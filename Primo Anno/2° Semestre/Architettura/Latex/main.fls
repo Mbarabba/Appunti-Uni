@@ -359,9 +359,36 @@ INPUT Capitoli/Teoria/Assembly/Assembly.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
 INPUT Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/ALU.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/ALU.aux
+INPUT Capitoli/Teoria/Circuiti Logici/ALU.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
 INPUT Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
+INPUT ./Capitoli/Teoria/Datapath/Register File.aux
+INPUT ./Capitoli/Teoria/Datapath/Register File.aux
+INPUT Capitoli/Teoria/Datapath/Register File.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Multiciclo.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Multiciclo.aux
+INPUT Capitoli/Teoria/Datapath/Datapath Multiciclo.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Singolo ciclo.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Singolo ciclo.aux
+INPUT Capitoli/Teoria/Datapath/Datapath Singolo ciclo.aux
+INPUT ./Capitoli/Teoria/Eccezioni/Eccezioni.aux
+INPUT ./Capitoli/Teoria/Eccezioni/Eccezioni.aux
+INPUT Capitoli/Teoria/Eccezioni/Eccezioni.aux
+INPUT ./Capitoli/Teoria/Interrupt/Interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/Interrupt.aux
+INPUT Capitoli/Teoria/Interrupt/Interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da programma.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da programma.aux
+INPUT Capitoli/Teoria/Interrupt/IO gestito da programma.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da interrupt.aux
+INPUT Capitoli/Teoria/Interrupt/IO gestito da interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da DMA.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da DMA.aux
+INPUT Capitoli/Teoria/Interrupt/IO gestito da DMA.aux
 OUTPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -553,11 +580,143 @@ INPUT ./Immagini/Schema PLA.png
 INPUT ./Immagini/Schema PLA.png
 INPUT ./Immagini/Schema PLA.png
 INPUT ./Immagini/Schema PLA.png
+INPUT ./Capitoli/Teoria/Circuiti Logici/ALU.tex
+OUTPUT Capitoli/Teoria/Circuiti Logici/ALU.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/ALU.tex
+INPUT ./Capitoli/Teoria/Circuiti Logici/ALU.tex
+INPUT Capitoli/Teoria/Circuiti Logici/ALU.tex
+INPUT ./Immagini/ALU-32Bit.png
+INPUT ./Immagini/ALU-32Bit.png
+INPUT ./Immagini/ALU-32Bit.png
+INPUT ./Immagini/ALU-32Bit.png
+INPUT ./Immagini/ALU-32Bit.png
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex
 OUTPUT Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex
 INPUT Capitoli/Teoria/Circuiti Logici/Reti sequenziali.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmr17.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmss.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmss.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ot1lmss.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmss17.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmss12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmss10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmss8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmss8.tfm
+INPUT ./Immagini/D-Latch.png
+INPUT ./Immagini/D-Latch.png
+INPUT ./Immagini/D-Latch.png
+INPUT ./Immagini/D-Latch.png
+INPUT ./Immagini/D-Latch.png
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmss12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmss8.tfm
+INPUT ./Immagini/Segnale T.png
+INPUT ./Immagini/Segnale T.png
+INPUT ./Immagini/Segnale T.png
+INPUT ./Immagini/Segnale T.png
+INPUT ./Immagini/Segnale T.png
+INPUT ./Immagini/Lunghezza clock T.png
+INPUT ./Immagini/Lunghezza clock T.png
+INPUT ./Immagini/Lunghezza clock T.png
+INPUT ./Immagini/Lunghezza clock T.png
+INPUT ./Immagini/Lunghezza clock T.png
+INPUT ./Immagini/D FlipFlop Schema.png
+INPUT ./Immagini/D FlipFlop Schema.png
+INPUT ./Immagini/D FlipFlop Schema.png
+INPUT ./Immagini/D FlipFlop Schema.png
+INPUT ./Immagini/D FlipFlop Schema.png
+INPUT ./Immagini/D FlipFlop Segnale.png
+INPUT ./Immagini/D FlipFlop Segnale.png
+INPUT ./Immagini/D FlipFlop Segnale.png
+INPUT ./Immagini/D FlipFlop Segnale.png
+INPUT ./Immagini/D FlipFlop Segnale.png
+INPUT ./Capitoli/Teoria/Datapath/Register File.tex
+OUTPUT Capitoli/Teoria/Datapath/Register File.aux
+INPUT ./Capitoli/Teoria/Datapath/Register File.tex
+INPUT ./Capitoli/Teoria/Datapath/Register File.tex
+INPUT Capitoli/Teoria/Datapath/Register File.tex
+INPUT ./Immagini/Register File.png
+INPUT ./Immagini/Register File.png
+INPUT ./Immagini/Register File.png
+INPUT ./Immagini/Register File.png
+INPUT ./Immagini/Register File.png
+INPUT ./Immagini/Lettura Register File.png
+INPUT ./Immagini/Lettura Register File.png
+INPUT ./Immagini/Lettura Register File.png
+INPUT ./Immagini/Lettura Register File.png
+INPUT ./Immagini/Lettura Register File.png
+INPUT ./Immagini/Scrittura Register File.png
+INPUT ./Immagini/Scrittura Register File.png
+INPUT ./Immagini/Scrittura Register File.png
+INPUT ./Immagini/Scrittura Register File.png
+INPUT ./Immagini/Scrittura Register File.png
+INPUT ./Capitoli/Teoria/Datapath/Datapath Multiciclo.tex
+OUTPUT Capitoli/Teoria/Datapath/Datapath Multiciclo.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Multiciclo.tex
+INPUT ./Capitoli/Teoria/Datapath/Datapath Multiciclo.tex
+INPUT Capitoli/Teoria/Datapath/Datapath Multiciclo.tex
+INPUT ./Immagini/Datapath Multiciclo.png
+INPUT ./Immagini/Datapath Multiciclo.png
+INPUT ./Immagini/Datapath Multiciclo.png
+INPUT ./Immagini/Datapath Multiciclo.png
+INPUT ./Immagini/Datapath Multiciclo.png
+INPUT ./Immagini/Schema FSM.png
+INPUT ./Immagini/Schema FSM.png
+INPUT ./Immagini/Schema FSM.png
+INPUT ./Immagini/Schema FSM.png
+INPUT ./Immagini/Schema FSM.png
+INPUT ./Immagini/DFA SFM.png
+INPUT ./Immagini/DFA SFM.png
+INPUT ./Immagini/DFA SFM.png
+INPUT ./Immagini/DFA SFM.png
+INPUT ./Immagini/DFA SFM.png
+INPUT ./Capitoli/Teoria/Datapath/Datapath Singolo ciclo.tex
+OUTPUT Capitoli/Teoria/Datapath/Datapath Singolo ciclo.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Singolo ciclo.tex
+INPUT ./Capitoli/Teoria/Datapath/Datapath Singolo ciclo.tex
+INPUT Capitoli/Teoria/Datapath/Datapath Singolo ciclo.tex
+INPUT ./Immagini/Schema Datapath Singolo Ciclo.png
+INPUT ./Immagini/Schema Datapath Singolo Ciclo.png
+INPUT ./Immagini/Schema Datapath Singolo Ciclo.png
+INPUT ./Immagini/Schema Datapath Singolo Ciclo.png
+INPUT ./Immagini/Schema Datapath Singolo Ciclo.png
+INPUT ./Capitoli/Teoria/Eccezioni/Eccezioni.tex
+OUTPUT Capitoli/Teoria/Eccezioni/Eccezioni.aux
+INPUT ./Capitoli/Teoria/Eccezioni/Eccezioni.tex
+INPUT ./Capitoli/Teoria/Eccezioni/Eccezioni.tex
+INPUT Capitoli/Teoria/Eccezioni/Eccezioni.tex
+INPUT ./Immagini/Registro cause.png
+INPUT ./Immagini/Registro cause.png
+INPUT ./Immagini/Registro cause.png
+INPUT ./Immagini/Registro cause.png
+INPUT ./Immagini/Registro cause.png
+INPUT ./Immagini/Registro Status.png
+INPUT ./Immagini/Registro Status.png
+INPUT ./Immagini/Registro Status.png
+INPUT ./Immagini/Registro Status.png
+INPUT ./Immagini/Registro Status.png
+INPUT ./Capitoli/Teoria/Interrupt/Interrupt.tex
+OUTPUT Capitoli/Teoria/Interrupt/Interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/Interrupt.tex
+INPUT ./Capitoli/Teoria/Interrupt/Interrupt.tex
+INPUT Capitoli/Teoria/Interrupt/Interrupt.tex
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da programma.tex
+OUTPUT Capitoli/Teoria/Interrupt/IO gestito da programma.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da programma.tex
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da programma.tex
+INPUT Capitoli/Teoria/Interrupt/IO gestito da programma.tex
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da interrupt.tex
+OUTPUT Capitoli/Teoria/Interrupt/IO gestito da interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da interrupt.tex
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da interrupt.tex
+INPUT Capitoli/Teoria/Interrupt/IO gestito da interrupt.tex
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da DMA.tex
+OUTPUT Capitoli/Teoria/Interrupt/IO gestito da DMA.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da DMA.tex
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da DMA.tex
+INPUT Capitoli/Teoria/Interrupt/IO gestito da DMA.tex
 INPUT main.aux
 INPUT ./Capitoli/Teoria/Rappresentazione binaria/Sistemi numerici.aux
 INPUT ./Capitoli/Teoria/Rappresentazione binaria/Sistemi numerici.aux
@@ -583,9 +742,36 @@ INPUT Capitoli/Teoria/Assembly/Assembly.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
 INPUT Capitoli/Teoria/Circuiti Logici/Reti combinatorie.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/ALU.aux
+INPUT ./Capitoli/Teoria/Circuiti Logici/ALU.aux
+INPUT Capitoli/Teoria/Circuiti Logici/ALU.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
 INPUT ./Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
 INPUT Capitoli/Teoria/Circuiti Logici/Reti sequenziali.aux
+INPUT ./Capitoli/Teoria/Datapath/Register File.aux
+INPUT ./Capitoli/Teoria/Datapath/Register File.aux
+INPUT Capitoli/Teoria/Datapath/Register File.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Multiciclo.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Multiciclo.aux
+INPUT Capitoli/Teoria/Datapath/Datapath Multiciclo.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Singolo ciclo.aux
+INPUT ./Capitoli/Teoria/Datapath/Datapath Singolo ciclo.aux
+INPUT Capitoli/Teoria/Datapath/Datapath Singolo ciclo.aux
+INPUT ./Capitoli/Teoria/Eccezioni/Eccezioni.aux
+INPUT ./Capitoli/Teoria/Eccezioni/Eccezioni.aux
+INPUT Capitoli/Teoria/Eccezioni/Eccezioni.aux
+INPUT ./Capitoli/Teoria/Interrupt/Interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/Interrupt.aux
+INPUT Capitoli/Teoria/Interrupt/Interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da programma.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da programma.aux
+INPUT Capitoli/Teoria/Interrupt/IO gestito da programma.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da interrupt.aux
+INPUT Capitoli/Teoria/Interrupt/IO gestito da interrupt.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da DMA.aux
+INPUT ./Capitoli/Teoria/Interrupt/IO gestito da DMA.aux
+INPUT Capitoli/Teoria/Interrupt/IO gestito da DMA.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb

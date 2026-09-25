@@ -1,299 +1,436 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {part}{1\hspace {1em}Teoria del corso}{6}{part.1}%
-\contentsline {chapter}{\numberline {1}Sistemi Numerici}{7}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Introduzione}{7}{section.1.1}%
-\contentsline {section}{\numberline {1.2}Bit}{7}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Definizione}{7}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Unità di misura}{7}{subsection.1.2.2}%
-\contentsline {subsection}{\numberline {1.2.3}Numero di configurazione possibili}{7}{subsection.1.2.3}%
-\contentsline {subsection}{\numberline {1.2.4}Numero massimo rappresentabile}{7}{subsection.1.2.4}%
-\contentsline {section}{\numberline {1.3}Rappresentazione di un sistema numerico posizionale}{8}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Cosa è un sistema numerico posizionale?}{8}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Formula}{8}{subsection.1.3.2}%
-\contentsline {subsubsection}{Esempio d'uso formula}{8}{subsubsection*.3}%
-\contentsline {section}{\numberline {1.4}Sistema Binario}{8}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Definizione}{8}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Esempio}{8}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Byte}{8}{subsection.1.4.3}%
-\contentsline {section}{\numberline {1.5}Sistema Ottale}{9}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Definizione}{9}{subsection.1.5.1}%
-\contentsline {subsection}{\numberline {1.5.2}Esempio}{9}{subsection.1.5.2}%
-\contentsline {section}{\numberline {1.6}Sistema Esadecimale}{9}{section.1.6}%
-\contentsline {subsection}{\numberline {1.6.1}Definizione}{9}{subsection.1.6.1}%
-\contentsline {subsubsection}{Notazione}{9}{subsubsection*.4}%
-\contentsline {subsection}{\numberline {1.6.2}Significato delle lettere}{9}{subsection.1.6.2}%
-\contentsline {subsection}{\numberline {1.6.3}Compattezza}{9}{subsection.1.6.3}%
-\contentsline {section}{\numberline {1.7}Conversione tra sistemi numerici}{10}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Da base $r \rightarrow $ a base $10$ }{10}{subsection.1.7.1}%
-\contentsline {subsubsection}{Esempio}{10}{subsubsection*.5}%
-\contentsline {subsection}{\numberline {1.7.2}Da base $10 \rightarrow $ a base $r$}{10}{subsection.1.7.2}%
-\contentsline {subsubsection}{Esempi}{10}{subsubsection*.6}%
-\contentsline {subsection}{\numberline {1.7.3}Da base $r \rightarrow $ a base $r'$}{11}{subsection.1.7.3}%
-\contentsline {subsubsection}{Esempi}{11}{subsubsection*.7}%
-\contentsline {section}{\numberline {1.8}Rappresentazioni dei valori}{13}{section.1.8}%
-\contentsline {subsection}{\numberline {1.8.1}Limite di cifre}{13}{subsection.1.8.1}%
-\contentsline {subsection}{\numberline {1.8.2}Tabella numeri rappresentabili}{13}{subsection.1.8.2}%
-\contentsline {subsection}{\numberline {1.8.3}Prefissi}{13}{subsection.1.8.3}%
-\contentsline {chapter}{\numberline {2}Sistema binario: Operazioni aritmetiche}{14}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Somma}{14}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Definizione}{14}{subsection.2.1.1}%
-\contentsline {subsection}{\numberline {2.1.2}Esempio}{14}{subsection.2.1.2}%
-\contentsline {subsection}{\numberline {2.1.3}Esempio con Overflow}{15}{subsection.2.1.3}%
-\contentsline {section}{\numberline {2.2}Sottrazione}{16}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Definizione}{16}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Esempio}{16}{subsection.2.2.2}%
-\contentsline {subsection}{\numberline {2.2.3}Esempio di Sottrazione Impossibile (Underflow)}{16}{subsection.2.2.3}%
-\contentsline {subsubsection}{Perché non è possibile effettuare l'operazione?}{16}{subsubsection*.9}%
-\contentsline {section}{\numberline {2.3}Shift}{17}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Definizione}{17}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Left Shift}{17}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Right Shift}{17}{subsection.2.3.3}%
-\contentsline {chapter}{\numberline {3}Rappresentazione dei numeri negativi}{18}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Perchè ne abbiamo bisogno?}{18}{section.3.1}%
-\contentsline {section}{\numberline {3.2}MS - Modulo e Segno}{18}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Procedura}{18}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Range di rappresentabilità}{18}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Difetti del sistema}{18}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Esempio di conversione}{18}{subsection.3.2.4}%
-\contentsline {subsection}{\numberline {3.2.5}Somma}{19}{subsection.3.2.5}%
-\contentsline {subsection}{\numberline {3.2.6}Sottrazione}{19}{subsection.3.2.6}%
-\contentsline {section}{\numberline {3.3}CA1 - Complemento a 1}{21}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Complemento}{21}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Procedura}{21}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Range di numeri rappresentabili}{21}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Difetti}{21}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Esempi di conversione}{21}{subsection.3.3.5}%
-\contentsline {section}{\numberline {3.4}CA2 - Complemento a 2}{22}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Procedura}{22}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Conversione a decimale}{22}{subsection.3.4.2}%
-\contentsline {subsection}{\numberline {3.4.3}Range di numeri rappresentabili}{22}{subsection.3.4.3}%
-\contentsline {subsection}{\numberline {3.4.4}Esempi di conversione}{22}{subsection.3.4.4}%
-\contentsline {subsection}{\numberline {3.4.5}Somma}{22}{subsection.3.4.5}%
-\contentsline {subsubsection}{Esempio 1}{23}{subsubsection*.13}%
-\contentsline {subsubsection}{Esempio 2}{23}{subsubsection*.14}%
-\contentsline {subsection}{\numberline {3.4.6}Sottrazione}{23}{subsection.3.4.6}%
-\contentsline {section}{\numberline {3.5}Rappresentazione eccesso $2^{n-1}$}{24}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Procedure}{24}{subsection.3.5.1}%
-\contentsline {subsubsection}{Regola pratica}{24}{subsubsection*.15}%
-\contentsline {subsection}{\numberline {3.5.2}Range numeri rappresentabili}{24}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Esempio di conversione}{24}{subsection.3.5.3}%
-\contentsline {subsubsection}{Metodo 1: Applicazione della formula $X + 2^{n-1}$}{24}{subsubsection*.16}%
-\contentsline {subsubsection}{Metodo 2: Tramite la Regola Pratica (da CA2)}{24}{subsubsection*.17}%
-\contentsline {section}{\numberline {3.6}Rappresentazione Eccesso 128}{25}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Procedura}{25}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Esempi}{25}{subsection.3.6.2}%
-\contentsline {paragraph}{Passando da CA2:}{25}{paragraph*.18}%
-\contentsline {subsection}{\numberline {3.6.3}Osservazioni}{25}{subsection.3.6.3}%
-\contentsline {chapter}{\numberline {4}Rappresentazione numeri frazionari con la virgola fissa}{26}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Idea}{26}{section.4.1}%
-\contentsline {section}{\numberline {4.2}UNSIGNED fixed point}{26}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Cosa è?}{26}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Struttura del formato}{26}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Range di valori rappresentabili}{26}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Peso delle posizioni}{27}{subsection.4.2.4}%
-\contentsline {subsection}{\numberline {4.2.5}Da Decimale a Virgola Fissa Unsigned}{27}{subsection.4.2.5}%
-\contentsline {subsection}{\numberline {4.2.6}Da Virgola Fissa Unsigned a Decimale}{28}{subsection.4.2.6}%
-\contentsline {section}{\numberline {4.3}SIGNED fixed point}{29}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Struttura del formato}{29}{subsection.4.3.1}%
-\contentsline {subsection}{\numberline {4.3.2}Peso delle posizioni}{29}{subsection.4.3.2}%
-\contentsline {subsection}{\numberline {4.3.3}Da numero decimale positivo a Signed Fixed-Point}{29}{subsection.4.3.3}%
-\contentsline {subsection}{\numberline {4.3.4}Da numero decimale negativo a Signed Fixed-Point}{30}{subsection.4.3.4}%
-\contentsline {chapter}{\numberline {5}Rappresentazionu numeri frazionari con la virgola mobile}{31}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Cosa è?}{31}{section.5.1}%
-\contentsline {section}{\numberline {5.2}Struttura}{31}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}32 bit}{31}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}64 bit}{31}{subsection.5.2.2}%
-\contentsline {section}{\numberline {5.3}Formule}{31}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Formula della rappresentazione in virgola mobile}{31}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Normalizzazione e "1 implicito"}{32}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Conversione da Decimale a Virgola Mobile}{32}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Conversione da Virgola Mobile a Decimale}{33}{section.5.5}%
-\contentsline {section}{\numberline {5.6}Errore assoluto $E_a$}{33}{section.5.6}%
-\contentsline {subsection}{\numberline {5.6.1}Cosa è?}{33}{subsection.5.6.1}%
-\contentsline {subsection}{\numberline {5.6.2}Formula}{33}{subsection.5.6.2}%
-\contentsline {subsection}{\numberline {5.6.3}Esempio di calcolo}{33}{subsection.5.6.3}%
-\contentsline {subsubsection}{Dati di partenza}{33}{subsubsection*.19}%
-\contentsline {subsubsection}{Calcolo}{33}{subsubsection*.20}%
-\contentsline {section}{\numberline {5.7}Errore Relativo $E_r$}{34}{section.5.7}%
-\contentsline {subsection}{\numberline {5.7.1}Cos'è?}{34}{subsection.5.7.1}%
-\contentsline {subsection}{\numberline {5.7.2}Formula}{34}{subsection.5.7.2}%
-\contentsline {subsection}{\numberline {5.7.3}Esempio di calcolo}{34}{subsection.5.7.3}%
-\contentsline {chapter}{\numberline {6}Rappresentazione caratteri}{35}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Idea}{35}{section.6.1}%
-\contentsline {section}{\numberline {6.2}ASCII Standard}{35}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Caratteristiche}{35}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Tabella}{36}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}ASCII Esteso}{37}{section.6.3}%
-\contentsline {subsection}{\numberline {6.3.1}Caratteristiche}{37}{subsection.6.3.1}%
-\contentsline {subsection}{\numberline {6.3.2}Tabella }{37}{subsection.6.3.2}%
-\contentsline {section}{\numberline {6.4}UNICODE}{38}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Caratteristiche}{38}{subsection.6.4.1}%
-\contentsline {chapter}{\numberline {7}Instruction Set Architecture (ISA)}{39}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Cosa è?}{39}{section.7.1}%
-\contentsline {section}{\numberline {7.2}Architettura MIPS}{39}{section.7.2}%
-\contentsline {subsection}{\numberline {7.2.1}Caratteristiche}{39}{subsection.7.2.1}%
-\contentsline {section}{\numberline {7.3}Formati delle istruzioni}{39}{section.7.3}%
-\contentsline {section}{\numberline {7.4}Rappresentazioni disponibili}{39}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Stringa a 32 bit}{39}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Stringa a 32 bit sezionata}{39}{subsection.7.4.2}%
-\contentsline {subsection}{\numberline {7.4.3}Rappresentazione esadecimale}{39}{subsection.7.4.3}%
-\contentsline {subsection}{\numberline {7.4.4}Formato assembly}{40}{subsection.7.4.4}%
-\contentsline {chapter}{\numberline {8}ISA R-Type}{41}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Cosa sono?}{41}{section.8.1}%
-\contentsline {section}{\numberline {8.2}Struttura}{41}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Struttura della stringa a 32 bit}{41}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Spiegazione dei campi}{41}{subsection.8.2.2}%
-\contentsline {chapter}{\numberline {9}ISA I-Type}{42}{chapter.9}%
-\contentsline {section}{\numberline {9.1}Cosa sono?}{42}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Struttura}{42}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Struttura della stringa a 32 bit}{42}{subsection.9.2.1}%
-\contentsline {subsection}{\numberline {9.2.2}Spiegazione dei campi}{42}{subsection.9.2.2}%
-\contentsline {section}{\numberline {9.3}Istruzione load word}{43}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Struttura stringa a 32 bit}{43}{subsection.9.3.1}%
-\contentsline {subsection}{\numberline {9.3.2}Spiegazione dei campi}{43}{subsection.9.3.2}%
-\contentsline {subsection}{\numberline {9.3.3}Svolgimento dell'operazione}{43}{subsection.9.3.3}%
-\contentsline {section}{\numberline {9.4}Istruzione store word}{44}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Struttura stringa a 32 bit}{44}{subsection.9.4.1}%
-\contentsline {subsection}{\numberline {9.4.2}Spiegazione dei campi}{44}{subsection.9.4.2}%
-\contentsline {subsection}{\numberline {9.4.3}Svolgimento dell'operazione}{44}{subsection.9.4.3}%
-\contentsline {section}{\numberline {9.5}Istruzioni di branch}{45}{section.9.5}%
-\contentsline {subsection}{\numberline {9.5.1}Struttura stringa a 32 bit}{45}{subsection.9.5.1}%
-\contentsline {subsection}{\numberline {9.5.2}Spiegazione dei campi}{45}{subsection.9.5.2}%
-\contentsline {subsection}{\numberline {9.5.3}Spiegazione dell'operazione}{45}{subsection.9.5.3}%
-\contentsline {chapter}{\numberline {10}ISA J-Type}{46}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Cosa sono?}{46}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Struttura}{46}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Struttura della stringa a 32 bit}{46}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Spiegazione dei campi}{46}{subsection.10.2.2}%
-\contentsline {chapter}{\numberline {11}Assembly}{47}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Linguaggi di alto e basso livello}{47}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}Linguaggio assembler}{47}{subsection.11.1.1}%
-\contentsline {subsubsection}{Cosa è?}{47}{subsubsection*.23}%
-\contentsline {subsubsection}{Vantaggi}{47}{subsubsection*.24}%
-\contentsline {subsubsection}{Svantaggi}{47}{subsubsection*.25}%
-\contentsline {subsection}{\numberline {11.1.2}Linguaggi ad alto livello}{47}{subsection.11.1.2}%
-\contentsline {subsubsection}{Cosa sono?}{47}{subsubsection*.26}%
-\contentsline {subsubsection}{Vantaggi}{47}{subsubsection*.27}%
-\contentsline {section}{\numberline {11.2}Catena programmativa (Vista ad alto livello)}{48}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}Struttura}{48}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}Ruolo del Compiler}{48}{subsection.11.2.2}%
-\contentsline {section}{\numberline {11.3}Catena programmativa (Vista a basso livello)}{48}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}Struttura}{48}{subsection.11.3.1}%
-\contentsline {subsection}{\numberline {11.3.2}Assembler}{49}{subsection.11.3.2}%
-\contentsline {subsubsection}{Cosa fa?}{49}{subsubsection*.28}%
-\contentsline {subsubsection}{Processo di assemblaggio}{49}{subsubsection*.29}%
-\contentsline {subsubsection}{Tabella dei Simboli}{49}{subsubsection*.30}%
-\contentsline {subsection}{\numberline {11.3.3}Linker (Link editor)}{50}{subsection.11.3.3}%
-\contentsline {subsubsection}{Cosa fa?}{50}{subsubsection*.31}%
-\contentsline {subsubsection}{Strttura}{50}{subsubsection*.32}%
-\contentsline {section}{\numberline {11.4}Convenzioni nomi ed uso dei registri}{51}{section.11.4}%
-\contentsline {subsection}{\numberline {11.4.1}Tabella}{51}{subsection.11.4.1}%
-\contentsline {subsection}{\numberline {11.4.2}Registri temporanei "salvati" e "non salvati"}{51}{subsection.11.4.2}%
-\contentsline {subsubsection}{Registri \$t (temporary)}{51}{subsubsection*.33}%
-\contentsline {subsubsection}{Registri \$s (saved)}{51}{subsubsection*.34}%
-\contentsline {section}{\numberline {11.5}Direttive all'assemblatore}{52}{section.11.5}%
-\contentsline {subsection}{\numberline {11.5.1}Cosa sono?}{52}{subsection.11.5.1}%
-\contentsline {subsection}{\numberline {11.5.2}Esempi di direttive}{52}{subsection.11.5.2}%
-\contentsline {subsection}{\numberline {11.5.3}Esempio d'uso}{52}{subsection.11.5.3}%
-\contentsline {section}{\numberline {11.6}Pseudoistruzioni}{53}{section.11.6}%
-\contentsline {subsection}{\numberline {11.6.1}Cosa sono?}{53}{subsection.11.6.1}%
-\contentsline {subsection}{\numberline {11.6.2}Esempio 1}{53}{subsection.11.6.2}%
-\contentsline {subsection}{\numberline {11.6.3}Esempio 2}{53}{subsection.11.6.3}%
-\contentsline {section}{\numberline {11.7}Procedure}{54}{section.11.7}%
-\contentsline {subsection}{\numberline {11.7.1}Cosa sono?}{54}{subsection.11.7.1}%
-\contentsline {subsection}{\numberline {11.7.2}Passaggi di una procedura}{54}{subsection.11.7.2}%
-\contentsline {subsection}{\numberline {11.7.3}Passaggio parametri}{54}{subsection.11.7.3}%
-\contentsline {subsection}{\numberline {11.7.4}Procedure innestate}{54}{subsection.11.7.4}%
-\contentsline {subsubsection}{Procedure "foglia" e "non foglia"}{54}{subsubsection*.35}%
-\contentsline {subsubsection}{Cosa succede se una procedura ne chiama un'altra?}{54}{subsubsection*.36}%
-\contentsline {subsection}{\numberline {11.7.5}Esempio}{55}{subsection.11.7.5}%
-\contentsline {subsection}{\numberline {11.7.6}Schema uso generale dello stack}{56}{subsection.11.7.6}%
-\contentsline {subsection}{\numberline {11.7.7}Salvataggio dei registri all'interno dello stack}{56}{subsection.11.7.7}%
-\contentsline {subsection}{\numberline {11.7.8}Osservazioni registri \$sp e \$fp}{56}{subsection.11.7.8}%
-\contentsline {subsubsection}{Frame di stack}{56}{subsubsection*.37}%
-\contentsline {subsubsection}{\$sp - Stack pointer}{56}{subsubsection*.38}%
-\contentsline {subsubsection}{\$fp - Frame pointer}{57}{subsubsection*.39}%
-\contentsline {section}{\numberline {11.8}Flusso di controllo}{58}{section.11.8}%
-\contentsline {subsection}{\numberline {11.8.1}Problema}{58}{subsection.11.8.1}%
-\contentsline {subsection}{\numberline {11.8.2}Ruolo della procedura chiamante}{58}{subsection.11.8.2}%
-\contentsline {subsection}{\numberline {11.8.3}Ruolo della procedura chiamata}{58}{subsection.11.8.3}%
-\contentsline {subsubsection}{Appena chiamata}{58}{subsubsection*.40}%
-\contentsline {subsubsection}{Fine esecuzione}{58}{subsubsection*.41}%
-\contentsline {subsection}{\numberline {11.8.4}Istruzione jal - Jump And Link}{59}{subsection.11.8.4}%
-\contentsline {subsubsection}{Cosa fa?}{59}{subsubsection*.42}%
-\contentsline {subsubsection}{Esempio in assembly}{59}{subsubsection*.43}%
-\contentsline {subsection}{\numberline {11.8.5}Istruzione jr - Jump Register}{60}{subsection.11.8.5}%
-\contentsline {subsubsection}{Cosa fa?}{60}{subsubsection*.44}%
-\contentsline {subsubsection}{Esempio in assembly}{60}{subsubsection*.45}%
-\contentsline {section}{\numberline {11.9}Syscall}{61}{section.11.9}%
-\contentsline {subsection}{\numberline {11.9.1}Cosa sono?}{61}{subsection.11.9.1}%
-\contentsline {subsection}{\numberline {11.9.2}Come usare le syscall}{61}{subsection.11.9.2}%
-\contentsline {subsection}{\numberline {11.9.3}Tabella}{61}{subsection.11.9.3}%
-\contentsline {subsection}{\numberline {11.9.4}Esempio d'uso senza procedure}{62}{subsection.11.9.4}%
-\contentsline {subsection}{\numberline {11.9.5}Esempio d'uso con procedure}{63}{subsection.11.9.5}%
-\contentsline {chapter}{\numberline {12}Reti combinatorie}{64}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Cosa sono i circuiti logici?}{64}{section.12.1}%
-\contentsline {section}{\numberline {12.2}Significato di 0 ed 1}{64}{section.12.2}%
-\contentsline {section}{\numberline {12.3}Cosa è un circuito (o rete) combinatoria?}{64}{section.12.3}%
-\contentsline {section}{\numberline {12.4}Porte logiche base}{64}{section.12.4}%
-\contentsline {subsection}{\numberline {12.4.1}Cosa sono?}{64}{subsection.12.4.1}%
-\contentsline {subsection}{\numberline {12.4.2}Porta logica AND}{64}{subsection.12.4.2}%
-\contentsline {subsubsection}{Simbolo}{64}{subsubsection*.46}%
-\contentsline {subsubsection}{Descrizione}{64}{subsubsection*.47}%
-\contentsline {subsubsection}{Tabella}{64}{subsubsection*.48}%
-\contentsline {subsection}{\numberline {12.4.3}Porta logica OR}{65}{subsection.12.4.3}%
-\contentsline {subsubsection}{Simbolo}{65}{subsubsection*.49}%
-\contentsline {subsubsection}{Descrizione}{65}{subsubsection*.50}%
-\contentsline {subsubsection}{Tabella}{65}{subsubsection*.51}%
-\contentsline {subsection}{\numberline {12.4.4}Porta logica NOT}{65}{subsection.12.4.4}%
-\contentsline {subsubsection}{Simbolo}{65}{subsubsection*.52}%
-\contentsline {subsubsection}{Descrizione}{65}{subsubsection*.53}%
-\contentsline {subsubsection}{Tabella}{65}{subsubsection*.54}%
-\contentsline {section}{\numberline {12.5}Porte logiche derivate}{65}{section.12.5}%
-\contentsline {subsection}{\numberline {12.5.1}Cosa sono?}{65}{subsection.12.5.1}%
-\contentsline {subsection}{\numberline {12.5.2}Porta logica NAND}{65}{subsection.12.5.2}%
-\contentsline {subsubsection}{Simbolo}{65}{subsubsection*.55}%
-\contentsline {subsubsection}{Descrizione}{65}{subsubsection*.56}%
-\contentsline {subsubsection}{Tabella}{65}{subsubsection*.57}%
-\contentsline {subsection}{\numberline {12.5.3}Porta logica NOR}{65}{subsection.12.5.3}%
-\contentsline {subsubsection}{Simbolo}{65}{subsubsection*.58}%
-\contentsline {subsubsection}{Descrizione}{65}{subsubsection*.59}%
-\contentsline {subsubsection}{Tabella}{65}{subsubsection*.60}%
-\contentsline {subsection}{\numberline {12.5.4}Porta logica XOR}{66}{subsection.12.5.4}%
-\contentsline {subsubsection}{Simbolo}{66}{subsubsection*.61}%
-\contentsline {subsubsection}{Descrizione}{66}{subsubsection*.62}%
-\contentsline {subsubsection}{Tabella}{66}{subsubsection*.63}%
-\contentsline {section}{\numberline {12.6}Decoder}{67}{section.12.6}%
-\contentsline {subsection}{\numberline {12.6.1}Cosa è?}{67}{subsection.12.6.1}%
-\contentsline {subsection}{\numberline {12.6.2}Come funziona?}{67}{subsection.12.6.2}%
-\contentsline {subsection}{\numberline {12.6.3}Schema semplificato}{67}{subsection.12.6.3}%
-\contentsline {subsection}{\numberline {12.6.4}Schema dettagliato}{67}{subsection.12.6.4}%
-\contentsline {subsection}{\numberline {12.6.5}Tabella}{67}{subsection.12.6.5}%
-\contentsline {section}{\numberline {12.7}Multiplexer}{68}{section.12.7}%
-\contentsline {subsection}{\numberline {12.7.1}Cosa è?}{68}{subsection.12.7.1}%
-\contentsline {subsection}{\numberline {12.7.2}Come funziona?}{68}{subsection.12.7.2}%
-\contentsline {subsection}{\numberline {12.7.3}Esempio}{68}{subsection.12.7.3}%
-\contentsline {subsubsection}{Schema semplificato}{68}{subsubsection*.64}%
-\contentsline {subsubsection}{Schema dettagliato}{68}{subsubsection*.65}%
-\contentsline {subsubsection}{Tabella}{68}{subsubsection*.66}%
-\contentsline {subsubsection}{}{68}{subsubsection*.67}%
-\contentsline {section}{\numberline {12.8}PLA - Programmable Logic Array}{69}{section.12.8}%
-\contentsline {subsection}{\numberline {12.8.1}Cosa è?}{69}{subsection.12.8.1}%
-\contentsline {subsection}{\numberline {12.8.2}Da cosa è compasta?}{69}{subsection.12.8.2}%
-\contentsline {subsection}{\numberline {12.8.3}Esempio}{69}{subsection.12.8.3}%
-\contentsline {subsubsection}{Schema semplificato}{69}{subsubsection*.68}%
-\contentsline {subsubsection}{Tabella}{69}{subsubsection*.69}%
-\contentsline {subsubsection}{Schema dettagliato}{70}{subsubsection*.70}%
-\contentsline {subsubsection}{Formula dell'esempio}{70}{subsubsection*.71}%
-\contentsline {section}{\numberline {12.9}Array di elementi logici}{71}{section.12.9}%
-\contentsline {subsection}{\numberline {12.9.1}Cosa sono?}{71}{subsection.12.9.1}%
-\contentsline {subsection}{\numberline {12.9.2}Esempio con Multiplexer a 32 bit}{71}{subsection.12.9.2}%
-\contentsline {subsubsection}{Schema semplificato}{71}{subsubsection*.72}%
-\contentsline {subsubsection}{Schema dettagliato}{71}{subsubsection*.73}%
-\contentsline {chapter}{\numberline {13}Reti sequenziali}{72}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Cosa è un circuito (o rete) sequenziale?}{72}{section.13.1}%
-\contentsline {part}{2\hspace {1em}Esercitazioni svolte}{73}{part.2}%
-\contentsline {part}{3\hspace {1em}Laboratori svolti}{74}{part.3}%
-\contentsline {part}{4\hspace {1em}Quiz Mega svolti}{75}{part.4}%
-\contentsline {part}{5\hspace {1em}Domande aperte Mega svolte}{76}{part.5}%
+\contentsline {part}{1\hspace {1em}Teoria del corso}{9}{part.1}%
+\contentsline {chapter}{\numberline {1}Sistemi Numerici}{10}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Introduzione}{10}{section.1.1}%
+\contentsline {section}{\numberline {1.2}Bit}{10}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Definizione}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Unità di misura}{10}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Numero di configurazione possibili}{10}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Numero massimo rappresentabile}{10}{subsection.1.2.4}%
+\contentsline {section}{\numberline {1.3}Rappresentazione di un sistema numerico posizionale}{11}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Cosa è un sistema numerico posizionale?}{11}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Formula}{11}{subsection.1.3.2}%
+\contentsline {subsubsection}{Esempio d'uso formula}{11}{subsubsection*.3}%
+\contentsline {section}{\numberline {1.4}Sistema Binario}{11}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Definizione}{11}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Esempio}{11}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Byte}{11}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}Sistema Ottale}{12}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Definizione}{12}{subsection.1.5.1}%
+\contentsline {subsection}{\numberline {1.5.2}Esempio}{12}{subsection.1.5.2}%
+\contentsline {section}{\numberline {1.6}Sistema Esadecimale}{12}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Definizione}{12}{subsection.1.6.1}%
+\contentsline {subsubsection}{Notazione}{12}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {1.6.2}Significato delle lettere}{12}{subsection.1.6.2}%
+\contentsline {subsection}{\numberline {1.6.3}Compattezza}{12}{subsection.1.6.3}%
+\contentsline {section}{\numberline {1.7}Conversione tra sistemi numerici}{13}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Da base $r \rightarrow $ a base $10$ }{13}{subsection.1.7.1}%
+\contentsline {subsubsection}{Esempio}{13}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {1.7.2}Da base $10 \rightarrow $ a base $r$}{13}{subsection.1.7.2}%
+\contentsline {subsubsection}{Esempi}{13}{subsubsection*.6}%
+\contentsline {subsection}{\numberline {1.7.3}Da base $r \rightarrow $ a base $r'$}{14}{subsection.1.7.3}%
+\contentsline {subsubsection}{Esempi}{14}{subsubsection*.7}%
+\contentsline {section}{\numberline {1.8}Rappresentazioni dei valori}{16}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Limite di cifre}{16}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Tabella numeri rappresentabili}{16}{subsection.1.8.2}%
+\contentsline {subsection}{\numberline {1.8.3}Prefissi}{16}{subsection.1.8.3}%
+\contentsline {chapter}{\numberline {2}Sistema binario: Operazioni aritmetiche}{17}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Somma}{17}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Definizione}{17}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Esempio}{17}{subsection.2.1.2}%
+\contentsline {subsection}{\numberline {2.1.3}Esempio con Overflow}{18}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}Sottrazione}{19}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Definizione}{19}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Esempio}{19}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Esempio di Sottrazione Impossibile (Underflow)}{19}{subsection.2.2.3}%
+\contentsline {subsubsection}{Perché non è possibile effettuare l'operazione?}{19}{subsubsection*.9}%
+\contentsline {section}{\numberline {2.3}Shift}{20}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Definizione}{20}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Left Shift}{20}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Right Shift}{20}{subsection.2.3.3}%
+\contentsline {chapter}{\numberline {3}Rappresentazione dei numeri negativi}{21}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Perchè ne abbiamo bisogno?}{21}{section.3.1}%
+\contentsline {section}{\numberline {3.2}MS - Modulo e Segno}{21}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Procedura}{21}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Range di rappresentabilità}{21}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Difetti del sistema}{21}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Esempio di conversione}{21}{subsection.3.2.4}%
+\contentsline {subsection}{\numberline {3.2.5}Somma}{22}{subsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.2.6}Sottrazione}{22}{subsection.3.2.6}%
+\contentsline {section}{\numberline {3.3}CA1 - Complemento a 1}{24}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Complemento}{24}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Procedura}{24}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Range di numeri rappresentabili}{24}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Difetti}{24}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Esempi di conversione}{24}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}CA2 - Complemento a 2}{25}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Procedura}{25}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Conversione a decimale}{25}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Range di numeri rappresentabili}{25}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Esempi di conversione}{25}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Somma}{25}{subsection.3.4.5}%
+\contentsline {subsubsection}{Esempio 1}{26}{subsubsection*.13}%
+\contentsline {subsubsection}{Esempio 2}{26}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {3.4.6}Sottrazione}{26}{subsection.3.4.6}%
+\contentsline {section}{\numberline {3.5}Rappresentazione eccesso $2^{n-1}$}{27}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Procedure}{27}{subsection.3.5.1}%
+\contentsline {subsubsection}{Regola pratica}{27}{subsubsection*.15}%
+\contentsline {subsection}{\numberline {3.5.2}Range numeri rappresentabili}{27}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Esempio di conversione}{27}{subsection.3.5.3}%
+\contentsline {subsubsection}{Metodo 1: Applicazione della formula $X + 2^{n-1}$}{27}{subsubsection*.16}%
+\contentsline {subsubsection}{Metodo 2: Tramite la Regola Pratica (da CA2)}{27}{subsubsection*.17}%
+\contentsline {section}{\numberline {3.6}Rappresentazione Eccesso 128}{28}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Procedura}{28}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Esempi}{28}{subsection.3.6.2}%
+\contentsline {paragraph}{Passando da CA2:}{28}{paragraph*.18}%
+\contentsline {subsection}{\numberline {3.6.3}Osservazioni}{28}{subsection.3.6.3}%
+\contentsline {chapter}{\numberline {4}Rappresentazione numeri frazionari con la virgola fissa}{29}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Idea}{29}{section.4.1}%
+\contentsline {section}{\numberline {4.2}UNSIGNED fixed point}{29}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Cosa è?}{29}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Struttura del formato}{29}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Range di valori rappresentabili}{29}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Peso delle posizioni}{30}{subsection.4.2.4}%
+\contentsline {subsection}{\numberline {4.2.5}Da Decimale a Virgola Fissa Unsigned}{30}{subsection.4.2.5}%
+\contentsline {subsection}{\numberline {4.2.6}Da Virgola Fissa Unsigned a Decimale}{31}{subsection.4.2.6}%
+\contentsline {section}{\numberline {4.3}SIGNED fixed point}{32}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Struttura del formato}{32}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Peso delle posizioni}{32}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Da numero decimale positivo a Signed Fixed-Point}{32}{subsection.4.3.3}%
+\contentsline {subsection}{\numberline {4.3.4}Da numero decimale negativo a Signed Fixed-Point}{33}{subsection.4.3.4}%
+\contentsline {chapter}{\numberline {5}Rappresentazionu numeri frazionari con la virgola mobile}{34}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Cosa è?}{34}{section.5.1}%
+\contentsline {section}{\numberline {5.2}Struttura}{34}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}32 bit}{34}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}64 bit}{34}{subsection.5.2.2}%
+\contentsline {section}{\numberline {5.3}Formule}{34}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Formula della rappresentazione in virgola mobile}{34}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Normalizzazione e "1 implicito"}{35}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Conversione da Decimale a Virgola Mobile}{35}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Conversione da Virgola Mobile a Decimale}{36}{section.5.5}%
+\contentsline {section}{\numberline {5.6}Errore assoluto $E_a$}{36}{section.5.6}%
+\contentsline {subsection}{\numberline {5.6.1}Cosa è?}{36}{subsection.5.6.1}%
+\contentsline {subsection}{\numberline {5.6.2}Formula}{36}{subsection.5.6.2}%
+\contentsline {subsection}{\numberline {5.6.3}Esempio di calcolo}{36}{subsection.5.6.3}%
+\contentsline {subsubsection}{Dati di partenza}{36}{subsubsection*.19}%
+\contentsline {subsubsection}{Calcolo}{36}{subsubsection*.20}%
+\contentsline {section}{\numberline {5.7}Errore Relativo $E_r$}{37}{section.5.7}%
+\contentsline {subsection}{\numberline {5.7.1}Cos'è?}{37}{subsection.5.7.1}%
+\contentsline {subsection}{\numberline {5.7.2}Formula}{37}{subsection.5.7.2}%
+\contentsline {subsection}{\numberline {5.7.3}Esempio di calcolo}{37}{subsection.5.7.3}%
+\contentsline {chapter}{\numberline {6}Rappresentazione caratteri}{38}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Idea}{38}{section.6.1}%
+\contentsline {section}{\numberline {6.2}ASCII Standard}{38}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Caratteristiche}{38}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Tabella}{39}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}ASCII Esteso}{40}{section.6.3}%
+\contentsline {subsection}{\numberline {6.3.1}Caratteristiche}{40}{subsection.6.3.1}%
+\contentsline {subsection}{\numberline {6.3.2}Tabella }{40}{subsection.6.3.2}%
+\contentsline {section}{\numberline {6.4}UNICODE}{41}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Caratteristiche}{41}{subsection.6.4.1}%
+\contentsline {chapter}{\numberline {7}Instruction Set Architecture (ISA)}{42}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Cosa è?}{42}{section.7.1}%
+\contentsline {section}{\numberline {7.2}Architettura MIPS}{42}{section.7.2}%
+\contentsline {subsection}{\numberline {7.2.1}Caratteristiche}{42}{subsection.7.2.1}%
+\contentsline {section}{\numberline {7.3}Formati delle istruzioni}{42}{section.7.3}%
+\contentsline {section}{\numberline {7.4}Rappresentazioni disponibili}{42}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Stringa a 32 bit}{42}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Stringa a 32 bit sezionata}{42}{subsection.7.4.2}%
+\contentsline {subsection}{\numberline {7.4.3}Rappresentazione esadecimale}{42}{subsection.7.4.3}%
+\contentsline {subsection}{\numberline {7.4.4}Formato assembly}{43}{subsection.7.4.4}%
+\contentsline {chapter}{\numberline {8}ISA R-Type}{44}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Cosa sono?}{44}{section.8.1}%
+\contentsline {section}{\numberline {8.2}Struttura}{44}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Struttura della stringa a 32 bit}{44}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Spiegazione dei campi}{44}{subsection.8.2.2}%
+\contentsline {chapter}{\numberline {9}ISA I-Type}{45}{chapter.9}%
+\contentsline {section}{\numberline {9.1}Cosa sono?}{45}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Struttura}{45}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Struttura della stringa a 32 bit}{45}{subsection.9.2.1}%
+\contentsline {subsection}{\numberline {9.2.2}Spiegazione dei campi}{45}{subsection.9.2.2}%
+\contentsline {section}{\numberline {9.3}Istruzione load word}{46}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Struttura stringa a 32 bit}{46}{subsection.9.3.1}%
+\contentsline {subsection}{\numberline {9.3.2}Spiegazione dei campi}{46}{subsection.9.3.2}%
+\contentsline {subsection}{\numberline {9.3.3}Svolgimento dell'operazione}{46}{subsection.9.3.3}%
+\contentsline {section}{\numberline {9.4}Istruzione store word}{47}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Struttura stringa a 32 bit}{47}{subsection.9.4.1}%
+\contentsline {subsection}{\numberline {9.4.2}Spiegazione dei campi}{47}{subsection.9.4.2}%
+\contentsline {subsection}{\numberline {9.4.3}Svolgimento dell'operazione}{47}{subsection.9.4.3}%
+\contentsline {section}{\numberline {9.5}Istruzioni di branch}{48}{section.9.5}%
+\contentsline {subsection}{\numberline {9.5.1}Struttura stringa a 32 bit}{48}{subsection.9.5.1}%
+\contentsline {subsection}{\numberline {9.5.2}Spiegazione dei campi}{48}{subsection.9.5.2}%
+\contentsline {subsection}{\numberline {9.5.3}Spiegazione dell'operazione}{48}{subsection.9.5.3}%
+\contentsline {chapter}{\numberline {10}ISA J-Type}{49}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Cosa sono?}{49}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Struttura}{49}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Struttura della stringa a 32 bit}{49}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Spiegazione dei campi}{49}{subsection.10.2.2}%
+\contentsline {chapter}{\numberline {11}Assembly}{50}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Linguaggi di alto e basso livello}{50}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Linguaggio assembler}{50}{subsection.11.1.1}%
+\contentsline {subsubsection}{Cosa è?}{50}{subsubsection*.23}%
+\contentsline {subsubsection}{Vantaggi}{50}{subsubsection*.24}%
+\contentsline {subsubsection}{Svantaggi}{50}{subsubsection*.25}%
+\contentsline {subsection}{\numberline {11.1.2}Linguaggi ad alto livello}{50}{subsection.11.1.2}%
+\contentsline {subsubsection}{Cosa sono?}{50}{subsubsection*.26}%
+\contentsline {subsubsection}{Vantaggi}{50}{subsubsection*.27}%
+\contentsline {section}{\numberline {11.2}Catena programmativa (Vista ad alto livello)}{51}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Struttura}{51}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Ruolo del Compiler}{51}{subsection.11.2.2}%
+\contentsline {section}{\numberline {11.3}Catena programmativa (Vista a basso livello)}{51}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Struttura}{51}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Assembler}{52}{subsection.11.3.2}%
+\contentsline {subsubsection}{Cosa fa?}{52}{subsubsection*.28}%
+\contentsline {subsubsection}{Processo di assemblaggio}{52}{subsubsection*.29}%
+\contentsline {subsubsection}{Tabella dei Simboli}{52}{subsubsection*.30}%
+\contentsline {subsection}{\numberline {11.3.3}Linker (Link editor)}{53}{subsection.11.3.3}%
+\contentsline {subsubsection}{Cosa fa?}{53}{subsubsection*.31}%
+\contentsline {subsubsection}{Strttura}{53}{subsubsection*.32}%
+\contentsline {section}{\numberline {11.4}Convenzioni nomi ed uso dei registri}{54}{section.11.4}%
+\contentsline {subsection}{\numberline {11.4.1}Tabella}{54}{subsection.11.4.1}%
+\contentsline {subsection}{\numberline {11.4.2}Registri temporanei "salvati" e "non salvati"}{54}{subsection.11.4.2}%
+\contentsline {subsubsection}{Registri \$t (temporary)}{54}{subsubsection*.33}%
+\contentsline {subsubsection}{Registri \$s (saved)}{54}{subsubsection*.34}%
+\contentsline {section}{\numberline {11.5}Direttive all'assemblatore}{55}{section.11.5}%
+\contentsline {subsection}{\numberline {11.5.1}Cosa sono?}{55}{subsection.11.5.1}%
+\contentsline {subsection}{\numberline {11.5.2}Esempi di direttive}{55}{subsection.11.5.2}%
+\contentsline {subsection}{\numberline {11.5.3}Esempio d'uso}{55}{subsection.11.5.3}%
+\contentsline {section}{\numberline {11.6}Pseudoistruzioni}{56}{section.11.6}%
+\contentsline {subsection}{\numberline {11.6.1}Cosa sono?}{56}{subsection.11.6.1}%
+\contentsline {subsection}{\numberline {11.6.2}Esempio 1}{56}{subsection.11.6.2}%
+\contentsline {subsection}{\numberline {11.6.3}Esempio 2}{56}{subsection.11.6.3}%
+\contentsline {section}{\numberline {11.7}Procedure}{57}{section.11.7}%
+\contentsline {subsection}{\numberline {11.7.1}Cosa sono?}{57}{subsection.11.7.1}%
+\contentsline {subsection}{\numberline {11.7.2}Passaggi di una procedura}{57}{subsection.11.7.2}%
+\contentsline {subsection}{\numberline {11.7.3}Passaggio parametri}{57}{subsection.11.7.3}%
+\contentsline {subsection}{\numberline {11.7.4}Procedure innestate}{57}{subsection.11.7.4}%
+\contentsline {subsubsection}{Procedure "foglia" e "non foglia"}{57}{subsubsection*.35}%
+\contentsline {subsubsection}{Cosa succede se una procedura ne chiama un'altra?}{57}{subsubsection*.36}%
+\contentsline {subsection}{\numberline {11.7.5}Esempio}{58}{subsection.11.7.5}%
+\contentsline {subsection}{\numberline {11.7.6}Schema uso generale dello stack}{59}{subsection.11.7.6}%
+\contentsline {subsection}{\numberline {11.7.7}Salvataggio dei registri all'interno dello stack}{59}{subsection.11.7.7}%
+\contentsline {subsection}{\numberline {11.7.8}Osservazioni registri \$sp e \$fp}{59}{subsection.11.7.8}%
+\contentsline {subsubsection}{Frame di stack}{59}{subsubsection*.37}%
+\contentsline {subsubsection}{\$sp - Stack pointer}{59}{subsubsection*.38}%
+\contentsline {subsubsection}{\$fp - Frame pointer}{60}{subsubsection*.39}%
+\contentsline {section}{\numberline {11.8}Flusso di controllo}{61}{section.11.8}%
+\contentsline {subsection}{\numberline {11.8.1}Problema}{61}{subsection.11.8.1}%
+\contentsline {subsection}{\numberline {11.8.2}Ruolo della procedura chiamante}{61}{subsection.11.8.2}%
+\contentsline {subsection}{\numberline {11.8.3}Ruolo della procedura chiamata}{61}{subsection.11.8.3}%
+\contentsline {subsubsection}{Appena chiamata}{61}{subsubsection*.40}%
+\contentsline {subsubsection}{Fine esecuzione}{61}{subsubsection*.41}%
+\contentsline {subsection}{\numberline {11.8.4}Istruzione jal - Jump And Link}{62}{subsection.11.8.4}%
+\contentsline {subsubsection}{Cosa fa?}{62}{subsubsection*.42}%
+\contentsline {subsubsection}{Esempio in assembly}{62}{subsubsection*.43}%
+\contentsline {subsection}{\numberline {11.8.5}Istruzione jr - Jump Register}{63}{subsection.11.8.5}%
+\contentsline {subsubsection}{Cosa fa?}{63}{subsubsection*.44}%
+\contentsline {subsubsection}{Esempio in assembly}{63}{subsubsection*.45}%
+\contentsline {section}{\numberline {11.9}Syscall}{64}{section.11.9}%
+\contentsline {subsection}{\numberline {11.9.1}Cosa sono?}{64}{subsection.11.9.1}%
+\contentsline {subsection}{\numberline {11.9.2}Come usare le syscall}{64}{subsection.11.9.2}%
+\contentsline {subsection}{\numberline {11.9.3}Tabella}{64}{subsection.11.9.3}%
+\contentsline {subsection}{\numberline {11.9.4}Esempio d'uso senza procedure}{65}{subsection.11.9.4}%
+\contentsline {subsection}{\numberline {11.9.5}Esempio d'uso con procedure}{66}{subsection.11.9.5}%
+\contentsline {chapter}{\numberline {12}Reti combinatorie}{67}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Cosa sono i circuiti logici?}{67}{section.12.1}%
+\contentsline {section}{\numberline {12.2}Significato di 0 ed 1}{67}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Cosa è un circuito (o rete) combinatoria?}{67}{section.12.3}%
+\contentsline {section}{\numberline {12.4}Porte logiche base}{67}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}Cosa sono?}{67}{subsection.12.4.1}%
+\contentsline {subsection}{\numberline {12.4.2}Porta logica AND}{67}{subsection.12.4.2}%
+\contentsline {subsubsection}{Simbolo}{67}{subsubsection*.46}%
+\contentsline {subsubsection}{Descrizione}{67}{subsubsection*.47}%
+\contentsline {subsubsection}{Tabella}{67}{subsubsection*.48}%
+\contentsline {subsection}{\numberline {12.4.3}Porta logica OR}{68}{subsection.12.4.3}%
+\contentsline {subsubsection}{Simbolo}{68}{subsubsection*.49}%
+\contentsline {subsubsection}{Descrizione}{68}{subsubsection*.50}%
+\contentsline {subsubsection}{Tabella}{68}{subsubsection*.51}%
+\contentsline {subsection}{\numberline {12.4.4}Porta logica NOT}{68}{subsection.12.4.4}%
+\contentsline {subsubsection}{Simbolo}{68}{subsubsection*.52}%
+\contentsline {subsubsection}{Descrizione}{68}{subsubsection*.53}%
+\contentsline {subsubsection}{Tabella}{68}{subsubsection*.54}%
+\contentsline {section}{\numberline {12.5}Porte logiche derivate}{68}{section.12.5}%
+\contentsline {subsection}{\numberline {12.5.1}Cosa sono?}{68}{subsection.12.5.1}%
+\contentsline {subsection}{\numberline {12.5.2}Porta logica NAND}{68}{subsection.12.5.2}%
+\contentsline {subsubsection}{Simbolo}{68}{subsubsection*.55}%
+\contentsline {subsubsection}{Descrizione}{68}{subsubsection*.56}%
+\contentsline {subsubsection}{Tabella}{68}{subsubsection*.57}%
+\contentsline {subsection}{\numberline {12.5.3}Porta logica NOR}{68}{subsection.12.5.3}%
+\contentsline {subsubsection}{Simbolo}{68}{subsubsection*.58}%
+\contentsline {subsubsection}{Descrizione}{68}{subsubsection*.59}%
+\contentsline {subsubsection}{Tabella}{68}{subsubsection*.60}%
+\contentsline {subsection}{\numberline {12.5.4}Porta logica XOR}{69}{subsection.12.5.4}%
+\contentsline {subsubsection}{Simbolo}{69}{subsubsection*.61}%
+\contentsline {subsubsection}{Descrizione}{69}{subsubsection*.62}%
+\contentsline {subsubsection}{Tabella}{69}{subsubsection*.63}%
+\contentsline {section}{\numberline {12.6}Decoder}{70}{section.12.6}%
+\contentsline {subsection}{\numberline {12.6.1}Cosa è?}{70}{subsection.12.6.1}%
+\contentsline {subsection}{\numberline {12.6.2}Come funziona?}{70}{subsection.12.6.2}%
+\contentsline {subsection}{\numberline {12.6.3}Schema semplificato}{70}{subsection.12.6.3}%
+\contentsline {subsection}{\numberline {12.6.4}Schema dettagliato}{70}{subsection.12.6.4}%
+\contentsline {subsection}{\numberline {12.6.5}Tabella}{70}{subsection.12.6.5}%
+\contentsline {section}{\numberline {12.7}Multiplexer}{71}{section.12.7}%
+\contentsline {subsection}{\numberline {12.7.1}Cosa è?}{71}{subsection.12.7.1}%
+\contentsline {subsection}{\numberline {12.7.2}Come funziona?}{71}{subsection.12.7.2}%
+\contentsline {subsection}{\numberline {12.7.3}Esempio}{71}{subsection.12.7.3}%
+\contentsline {subsubsection}{Schema semplificato}{71}{subsubsection*.64}%
+\contentsline {subsubsection}{Schema dettagliato}{71}{subsubsection*.65}%
+\contentsline {subsubsection}{Tabella}{71}{subsubsection*.66}%
+\contentsline {subsubsection}{}{71}{subsubsection*.67}%
+\contentsline {section}{\numberline {12.8}PLA - Programmable Logic Array}{72}{section.12.8}%
+\contentsline {subsection}{\numberline {12.8.1}Cosa è?}{72}{subsection.12.8.1}%
+\contentsline {subsection}{\numberline {12.8.2}Da cosa è compasta?}{72}{subsection.12.8.2}%
+\contentsline {subsection}{\numberline {12.8.3}Esempio}{72}{subsection.12.8.3}%
+\contentsline {subsubsection}{Schema semplificato}{72}{subsubsection*.68}%
+\contentsline {subsubsection}{Tabella}{72}{subsubsection*.69}%
+\contentsline {subsubsection}{Schema dettagliato}{73}{subsubsection*.70}%
+\contentsline {subsubsection}{Formula dell'esempio}{73}{subsubsection*.71}%
+\contentsline {section}{\numberline {12.9}Array di elementi logici}{74}{section.12.9}%
+\contentsline {subsection}{\numberline {12.9.1}Cosa sono?}{74}{subsection.12.9.1}%
+\contentsline {subsection}{\numberline {12.9.2}Esempio con Multiplexer a 32 bit}{74}{subsection.12.9.2}%
+\contentsline {subsubsection}{Schema semplificato}{74}{subsubsection*.72}%
+\contentsline {subsubsection}{Schema dettagliato}{74}{subsubsection*.73}%
+\contentsline {chapter}{\numberline {13}ALU - Arithmetic Logic Unit}{75}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Cosa è?}{75}{section.13.1}%
+\contentsline {section}{\numberline {13.2}Blocchi di base per costruire l'ALU}{75}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Porte AND}{75}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Porte OR}{75}{subsection.13.2.2}%
+\contentsline {subsection}{\numberline {13.2.3}Inverter}{75}{subsection.13.2.3}%
+\contentsline {subsection}{\numberline {13.2.4}Multiplexer}{75}{subsection.13.2.4}%
+\contentsline {section}{\numberline {13.3}ALU a 1 bit}{76}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Schema dettagliato ALU 30-0}{76}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}Schema dettagliato ALU 31}{76}{subsection.13.3.2}%
+\contentsline {subsection}{\numberline {13.3.3}Operazioni disponibili}{77}{subsection.13.3.3}%
+\contentsline {subsection}{\numberline {13.3.4}Operazione SLT - Set on Less Then}{77}{subsection.13.3.4}%
+\contentsline {subsubsection}{Cosa fa?}{77}{subsubsection*.74}%
+\contentsline {subsubsection}{Come funziona?}{77}{subsubsection*.75}%
+\contentsline {subsection}{\numberline {13.3.5}Overflow detection}{77}{subsection.13.3.5}%
+\contentsline {subsubsection}{Cosa fa?}{77}{subsubsection*.76}%
+\contentsline {subsection}{\numberline {13.3.6}Casi di Overflow}{77}{subsection.13.3.6}%
+\contentsline {subsubsection}{Come funziona}{77}{subsubsection*.77}%
+\contentsline {section}{\numberline {13.4}ALU a 32 bit}{78}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Schema dettagliato}{78}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {13.4.2}Schema semplificato}{78}{subsection.13.4.2}%
+\contentsline {subsection}{\numberline {13.4.3}Tabella di controllo}{78}{subsection.13.4.3}%
+\contentsline {subsection}{\numberline {13.4.4}Operazione BEQ - Branch on equal}{79}{subsection.13.4.4}%
+\contentsline {subsubsection}{Cosa fa?}{79}{subsubsection*.78}%
+\contentsline {subsubsection}{Come funziona?}{79}{subsubsection*.79}%
+\contentsline {chapter}{\numberline {14}Reti sequenziali}{80}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Cosa è un circuito (o rete) sequenziale?}{80}{section.14.1}%
+\contentsline {section}{\numberline {14.2}Componenti}{80}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Stato}{80}{section.14.3}%
+\contentsline {section}{\numberline {14.4}Famiglie di circuiti sequenziali}{80}{section.14.4}%
+\contentsline {section}{\numberline {14.5}Clock}{81}{section.14.5}%
+\contentsline {subsection}{\numberline {14.5.1}Cosa è?}{81}{subsection.14.5.1}%
+\contentsline {subsection}{\numberline {14.5.2}Diagramma}{81}{subsection.14.5.2}%
+\contentsline {subsection}{\numberline {14.5.3}Formula: Frequenza di clock}{81}{subsection.14.5.3}%
+\contentsline {section}{\numberline {14.6}S-R Latch}{82}{section.14.6}%
+\contentsline {subsection}{\numberline {14.6.1}Cosa è?}{82}{subsection.14.6.1}%
+\contentsline {subsection}{\numberline {14.6.2}Schema}{82}{subsection.14.6.2}%
+\contentsline {subsection}{\numberline {14.6.3}Tabella}{82}{subsection.14.6.3}%
+\contentsline {subsection}{\numberline {14.6.4}Problematiche}{82}{subsection.14.6.4}%
+\contentsline {section}{\numberline {14.7}D Latch}{83}{section.14.7}%
+\contentsline {subsection}{\numberline {14.7.1}Definizione}{83}{subsection.14.7.1}%
+\contentsline {subsection}{\numberline {14.7.2}Schema}{83}{subsection.14.7.2}%
+\contentsline {subsection}{\numberline {14.7.3}Comportamento}{83}{subsection.14.7.3}%
+\contentsline {subsection}{\numberline {14.7.4}Segnale $D$}{83}{subsection.14.7.4}%
+\contentsline {subsection}{\numberline {14.7.5}Lunghezza periodo di clock $T$}{84}{subsection.14.7.5}%
+\contentsline {section}{\numberline {14.8}D Flip-Flop}{85}{section.14.8}%
+\contentsline {subsection}{\numberline {14.8.1}Metodologie di timing}{85}{subsection.14.8.1}%
+\contentsline {subsection}{\numberline {14.8.2}Definizione}{85}{subsection.14.8.2}%
+\contentsline {subsection}{\numberline {14.8.3}Schema}{85}{subsection.14.8.3}%
+\contentsline {subsection}{\numberline {14.8.4}Schema dei segnali}{85}{subsection.14.8.4}%
+\contentsline {subsection}{\numberline {14.8.5}Funzionamento}{85}{subsection.14.8.5}%
+\contentsline {chapter}{\numberline {15}Register File}{86}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Cosa è?}{86}{section.15.1}%
+\contentsline {section}{\numberline {15.2}Da cosa è composto?}{86}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}Schema}{86}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}Spiegazione porte}{86}{subsection.15.2.2}%
+\contentsline {subsubsection}{Registri in lettura}{86}{subsubsection*.80}%
+\contentsline {subsubsection}{Registri in scrittura}{86}{subsubsection*.81}%
+\contentsline {subsubsection}{Segnali di controllo}{86}{subsubsection*.82}%
+\contentsline {section}{\numberline {15.3}Lettura dal Register File}{87}{section.15.3}%
+\contentsline {subsection}{\numberline {15.3.1}Schema}{87}{subsection.15.3.1}%
+\contentsline {subsection}{\numberline {15.3.2}Spiegazione}{87}{subsection.15.3.2}%
+\contentsline {section}{\numberline {15.4}Scrittura nel Register File}{88}{section.15.4}%
+\contentsline {subsection}{\numberline {15.4.1}Schema}{88}{subsection.15.4.1}%
+\contentsline {subsection}{\numberline {15.4.2}Spiegazione}{88}{subsection.15.4.2}%
+\contentsline {chapter}{\numberline {16}Datapath Multiciclo}{89}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Schema}{89}{section.16.1}%
+\contentsline {section}{\numberline {16.2}Componenti}{90}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}Unità Funzionali}{90}{subsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.2.2}Registri}{90}{subsection.16.2.2}%
+\contentsline {subsection}{\numberline {16.2.3}Multiplexer}{90}{subsection.16.2.3}%
+\contentsline {section}{\numberline {16.3}Segnali di controllo}{91}{section.16.3}%
+\contentsline {subsection}{\numberline {16.3.1}Segnali di Abilitazione (a 1 bit)}{91}{subsection.16.3.1}%
+\contentsline {subsection}{\numberline {16.3.2}Segnali di Selezione Multiplexer a 2 vie (a 1 bit)}{91}{subsection.16.3.2}%
+\contentsline {subsection}{\numberline {16.3.3}Segnali di Controllo a 2 bit (Multiplexer complessi e ALU)}{92}{subsection.16.3.3}%
+\contentsline {subsection}{\numberline {16.3.4}Segnali per la Gestione delle Eccezioni (Co-processore 0)}{92}{subsection.16.3.4}%
+\contentsline {section}{\numberline {16.4}Metodologia di clocking}{93}{section.16.4}%
+\contentsline {section}{\numberline {16.5}Passaggi per l'esecuzione di una istruzione}{93}{section.16.5}%
+\contentsline {section}{\numberline {16.6}FSM}{94}{section.16.6}%
+\contentsline {subsection}{\numberline {16.6.1}Circuito sequenziale per il controllo}{94}{subsection.16.6.1}%
+\contentsline {subsection}{\numberline {16.6.2}FSM}{94}{subsection.16.6.2}%
+\contentsline {subsection}{\numberline {16.6.3}Spiegazione}{94}{subsection.16.6.3}%
+\contentsline {section}{\numberline {16.7}Fetch}{95}{section.16.7}%
+\contentsline {subsection}{\numberline {16.7.1}Spiegazione}{95}{subsection.16.7.1}%
+\contentsline {subsection}{\numberline {16.7.2}Componenti utilizzati}{95}{subsection.16.7.2}%
+\contentsline {subsection}{\numberline {16.7.3}Procedura}{95}{subsection.16.7.3}%
+\contentsline {subsection}{\numberline {16.7.4}Segnali}{95}{subsection.16.7.4}%
+\contentsline {section}{\numberline {16.8}Decode}{96}{section.16.8}%
+\contentsline {subsection}{\numberline {16.8.1}Spiegazione}{96}{subsection.16.8.1}%
+\contentsline {subsection}{\numberline {16.8.2}Componenti utilizzati}{96}{subsection.16.8.2}%
+\contentsline {subsection}{\numberline {16.8.3}Procedura}{96}{subsection.16.8.3}%
+\contentsline {subsection}{\numberline {16.8.4}Segnali}{96}{subsection.16.8.4}%
+\contentsline {section}{\numberline {16.9}Execute per le istruzioni jump}{97}{section.16.9}%
+\contentsline {subsection}{\numberline {16.9.1}Spiegazione}{97}{subsection.16.9.1}%
+\contentsline {subsection}{\numberline {16.9.2}Componenti utilizzati}{97}{subsection.16.9.2}%
+\contentsline {subsection}{\numberline {16.9.3}Procedura}{97}{subsection.16.9.3}%
+\contentsline {subsection}{\numberline {16.9.4}Segnali}{97}{subsection.16.9.4}%
+\contentsline {section}{\numberline {16.10}Execute beq}{98}{section.16.10}%
+\contentsline {subsection}{\numberline {16.10.1}Spiegazione}{98}{subsection.16.10.1}%
+\contentsline {subsection}{\numberline {16.10.2}Componenti utilizzati}{98}{subsection.16.10.2}%
+\contentsline {subsection}{\numberline {16.10.3}Procedura}{98}{subsection.16.10.3}%
+\contentsline {subsection}{\numberline {16.10.4}Segnali}{98}{subsection.16.10.4}%
+\contentsline {section}{\numberline {16.11}Execute R-Type}{99}{section.16.11}%
+\contentsline {subsection}{\numberline {16.11.1}Spiegazione}{99}{subsection.16.11.1}%
+\contentsline {subsection}{\numberline {16.11.2}Componenti utilizzati}{99}{subsection.16.11.2}%
+\contentsline {subsection}{\numberline {16.11.3}Procedura}{99}{subsection.16.11.3}%
+\contentsline {subsection}{\numberline {16.11.4}Segnali}{99}{subsection.16.11.4}%
+\contentsline {section}{\numberline {16.12}Execute Store Word}{100}{section.16.12}%
+\contentsline {subsection}{\numberline {16.12.1}Spiegazione}{100}{subsection.16.12.1}%
+\contentsline {subsection}{\numberline {16.12.2}Componenti utilizzati}{100}{subsection.16.12.2}%
+\contentsline {subsection}{\numberline {16.12.3}Procedura}{100}{subsection.16.12.3}%
+\contentsline {subsection}{\numberline {16.12.4}Segnali di controllo}{100}{subsection.16.12.4}%
+\contentsline {section}{\numberline {16.13}Execute Load Word}{101}{section.16.13}%
+\contentsline {subsection}{\numberline {16.13.1}Spiegazione}{101}{subsection.16.13.1}%
+\contentsline {subsection}{\numberline {16.13.2}Componenti utilizzati}{101}{subsection.16.13.2}%
+\contentsline {subsection}{\numberline {16.13.3}Procedura}{101}{subsection.16.13.3}%
+\contentsline {subsection}{\numberline {16.13.4}Segnali}{101}{subsection.16.13.4}%
+\contentsline {chapter}{\numberline {17}Datapath Singolo ciclo}{102}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Schema}{102}{section.17.1}%
+\contentsline {section}{\numberline {17.2}Metodologia di clockin}{102}{section.17.2}%
+\contentsline {chapter}{\numberline {18}Eccezioni}{103}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Definizione}{103}{section.18.1}%
+\contentsline {subsection}{\numberline {18.1.1}Esempi di eccezioni}{103}{subsection.18.1.1}%
+\contentsline {section}{\numberline {18.2}Procedura generale per la gestione di un eccezione}{103}{section.18.2}%
+\contentsline {subsection}{\numberline {18.2.1}Procedura generale}{103}{subsection.18.2.1}%
+\contentsline {subsection}{\numberline {18.2.2}Problematica: Identificazione dell'evento inatteso}{103}{subsection.18.2.2}%
+\contentsline {subsubsection}{Indirizzo fisso}{103}{subsubsection*.83}%
+\contentsline {subsubsection}{Interruzioni vettorizzate}{103}{subsubsection*.84}%
+\contentsline {section}{\numberline {18.3}Gestione delle eccezioni in MIPS}{104}{section.18.3}%
+\contentsline {subsection}{\numberline {18.3.1}Registri Coprocessore 0}{104}{subsection.18.3.1}%
+\contentsline {subsection}{\numberline {18.3.2}Procedura}{104}{subsection.18.3.2}%
+\contentsline {subsubsection}{Azioni a carico dell'hardware}{104}{subsubsection*.85}%
+\contentsline {subsubsection}{Azioni a carico dell'exception handler}{104}{subsubsection*.86}%
+\contentsline {subsection}{\numberline {18.3.3}Tabella delle eccezioni}{105}{subsection.18.3.3}%
+\contentsline {chapter}{\numberline {19}Interrupt}{106}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Definizione}{106}{section.19.1}%
+\contentsline {chapter}{\numberline {20}I/O gestito da programma}{107}{chapter.20}%
+\contentsline {chapter}{\numberline {21}I/O gestito da interrupt}{108}{chapter.21}%
+\contentsline {chapter}{\numberline {22}I/O gestito da DMA}{109}{chapter.22}%
+\contentsline {part}{2\hspace {1em}Esercitazioni svolte}{110}{part.2}%
+\contentsline {part}{3\hspace {1em}Laboratori svolti}{111}{part.3}%
+\contentsline {part}{4\hspace {1em}Quiz Mega svolti}{112}{part.4}%
+\contentsline {part}{5\hspace {1em}Domande aperte Mega svolte}{113}{part.5}%

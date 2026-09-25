@@ -32,16 +32,16 @@ Le porte logiche hanno n input e generalmente 1 output
 \begin{minipage}[t]{0.31\textwidth}
     \subsubsection{Simbolo}
     \begin{tikzpicture}[line width=1.6pt, line cap=round, line join=round]
-    % Ingressi (linee orizzontali a sinistra)
-    \draw (-0.7, 0.35) -- (0, 0.35);
-    \draw (-0.7, -0.35) -- (0, -0.35);
+        % Ingressi (linee orizzontali a sinistra)
+        \draw (-0.7, 0.35) -- (0, 0.35);
+        \draw (-0.7, -0.35) -- (0, -0.35);
 
-    % Corpo della porta AND: lato posteriore dritto, tratti superiore/inferiore e arco semicircolare
-    \draw (0, -0.7) -- (0, 0.7) -- (0.5, 0.7) arc[start angle=90, end angle=-90, radius=0.7] -- (0, -0.7);
+        % Corpo della porta AND: lato posteriore dritto, tratti superiore/inferiore e arco semicircolare
+        \draw (0, -0.7) -- (0, 0.7) -- (0.5, 0.7) arc[start angle=90, end angle=-90, radius=0.7] -- (0, -0.7);
 
-    % Uscita (linea orizzontale a destra)
-    \draw (1.2, 0) -- (1.9, 0);
-\end{tikzpicture}
+        % Uscita (linea orizzontale a destra)
+        \draw (1.2, 0) -- (1.9, 0);
+    \end{tikzpicture}
 \end{minipage}
 \hfill
 \begin{minipage}[t]{0.31\textwidth}
@@ -58,7 +58,6 @@ Le porte logiche hanno n input e generalmente 1 output
             0   &   1   &   0 \\ \hline
             1   &   0   &   0 \\ \hline
             1   &   1   &   1 \\ \hline
-
         \end{tabular}
 \end{minipage}
 
