@@ -1,0 +1,12 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {part}{I\hspace {1em}Ripasso Algoritmi}{2}{part.1}%
+\contentsline {part}{II\hspace {1em}Programmazione Dinamica}{3}{part.2}%
+\contentsline {chapter}{\numberline {1}LCS - Longest}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sequenze}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Definizione}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Sequenza vuota}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Lunghezza della sequenza}{4}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Esempio di sequenza}{4}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Sottosequenze}{4}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Definizione}{4}{subsection.1.2.1}%

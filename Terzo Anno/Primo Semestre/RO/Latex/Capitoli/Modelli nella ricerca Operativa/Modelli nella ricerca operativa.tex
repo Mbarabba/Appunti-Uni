@@ -1,0 +1,236 @@
+\chapter{Modelli nella ricerca operativa}
+
+    \section{Problemi di Ottimizzazione}
+
+        \subsection{Definizione: Problema di ottimizzazione}
+        Data una \textbf{funzione obiettivo}
+        {
+            \Large
+            $$
+                f:\mathbb{R}^n \to \mathbb{R}
+            $$
+        }
+
+        Un problema di ottimizzazione consiste nel determinare, se esistono uno o più di minimo / massimo $x'$, assegnazione di valori delle \textbf{variabili decisionali $x$}, della \textbf{funzione obiettivo $f$} tra i punti x che appartengono alla \textbf{regione ammissibile $X$}
+
+
+        \subsubsection{Formula: Problema di ottimizzazione generale}
+        Un \textbf{problema di ottimizzazione} è formulabile come segue:
+        {
+            \large
+
+            \begin{gather*}
+                optf(x) \\
+                s.a, x\in X \ t.c \  \uline{X \subseteq \mathbb{R}^n} \to \text{\textbf{Regione Ammissibile:} Insieme delle soluzioni x ammissibili} \\ \\
+                \text{Dove } opt \in \{min, max\}
+            \end{gather*}
+        }
+
+
+        \subsubsection{Formula: Problema di Minimizzazione}
+        \begin{gather*}
+            min\, f(x) \\
+            \text{Soggetto a } \, x \in X  \ t.c \ X \in \mathbb{R}^n
+        \end{gather*}
+
+        $x \in X \ t.c \ X \subseteq \mathbb{R}^n$ vengono definite come \textbf{Variabili Decisionali:} Variabili numeriche i cui valori identificano una soluzione del problema
+
+        \subsubsection{Formula: Problema di Massimizzazione}
+        \begin{gather*}
+            max\, f(x) \\
+            \text{Soggetto a} \, x \in X  \ t.c \ X \in \mathbb{R}^n
+        \end{gather*}            
+
+
+        \newpage
+        \subsection{Rappresentazione grafica ed analitica della regione ammissibile}
+
+        \begin{minipage}{0.45\textwidth}
+            \begin{gather*}
+                opt\, f(x) \\
+                \text{Soggetto a } x \in X \quad X \subseteq \mathbb{R}^n \\
+                max\, f(x)=-min \, -f(x)
+            \end{gather*}
+        \end{minipage}
+        \hfil
+        \begin{minipage}{0.45\textwidth}
+            \begin{center}
+                \includegraphics[scale=0.3]{Immagini/Screenshot From 2026-09-28 21-19-09.png}
+            \end{center}
+        \end{minipage}
+
+        \section{Ottimizzazione}
+
+            \subsection{Ottimizzazione non vincolata}
+            La ricerca del/i punto/i di ottimo della funzione obiettivo viene condotta su tutto lo spazio di definizione della/e variabile/i di decisione
+
+            \begin{center}
+                \begin{minipage}{0.005\textwidth}
+                    \begin{center}
+                        \includegraphics[scale=0.3]{Immagini/Screenshot From 2026-09-28 21-23-17.png}
+                    \end{center}
+                \end{minipage}
+                \hfil
+                \begin{minipage}{0.05\textwidth}
+                    \begin{gather*}
+                        X = \mathbb{R}^n \\ \\
+                        x \in (-\infty, +\infty)
+                    \end{gather*}
+                \end{minipage}
+            \end{center}
+
+
+            \subsection{Ottimizzazione vincolata}
+            La ricerca del/i punto/i di ottimo della funzione obiettivo viene condotta su un sottoinsieme proprio dello spazio di definizione della/e variabile/i di decisione
+
+            \begin{center}
+                \begin{minipage}{0.005\textwidth}
+                    \includegraphics[scale=0.3]{Immagini/Screenshot From 2026-09-28 21-28-37.png}
+                \end{minipage}
+                \hfil
+                \begin{minipage}{0.05\textwidth}
+                    \begin{gather*}
+                        X \subset \mathbb{R}^n \\ \\
+                        x \in [a,+\infty)
+                    \end{gather*}
+                \end{minipage}
+            \end{center}
+
+
+            \newpage
+            \subsection{Ottimizzazione Intera}
+            Le variabili assumono solo valori interi
+
+            {
+                \large
+
+                $$
+                X \in \mathbb{Z}^n
+                $$
+            }
+
+            \subsection{Ottimizzazione Binaria}
+            Le variabili assumono solo valore 0 o 1
+
+            {
+                \large
+
+                $$
+                x \in \{0,1\}^n
+                $$
+            }
+
+            \subsection{Ottimizzazione Mista}
+            Alcune variabili assumono valori interi mentre altri variabili assumono solo valori binari
+
+            Se non specificato altrimenti, si intende $X \subseteq \mathbb{R}^n$
+
+    \newpage
+    \section{Programmazione Matematica}
+        \subsection{Definizione}
+        Quando l'insieme $X$ delle soluzioni ammissibili di un problema di ottimizzazione viene espresso attraverso un sistema di equazioni e disequazione, esso prende il nome di \textbf{problema di programmazione matematica (PM)}
+
+        \subsection{Vincoli}
+        Un vincolo è un espressione del tipo,
+        $g_i: X \to \mathbb{R} \quad
+        g_i(\mathbf{x}) 
+            \begin{Bmatrix} 
+                \ge \\ = \\ \le 
+            \end{Bmatrix} 0
+        $ 
+        è una funzione generica che lega tra loro le variabili decisionali, In generale possiamo avere uno o più vincoli.
+
+        L'espressione $\begin{Bmatrix} \ge \\ = \\ \le \end{Bmatrix}0$ intende specificare che:
+        \begin{itemize}
+            \item $g_i(x) \geq 0$ oppure
+            \item $g_i(x) = 0$ oppure
+            \item $g_i(x) \leq 0$
+        \end{itemize}
+
+        \subsection{Definizione: Regione Ammissibile}
+        In questo caso la regione ammissibile è definita dall'insieme dei vincoli del problema
+
+        {
+            \large
+
+            $$
+                X = \{x \in \mathbb{R}^n \text{ con } 
+                g_i(\mathbf{x}) 
+                \begin{Bmatrix} 
+                    \ge \\ = \\ \le 
+                \end{Bmatrix} 0, i=1,\dots,m
+                    \}
+            $$
+        }
+        
+        Osserviamo, quindi, che abbiamo $m$ vincoli ed $n$ variabili
+        \begin{itemize}
+            \item Se $\mathbf{x \in X}$ allora $x$ è \textbf{soluzione ammissibile}
+            \item Se $\mathbf{x \not\in X}$ allora x \textbf{non è una soluzione ammissibile (soluzione inammissibile)}
+        \end{itemize}
+
+        \subsection{Ottimi globali e locali}
+        La risoluzione di un problema di programmazione matematica \uline{consiste nel trovare una soluzione ammissibile che sia un \textbf{otttimo globale}}, vale a dire un vettore $x' \in X$ tale che:
+        
+        \begin{gather*}
+            f(x*) \leq f(x) \quad \forall x \in X \quad \text{se opt = min} \\ \\
+            f(x*) \geq f(x) \quad \forall x \in X \quad \text{se opt = max}
+        \end{gather*}
+
+        Un problema di ottimizzazione può avere:
+        \begin{itemize}
+            \item Più di un ottimo globale
+            \item Più di un ottimo locale
+        \end{itemize}
+
+        \subsection{Ottimi globali e locali: Casi possibili}
+
+        \subsubsection{Programmazione lineare}
+        {
+            \large
+
+            $$
+                opt\, f(x) = c^Tx\, \text{(lineare)} \quad X = \{x \in \mathbb{R}^n :  
+                g_i(\mathbf{x}) 
+                \begin{Bmatrix} 
+                    \ge \\ = \\ \le 
+                \end{Bmatrix} 0, i=1,\dots,m
+                    \}
+            $$
+        }
+
+        \subsubsection{Programmazione lineare Intera}
+        {
+            \large
+
+            $$
+                opt\, f(x) = c^Tx\, \text{(lineare)} \quad X = \{x \in \mathbb{Z}^n :  
+                g_i(\mathbf{x}) 
+                \begin{Bmatrix} 
+                    \ge \\ = \\ \le 
+                \end{Bmatrix} 0, i=1,\dots,m
+                    \}
+            $$
+        }
+
+        \subsubsection{Programmazione non lineare}
+        {
+            \large
+
+            $$
+                opt\, f(x)\, \text{(lineare) o non lineare} \quad X = \{x \in \mathbb{R}^n :  
+                g_i(\mathbf{x}) 
+                \begin{Bmatrix} 
+                    \ge \\ = \\ \le 
+                \end{Bmatrix} 0, i=1,\dots,m
+                    \}
+            $$
+        }
+
+        \subsection{Esempio 1}
+
+        \subsection{Esempio 2}
+
+        \subsection{Esempio 3}
+
+        \subsection{Esempio Cuba Libre}

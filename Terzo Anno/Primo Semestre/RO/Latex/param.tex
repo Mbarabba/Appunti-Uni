@@ -1,0 +1,91 @@
+% --- 0 nome appunti
+
+
+% --- 1. LINGUA E FONT ---
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage[italian]{babel} % Traduce "Chapter" in "Capitolo", ecc.
+\usepackage{lmodern}        % Font vettoriale di alta qualità
+\usepackage{ulem}
+\usepackage{multirow}
+\usepackage{makecell}
+
+% --- 2. GEOMETRIA E IMPAGINAZIONE ---
+\usepackage[a4paper, top=2.5cm, bottom=2.5cm, left=2.5cm, right=2.5cm]{geometry}
+\usepackage{titlesec}       % Personalizzazione dei titoli
+\setlength{\parindent}{0pt}
+% Rimuove la scritta "Capitolo X" e affianca il numero al titolo
+\titleformat{\chapter}[hang]
+  {\normalfont\huge\bfseries}{\thechapter.}{20pt}{\Huge}
+\titlespacing*{\chapter}{0pt}{-20pt}{30pt}
+
+% --- 3. MATEMATICA E SIMBOLI ---
+\usepackage{amsmath, amssymb, amsfonts}
+
+% --- 4. GRAFICA E IMMAGINI ---
+\usepackage{graphicx}
+\usepackage{float}          % Permette l'uso di [H] per forzare la posizione delle immagini
+\usepackage{caption}        % Personalizzazione delle didascalie
+\usepackage{subcaption}     % Per affiancare più immagini
+\usepackage{geometry}
+\geometry{a4paper, margin=1.25cm}
+\usepackage{parskip}
+\usepackage{titlesec}
+\usepackage{xltabular}
+
+% --- 5. TIKZ ---
+\usepackage{tikz}
+
+% --- 6. LISTE E TABELLE ---
+\usepackage{enumitem}       % Controllo avanzato di itemize e enumerate
+\usepackage{booktabs}       % Tabelle professionali (toprule, midrule, bottomrule)
+\usepackage{tabularx}       % Tabelle che si adattano alla larghezza della pagina
+
+% --- 7. FORMATTAZIONE DEL CODICE (LISTINGS) ---
+\usepackage{listings}
+\usepackage{xcolor}
+
+% Definizione colori per il codice
+\definecolor{codegreen}{rgb}{0,0.6,0}
+\definecolor{codegray}{rgb}{0.5,0.5,0.5}
+\definecolor{codepurple}{rgb}{0.58,0,0.82}
+\definecolor{backcolour}{rgb}{0.95,0.95,0.92}
+
+% Configurazione stile codice (ottimizzato per Java/C++)
+\lstdefinestyle{oopstyle}{
+    backgroundcolor=\color{backcolour},   
+    commentstyle=\color{codegreen}\itshape,
+    keywordstyle=\color{magenta}\bfseries,
+    numberstyle=\tiny\color{codegray},
+    stringstyle=\color{codepurple},
+    basicstyle=\ttfamily\footnotesize,
+    breakatwhitespace=false,         
+    breaklines=true,                 
+    captionpos=b,                    
+    keepspaces=true,                 
+    numbers=left,                    
+    numbersep=5pt,                  
+    showspaces=false,                
+    showstringspaces=false,
+    showtabs=false,                  
+    tabsize=2,
+    frame=single,
+    rulecolor=\color{black!30}
+}
+\lstset{style=oopstyle}
+
+% --- 8. BOX COLORATI (PATTERN GRASP, GOF, PROCESSO UP) ---
+\usepackage[most]{tcolorbox}
+
+% --- 9. COLLEGAMENTI E INDICE (Da caricare per ultimo) ---
+\usepackage{hyperref}
+\hypersetup{
+    colorlinks=true,
+    linkcolor=blue!70!black, % Colore dei link interni (indice)
+    filecolor=magenta,       % Colore dei link a file
+    urlcolor=cyan,           % Colore degli URL
+    pdftitle={Appunti di Architettura degli elaborati},
+    pdfauthor={Il tuo nome},
+    pdfpagemode=UseOutlines
+}
+\usepackage{bookmark} % Migliora i segnalibri nel lettore PDF
