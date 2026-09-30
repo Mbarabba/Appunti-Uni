@@ -1,4 +1,4 @@
-\chapter{LCS - Longest}
+\chapter{Sequenze e sottosequenze}
 
     \section{Sequenze}
         \subsection{Definizione}
@@ -13,7 +13,7 @@
         La lunghezza della sequenza vuota è pari a 0
 
         \subsection{Esempio di sequenza}
-        {
+        { 
             \Large
 
             \begin{gather*}
@@ -30,6 +30,254 @@
             \end{gather*}
         }
 
+
+        \subsection{Prefisso}
+        Data una sequenza $X = <x_1, \dots, x_n>$ sia $i \in \{0,1,\dots,n\}$ il prefisso i-esimo di $X$ è:
+        {
+            \Large
+        
+            \begin{gather*}
+                X_i = <x_1, \dots, x_n> \text{ con } i>0 \\
+                X_0 = \epsilon = <> \text{ (sequenza vuota) con }i=0
+            \end{gather*}
+        }
+
+        \subsection{Esempio di prefisso}
+        {
+            \Large
+
+            \begin{gather*}
+                X = <a,b,c,b,d,a,b> \quad |X| = 7 \\
+                X_3 = <a,b,c> \\
+                X_5 = <a,b,c,b,d> \\
+                X_7 = <a,b,c,b,d,a,b> = X \\
+                X_0 = <>
+            \end{gather*}
+        }
+        
+
     \section{Sottosequenze}
         \subsection{Definizione}
-        Data una sequenza $X=<x_1, \dots, x_n>$ e un'altra sequenza $Z=<z_1, \dots, z_k>$ si dice che $Z$ è sottosequenza di X se e solo s
+        Data una sequenza $X=<x_1, \dots, x_n>$ e un'altra sequenza $Z=<z_1, \dots, z_k>$ si dice che $Z$ è \textbf{sottosequenza} di X se e solo se \uline{esiste una sequenza strettamente crescente di indici $<i_1, \dots, i_k>$ tale che $\forall j \in \{1, \dots, k\}\ z_j = x_{i_{j}}$} 
+
+        \subsection{Esempio di sottosequenza}
+        {
+            \Large
+
+            \begin{gather*}
+                X = <a, b, c, b, d, a, b> \quad |X|=7 \\
+                Z = <b, c, d, b> \quad |Z| = 4 \\ 
+                \\
+                <i_1, i_2, i_3, i,4> = <2, 3, 5, 7> \ \text{infatti} \\ 
+                \\
+                \mathbf{z_1} = b = x_{i_{1}} = \mathbf{x_2} \\
+                \mathbf{z_2} = c = x_{i_2} = \mathbf{x_3} \\
+                \mathbf{z_3} = d = x_{i_3} = \mathbf{x_5} \\
+                \mathbf{z_4} = b = x_{i_4} = \mathbf{x_7}
+            \end{gather*}
+        }
+
+
+\chapter{LCS - Longest Common Subsequence}
+    \section{Istanza}
+    Abbiamo 2 sequenze:
+    {
+        \Large
+
+        \begin{gather*}
+            X = <x_1, \dots, x_m> \\
+            Y = <y_1, \dots, y_m>        
+        \end{gather*}
+    }
+    
+    \section{Obiettivo}
+    Vogliamo $Z$, ossia \uline{la più lunga sottosequenza comunue}
+    
+    {
+        \Large
+
+        $$
+        |Z| = max\{|W|: W \text{ sottosequenza sia di } X \text{ che di } Y\}
+        $$
+    }
+
+    Possiamo avere più soluzioni, con $LCS(X_m, Y_n)$ indichiamo una soluzione
+
+        \subsection{Esempio di LCS}
+        
+        {
+            \begin{gather*}
+                X = <a, b, c, d, b, a, b> \quad m \\
+                Y = <b, d, c, a, b, a> \quad n=6 \\
+                Z^{(1)} = <b,c,a> \text{ è sottosequenza di } X \text{ e } Y \text{di lunghezza } 3 \\
+                Z^{(2)} = <b,c,b,a> \text{ è sottosequenza di } X \text{ e } Y \text{di lunghezza } 4 \\
+                Z^{(3)} = <b,d,a, b> \text{ è sottosequenza di } X \text{ e } Y \text{di lunghezza } 4 \\ \\
+                Z^{(2)} \text{ e } Z^{3} \text{ sono entrambe } LCS(X,Y)
+            \end{gather*}
+        }
+    \section{Come risolvere il problema LCS?: Metodo NAIF}
+    \begin{enumerate}
+        \item Generare tutte le sottosequenze della più corta tra $X$ e $Y$ (Supponiamo sia $X$)
+        \item Per ciascuna di esse controllare che sia sottosequenza di $Y$
+        \item \uline{In caso il punto precedente venga rispettato}, controllare che la sua lunghezza superi quella della più lunga sottosequenza comune sinora incontrata (occorre memorizzare il valore della più lunga sottosequenza sinora incontrata)
+        \item \uline{In caso il punto precedente venga rispettato}, aggiornare tale valore e memorizzare la sottosequenza
+    \end{enumerate}
+
+        \subsection{Complessità}
+        Data $X = <x_>, \dots, x_n>$ il numero di possibili sottosequenze è pari a $2^n$ portando così l'algoritmo ad avere una complessità esponenziale \textbf{nel caso peggiore}.
+
+        LCS è un problema di ottimizzazione combinatoria (Programmazione dinamica)
+
+        \begin{itemize}
+            \item Occorre \uline{ridefinire il problema in termini ricorsivi}
+            \item Disegnare un algortimo \textbf{iterativo bottom-up}
+        \end{itemize}
+
+
+\chapter{LCS in termini ricorsivi}
+        \section{Istanza}
+        Abbiamo 2 sequenze:
+        
+        {
+            \Large
+
+            \begin{gather*}
+                X_m = <x_1, \dots, x_m> \\
+                Y_n = <y_1, \dots, y_n>
+            \end{gather*}
+        }
+
+        \section{Obiettivo}
+        Trovare $Z^{(m,b)}$ che è una $LCS(X_m, Y_n)$
+
+        \subsection{Definizione del sottoproblema}
+
+        \subsubsection{Cosa dobbiamo fare}
+        Per scrivere la soluzione di un sottoproblema qualunque abbiamo bisogno di:
+        \begin{itemize}
+            \item Caso base
+            \item Equazione di ricorrenza
+        \end{itemize}
+
+
+        \subsubsection{Istanze}
+        Abbiamo 2 sequenze:
+        
+        {
+            \Large
+
+            \begin{gather*}
+                X_m = <x_1, \dots, x_i> \quad \text{con } 0 \leq i \leq m\\
+                Y_n = <y_1, \dots, y_j> \quad \text{con } 0 \leq j \leq n \\ 
+                \text{Se } i=m \text{ e } j=m \text{ abbiamo l'intera } X_m \text{ e l'intera } Y_n
+            \end{gather*}
+        }
+
+        \subsubsection{Considerazioni}
+        \begin{itemize}
+            \item Se $i=0 \quad X_i = <> \quad Y_j$
+            \item Se $j=0 \quad X_i \quad Y_j = <>$
+            \item Se $i=j=0 \quad X_i = Y_j = <>$
+        \end{itemize}
+
+        \subsubsection{Numero di sottoproblemi}
+        Ogni coppia $(i,j)$ con $i \in \{0, \dots, m\}$ e $j \in \{0, \dots, n\}$ individua un sottoproblema, portando così ad avere $(m+1) \cdot (n+1) sottoproblemi$
+
+
+        \section{Soluzione del sottoproblema}
+        \subsection{Definizione della lunghezza della soluzione}
+            Definiamo con $c_{(i,j)}$ la lunghezza di una LCS delle sequenze $X_i$ e $Y_j$
+
+        \subsection{Spiegazione della soluzione}
+        Dato il sottoproblema $(i,j)$ vogliamo calcolare $Z^{i,j} = LCS(X_i, Y_j)$ assumendo di conoscere tutte le soluzioni dei sottoproblemi più piccoli
+
+        \subsection{"Matrice dei sottoproblemi"}
+\begin{minipage}[t]{0.5\textwidth}
+            \begin{center}
+                % Aumentiamo lo spazio tra le righe e le colonne per una migliore leggibilità
+                \setlength{\arraycolsep}{10pt}
+                \renewcommand{\arraystretch}{2}
+    
+                    $\begin{array}{ccccc}
+                    % Bordo superiore
+                    \cline{1-5}
+                    \multicolumn{1}{|c}{Z^{(0,0)}} & Z^{(0,1)} & \dots & Z^{(0,j-1)} & \multicolumn{1}{c|}{Z^{(0,j)}} \\
+                    \multicolumn{1}{|c}{Z^{(1,0)}} & Z^{(1,1)} & \dots & Z^{(1,j-1)} & \multicolumn{1}{c|}{Z^{(1,j)}} \\
+                    \multicolumn{1}{|c}{\vdots}    & \vdots    &       & \vdots      & \multicolumn{1}{c|}{\vdots} \\
+                    \multicolumn{1}{|c}{Z^{(i-1,0)}} & Z^{(i-1,1)} & \dots & Z^{(i-1,j-1)} & \multicolumn{1}{c|}{Z^{(i-1,j)}} \\
+                    % Bordo orizzontale solo sotto l'ultimo elemento della penultima riga
+                    \cline{5-5}
+                    \multicolumn{1}{|c}{Z^{(i,0)}} & Z^{(i,1)} & \dots & \multicolumn{1}{c|}{Z^{(i,j-1)}} & \\
+                    % Bordo inferiore per le restanti colonne
+                    \cline{1-4}
+                    \end{array}$
+            \end{center}
+\end{minipage}
+\hfil
+\begin{minipage}[t]{0.45\textwidth}
+    \subsubsection{Nota bene}
+    \begin{itemize}
+        \item $i =$ colonna, $j =$ riga
+        \item La 1ª riga e la 1ª colonna sono tutte le possibili combinazioni dei casi base $i=0$ oppure $j=0$
+    \end{itemize}
+\end{minipage}
+
+\vspace{0.5cm}
+
+        Noi non abbiamo conoscenza dei contentui delle 2 sequenze (ossia le soluzioni calcolate precendetemente conosciamo solo l'input ($i$ e $j$) ) essendo esse risultati di chiamate ricorsive
+
+        $Z^{(i,j)}$ è l'espressione che dipenda da (eventualmente) tutte le soluzioni dei sottoproblemi più piccoli con:
+        \begin{itemize}
+            \item $0 \leq \overline{i} \leq i$
+            \item $0 \leq \overline{j} \leq j$
+            \item $(\overline{i} < i) \land (\overline{j} < j)$
+        \end{itemize} 
+
+
+        \section{Soluzione}
+            \subsection{Casi base}
+            \begin{itemize}
+                \item Se \textbf{$\mathbf{i=0}$ e $\mathbf{j}$ qualunque} \\
+                {\Large $$Z^{(0,j)}=LCS(X_0, Y_j)=LCS(<>, Y_j) = <>$$} \\
+                Il risultato sarà una sequenza vuota con $c_(0,j)=0$
+
+                \item Se \textbf{$\mathbf{j=0}$ e $\mathbf{i}$ qualunque} \\
+                {\Large $$Z^{(i,0)}=LCS(X_i, Y_0)=LCS(X_i, Y_0) = <>$$ }\\
+                Il risultato sarà una sequenza vuota con $c_(i,0)=0$
+            \end{itemize}
+
+            \subsection{Passo ricorsivo}
+            \begin{itemize}
+                \item Se $\mathbf{x_i = j_i}$ \\
+                {\Large $$\mathbf{Z^{(i,j)} = Z^{(i-1,j-1)}\ | \ x_i \quad c_{(i,j)} = c_{(i-1, j-1)} + 1}$$}
+
+                \item Se $\mathbf{x_i \not = y_j}$ \\
+                Si ha che $Z^{(i,j)}$ non termina con $x_i$ oppure non termina con $y_j$
+
+                \begin{itemize}
+                    \item [\textbf{(A)}] Allora "$x_i$ è inutile" nell'instanza del sottoproblema $(i,j)$ quindi è come se si dovesse risolvere il sottoproblema $(i-1, j)$ di cui si ha a disposizione la soluzione [$Z^{(i-1,j)}$] in quanto $(i-1,j)$ è un sottoproblema di $(i,j)$. \\Pertanto:
+                    
+                    {
+                        \Large
+
+                        $$
+                            \mathbf{Z^{(i,j)} = Z^{(i-1, j)} \quad \text{ se } c_{(i,j)} = c_{(i-1,j)}}
+                        $$
+                    }
+
+                    \item [\textbf{(B)}] Allora "$y_j$ è inutile" nell'istanza del sottoproblema $(i,j)$ quindi è come se si dovesse risolvere il sottoproblema $(i,j-1)$ di cui si ha a disposizione la soluzione [$Z^{(i,j-1)}$] in quanto $(i, j-1)$ è un sottoproblema più piccolo di $(i,j)$\\
+                    Pertanto:
+
+                    {
+                        \Large
+
+                        $$
+                            \mathbf{Z^{(i,j)} = Z^{i,j-1} \quad \text{ se } c_{(i,j)} = c_{(i,j-1)}}
+                        $$
+                    }
+                \end{itemize}
+            \end{itemize}
+
+        A priori sembrerebbe impossibile come termina $Z^{(i.j)}$ rendendo impossibile decidere quale caso tra (A) e (B) si verificherà.
+
+        Tuttavia, siccome una delle due si deve necessariamente verificare, si verificherà necessariamente quella che porta alla soluzione "migliore" (con lunghezza maggiore)

@@ -398,15 +398,30 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT Appunti APA.aux
 INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
 INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
 INPUT Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
