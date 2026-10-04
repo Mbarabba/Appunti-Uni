@@ -79,205 +79,400 @@
 
 
 \chapter{LCS - Longest Common Subsequence}
-    \section{Istanza}
-    Abbiamo 2 sequenze:
-    {
-        \Large
 
-        \begin{gather*}
-            X = <x_1, \dots, x_m> \\
-            Y = <y_1, \dots, y_m>        
-        \end{gather*}
-    }
-    
-    \section{Obiettivo}
-    Vogliamo $Z$, ossia \uline{la più lunga sottosequenza comunue}
-    
-    {
-        \Large
+\section{Definizione del problema LCS}
+Date 2 o più sequenze vogliamo essere in grado di definire la più lunga sottosequenza in comune tra le date sequenze.
 
-        $$
-        |Z| = max\{|W|: W \text{ sottosequenza sia di } X \text{ che di } Y\}
-        $$
-    }
+Per ora affronteremo il problema della LCS di 2 sequenze.
 
-    Possiamo avere più soluzioni, con $LCS(X_m, Y_n)$ indichiamo una soluzione
+\subsection{Istanza}
+\begin{itemize}
+    \item $X= <x_1, \dots , x_m>$
+    \item $Y = <y_1, \dots, y_n>$
+\end{itemize}
 
-        \subsection{Esempio di LCS}
-        
-        {
-            \begin{gather*}
-                X = <a, b, c, d, b, a, b> \quad m \\
-                Y = <b, d, c, a, b, a> \quad n=6 \\
-                Z^{(1)} = <b,c,a> \text{ è sottosequenza di } X \text{ e } Y \text{di lunghezza } 3 \\
-                Z^{(2)} = <b,c,b,a> \text{ è sottosequenza di } X \text{ e } Y \text{di lunghezza } 4 \\
-                Z^{(3)} = <b,d,a, b> \text{ è sottosequenza di } X \text{ e } Y \text{di lunghezza } 4 \\ \\
-                Z^{(2)} \text{ e } Z^{3} \text{ sono entrambe } LCS(X,Y)
-            \end{gather*}
-        }
-    \section{Come risolvere il problema LCS?: Metodo NAIF}
-    \begin{enumerate}
-        \item Generare tutte le sottosequenze della più corta tra $X$ e $Y$ (Supponiamo sia $X$)
-        \item Per ciascuna di esse controllare che sia sottosequenza di $Y$
-        \item \uline{In caso il punto precedente venga rispettato}, controllare che la sua lunghezza superi quella della più lunga sottosequenza comune sinora incontrata (occorre memorizzare il valore della più lunga sottosequenza sinora incontrata)
-        \item \uline{In caso il punto precedente venga rispettato}, aggiornare tale valore e memorizzare la sottosequenza
-    \end{enumerate}
+\subsection{Obiettivo}
+Vogliamo trovare $Z$ sottosequenza sia di $X$ che di $Y$ tale che:
 
-        \subsection{Complessità}
-        Data $X = <x_>, \dots, x_n>$ il numero di possibili sottosequenze è pari a $2^n$ portando così l'algoritmo ad avere una complessità esponenziale \textbf{nel caso peggiore}.
+$$
+    |Z| = max\{|W|\, :\, \text{sottosequenza sia di } X \text{ che di } Y\}
+$$
 
-        LCS è un problema di ottimizzazione combinatoria (Programmazione dinamica)
+\subsubsection{Molteplicità di soluzioni}
+Possiamo avere più di una soluzione, $LCS(X_m, Y_m)$ indica una sola soluzione tra le possibili
 
-        \begin{itemize}
-            \item Occorre \uline{ridefinire il problema in termini ricorsivi}
-            \item Disegnare un algortimo \textbf{iterativo bottom-up}
-        \end{itemize}
-
-
-\chapter{LCS in termini ricorsivi}
-        \section{Istanza}
-        Abbiamo 2 sequenze:
-        
-        {
-            \Large
-
-            \begin{gather*}
-                X_m = <x_1, \dots, x_m> \\
-                Y_n = <y_1, \dots, y_n>
-            \end{gather*}
-        }
-
-        \section{Obiettivo}
-        Trovare $Z^{(m,b)}$ che è una $LCS(X_m, Y_n)$
-
-        \subsection{Definizione del sottoproblema}
-
-        \subsubsection{Cosa dobbiamo fare}
-        Per scrivere la soluzione di un sottoproblema qualunque abbiamo bisogno di:
-        \begin{itemize}
-            \item Caso base
-            \item Equazione di ricorrenza
-        \end{itemize}
-
-
-        \subsubsection{Istanze}
-        Abbiamo 2 sequenze:
-        
-        {
-            \Large
-
-            \begin{gather*}
-                X_m = <x_1, \dots, x_i> \quad \text{con } 0 \leq i \leq m\\
-                Y_n = <y_1, \dots, y_j> \quad \text{con } 0 \leq j \leq n \\ 
-                \text{Se } i=m \text{ e } j=m \text{ abbiamo l'intera } X_m \text{ e l'intera } Y_n
-            \end{gather*}
-        }
-
-        \subsubsection{Considerazioni}
-        \begin{itemize}
-            \item Se $i=0 \quad X_i = <> \quad Y_j$
-            \item Se $j=0 \quad X_i \quad Y_j = <>$
-            \item Se $i=j=0 \quad X_i = Y_j = <>$
-        \end{itemize}
-
-        \subsubsection{Numero di sottoproblemi}
-        Ogni coppia $(i,j)$ con $i \in \{0, \dots, m\}$ e $j \in \{0, \dots, n\}$ individua un sottoproblema, portando così ad avere $(m+1) \cdot (n+1) sottoproblemi$
-
-
-        \section{Soluzione del sottoproblema}
-        \subsection{Definizione della lunghezza della soluzione}
-            Definiamo con $c_{(i,j)}$ la lunghezza di una LCS delle sequenze $X_i$ e $Y_j$
-
-        \subsection{Spiegazione della soluzione}
-        Dato il sottoproblema $(i,j)$ vogliamo calcolare $Z^{i,j} = LCS(X_i, Y_j)$ assumendo di conoscere tutte le soluzioni dei sottoproblemi più piccoli
-
-        \subsection{"Matrice dei sottoproblemi"}
-\begin{minipage}[t]{0.5\textwidth}
-            \begin{center}
-                % Aumentiamo lo spazio tra le righe e le colonne per una migliore leggibilità
-                \setlength{\arraycolsep}{10pt}
-                \renewcommand{\arraystretch}{2}
-    
-                    $\begin{array}{ccccc}
-                    % Bordo superiore
-                    \cline{1-5}
-                    \multicolumn{1}{|c}{Z^{(0,0)}} & Z^{(0,1)} & \dots & Z^{(0,j-1)} & \multicolumn{1}{c|}{Z^{(0,j)}} \\
-                    \multicolumn{1}{|c}{Z^{(1,0)}} & Z^{(1,1)} & \dots & Z^{(1,j-1)} & \multicolumn{1}{c|}{Z^{(1,j)}} \\
-                    \multicolumn{1}{|c}{\vdots}    & \vdots    &       & \vdots      & \multicolumn{1}{c|}{\vdots} \\
-                    \multicolumn{1}{|c}{Z^{(i-1,0)}} & Z^{(i-1,1)} & \dots & Z^{(i-1,j-1)} & \multicolumn{1}{c|}{Z^{(i-1,j)}} \\
-                    % Bordo orizzontale solo sotto l'ultimo elemento della penultima riga
-                    \cline{5-5}
-                    \multicolumn{1}{|c}{Z^{(i,0)}} & Z^{(i,1)} & \dots & \multicolumn{1}{c|}{Z^{(i,j-1)}} & \\
-                    % Bordo inferiore per le restanti colonne
-                    \cline{1-4}
-                    \end{array}$
-            \end{center}
-\end{minipage}
-\hfil
-\begin{minipage}[t]{0.45\textwidth}
-    \subsubsection{Nota bene}
-    \begin{itemize}
-        \item $i =$ colonna, $j =$ riga
-        \item La 1ª riga e la 1ª colonna sono tutte le possibili combinazioni dei casi base $i=0$ oppure $j=0$
-    \end{itemize}
-\end{minipage}
+\subsection{Esempi di LCS}
+\begin{align*}
+X &= \langle a, b, c, b, d, a, b \rangle & (= X_7) & m &= 7 \\
+Y &= \langle b, d, c, a, b, a \rangle & (= Y_6) & n &= 6
+\end{align*}
 
 \vspace{0.5cm}
 
-        Noi non abbiamo conoscenza dei contentui delle 2 sequenze (ossia le soluzioni calcolate precendetemente conosciamo solo l'input ($i$ e $j$) ) essendo esse risultati di chiamate ricorsive
 
-        $Z^{(i,j)}$ è l'espressione che dipenda da (eventualmente) tutte le soluzioni dei sottoproblemi più piccoli con:
+\begin{center}
+    $Z^{(1)} = \langle b, c, a \rangle$ è sottoseq. di $X$ e $Y$ di lungh. 3\\[1.5ex]
+    $Z^{(2)} = \langle b, c, b, a \rangle$ \quad '' \hspace{1.3cm} '' \hspace{1cm} '' \hspace{1.4cm} 4\\[1.5ex]
+    $Z^{(3)} = \langle b, d, a, b \rangle$ \quad '' \hspace{1.3cm} '' \hspace{1cm} '' \hspace{1.4cm} 4\\[2.5ex]
+    
+    
+    {\Large $Z^{(2)}$ e $Z^{(3)}$ sono entrambe $LCS(X,Y)$!}\\[3ex]
+    
+    \begin{align*}
+    X &= \langle d, e, a \rangle \\
+    Y &= \langle b, f, h, c \rangle
+    \end{align*}
+    
+    \vspace{1.5ex}
+    \noindent
+     $LCS(X,Y) = \langle \rangle$ sono entrambe LCS di lunghezza $0$
+\end{center}
+
+\newpage
+\section{LCS - Metodo NAIF}
+
+\subsection{Spiegazione}
+Una tecninca a forza bruta per risolvere il problema della più lunga sottosequenza comune consiste nell'enumerare tutte le sottosequenze di $X$ e controllare le singole sottosequenze per vedere se sono anche sottosequenze di $Y$
+
+\subsection{Procedura di soluzione}
+\begin{enumerate}
+    \item Generare tutte le sottosequenze della più corta tra $X$ e $Y$ (in questo caso supponiamo sia $X$)
+    \item Per ciascuna di esse controllare che sia sottosequenza di $Y$, in caso affermativo controllare che la sua lunghezza superi quella della più lunga sottosequenza comune sinora incontrata (occorre memorizzare il valore della più lunga sottosequenza comune sinora incontrata) e in caso affermativo aggiornare tale valore e memorizzare la sottosequenza
+\end{enumerate}
+
+\subsection{Complessità}
+Ogni sottosequenza di $X$ corrisponde a un sottoinsieme degli indici \{1,2, \dots, m\} di $X$.
+
+Ci sono $2^m$ sottosequenze di $X$, quindi questo approccio richiede un tempo esponenziale, il che lo rende inutilizzabile per le sequenze lunghe.
+
+\newpage
+\section{LCS - Ricorsivo puro}
+
+\subsection{Caso base}
+Nel caso base affrontiamo l'eventualità in cui una delle sequenze sia vuota, ovviamente la LCS tra una sequenza vuota e una sequenza qualsiasi sarà la sequenza vuota
+
+
+\begin{itemize}
+    \item Se $i=0 \lor j=0$ allora 
+        $$Z^{(i,j)}=LCS(X_0,Y_j) = LCS(<>,Y_j)=<> \text{ e }  c_{ij}=|Z^{0,j}|=0$$
+\end{itemize}
+
+\subsubsection{Sottoproblemi}
+\begin{itemize}
+    \item Se $i=m$ e $j=n$ abbiamo l'intera sequenza $X$ e l'intera sequenza $Y$
+    \item Se $i=0$ allora 
+        $$X = <> \text{ (sequenza vuota) e } Y=Y_j$$
+    \item Se $j=0$ allora 
+        $$X=X_i \text{ e } Y=<> \text{ (sequenza vuota)}$$
+    \item Se $i=j=0$ allora 
+        $$X_i = Y_j = <> \text{ (entrambe le sequenza sono vuote)}$$
+\end{itemize}
+
+
+\subsubsection{Numero di sottoproblemi}
+Ogni coppia $(i,j)$ con $i \in \{0, \dots, m\}$ e $j \in \{0, \dots, n\}$ individua un sottoproblema, quindi si hanno $(m+1) \cdot (n+1)$ sottoproblemi.
+
+Portando così ad avere per ogni caso base $m+n+1$ sottoproblemi da risolvere
+
+\subsection{Passo ricorsivo}
+\begin{itemize}
+    \item Se $x_i = y_j$ allora:
+        $$
+            Z^{(i,j)} = Z^{(i-1,j-1)}\ |\ x_i \quad \text{ e } \quad c_{ij} = c_{i-1,j-1} + 1
+        $$
+    
+    \item Se $x_i \not= y_j$ allora abbiamo 2 possibili soluzioni:
+            $$
+            Z^{(i,j)} = 
+                \begin{cases}
+                    Z^{(i-1,j)} \text{ se } c_{i-1,j} \geq c_{i,j-1} \\
+                    Z^{(i,j-1)} \text{ se } c_{i-1,j} \leq c_{i,j-1} 
+                \end{cases} \quad \text{e} \quad c_{i,j} = max\{c_{i-1,j}, c_{i,j-1}\}
+            $$
+\end{itemize}
+
+\subsubsection{Singnificato simbolo " | "}
+Con il simbolo " | " s'intende la concatenazione di 2 sequenze 
+
+\newpage
+\subsection{"Matrice" dei sottoproblemi}
+Possiamo visualizzare la procedura di calcolo di tutti i sottoproblemi dell'algoritmo LCS come una matrice. 
+
+\begin{figure}[h]
+    {\Large \[
+    \begin{array}{|ccccc|}
+    \hline
+    Z^{(0,0)} & Z^{(0,1)} & \dots & Z^{(0,j-1)} & Z^{(0,j)} \\
+    Z^{(1,0)} & Z^{(1,1)} & \dots & Z^{(1,j-1)} & Z^{(1,j)} \\
+    \vdots & \vdots & \ddots & \vdots & \vdots \\
+    Z^{(i-1,0)} & Z^{(i-1,1)} & \dots & Z^{(i-1,j-1)} & Z^{(i-1,j)} \\
+    Z^{(i,0)} & Z^{(i,1)} & \dots & Z^{(i,j-1)} & \multicolumn{1}{c|}{} \\ \cline{5-5}
+    \hline
+    \end{array}
+    \]}
+
+    \caption{Esempio di matrice dei sottoproblemi}
+\end{figure}
+
+La cella $Z^{(i,j)}$ è vuota, essendo che quella espressione dipende da (evenutalmente) tutte le soluzioni dei sottoproblmei più piccoli con:
+{
+    \large
+
+    \begin{align*}
+        Z^{(\bar{\imath}, \bar{\jmath})} \quad \text{con } & \quad 0 \leq \bar{\imath} \leq i \\
+        & \quad 0 \leq \bar{\jmath} \leq j
+    \end{align*}
+
+}
+
+Possiamo visualizzare l'eseucuzione dei vari passi ricorsivi come spostamento all'interno della matrice
+
+\begin{itemize}
+    \item In caso $x_i = y_j$ ci spostiamo \uline{diagonalmente}
+    \item Nel caso in cui $x_i \not = y_j$
         \begin{itemize}
-            \item $0 \leq \overline{i} \leq i$
-            \item $0 \leq \overline{j} \leq j$
-            \item $(\overline{i} < i) \land (\overline{j} < j)$
-        \end{itemize} 
+            \item [\textbf{(a)}] Se $c_{i-1,j} \geq c_{i,j-1}$ ci sposteremo alla \uline{cella in alto}
+            \item [\textbf{(b)}] Se $c_{i-1,j} \leq c_{i,j-1}$ ci sposteremo alla \uline{cella a sinistra}
+        \end{itemize}
+\end{itemize}
+
+\subsection{Algoritmo in pseudocodice}
+\begin{lstlisting}[mathescape=true]
+    LCS-R(i,j) $\leftarrow$ calcola una LCS($X_i, Y_j$)
+
+    //Caso base
+    if(i==0 $\lor$ j==0)
+        return <>
+    
+    //Passo ricorsivo
+    else
+        if($x_i$ == $y_j$)
+            return LCS-R($i-1,j-1$) + $x_i$ $\leftarrow$ $+x_i$ viene usato come concatenazione
+        else
+            $S_1$ = LCS-R($i-1,j$)
+            $S_2$ = LCS-R($i,j-1$)
+
+            if($|S_1| \geq |S_2|$)
+                return $S_1$
+            else
+                return $S_2$
+\end{lstlisting}
+
+\subsection{Tempi di calcolo}
+Questo algoritmo ricorsivo porta ad avere una complessità esponenziale essendo che ripete più volte lo stesso calcolo
+
+\newpage
+\section{Algoritmo Iterativo Bottom-Up}
+
+\subsection{Spiegazione del funzionamento generale}
+Per fare supporto all'algoritmo ricorsivo utilizziamo delle strutture dati di supporto (in questo caso degli array bidimensionali) per memorizzare i risultati delle varie chiamate ricorsive così da poterli riutilizzare
+
+\subsection{Strutture dati di supporto}
+
+\subsubsection{Matrice S}
+Utilizzo una matrice denominata S di dimensione \texttt{S[$0, \dots, m$][$0, \dots, n$]} ($m+1$ righe, $n+1$ colonne) per memorizzare ogni $Z^{(i,j)}$ per ogni sottoproblema $(i,j)$ con :
+\begin{itemize}
+    \item $i \in \{0, \dots, m\}$
+    \item $j \in \{0, \dots, n\}$
+\end{itemize}
+
+\begin{figure}[h]
+    \[
+    \begin{array}{cc|c|c|c|c|c|c|c|}
+    % Prima riga di intestazione: I caratteri della sequenza Y
+    \multicolumn{2}{c}{} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{b} & \multicolumn{1}{c}{d} & \multicolumn{1}{c}{c} & \multicolumn{1}{c}{a} & \multicolumn{1}{c}{b} & \multicolumn{1}{c}{a} \\
+    % Seconda riga di intestazione: Gli indici della sequenza Y
+    \multicolumn{2}{c}{X \setminus Y} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} \\
+    \cline{3-9}
+    % Inizio della matrice vera e propria
+      & 0 & \langle \rangle & \langle \rangle & \langle \rangle & \langle \rangle & \langle \rangle & \langle \rangle & \langle \rangle \\
+    \cline{3-9}
+    a & 1 & \langle \rangle & \langle \rangle & \langle \rangle & \langle \rangle & \langle a \rangle & \langle a \rangle & \langle a \rangle \\
+    \cline{3-9}
+    b & 2 & \langle \rangle & \langle b \rangle & \langle b \rangle & \langle b \rangle & \langle a \rangle & \langle a,b \rangle & \\
+    \cline{3-9}
+    c & 3 & \langle \rangle & & & & & & \\
+    \cline{3-9}
+    b & 4 & \langle \rangle & & & & & & \\
+    \cline{3-9}
+    d & 5 & \langle \rangle & & & & & & \\
+    \cline{3-9}
+    a & 6 & \langle \rangle & & & & & & \\
+    \cline{3-9}
+    b & 7 & \langle \rangle & & & & & & \\
+    \cline{3-9}
+    \end{array}
+    \]
+
+    \caption{Esempio di matrice S non del tutto completa}
+\end{figure}
+\subsubsection{Matrice C}
+Utilizziamo una matrice c, denominata matrice dei coefficienti per salvare in memoria la lunghezza di ciascuna delle LCS calcolate ($c_{(i,j)} = |Z^{(i,j)}|$).
 
 
-        \section{Soluzione}
-            \subsection{Casi base}
-            \begin{itemize}
-                \item Se \textbf{$\mathbf{i=0}$ e $\mathbf{j}$ qualunque} \\
-                {\Large $$Z^{(0,j)}=LCS(X_0, Y_j)=LCS(<>, Y_j) = <>$$} \\
-                Il risultato sarà una sequenza vuota con $c_(0,j)=0$
+\begin{figure}[h]
+    \[
+\begin{array}{cc|c|c|c|c|c|c|c|}
+% Prima riga di intestazione: I caratteri della sequenza Y
+\multicolumn{2}{c}{} & \multicolumn{1}{c}{b} & \multicolumn{1}{c}{d} & \multicolumn{1}{c}{c} & \multicolumn{1}{c}{a} & \multicolumn{1}{c}{b} & \multicolumn{1}{c}{a} \\
+% Seconda riga di intestazione: Gli indici della sequenza Y
+\multicolumn{2}{c}{X \setminus Y} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} \\
+\cline{3-9}
+  & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+\cline{3-9}
+a & 1 & 0 & 0 & 0 & 0 & 1 & 1 & 1 \\
+\cline{3-9}
+b & 2 & 0 & 1 & 1 & 1 & 1 & 2 & \\
+\cline{3-9}
+c & 3 & 0 & & & & & & \\
+\cline{3-9}
+b & 4 & 0 & & & & & & \\
+\cline{3-9}
+d & 5 & 0 & & & & & & \\
+\cline{3-9}
+a & 6 & 0 & & & & & & \\
+\cline{3-9}
+b & 7 & 0 & & & & & & \\
+\cline{3-9}
+\end{array}
+\]
 
-                \item Se \textbf{$\mathbf{j=0}$ e $\mathbf{i}$ qualunque} \\
-                {\Large $$Z^{(i,0)}=LCS(X_i, Y_0)=LCS(X_i, Y_0) = <>$$ }\\
-                Il risultato sarà una sequenza vuota con $c_(i,0)=0$
-            \end{itemize}
+\caption{Esempio di matrice dei coefficienti}
+\end{figure}
 
-            \subsection{Passo ricorsivo}
-            \begin{itemize}
-                \item Se $\mathbf{x_i = j_i}$ \\
-                {\Large $$\mathbf{Z^{(i,j)} = Z^{(i-1,j-1)}\ | \ x_i \quad c_{(i,j)} = c_{(i-1, j-1)} + 1}$$}
+\newpage
+\subsection{Algortimo in pseudocodice}
+\begin{lstlisting}[mathescape=true]
+LCS-IT($m,n$)
+    //Caso base con $i=0$
+    for($j=0$ to $n$)
+        S[$0,j$] = $\langle\rangle$
+        c[$0,j$] = $0$
 
-                \item Se $\mathbf{x_i \not = y_j}$ \\
-                Si ha che $Z^{(i,j)}$ non termina con $x_i$ oppure non termina con $y_j$
+    //Caso base con $j=0$
+    for($i=1$ to $m$)
+        S[$i,0$] = $\langle\rangle$
+        c[$i,0$] = $0$
 
-                \begin{itemize}
-                    \item [\textbf{(A)}] Allora "$x_i$ è inutile" nell'instanza del sottoproblema $(i,j)$ quindi è come se si dovesse risolvere il sottoproblema $(i-1, j)$ di cui si ha a disposizione la soluzione [$Z^{(i-1,j)}$] in quanto $(i-1,j)$ è un sottoproblema di $(i,j)$. \\Pertanto:
-                    
-                    {
-                        \Large
+    //Passo ricorsivo per risolvere tutti i sottoproblemi $(i,j)$ con $i > 0$ e $j > 0$
+    for($i=1$ to $m$)
+        for($j=1$ to $n$)
+            if($x_i$ == $y_j$)
+                S[$i,j$] = S[$i-1,j-1$] | $x_i$ //Usiamo la definizione ricorsiva di $Z^{(i,j)}$
+                c[$i,j$] = c[$i-1,j-1$]
 
-                        $$
-                            \mathbf{Z^{(i,j)} = Z^{(i-1, j)} \quad \text{ se } c_{(i,j)} = c_{(i-1,j)}}
-                        $$
-                    }
+            else
+                if(c[$i-1,j$] $\geq$ c[$i,j-1$])
+                    //Caso in cui $c_{i-1,j} \geq c_{i,j-1}$
+                    S[$i,j$] = S[$i-1,j$] 
+                    c[$i,j$] = c[$i-1,j$]
+                else
+                    //Caso in cui $c_{i-1,j} \leq c_{i,j-1}$
+                    S[$i,j$] = S[$i,j-1$]
+                    c[$i,j$] = c[$i,j-1$]
+    return S e c
 
-                    \item [\textbf{(B)}] Allora "$y_j$ è inutile" nell'istanza del sottoproblema $(i,j)$ quindi è come se si dovesse risolvere il sottoproblema $(i,j-1)$ di cui si ha a disposizione la soluzione [$Z^{(i,j-1)}$] in quanto $(i, j-1)$ è un sottoproblema più piccolo di $(i,j)$\\
-                    Pertanto:
 
-                    {
-                        \Large
 
-                        $$
-                            \mathbf{Z^{(i,j)} = Z^{i,j-1} \quad \text{ se } c_{(i,j)} = c_{(i,j-1)}}
-                        $$
-                    }
-                \end{itemize}
-            \end{itemize}
+        
+\end{lstlisting}
 
-        A priori sembrerebbe impossibile come termina $Z^{(i.j)}$ rendendo impossibile decidere quale caso tra (A) e (B) si verificherà.
+\subsection{Tempi di calcolo}
+Essendo che il calcolo delle LCS viene eseguito una sola volta e ogni LCS viene poi salvata nella rispettiva cella all'interno della matrice S, la complessità di questo algoritmo sta nel calcolo effettivo delle LCS.
 
-        Tuttavia, siccome una delle due si deve necessariamente verificare, si verificherà necessariamente quella che porta alla soluzione "migliore" (con lunghezza maggiore)
+Essendoci m righe ed n colonne questo porta ad avere una complessità di $\Theta(m \cdot n)$
+
+\subsection{Come migliorarlo}
+Possiamo fare a meno di calcolare tutte le $Z^{(i,j)}$ evitando così di utilizzare la matrice S che occupa molto spazio in memoria in quanto è composta da sequenze
+
+
+\newpage
+\section{LCS - Length (Calcolo della lunghezza e dei puntatori di una LCS)}
+
+\subsection{Spiegazione del funzionamento generale}
+Questo metodo serve per \uline{calcolare la lunghezza della LCS} e a \uline{salvare gli indici delle sottosequenze da ricreare} attraverso dei puntatori, \textbf{per la costruzione vera e propria della LCS si usa l'lagoritmo PRINT-LCS}.
+
+
+Il principio utilizzato in questo algoritmo è lo stesso della LCS-IT, l'unica differenza è che non salviamo tutte le sequenze calcolate, ma solo le coordinate per calcolarle così da salvare spazio in memoria.
+
+
+\subsection{Strutture dati di supporto}
+
+\subsubsection{Matrice C}
+Utilizziamo una matrice c, denominata matrice dei coefficienti per salvare in memoria la lunghezza di ciascuna delle LCS calcolate
+
+\subsubsection{Matrice b}
+La procedura utilizza la tabella b[$1,\dots,m,0,\dots,n$] per semplificare la costruzione di una soluzione ottima.
+
+b[$i,j$] punta alla posizione della tabella che corrisponde alla soluzione otttima del sottoproblema che è stata scelta per calcolare c[i,j]
+
+\subsection{Algortimo in pseudocodice}
+\begin{lstlisting}[mathescape=true]
+LCS-Length($X,Y$)
+    m = $|Y|$
+    n = $|X|$
+    Siano b[$,1\dots,m,1\dots,n$] e c[$0,\dots,m,0,\dots,n$] due nuove tabelle
+
+    //Caso base $i=0$
+    for($j=0$ to n)
+        c[$0,j$] = 0
+
+    //Caso base $j=0$
+    for($i=1$ to m)
+        c[$i,0$] = 0
+        
+    for($i=1$ to $m$)
+        for($j=1$ to $n$)
+            //Passo ricorsivo $x_i = $y_j$$
+            if($x_i$ == $y_j$)
+                c[$i,j$] = c[$i-1,j-1$] + 1
+                b[$i,j$] = b[[$i-1,j-1$]]
+            //Passi ricorsivi dove $x_i \not = y_j$
+            else 
+                //Caso in cui $c_{i-1,j} \geq c_{i,j-1}$
+                if(c[$i-1,j$] $\geq$ c[$i,j-1$])
+                    c[$i,j$] = c[$i-1,j$]
+                    b[$i,j$] = b[$b-1,j$] 
+                //Caso in cui $c_{i-1,j} \leq c_{i,j-1}$
+                else
+                    c[$i,j$] = c[$i,j-1$]
+                    b[$i,j$] = b[$b,j-1$]
+    return c e b 
+\end{lstlisting}
+
+\newpage
+\section{Print - LCS (Costruzione di una LCS)}
+\subsection{Spiegazione del funzionamento generale}
+La tabella b restituita dalla procedura LCS-Length può essere utilizzata per costruire rapidamente una LCS delle sequenze $X$ e $Y$.
+
+Utiliziamo i contenuti della tabella b per ricostruire ricorsivamente la LCS
+
+\subsection{Strutture dati di supporto}
+\subsubsection{Matrice C}
+Utilizziamo una matrice c, denominata matrice dei coefficienti per salvare in memoria la lunghezza di ciascuna delle LCS calcolate
+
+\subsubsection{Matrice b}
+La procedura utilizza la tabella b[$1,\dots,m,0,\dots,n$] per semplificare la costruzione di una soluzione ottima.
+
+b[$i,j$] punta alla posizione della tabella che corrisponde alla soluzione otttima del sottoproblema che è stata scelta per calcolare c[i,j]
+
+
+\subsection{Algortimo in pseudocodice}
+\begin{lstlisting}
+PRINT-LCS($i,j,X,$b)
+    if($i==0 \lor j==0$)
+        return
+    if(b[$i,j$] == b[i-1,j-1])
+        return PRINT-LCS($i-1,j-1,X,$b)
+        print $x_i$
+    else
+        if(b[$i,j$] == b[$i-1,j$])
+            PRINT-LCS($i-1,j,X,$b)
+        else
+            PRINT-LCS($i,j-1,X,$b)
+\end{lstlisting}
+
+\subsection{Tempi di calcolo}
+La procedura impega un tempo $O(m+n)$, perchè a ogni chiamata ricorsiva essa decrementa almeno uno dei valori $i$ e $j$
+
+

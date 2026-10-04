@@ -1,0 +1,58 @@
+\babel@toc {italian}{}\relax 
+\babel@toc {italian}{}\relax 
+\contentsline {part}{I\hspace {1em}Programmazione Dinamica}{3}{part.1}%
+\contentsline {chapter}{\numberline {1}Sequenze e sottosequenze}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sequenze}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Definizione}{4}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Sequenza vuota}{4}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Lunghezza della sequenza}{4}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Esempio di sequenza}{4}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Prefisso}{4}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Esempio di prefisso}{4}{subsection.1.1.6}%
+\contentsline {section}{\numberline {1.2}Sottosequenze}{5}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Definizione}{5}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Esempio di sottosequenza}{5}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}LCS - Longest Common Subsequence}{6}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Definizione del problema LCS}{6}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Istanza}{6}{subsection.2.1.1}%
+\contentsline {subsection}{\numberline {2.1.2}Obiettivo}{6}{subsection.2.1.2}%
+\contentsline {subsubsection}{Molteplicità di soluzioni}{6}{subsubsection*.2}%
+\contentsline {subsection}{\numberline {2.1.3}Esempi di LCS}{6}{subsection.2.1.3}%
+\contentsline {section}{\numberline {2.2}LCS - Metodo NAIF}{7}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Spiegazione}{7}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Procedura di soluzione}{7}{subsection.2.2.2}%
+\contentsline {subsection}{\numberline {2.2.3}Complessità}{7}{subsection.2.2.3}%
+\contentsline {section}{\numberline {2.3}LCS - Ricorsivo puro}{8}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Caso base}{8}{subsection.2.3.1}%
+\contentsline {subsubsection}{Sottoproblemi}{8}{subsubsection*.3}%
+\contentsline {subsubsection}{Numero di sottoproblemi}{8}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {2.3.2}Passo ricorsivo}{8}{subsection.2.3.2}%
+\contentsline {subsubsection}{Singnificato simbolo " | "}{8}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {2.3.3}"Matrice" dei sottoproblemi}{9}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Algoritmo in pseudocodice}{9}{subsection.2.3.4}%
+\contentsline {subsection}{\numberline {2.3.5}Tempi di calcolo}{9}{subsection.2.3.5}%
+\contentsline {section}{\numberline {2.4}Algoritmo Iterativo Bottom-Up}{10}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Spiegazione del funzionamento generale}{10}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Strutture dati di supporto}{10}{subsection.2.4.2}%
+\contentsline {subsubsection}{Matrice S}{10}{subsubsection*.7}%
+\contentsline {subsubsection}{Matrice C}{10}{subsubsection*.9}%
+\contentsline {subsection}{\numberline {2.4.3}Algortimo in pseudocodice}{11}{subsection.2.4.3}%
+\contentsline {subsection}{\numberline {2.4.4}Tempi di calcolo}{11}{subsection.2.4.4}%
+\contentsline {subsection}{\numberline {2.4.5}Come migliorarlo}{11}{subsection.2.4.5}%
+\contentsline {section}{\numberline {2.5}LCS - Length (Calcolo della lunghezza e dei puntatori di una LCS)}{12}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Spiegazione del funzionamento generale}{12}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Strutture dati di supporto}{12}{subsection.2.5.2}%
+\contentsline {subsubsection}{Matrice C}{12}{subsubsection*.11}%
+\contentsline {subsubsection}{Matrice b}{12}{subsubsection*.12}%
+\contentsline {subsection}{\numberline {2.5.3}Algortimo in pseudocodice}{12}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Print - LCS (Costruzione di una LCS)}{13}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Spiegazione del funzionamento generale}{13}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Strutture dati di supporto}{13}{subsection.2.6.2}%
+\contentsline {subsubsection}{Matrice C}{13}{subsubsection*.13}%
+\contentsline {subsubsection}{Matrice b}{13}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {2.6.3}Algortimo in pseudocodice}{13}{subsection.2.6.3}%
+\contentsline {subsection}{\numberline {2.6.4}Tempi di calcolo}{13}{subsection.2.6.4}%
+\contentsline {part}{II\hspace {1em}Esercizi}{14}{part.2}%
+\contentsline {chapter}{\numberline {1}Esercizi LCS}{15}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Simulare PRINT-LCS($7,6,X_7$,b)}{15}{section.1.1}%
+\contentsline {section}{\numberline {1.2}LCS di 3 sequenze in contemporanea}{15}{section.1.2}%
