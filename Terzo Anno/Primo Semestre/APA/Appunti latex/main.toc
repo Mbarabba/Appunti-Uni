@@ -54,5 +54,27 @@
 \contentsline {subsection}{\numberline {2.6.4}Tempi di calcolo}{13}{subsection.2.6.4}%
 \contentsline {part}{II\hspace {1em}Esercizi}{14}{part.2}%
 \contentsline {chapter}{\numberline {1}Esercizi LCS}{15}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Simulare PRINT-LCS($7,6,X_7$,b)}{15}{section.1.1}%
-\contentsline {section}{\numberline {1.2}LCS di 3 sequenze in contemporanea}{15}{section.1.2}%
+\contentsline {section}{\numberline {1.1}Simulazione della Costruzione e Scrittura di una LCS}{15}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Come si risolve il problema della LCS di X e Y}{15}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Equazioni di ricorrenza}{15}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Riempimento della matrice $c$}{15}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Ricostruzione della soluzione}{16}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Algoritmo PRINT-LCS senza matrice dei puntatori b}{16}{subsection.1.1.5}%
+\contentsline {section}{\numberline {1.2}HCS - Heaviest Common Subsequence}{17}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Definizione del problema}{17}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Procedura di risoluzione}{17}{subsection.1.2.2}%
+\contentsline {subsection}{\numberline {1.2.3}Definizione del generico sottoproblema}{17}{subsection.1.2.3}%
+\contentsline {subsection}{\numberline {1.2.4}Equazione di ricorrenza}{17}{subsection.1.2.4}%
+\contentsline {subsection}{\numberline {1.2.5}Algoritmo bottom-up}{18}{subsection.1.2.5}%
+\contentsline {subsection}{\numberline {1.2.6}Algoritmo di stampa HCS}{18}{subsection.1.2.6}%
+\contentsline {section}{\numberline {1.3}LCS con al massimo 3 rossi}{19}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Definizione del problema}{19}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Esempi}{19}{subsection.1.3.2}%
+\contentsline {subsubsection}{Esempio 1}{19}{subsubsection*.15}%
+\contentsline {subsubsection}{Esempio 2}{19}{subsubsection*.16}%
+\contentsline {subsection}{\numberline {1.3.3}Procedura di soluzione}{19}{subsection.1.3.3}%
+\contentsline {subsection}{\numberline {1.3.4}Definizione del generico sottoproblema}{20}{subsection.1.3.4}%
+\contentsline {subsection}{\numberline {1.3.5}Equazione di ricorrenza}{20}{subsection.1.3.5}%
+\contentsline {subsection}{\numberline {1.3.6}Algoritmo Bottom-up}{21}{subsection.1.3.6}%
+\contentsline {subsection}{\numberline {1.3.7}Ricostruzione}{21}{subsection.1.3.7}%
+\contentsline {section}{\numberline {1.4}LCS tra 3 sequenze}{22}{section.1.4}%

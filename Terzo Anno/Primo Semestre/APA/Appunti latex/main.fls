@@ -2,8 +2,8 @@ PWD /home/mbarabba/Desktop/Appunti-Uni/Terzo Anno/Primo Semestre/APA/Appunti lat
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /usr/share/texlive/texmf-dist/web2c/texmf.cnf
 INPUT /var/lib/texmf/web2c/pdftex/pdflatex.fmt
-INPUT /home/mbarabba/Desktop/Appunti-Uni/Terzo Anno/Primo Semestre/APA/Appunti latex/main.tex.tex
-OUTPUT main.tex.log
+INPUT /home/mbarabba/Desktop/Appunti-Uni/Terzo Anno/Primo Semestre/APA/Appunti latex/main.tex
+OUTPUT main.log
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/report.cls
 INPUT /usr/share/texlive/texmf-dist/tex/latex/base/size12.clo
@@ -221,6 +221,37 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/lstmisc.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
 INPUT /usr/share/texlive/texmf-dist/tex/latex/listings/listings.cfg
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithms/algorithm.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/base/ifthen.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algpseudocodex/algpseudocodex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algpseudocodex/algpseudocodex.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/algorithmicx/algorithmicx.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fifo-stack/fifo-stack.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/fifo-stack/fifo-stack.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/varwidth/varwidth.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tabto-ltx/tabto.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tabto-ltx/tabto.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/totcount/totcount.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/totcount/totcount.sty
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarycalc.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfit.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/tikzmark/tikzlibrarytikzmark.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3kernel/expl3.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/l3packages/xparse/xparse.sty
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/jknappen/ec/ecrm1000.tfm
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcolorbox.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tools/verbatim.sty
@@ -264,7 +295,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryfadings.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryfadings.code.tex
-OUTPUT main.tex.pdf
+OUTPUT main.pdf
 INPUT /usr/share/texlive/texmf-dist/tex/latex/tcolorbox/tcbposter.code.tex
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/hyperref/hyperref.sty
@@ -308,18 +339,16 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT /usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
-INPUT ./main.tex.aux
-INPUT ./main.tex.aux
-INPUT main.tex.aux
+INPUT ./main.aux
+INPUT ./main.aux
+INPUT main.aux
 INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
 INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
 INPUT Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/Esercizi LCS.aux
-OUTPUT main.tex.aux
+OUTPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -341,9 +370,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ec.enc
-INPUT ./main.tex.toc
-INPUT ./main.tex.toc
-INPUT main.tex.toc
+INPUT ./main.toc
+INPUT ./main.toc
+INPUT main.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx12.tfm
@@ -381,8 +410,7 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT main.tex.toc
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+OUTPUT main.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.tex
 OUTPUT Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
@@ -400,6 +428,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
@@ -443,28 +472,49 @@ OUTPUT Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
 INPUT Capitoli/Esercitazioni/Esercizi LCS.tex
-INPUT main.tex.aux
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx6.tfm
+INPUT main.aux
 INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
 INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
 INPUT Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/Esercizi LCS.aux
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmib10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

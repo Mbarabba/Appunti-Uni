@@ -1,5 +1,449 @@
+\definecolor{xcolor}{HTML}{8B5A2B}
+\definecolor{ycolor}{HTML}{6A287E}
+\definecolor{xring}{HTML}{991B1B}
+\definecolor{yring}{HTML}{15803D}
+\definecolor{orangecolor}{HTML}{D95F02}
+\definecolor{bluecolor}{HTML}{1D4ED8}
+\definecolor{pathgreen}{HTML}{0F8A5F}
+\definecolor{codebg}{HTML}{F8FAFC}
+
 \chapter{Esercizi LCS}
 
-\section{Simulare PRINT-LCS($7,6,X_7$,b)}
+\section{Simulazione della Costruzione e Scrittura di una LCS}
 
-\section{LCS di 3 sequenze in contemporanea}
+\subsection{Come si risolve il problema della LCS di X e Y}
+\begin{enumerate}
+    \item Definizione ricorsiva del problema (generico sottoproblema di dimensione $(i,j)$ con relativo coefficiente $c_{ij}$)
+    \item Individuazione del valore ottimo del problema $(c_{mn})$
+    \item Equazione di ricorrenza per il calcolo del generico $c_{ij}$
+    \begin{itemize}
+        \item Casi base
+        \item Passo ricorsivo
+    \end{itemize}
+    \item Riempimento della matrice C dei coefficienti (algoritmo bottom-up)
+    \item Ricostruzione di una soluzione a partire da C
+\end{enumerate}
+
+\subsection{Equazioni di ricorrenza}
+\begin{itemize}
+    \item \textbf{Casi base}:
+    \begin{itemize}
+        \item $\mathbf{i=0 \lor j=0} \implies LCS(X_i,Y_j)=\langle\rangle \implies \uline{c_{ij}=0}$
+    \end{itemize}
+    \item \textbf{Passo Ricorsivo}:
+    \begin{itemize}
+        \item $\mathbf{x_i=y_j} \implies LCS(X_i,Y_j) = LCS(X_{i-1},Y_{j-1})+ \langle x_i \rangle \implies \uline{c_{ij} = c_{i-1j-1}+1}$
+        \item $\mathbf{x_i \not = y_j} \implies longest(LCS(X_{i-1}, Y_j),(X_i,Y_{j-1})) \implies \uline{c_{ij} = max(c_{i-1j},c_{ij-1})}$
+    \end{itemize}
+\end{itemize}
+
+\subsection{Riempimento della matrice $c$}
+\begin{center}
+\renewcommand{\arraystretch}{1.65}
+\setlength{\tabcolsep}{11pt}
+\begin{tabular}{r | c | c | c | c | c | c | c | c | c | l}
+\multicolumn{1}{l}{\Large $\boldsymbol{C}$} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_1}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_2}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_3}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_4}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_5}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_6}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_7}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_8}$}} & \multicolumn{1}{l}{} \\
+\cline{2-10}
+ & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & \textcolor{xring}{\textbf{0}} \\
+\cline{2-10}
+\textcolor{xcolor}{$\mathbf{x_1}$} & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \textcolor{xring}{\textbf{1}} \\
+\cline{2-10}
+\textcolor{xcolor}{$\mathbf{x_2}$} & 0 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 & \textcolor{xring}{\textbf{2}} \\
+\cline{2-10}
+\textcolor{xcolor}{$\mathbf{x_3}$} & 0 & 1 & 2 & 2 & 2 & 2 & 2 & 2 & 2 & \textcolor{xring}{\textbf{3}} \\
+\cline{2-10}
+\textcolor{xcolor}{$\mathbf{x_4}$} & 0 & 1 & 2 & 2 & 2 & 3 & 3 & 3 & 3 & \textcolor{xring}{\textbf{4}} \\
+\cline{2-10}
+\textcolor{xcolor}{$\mathbf{x_5}$} & 0 & 1 & 2 & 2 & 2 & 3 & 3 & 4 & 4 & \textcolor{xring}{\textbf{5}} \\
+\cline{2-10}
+\textcolor{xcolor}{$\mathbf{x_6}$} & 0 & 1 & 2 & 2 & 3 & 3 & 4 & 4 & 4 & \textcolor{xring}{\textbf{6}} \\
+\cline{2-10}
+\multicolumn{1}{c}{} & \multicolumn{1}{c}{\textcolor{yring}{\textbf{0}}} & \multicolumn{1}{c}{\textcolor{yring}{\textbf{1}}} & \multicolumn{1}{c}{\textcolor{yring}{\textbf{2}}} & \multicolumn{1}{c}{\textcolor{yring}{\textbf{3}}} & \multicolumn{1}{c}{\textcolor{yring}{\textbf{4}}} & \multicolumn{1}{c}{\textcolor{yring}{\textbf{5}}} & \multicolumn{1}{c}{\textcolor{yring}{\textbf{6}}} & \multicolumn{1}{c}{\textcolor{yring}{\textbf{7}}} & \multicolumn{1}{c}{\textcolor{yring}{\textbf{8}}} & \multicolumn{1}{c}{} \\
+\end{tabular}
+\end{center}
+
+\subsection{Ricostruzione della soluzione}
+\renewcommand{\arraystretch}{1.85}
+\setlength{\tabcolsep}{6.5pt}
+\begin{center}
+    \begin{tabular}{r | c | c | c | c | c | c | c | c | c | l}
+    \multicolumn{1}{l}{\Large $\boldsymbol{C}$} & \multicolumn{1}{c}{} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_1}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_2}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_3}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_4}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_5}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_6}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_7}$}} & \multicolumn{1}{c}{\textcolor{ycolor}{$\mathbf{y_8}$}} & \multicolumn{1}{l}{} \\
+    \cline{2-10}
+     & \textcolor{pathgreen}{\textbf{0}} & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    \cline{2-10}
+    \textcolor{xcolor}{$\mathbf{x_1}$} & 0 & ${}^{\textcolor{pathgreen}{\boldsymbol{\nwarrow}}}\mathbf{1}$ & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 1 \\
+    \cline{2-10}
+    \textcolor{xcolor}{$\mathbf{x_2}$} & 0 & $\overset{\textcolor{pathgreen}{\boldsymbol{\uparrow}}}{\mathbf{1}}$ & 1 & 1 & 1 & 1 & 1 & 1 & 1 & 2 \\
+    \cline{2-10}
+    \textcolor{xcolor}{$\mathbf{x_3}$} & 0 & 1 & ${}^{\textcolor{pathgreen}{\boldsymbol{\nwarrow}}}\mathbf{2}$ & $\textcolor{pathgreen}{\boldsymbol{\leftarrow}}\mathbf{2}$ & $\textcolor{pathgreen}{\boldsymbol{\leftarrow}}\mathbf{2}$ & 2 & 2 & 2 & 2 & 3 \\
+    \cline{2-10}
+    \textcolor{xcolor}{$\mathbf{x_4}$} & 0 & 1 & 2 & 2 & 2 & ${}^{\textcolor{pathgreen}{\boldsymbol{\nwarrow}}}\mathbf{3}$ & $\textcolor{pathgreen}{\boldsymbol{\leftarrow}}\mathbf{3}$ & 3 & 3 & 4 \\
+    \cline{2-10}
+    \textcolor{xcolor}{$\mathbf{x_5}$} & 0 & 1 & 2 & 2 & 2 & 3 & 3 & ${}^{\textcolor{pathgreen}{\boldsymbol{\nwarrow}}}\mathbf{4}$ & \textcolor{bluecolor}{$\fbox{$\textcolor{pathgreen}{\boldsymbol{\leftarrow}}\mathbf{4}$}$} & 5 \\
+    \cline{2-10}
+    \textcolor{xcolor}{$\mathbf{x_6}$} & 0 & 1 & 2 & 3 & 3 & 3 & 4 & \textcolor{bluecolor}{$\fbox{$\mathbf{4}$}$} & $\overset{\textcolor{pathgreen}{\boldsymbol{\uparrow}}}{\textcolor{xring}{\fbox{$\mathbf{4}$}}}$ & 6 \\
+    \cline{2-10}
+    \multicolumn{1}{c}{} & \multicolumn{1}{c}{0} & \multicolumn{1}{c}{1} & \multicolumn{1}{c}{2} & \multicolumn{1}{c}{3} & \multicolumn{1}{c}{4} & \multicolumn{1}{c}{5} & \multicolumn{1}{c}{6} & \multicolumn{1}{c}{7} & \multicolumn{1}{c}{8} & \multicolumn{1}{c}{} \\
+    \end{tabular}
+\end{center}
+
+\begin{itemize}
+    \item {\color{blue}Se abbiamo 2 celle con lo stesso valore \uline{per convenzione} andiamo in alto}
+    \item Esistono altre LCS ottimali oltre quella calcolata, per farlo, bisogna scegliere un altro path durante il passo ricorsivo (andare a sinistra) in caso cui le 2 celle abbiano lo stesso valore
+\end{itemize}
+
+\subsection{Algoritmo PRINT-LCS senza matrice dei puntatori b}
+\begin{algorithm}[H]
+\caption{PRINT-LCS senza matrice dei puntatori}
+\begin{algorithmic}[1]
+\Procedure{PRINT-LCS}{$c, X, Y, i, j$}
+    \If{$i == 0 \lor j == 0$} \Comment{Caso base}
+        \State \Return
+    \EndIf
+    \If{$x_i == y_j$} \Comment{Passo ricorsivo $x_i = y_j$}
+        \State \Call{PRINT-LCS}{$c, X, Y, i-1, j-1$}
+        \State $\text{stampa } x_i$
+    \Else
+        \If{$c[i, j] == c[i-1, j]$}
+            \State \Call{PRINT-LCS}{$c, X, Y, i-1, j$} \Comment{Passo ricorsivo in cui $|LCS(X_{i-1}, Y_j)| \ge |LCS(X_i, Y_{j-1})|$}
+        \Else
+            \State \Call{PRINT-LCS}{$c, X, Y, i, j-1$} \Comment{Passo ricorsivo in cui $|LCS(X_{i-1}, Y_j)| < |LCS(X_i, Y_{j-1})|$}
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+A differenza della versione standard presentata nel Cormen, è possibile eliminare del tutto la matrice di supporto $b[1\dots m, 1\dots n]$ dei puntatori (\texttt{"$\nwarrow$"}, \texttt{"$\uparrow$"}, \texttt{"$\leftarrow$"}), risparmiando spazio in memoria pari a $\Theta(m \cdot n)$. 
+
+Infatti, a partire dalla cella $(m, n)$, possiamo ricostruire a ritroso il cammino ottimo direttamente dalla matrice delle lunghezze $c$ determinando in tempo $\Theta(1)$ quale sottoproblema ha generato il valore $c[i,j]$.
+
+\newpage
+\section{HCS - Heaviest Common Subsequence}
+\subsection{Definizione del problema}
+
+\begin{itemize}
+    \item \textbf{Input}:
+    \begin{itemize}
+        \item $X = \langle x_1, x_2, \dots, x_m \rangle$
+        \item $Y = \langle y_1, y_2, \dots, y_m \rangle$
+        \item $w: \Sigma \to \mathbb{N}^+$ (funzione peso, a ogni carattere associamo un numero naturale maggiore di 0)
+    \end{itemize}
+
+    \item \textbf{Output}:
+    \begin{itemize}
+        \item $Z = \langle z_1, z_2, \dots, z_K\rangle$ tale che:
+        \begin{itemize}
+            \item $Z$ è sottosequenza comune di $X$ e $Y$
+            \item $W(Z) = \Sigma_{i=1}^K w(z_i)$ è massimo
+        \end{itemize}
+    \end{itemize}
+\end{itemize}
+
+\subsection{Procedura di risoluzione}
+\begin{enumerate}
+    \item Definizione ricorsiva del problema (generico sottoproblema con relativo coefficiente)
+    \item Individuazione del valore ottimo del problema
+    \item Equazione di ricorrenza per il calcolo del generico coefficiente
+    \begin{itemize}
+        \item Passo ricorsivo
+        \item Casi base
+    \end{itemize}
+    \item Riempimento della matrice $c$ dei coefficienti (algoritmo bottom-up)
+    \item Ricostruzione di una soluzione a partire da $c$
+\end{enumerate}
+
+\subsection{Definizione del generico sottoproblema}
+\begin{itemize}
+    \item Sottoproblema di dimensione $2=i,j$
+    \item Trovare $Z_{ij}=HCS(X_i,Y_j)$
+    \item Numero sottoproblemi $= (n+1)(m+1)$
+    \item Coefficiente  $c_{ij} = $ peso totale $W(Z_{ij})$
+    \item Problema principale: Sottoproblema di dimensione $(m,n)$
+    \item Valore attimo del problema principale $= c_{m,n}$
+\end{itemize}
+
+\subsection{Equazione di ricorrenza}
+\begin{itemize}
+    \item \textbf{Caso base:}
+    \begin{itemize}
+        \item Se $i = 0 \lor j=0 \implies HCS(X_i,Y_j) = \langle \rangle \implies c_{ij} = 0$
+    \end{itemize}
+    \item \textbf{Passo ricorsivo:}
+    \begin{itemize}
+        \item $\mathbf{x_i = y_j} \implies HCS(X_{i-1},Y_{j-1}) + \langle x_i \rangle \implies c[i,j] = c[i-1,j-1] + w(x_i)$ 
+        \item $\mathbf{x_i \not = y_j} \implies heaviest(HCS(X_{i-1},Y_j), HCS(X_i,Y_{j-1})) \implies max(c_{i-1,j},c_{i,j-1})$
+    \end{itemize} 
+\end{itemize}
+
+\subsection{Algoritmo bottom-up}
+\begin{algorithm}[H]
+    \caption{Algoritmo Bottom-up Heaviest Common Subsequence}
+    \begin{algorithmic}[1]
+        \Procedure{WEIGHT-HCS}{$w,X,Y$}
+            \For{$i=0 \textbf{ to } m$} \Comment{Caso base $i=0$}
+                \State $c[i,0] = 0$
+            \EndFor
+            \For{$j=0 \textbf{ to } n$} \Comment{Caso base $j=0$}
+                \State $c[0,j] = 0$
+            \EndFor
+        
+            \For{$i=1 \textbf{ to } m$}
+                \For{$j=1 \textbf{ to } n$}
+                    \If{$x_i == y_j$} \Comment{Passo ricorsivo $x_i == y_j$}
+                        \State $c[i,j]=c[i-1,j-1]+w(x_i)$
+                    \Else \Comment{Passo ricorsivo $x_i \not = y_j$}
+                        \State $c[m,n] = max(c[n-1,m],c[n,m-1])$
+                    \EndIf
+                \EndFor
+            \EndFor
+            \State \Return c
+        \EndProcedure
+
+    \end{algorithmic}
+\end{algorithm}
+
+\subsection{Algoritmo di stampa HCS}
+\begin{algorithm}
+    \caption{Algoritmo di stampa della HCS}
+    \begin{algorithmic}
+        \Procedure{PRINT-HCS}{$c,X,Y,i,j$}
+            \If{$i==0 \lor j==0$}
+                \State \Return
+            \EndIf
+            \If{$x_i == y_j$}
+                \State PRINT-HCS($c,i-1,j-1$)
+                \State stampa $x_i$
+
+                \Else
+                    \If{$c[i,j]== c[i-1,j]$}
+                        \State PRINT-HCS($c,i-1,h$)
+                    \Else
+                        \State PRINT-HCS($c,i,j-1$)
+                    \EndIf
+            \EndIf
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+\newpage
+\section{LCS con al massimo 3 rossi}
+
+\subsection{Definizione del problema}
+\begin{itemize}
+    \item \textbf{Input:}
+    \begin{itemize}
+        \item $X = \langle x_1, x_2, \dots, x_m \rangle$
+        \item $Y = \langle y_1, y_2, \dots, y_n \rangle$
+        \item $col: \Sigma \to \{red,black\}$
+        \item $3, \text{Numero intero}, \text{Parametro in input}$
+    \end{itemize}
+    \item \textbf{Output:}
+    \begin{itemize}
+        \item $Z$ è sottosequenza comune di $X$ e $Y$
+        \item $Z$ ha al massimo $3$ elementi rossi $(red)$
+        \item $k$ è massimo
+    \end{itemize}
+\end{itemize}
+
+\subsection{Esempi}
+
+\subsubsection{Esempio 1}
+{
+    \Large
+    \begin{gather*}
+        X = \langle {\color{red} 3},5, {\color{red}9,6,}4,8,12, {\color{red} 10,}5,30 ,{\color{red} 7}\rangle \\
+        Y = \langle {\color{red} 3,}2, {\color{red} 9,6,} 11, 8, 13, 30, {\color{red} 7} \rangle
+    \end{gather*}
+}
+
+\subsubsection{Esempio 2}
+{
+    \Large
+    \begin{gather*}
+        X = \langle {\color{red} 3,5,9,6,} 4,8,12,30 \rangle \\
+        Y = \langle 4,8,12,30, {\color{red} 3,5,9,6} \rangle
+    \end{gather*}
+}
+
+\subsection{Procedura di soluzione}
+\begin{enumerate}
+    \item Definizone ricorsiva del problema (generico sottoproblema con relativo coefficiente)
+    \item Individuazione del valore ottimo del problema
+    \item Equazione di ricorrenza per il calcolo del generico coefficiente
+    \begin{itemize}
+        \item Casi base
+        \item Passo ricorsivo
+    \end{itemize}
+    \item Riempimento della matrice $c$ dei coefficienti (algoritmo bottom-up)
+    \item Ricostruzione di una soluzione a partire da $c$
+\end{enumerate}
+
+\newpage
+\subsection{Definizione del generico sottoproblema}
+\begin{itemize}
+    \item \textbf{Sottoproblema di dimensione $3$:} $(i,j,r\text{ (numero di rossi)})$
+    \begin{gather*}
+        i \in \{1, \dots, m\} \\
+        j \in \{1, \dots, n\} \\ 
+        r \in \{0,1,2,3\} \text{ si inizia con r=3, si decrementa per ogni rosso aggiunto}
+    \end{gather*}
+    
+    \item \textbf{Numero sottoproblemi:} $(m+1)(n+1)(3+1)$
+    \item \textbf{Coefficiente $c_{ijr}\text{(valore ottimo)}$:} Lunghezza di $LCS_r(X_i,Y_j)$
+    \item \textbf{Problema principale:} Sottoproblema di dimensione $(m,n,3)$
+    \item \textbf{Valore ottimo del problema principale:} $c_{mn3}$
+\end{itemize}
+
+\subsection{Equazione di ricorrenza}
+\begin{itemize}
+    \item \textbf{Caso base}
+    \begin{itemize}
+        \item { \large
+                $\mathbf{\forall r \in \{0,1,2,3\},(i = 0 \lor j=0)}$ \\ $\implies LCS_r(X_i,Y_j) = \langle \rangle$ \\
+                $\implies c_{ijr} = 0$
+            }
+    \end{itemize}
+    \item \textbf{Passo ricorsivo}
+    \begin{itemize}
+        \item 
+        {
+            \large
+            $
+            \mathbf
+            {
+                \forall r \in \{0,1,2,3\}, (i>0 \land j>0) \land (x_i \not = y_j) 
+            } \\
+            \implies LCS_r(X_i,Y_j) = longest(LCS_r(X_{i-1},Y_j),LCS_r(X_i,Y_{j-1})) \\
+            \implies c_{ijr} = max(c_{i-1\ j\ r}, c_{i\ j-1\ r})
+            $
+        }
+        \item 
+        {
+            \large
+            $
+                \mathbf
+                {
+                    \forall r \in \{0,1,2,3\}, (i>0 \land j>0) \land (x_i = y_j) \land (col(x_i) \not = red)
+                } \\
+                \implies LCS_r(X_i,Y_j) = LCS(X_{i-1},Y_{j-1}) + {\langle x_i \rangle} \\
+                \implies c_{ijr} = c_{i-1\ j-1\ r} + 1
+            $
+        }
+        \item
+        {
+            \large
+            $
+                \mathbf
+                {
+                    (r=0) \land (i>0 \land j=0) \land (x_i = y_j) \land (col(x_i) = red)
+                } \\
+                \implies LCS_r(X_i,Y_j) = LCS_r(X_{i-1},Y_{j-1}) \\
+                \implies c_{ijr} = c_{i-1\ j-1\ r}
+            $
+        }
+        \item
+        {
+            \large
+            $
+                \mathbf
+                {
+                    (r>0) \land (i > 0 \land j > 0) \land (x_i = y_j) \land (col(x_i) = red)
+                } \\
+                \implies LCS_r(X_i,Y_j) = LCS_{r-1}(X_{i-1},Y_{j-1}) + {\color{red} \langle x_i \rangle} \\
+                \implies c_{ijr} = c_{i-1 \ j-1\ r-1} + 1
+            $
+        }
+    \end{itemize}
+\end{itemize}
+
+\subsection{Algoritmo Bottom-up}
+\begin{algorithm}[H]
+    \caption{LCS-atmost-3-red-length}
+    \begin{algorithmic}
+        \Procedure{LCS-atmost-3-red-length}{X,Y}
+
+            \State c = matrice di dimensione $(m+1)(n+1)(3+1)$
+
+            \Comment{Casi base}
+            \For{$r \text{ from } 0 \text{ to } 3$}
+                \For{$i \text{ from } 0 \text{ to } m$}
+                    \State c[$i,0,r$] = 0
+                \EndFor
+            \EndFor
+            \For{$r \text{ from } 0 \text{ to } 3$}
+                \For{$j \text{ from } 0 \text{ to } n$}
+                    \State c[$0,j,r$] = 0
+                \EndFor
+            \EndFor
+            \For{$r \text{ from } 0 \text{ to } 3$}
+                \For{$i \text{ from } 0 \text{ to } m$}
+                    \State c[$i,0,r$] = 0
+                \EndFor
+            \EndFor
+        \EndProcedure
+
+        \Comment{Passo ricorsivo}
+        \For{$r \text{ from } 0 \text{ to } 3$}
+            \For{$i \text{ from } 0 \text{ to } m$}
+                \For{$j \text{ from } 0 \text{ to } n$}
+                    \If{$x_i \not = y_j$}
+                        \State c[$i,j,r$] = c[$i-1,j-1,r$]
+
+                    \Else
+                        \If{$col(x_i) \not = red$}
+                            \State c[$i,j,r$] = c[$i-1,j-1,r$] + 1
+                        \Else
+                            \If{$r = 0$}
+                                \State c[$i,j,r$] = c[$i-1,j-1,r$]
+
+                            \Else
+                                \State c[$i,j,r$] = c[$i-1,j-1,r-1$] + 1
+                            \EndIf
+                        \EndIf
+                    \EndIf
+                \EndFor
+            \EndFor
+        \EndFor
+
+        \State \Return c[$m,n,3$]
+    \end{algorithmic}
+\end{algorithm}
+
+\subsection{Ricostruzione}
+\begin{algorithm}[H]
+    \caption{Print-LCS3R}
+    \begin{algorithmic}[1]
+        \Procedure{Print-LCS3R}{X,Y}
+            \Comment{Caso base}
+            \If{$i=0 \lor j=0$}
+                \State \Return
+            \EndIf
+
+            \Comment{Passo ricorsivo}
+            \If{$x_i \not = y_j$}
+                \State \Return longest(Print-LCS3R($X_{i-1},Y_{j}$), Print-LCS3R($X_{i}, Y_{j-1}$))
+
+                \Else
+                    \If{$col(x_i) \not = red$}
+                        \State Print-LCS3R($X_{i-1},Y_{j-1}$)
+                        \State Stampa $x_i$
+                    
+                        \Else
+                            \If{$r=0$}
+                                \State Print-LCS3R($X_{i-1},Y_{j-1}$)
+                            \Else
+                                \State Print-LCS3R($X_{i-1},Y_{j-1}$)
+                                \State Stampa $x_i$
+                            \EndIf
+
+                    \EndIf
+            \EndIf
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+
+\newpage
+\section{LCS tra 3 sequenze}
