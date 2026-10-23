@@ -1,0 +1,270 @@
+\chapter{Formulazione del problema}
+\section{Pianificazione della produzione}
+\subsection{Traccia}
+Nell' impianto di Lambrate la TOOL.spa produce unicamente pinze e
+chiavi il cui processo di produzione richiede:
+\begin{itemize}
+    \item Acciaio (materia prima)
+    \item Una fase di lavorazione dei singoli pezzi in acciaio (macchina per la lavorazione)
+    \item Una fase di assemblaggio dei pezzi lavorati (macchina per l'assemblaggio)
+\end{itemize}
+
+\vspace{0.5cm}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        & Per una chiave & Per una piza & Disponibilità giornaliera \\ \hline
+        Acciaio & 1,5 & 1 & 27000 \\ \hline
+        Ore macchina lavorazione & 1 & 1 & 21000 \\ \hline
+        Ore macchina assemblaggio & 0,3 & 0,5 & 9000 \\ \hline
+    \end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+In più si conosce la domanda giornaliera e il guadagno che si ottiene dalla vendità di ogni unità dei due prodotti
+
+\vspace{0.5cm}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|}
+        \hline & chiavi & pinze \\ \hline
+        Domanda max giornaliera & 15000 & 16000 \\ \hline
+        Guadagno per 1000 unità vendute & \$130 & \$100  \\ \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Modello di programmazione lineare}
+
+\subsubsection{incognite o variabili decisionali}
+\begin{itemize}
+    \item $\mathbf{x_c}:$ Numero di chiavi da produrre in un giorno (migliaia)
+    \item $\mathbf{x_p}:$ Numero di pinze da produrre in un giorno (in migliaia)
+\end{itemize}
+
+\subsubsection{Funzione obiettivo}
+{
+    \large
+    $$
+        max\ 130x_c + 100x_p \quad \text{guadagno totale giornaliero (in dollari)}
+    $$
+}
+
+\subsubsection{Vincoli}
+
+$$
+    \begin{aligned}
+        x_c &\leq 15 && \quad \text{Vincolo sul numero di chiavi producibili} \\
+        x_p &\leq 16 && \quad \text{Vincolo sul numero di pinze producibili} \\
+        1,5 \cdot x_c + 1 \cdot x_p &\leq 27 && \quad \text{Vincolo sull'acciaio} \\
+        1 \cdot x_c + 1 \cdot x_p &\leq 21 && \quad \text{Vincolo sulla macchina da lavorazione} \\
+        0,3 \cdot x_c + 0,5 \cdot x_p &\leq 9 && \quad \text{Vincolo sulle macchine di assemblaggio} \\
+        x_c,x_p \geq 0 && \quad \text{Vincoli di nonnegatività}
+    \end{aligned}
+$$
+
+\section{Problema della dieta}
+\subsection{Traccia}
+Individuare il mix ottimale degli ingredienti per il pasto di una mensa aziendale che consente di minimizzare il costo e soddisfare i vincoli nutrizionali
+
+Il pasto deve contenere almeno :
+\begin{itemize}
+    \item $2hg$ proteine
+    \item $4hg$ carboidrati
+    \item $3hg$ grasso
+\end{itemize}
+
+Si possono miscelare 4 ingredienti con le seguenti caratteristiche (in hg per ogni kg)
+
+\vspace{0.5cm}
+
+\begin{center}
+    \begin{tabular}{|c|c|c|c|c|}
+        \hline Ingredienti & proteine & carboidrati & grassi & costo \\ \hline 1 & 1 & 4 & 3 & 3 \\ \hline
+        2 & 3 & 4 & 2 & 6 \\ \hline
+        3 & 2& 3& 3& 5 \\ \hline
+        4 & 3 & 2 & 4& 6 \\ \hline
+    \end{tabular}
+\end{center}
+
+\vspace{0.5cm}
+
+\subsection{Modello di programmazione lineare}
+\subsubsection{Variabili}
+$$
+    \begin{aligned}
+        x_1 && \quad \text{Quantitaivo ingrediente 1} \\
+        x_2 && \quad \text{Quantitaivo ingrediente 2} \\
+        x_3 && \quad \text{Quantitaivo ingrediente 3} \\
+        x_4 && \quad \text{Quantitaivo ingrediente 4} 
+    \end{aligned}
+$$
+
+\subsubsection{Funzione obiettivo}
+{
+    \large
+    $$
+    min\ 3 \cdot x_1 + 6 \cdot x_2 + 5 \cdot x_3 + 6 \cdot x_4
+    $$
+}
+
+\subsubsection{Vincoli}
+$$
+    \begin{aligned}
+        1 \cdot x_1 + 2 \cdot x_2 + 2 \cdot x_3 + 3 \cdot x_3 \geq 2 && \quad \text{Vincolo delle proteine} \\ 
+        4 \cdot x_1 + 4 \cdot x_2 + 3 \cdot x_3 + 2 \cdot x_4 \geq 4 && \quad \text{Vincolo dei carboidrati} \\
+        3 \cdot x_1 + 2 \cdot x_2 + 3 \cdot x_3 + 4 \cdot x_4 \geq 3 && \quad \text{Vincolo dei grassi} \\
+        x_1,x_2,x_3,x_4 \geq 0 && \quad \text{Vincoli di non nullità}
+    \end{aligned}
+$$
+
+\subsubsection{Formulazione compatta}
+\begin{minipage}{0.5\textwidth}
+    \begin{gather*}
+            Min\ 3 \cdot x_1 + 6 \cdot x_2 + 5 \cdot x_3 + 6 \cdot x_4 = \sum_{i \in I} c_i \cdot x_i \\ 
+            \sum_{i\in I} q_{ip} \cdot x_i \geq r_p \quad \text{proteine} \\
+            \sum_{i\in I} q_{ic} \cdot x_i \geq r_c \quad \text{cardoidrati} \\
+            \sum_{i\in I} q_{ig} \cdot x_i \geq r_g \quad \text{grassi} \\
+    \end{gather*}
+\end{minipage}
+\hfill
+\begin{minipage}{0.5\textwidth}
+    \begin{itemize}
+        \item $I = \{1,2,3,4\}$ Insieme degli ingredienti
+        \item $M = \{g,p,c\}$ Insieme dei macronutrienti
+        \item $q_{im}$ Quantitativo di $m \in M$ in $i \in I$
+        \item $c_i$ Costo di $i \in I$
+        \item $r_m$ requisiti di $m \in M$
+    \end{itemize}
+\end{minipage}
+
+\newpage
+\section{Reti di distribuzione}
+\subsection{Traccia}
+Bell computers produce computer in 3 stabilimenti e li trasporta in 4 centri di distribuzione
+
+\begin{center}
+    \begin{tabular}{|l|r|c|l|r|}
+    \hline
+    \textbf{Stabilimento} & \textbf{Capacità} & \quad & \textbf{C. Distribuzione} & \textbf{Domanda} \\ \hline
+    Texas & 460 & & New Jersey & 520 \\ \hline
+    Singapore & 700 & & Shannon & 250 \\ \hline
+    Barcelona & 390 & & Buenos Aires & 400 \\ \hline
+     & & & Taipei & 380 \\ \hline
+    \textit{\textbf{Total}} & \textit{\textbf{1,550}} & & \textit{\textbf{Total}} & \textit{\textbf{1,550}} \\ \hline
+    \end{tabular}
+    
+    \bigskip
+    
+    \begin{tabular}{|l|c|c|c|c|}
+    \hline
+    \textbf{Costo di} & \textbf{New Jersey} & \textbf{Shannon} & \textbf{Buenos Aires} & \textbf{Taipei} \\
+    \textbf{trasporto} & & & & \\ \hline
+    Texas & €22/unit & 17 & 30 & 18 \\ \hline
+    Singapore & 15 & 35 & 20 & 25 \\ \hline
+    Barcelona & 28 & 21 & 16 & 14 \\ \hline
+    \end{tabular}
+\end{center}
+
+\subsection{Modello di programmazione lineare}
+
+\subsubsection{Parametri}
+\begin{itemize}
+    \item Costo di trasporto da un centro all'altro
+    \item Numero di computer prodotti da ogni stabilimento
+    \item Domanda di computer per ogni centro di distribuzione
+\end{itemize}
+
+\subsubsection{Variabili di decisione}
+\begin{itemize}
+    \item $\mathbf{c_{xy}}$ costo di trasporto da centro distribuzione $x$ a centro di distribuzione $y$
+    \item $\mathbf{s_{ij}}$ la quantità di computer spediti da $x$ a $j$
+\end{itemize}
+
+
+\subsubsection{Funzione obiettivo}
+{
+    \Large
+    $$
+    min \sum_{i=1}^{3} \sum_{j=1}^{4} c_{ij} \cdot s_{ij}
+    $$
+}
+
+
+\subsubsection{Vincoli}
+\begin{itemize}
+    \item \textbf{Vincoli di non negatività:} $s_{ij} \geq 0$
+    \item \textbf{Vincoli di domanda:} 
+    $
+        \begin{aligned}
+            s_{11} + s_{21} + s_{31}  &\geq   520 \\ 
+            s_{12} + s_{22} + s_{32}  &\geq   250 \\ 
+            s_{13} + s_{23} + s_{33}  &\geq   400 \\
+            s_{14} + s_{24} + s_{34}  &\geq   380
+        \end{aligned}
+    $
+
+    \item \textbf{Vincoli di offerta:}
+    $
+        \begin{aligned}
+            s_{11} + s_{12} + s_{13} + s_{14}  &\leq   460  \\
+            s_{21} + s_{22} + s_{23} + s_{24}  &\leq   700  \\
+            s_{31} + s_{32} + s_{33} + s_{34}  &\leq   390  \\
+        \end{aligned}
+    $
+\end{itemize}
+
+\newpage
+\section{Turni di lavoro}
+\subsection{Traccia}
+Un ristorante è aperto tutti i giorni della settimana. Basandosi sull'esperienza passata, il numero di dipendenti necessario per ogni giorno della settimana è:
+
+\begin{center}
+    \begin{tabular}{|l|*{7}{c|}}
+    \hline
+    Day & Mo & Tu & We & Th & Fr & Sa & Su \\
+    \hline
+    Number & 14 & 13 & 15 & 16 & 19 & 18 & 11 \\
+    \hline
+    \end{tabular}
+\end{center}
+
+Ongi dipendente lavora 5 giorni consecutivi ed ha 2 giorni di riposo, e cosi vià. Come possiamo minimizzare il numero totale di dipendenti?
+
+\subsection{Modello di programmazione lineare}
+
+\subsubsection{Parametri}
+\begin{itemize}
+    \item Numero di dipendenti necessari per ogni giorno lavorativo
+\end{itemize}
+
+\subsubsection{Variabili di decisione}
+\begin{itemize}
+    \item  $\mathbf{x_i \ i \in \{1,2,3,4,5,6,7\}}$:numero di dipendenti che inizia a lavorare nel giorno $i$
+\end{itemize}
+
+\subsubsection{Funzione obiettivo}
+{
+    \Large
+    $$
+    min \sum_{i=1}^{7} x_i
+    $$
+}
+\subsubsection{Vincoli}
+\begin{itemize}
+    \item Vincoli di non negatività: 
+
+    \item Vincoli di necessità di dipendenti: 
+    $
+        \begin{aligned}
+            s_1 + s_7 + s_6 + s_5 + s_4 &\geq 14 \\
+            s_2 + s_1 + s_7 + s_6 + s_5 &\geq 13 \\
+            s_3 + s_2 + s_1 + s_7 + s_6 &\geq 15 \\
+            s_4 + s_3 + s_2 + s_1 + s_7 &\geq 16 \\
+            s_5 + s_4 + s_3 + s_2 + s_1&\geq 19 \\
+            &\geq 18 \\
+            &\geq 11 
+        \end{aligned}
+    $
+\end{itemize}

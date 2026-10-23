@@ -1,0 +1,205 @@
+\chapter{LIS - Longest Increasing Subsequence}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Abbiamo una sequenze $\mathbf{X = \langle x_1, \dots, x_m \rangle (= X_m),\ \forall x_i \in X,\ x_i \in \Sigma}$
+
+\subsection{Soluzione}
+Una più lunga sottosequenza $Z$ di $X$ nella quale \uline{gli elementi appaiono in ordine crescente}.\\
+($\Sigma$ munito di una relazione d'ordine crescente)
+
+\subsection{Esempio}
+{
+    \large
+    \begin{gather*}
+        X = X_8 = \langle 6,4,7,3,5,9,11,8 \rangle \quad m=8 \\ \\ 
+        \left.
+        \begin{aligned}
+        \langle 4, 7, 9, 11 \rangle \\
+        \langle 6, 7, 9, 11 \rangle \\
+        \langle 4, 5, 9, 11 \rangle \\
+        \langle 3, 5, 9, 11 \rangle
+        \end{aligned}
+        \right\}
+        \quad \text{Sono tutte LIS} \\ \\
+        \langle 3,5,8\rangle  \text{ termina con $x_8 = 8$ ma non è una LIS perchè non ha lunghezza massima}
+    \end{gather*}
+}
+
+\newpage
+\section{Formulazione ricorsiva di una LIS}
+\subsection{Istanza}
+{
+    \large
+    $$
+        X_i = \langle x_1, \dots, x_i \rangle
+    $$
+}
+
+\subsection{Soluzione}
+Una soluzione $LIS\ Z^{(i)}$ di $X_i$
+
+\subsection{Caso base}
+{
+    \large
+
+    \begin{itemize}
+        \item $i=0\ Z^{\emptyset} = \langle \rangle$
+        \item $i=0\ Z^{1} = \langle x_1 \rangle$
+    \end{itemize}
+}
+
+\subsection{Passo ricorsivo $i > 1$}
+{
+    \large
+
+    \begin{itemize}
+        \item $Z^{(i)} \stackrel{???}{=} Z^{(0)}\ Z^{(1)} \dots Z^{(i-1)}$
+        \item $Z^{(i)} = Z^{(?)} + x_i$
+    \end{itemize}
+}
+
+Non è possibile costruire una LIS in questo modo, essendo che per capire chi è $Z^{(?)}$ \uline{occorre conoscere con cosa termina}, ma ciò non si può sapere essendo la LIS costruita attraverso \textbf{chiamate ricorsive}.
+
+Per risolvere il dilemma, si \uline{introduce un problema ausiliario}/vincolato associato a LIS per ovviare a tale mancanza
+
+\newpage
+\section{Formulazione ricorsiva di una $LIS_V$}
+\subsection{Istanza}
+{
+    \large
+    $$
+        X=X_m=\langle x_1, \dots, x_m \rangle
+    $$
+}
+\subsection{Soluzione}
+Una $LIS\ Z$ di $X$ la quale termina con l'ultimo simbolo di $X$ (cioè con $x_m$)
+
+\subsection{Definizione dei coefficienti nel problema $LIS_V$}
+$\forall i \in \{1, \dots, m\}\ c_i$ è $|Z^{(i)}|$ cioè la lunghezza di $Z^{(i)}$
+
+\subsection{Caso base}
+Con $i=1$ abbiamo che l'istanza è $X_1 =\langle x_1 \rangle$, questo porta ad avere $Z^{(i)}=\langle x_1 \rangle$ e $c_1  = |Z^{(i)}| = 1$
+
+\subsection{Passo ricorsivo}
+{
+    \large $$ Z^{(i) }= Z^{(k)} + x_i $$ 
+}
+
+$Z^(k)$ è uno dei sottoproblemi più piccoli di $i$ che termina con $x_i$.
+
+Si richiede che:
+\begin{itemize}
+    \item $\mathbf{x_k < x_i}$
+    \item $Z^{(k)}$ sia una migliora (più lunga) tra tutte le $Z^{(j)}$ con $j<i$ il cui ultimo simbolo $x_j$ è minore di $x_i$
+\end{itemize}
+
+Quindi $Z^{(k)}$ è tale che
+{
+    \large
+    $$ 
+        c_k=|Z^{(k)}| = max\{c_j: 1 \leq j \leq \land x_j < x_i\}
+    $$
+}
+siccome $Z^{(i)}=Z^{(j)} + x_i$, $c_i = max\{c_j : 1 \leq i \land x_j < x_i\} + 1$ con $max\ \emptyset=0$
+
+\newpage
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}
+    \caption{LIS-LENGTH($n$)}
+    \begin{algorithmic}
+        \Procedure{LIS-Length}{$n$}
+        
+        \State $n=length(X)$
+
+        \State $c[1]=1$ \Comment{Caso base}
+
+        \State $m = c[1]$ \Comment{in m si vuole calcolare il $max\{c_1,\dots,c_n\}$}
+
+        
+        \State $ind-m=1$ \Comment{in ind-m si vuole calcolare l'indice $k$ tale che $c_k = max\{c1,\dots,c_n\}$}
+
+        \State $b[1]=0$
+
+        \For{$i=2$ to $n$} \Comment{$\text{occorre calcolare } c_i = max\{c_j:1 \leq j \leq i \land x_j < x_i\} + 1$ con $max\ \emptyset = 0$}
+
+        \State $tmp = 0$
+        \State $h = 0$
+        
+        \For{$j=1$ to $i-1$}
+            \If{$x_j < x_i \land c[j]>tmp$}
+            \State $tmp=c[j]$
+            \State $h=j$
+            \EndIf
+        \EndFor
+
+        \State $c[i]=tmp+1$
+        \State $b[i]=h$
+
+        \If{$c[i]>m$}
+        \State $m=c[i]$
+        \State $ind-m=i$
+        \EndIf
+
+        \EndFor
+
+
+        \State \Return $c,b,m,ind-m$
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+Complessità in tempo $\Theta(n^2)$ in spazio $\Theta(n)$
+
+
+\section{Ricostruzione della LIS}
+\begin{algorithm}
+    \caption{PRINT-LIS}
+    \begin{algorithmic}
+        \Procedure{Print-LIS}{$ind-m,b$}
+        \If{$b[ind-m]=0$}
+            \State print($x_i$)
+
+            \Else
+                \State Print-LIS($b[i]$)
+                \State print($x_i$)
+        \EndIf
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+
+\newpage
+\section{Dimostrazione: Proprietà Sottostruttura Ottima di una $LIS_V$}
+\subsection{Teorema}
+\begin{itemize}
+    \item Data $X= \langle x_1, \dots, x_n \rangle$
+    \item Sia $i\in \{2,\dots,n\}$
+    \item Sia $Z^{(i)}$ una $LIS_V$ di $X_i$
+    \item Sia $Z^{(i)}$ con $j \in \{1,\dots,i-1\}$ una qualuque $LIS_V$ di $X_j$
+    \begin{itemize}
+        \item Quindi $Z^{(i)}$ termina con $x_i$ e $Z^{(j)}$ termina con $x_j$
+    \end{itemize}
+\end{itemize}
+
+Vale che:
+{
+    \large
+    $$Z^{(i)} = Z^* | x_i$$
+}
+
+dove $Z^*$ è una più lunga tra le sequenze $Z^{j}$ il cui ultimo simbolo $x_j$ è $<x_i$ 
+
+\subsection{Dimostrazione}
+Trattiamo solo il caso in cui $Z^* \not = \langle \rangle$.
+
+\textbf{Se per assurdo} $Z^*|x_i$ non è soluzione del sottoproblema i-esimo per nessuna tra le possibili sequenze $Z^*$ allora 
+$\exists Z' : Z^{(i)} = Z'|x_i$ vale quindi che:
+\begin{itemize}
+    \item $Z'$ è crescente
+    \item $Z'$ termina con un simbolo $<x_i$
+    \item $|Z'|>|Z^*|$ termina con $x_j$, che è uno tra $x_{j_1},\dots,x_{j_e}$
+\end{itemize}
+
+Quindi considerando $Z^* = Z^{(j)}$ si ha che $Z^*$ non è una soluzione del sottoproblema $j'$, il che contraddice l'ipotesi

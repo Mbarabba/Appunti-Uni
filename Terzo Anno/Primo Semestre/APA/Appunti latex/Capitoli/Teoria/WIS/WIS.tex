@@ -1,0 +1,286 @@
+\chapter{WIS - Weighted Interval Scheduling 
+\\(ottimizzazione combinatoria insiemi)}
+
+\section{Definzione del problema}
+\subsection{Istanza}
+\subsubsection{Definizione dell'insieme}
+Dato un insieme di attività $X_n = \langle 1, \dots, n \rangle$ con $n \in \mathbb{N}\ n>0$ a cui, per ogni attività dell'insieme sono associati i parametri:
+\begin{itemize}
+    \item $\mathbf{s_i}$ tempo di inizio dell'attività $i$
+    \item $\mathbf{f_i}$ tempo di fine dell'attività $i$
+    \item $\mathbf{v_i >0}$ il valore attribuito all'attività $i$
+\end{itemize}
+
+\subsubsection{Compatibilità}
+Siano $i,j \in X_n$ due attività distinte $(i \not = j)$ diciamo che $i$ e $j$ sono compatibili \textbf{se non si sovrappongono} \uline{$[s_i,f_i) \cap [s_j,f_j) = \emptyset$}
+
+\subsubsection{Funzione di valutazione}
+$A \subseteq X_n$ contiene solo attività mutualmente compatibili
+
+Sia $A \subseteq X_n$ qualunque definiamo:
+
+{
+    \large
+    $$
+    V(A) = 
+    \begin{cases}
+        \sum_{i \in A} v_i & \text{se } A \neq \emptyset \\
+        0 & \text{se } A = \emptyset
+    \end{cases}
+    $$
+}
+
+Dato un sottoinsieme, la funzione $V$ gli associa un numero reale (ossia il suo valore)
+
+
+\begin{itemize}
+    \item In caso cui il \uline{sottoinsieme non sia vuoto}, il valore associato sarà la somma di tutti i valori delle sue attività
+    \item In caso cui il \uline{sottoinsieme sia vuoto}, il valore associato sarà 0
+\end{itemize}
+
+\newpage
+\subsubsection{Funzione di Compatibilità}
+Dato $A \subseteq X_n$ qualunque definiamo:
+
+{
+    \large
+    $$
+    COMP(A) = 
+    \begin{cases}
+        true & \text{se } A \not = \emptyset \text{ e } A \text{ contiene attività mutualmente compatibili} \\
+        true & \text{se } A = \emptyset \\
+        false & \text{altrimenti}
+    \end{cases}
+    $$
+}
+
+Dato un sottoinsieme, la funzione $COMP$ restituisce un valore booleano per definire se l'insieme è composta da elementi mutualmente compatibili
+\begin{itemize}
+    \item In caso l'insieme non sia vuoto e sia composto da elementi mutualmente compatibili, restituirà il valore $true$
+    \item In caso l'insieme sia vuoto, restituirà il valore $true$
+    \item In caso l'insieme non sia vuoto e siano presenti al suo interno elementi non mutualmente compatibili, restituirà $false$
+\end{itemize}
+
+\subsection{Soluzione}
+Stiamo cercando un sottoinsieme di $X_n$ che contenga elementi mutualmente compatibili la cui somma porta al valore massimo
+
+{
+    \large
+    \[
+        V(S) = \max_{\substack{A \subseteq X_n : \\ \text{COMP}(A)=\text{true}}} \{ V(A) \}
+    \]
+}
+
+\newpage
+
+\section{Definzione della soluzione ricorsiva}
+
+\subsection{Istanza}
+Abbiamo un insieme di attività $X_i = \{1, \dots, i\}$
+
+
+\subsection{Soluzione}
+Chiamiamo $S_i$ la \uline{soluzione del sottoproblema i-esimo}
+
+{
+    \large
+    $$
+        S_i \subseteq X_i :  
+        V(S_i) = \max_{\substack{A \subseteq X_n : \\ \text{COMP}(A)=\text{true}}} \{ V(A) \}
+    $$
+}
+
+Vogliamo una soluzione il cui valore sia il massimo dell'insieme degli elementi $A \subseteq X_n$ mutualmente compatibili
+
+
+\subsubsection{Definizione del coefficiente $c_i$}
+Definiamo $c_i$ come $c_i = V(S_i)$
+
+\subsection{Casi base}
+
+\subsubsection{Insieme vuoto $i=0$}
+{
+    \large
+    $$
+        i=0 \quad X_0 = \emptyset \implies S_0 = \emptyset \quad c_0=V(S_0)=0
+    $$
+}
+
+Essendo che l'insieme vuoto non contiene alcuna attività il suo valore sarà pari a 0
+
+\subsubsection{Insieme composto da un solo elemento $i=1$}
+{
+    \large
+    $$
+        i=1 \quad X_1=\{1\} \implies S_1 = \{1\} \quad c_1 = V(S_1) = v_1
+    $$
+}
+
+Essendo l'insieme $S$ composto da un unico elemento esso rispetterà la condizione di compatibilità portando il valore della soluzione ad essere il valore della singola attività presente
+
+\subsection{Passo ricorsivo}
+Si vuole risolvere il sottoproblema i-esimo con $i>1$ assumendo di aver già risolto i sottoproblemi $0,\dots,i-1$ ossia di disporre di $S_0,\dots, S_{i-1}$ ma:
+
+{
+    \large
+    $$
+        S_i \overset{???}{=} \underbrace{S_0, \dots, S_{i-1}}_{\text{Espressione in funzione di $S_0,\dots,S_{i-1}$}}
+    $$
+}
+Distinguiamo 2 casi
+
+\subsubsection{$\mathbf{i \not \in S_i}$}
+L'elemento i dell'istanza $X_i = \{1,\dots,i\}$ è \textbf{inutile}.
+
+Procediamo come se l'istnaza fosse $X_{i-1}$, quindi procediamo a risolvere il sottoproblema i equivale a risolvere il sottoproblema $i-1$, pertanto:
+
+{
+    \large
+    $$
+        S_i = S_{i-1} \quad c_i = V(S_i)=c_{i-1}
+    $$
+}
+
+\subsubsection{$\mathbf{i \in S_i}$}
+Quindi abbiamo che:
+
+{
+    \large
+    $$
+        S_i = S_? \ \cup \ \{i\}
+    $$
+}
+
+$S_?$ è la soluzione di quale sottoproblema di $i?$ Per scoprirlo abbiamo bisogno di ordinare per tempo di fine (preprocessing) e calcolare quale delle attività antecendenti ha valore massimo.
+
+Per fare ciò definiamo:
+
+{
+    \large
+
+    $$
+        p(i) = max\{j<i:\text{$j$ è compatibile con $i$}\}
+    $$
+}
+
+che ci restituisce l'attività con valore massimo antecedente e compatibile ad $i$.
+
+\begin{itemize}
+    \item $\mathbf{X_{p(i)}}$ contiene attività ciascuna delle quali è compatibili con $i$
+    \item $\mathbf{S_{p(i)} \subseteq X_{p(i)}}$ contiene attività tutte mutualmente compatibili e ciascuna delle quali è compatibile con $i$, inoltre è di valore massimo
+\end{itemize}
+
+Se entrambe queste condizioni vengono rispettate allora:
+
+{
+    \large
+
+    $$
+        S_i = S_{p(i)} \cup \{i\} \quad c_i = V(S_i) = c_{p(i) + v_i}
+    $$
+}
+
+\section{Algoritmo bottom-up}
+\subsection{Pseudocodice}
+\begin{algorithm}
+    \caption{WIS-WEIGHT}
+    \begin{algorithmic}
+        \Procedure{WIS-WEIGHT}{$n$}
+            \State $c[0]=0$
+            
+            \For{$i=1$ to $n$}
+                \State $c[i]=max\{c[i-1],c[p(i)] + v_i\}$
+            \EndFor
+
+            \State \Return $c$
+            
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+\subsection{Spiegazione}
+\begin{enumerate}
+    \item Impostiamo il caso base $(c[0])$ a 0
+    \item Ricorsivamente risaliamo l'array e utilizziamo la funzione di valutazione per assegnare un valore a ognuna delle celle, grazie al fatto che salviamo il valore ottenuto all'interno dell'array $c$ non dovremo ricalcolare ogni volta le soluzioni dei sottoproblemi
+\end{enumerate}
+
+\subsection{Complessità}
+\begin{itemize}
+    \item \textbf{Complessità in tempo:} $\Theta(n)$, è un ciclo for che scorre un array e applica una funzione
+    \item \textbf{Complessità in spazio:} $\Theta(n)$ tutto ciò che abbiamo in memoria è un semplice array
+\end{itemize}
+
+\subsection{Simulazione}
+
+
+\newpage
+\section{Algoritmo di stampa della soluzione $\mathbf{S_i}$}
+\subsection{Pseudocodice}
+\begin{algorithm}
+    \caption{PRINT-WIS}
+    \begin{algorithmic}
+        \Procedure{PRINT-WIS}{$i,c$}
+            \If{$i=0$}
+            \State \Return
+
+            \Else
+                \If{$c[p(i)]+v_i \geq c[i-1]$} 
+                    \State PRINT-WIS($p(i),c$) \Comment{Stampa $S_{p(i)} \implies S_i=S_{p(i)} \cup$}
+                    \State print(i)
+
+                    \Else
+                        \State PRINT-WIS($i-1,c$) \Comment{Stampa $S_{i-1}\implies S_i = S_{i-1}$}
+                \EndIf
+        \EndIf
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+\subsection{Spiegazione}
+\begin{enumerate}
+    \item Se abbiamo $i=0$ implica che l'insieme è vuoto/siamo arrivati alla fine e quindi non c'è nulla da stampare
+    \item Usiamo la formula di ricorrenza per capire quale elemento stampare al prossimo ciclo ricorsivo
+    \item Continuiamo finchè $i=0 \implies$ l'array è finito
+\end{enumerate}
+\subsection{Complessità}
+\begin{itemize}
+    \item \textbf{Complessità in tempo:} $\Theta(n)$, stiamo solo risalendo l'array ricorsivamente e stampando gli elementi
+    \item \textbf{Complessità in spazio:} $\Theta(n)$ tutto ciò che abbiamo in memoria è un semplice array
+\end{itemize}
+
+
+\newpage
+\section{Algoritmo di stampa dell'insieme di soluzione}
+\subsection{Pseudocodice}
+\begin{algorithm}
+    \caption{SET-WIS}
+    \begin{algorithmic}
+        \Procedure{SET-WIS}{$i,c$}
+            \If{$i=0$}
+                \State \Return $\emptyset$
+
+                \Else
+                    \If{$c[p(i)] + v_i \geq c[i-1]$} 
+                        \State \Return SET-WIS($p(i),c$) $\cup \{i\}$
+
+                        \Else
+                            \State \Return SET-WIS($i-1,c$)
+                    \EndIf
+            \EndIf
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+\subsection{Spiegazione}
+    \begin{enumerate}
+        \item Se l'insieme è vuoto allora restituiamo l'insieme vuoto
+        \item Attraverso la chiamata formula di ricorsione costruisco l'array contenente gli elementi dell'insieme della soluzione
+        \item Finiti gli elementi stampero $\emptyset$ concatenato agli elementi dell'insieme di soluzione
+    \end{enumerate}
+\subsection{Complessità}
+\begin{itemize}
+    \item \textbf{Complessità in tempo:} $\Theta(n)$, stiamo solo risalendo l'array ricorsivamente e stampando gli elementi
+    \item \textbf{Complessità in spazio:} $\Theta(n)$ tutto ciò che abbiamo in memoria è un semplice array
+\end{itemize}
+
+\newpage
+\section{Dimostrazione del problema della sottostruttura ottima}
+\subsection{Teorema}
+\subsection{Dimostrazione}

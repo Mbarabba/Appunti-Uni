@@ -1,5 +1,3 @@
-
-
 \documentclass[a4paper,12pt]{report}
 
 \input{param.tex}
@@ -19,7 +17,7 @@
         
         \vspace{1.5cm}
         
-        {\Large Nicholas Scorrano} % Inserisci qui il tuo nome
+        {\Large Nicholas Scorrano}
         
         \vspace{1.5cm}
         
@@ -38,12 +36,18 @@
 
     \tableofcontents
 
-    \part{Programmazione Dinamica}
+    \part{Teoria}
         \setcounter{chapter}{0}
-        \include{Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.tex}
+        \include{Capitoli/Teoria/LCS/LCS.tex}
+        \include{Capitoli/Teoria/WIS/WIS.tex}
+        \include{Capitoli/Teoria/LIS/LIS.tex}
+        \include{Capitoli/Teoria/Hateville/Hateville.tex}
+        \include{Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.tex}
+        \include{Capitoli/Teoria/LICS/LICS.tex}
 
     \part{Esercizi}
         \setcounter{chapter}{0}
         \include{Capitoli/Esercitazioni/Esercizi LCS.tex}
+        \include{Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex}
         
 \end{document}

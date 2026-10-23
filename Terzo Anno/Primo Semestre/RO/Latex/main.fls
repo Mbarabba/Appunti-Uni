@@ -322,6 +322,12 @@ INPUT Capitoli/Teoria/Modelli nella ricerca/Modelli nella ricerca operativa.aux
 INPUT ./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux
 INPUT ./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux
 INPUT Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux
+INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
+INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
+INPUT Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
+INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
+INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
+INPUT Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
 OUTPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -384,9 +390,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT main.toc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+OUTPUT main.toc
 INPUT ./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.tex
 OUTPUT Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.aux
 INPUT ./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.tex
@@ -487,6 +493,93 @@ INPUT ./Immagini/RA PL.png
 INPUT ./Immagini/RA PL.png
 INPUT ./Immagini/RA PL.png
 INPUT ./Immagini/RA PL.png
+INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.tex
+OUTPUT Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
+INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.tex
+INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.tex
+INPUT Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.tex
+INPUT ./Immagini/Vertici.png
+INPUT ./Immagini/Vertici.png
+INPUT ./Immagini/Vertici.png
+INPUT ./Immagini/Vertici.png
+INPUT ./Immagini/Vertici.png
+INPUT ./Immagini/Spigolo.png
+INPUT ./Immagini/Spigolo.png
+INPUT ./Immagini/Spigolo.png
+INPUT ./Immagini/Spigolo.png
+INPUT ./Immagini/Spigolo.png
+INPUT ./Immagini/Vertici ammissibili.png
+INPUT ./Immagini/Vertici ammissibili.png
+INPUT ./Immagini/Vertici ammissibili.png
+INPUT ./Immagini/Vertici ammissibili.png
+INPUT ./Immagini/Vertici ammissibili.png
+INPUT ./Immagini/Vertici non ammissibili.png
+INPUT ./Immagini/Vertici non ammissibili.png
+INPUT ./Immagini/Vertici non ammissibili.png
+INPUT ./Immagini/Vertici non ammissibili.png
+INPUT ./Immagini/Vertici non ammissibili.png
+INPUT ./Immagini/Test di ottimalità.png
+INPUT ./Immagini/Test di ottimalità.png
+INPUT ./Immagini/Test di ottimalità.png
+INPUT ./Immagini/Test di ottimalità.png
+INPUT ./Immagini/Test di ottimalità.png
+INPUT ./Immagini/Concetto chiave 1.png
+INPUT ./Immagini/Concetto chiave 1.png
+INPUT ./Immagini/Concetto chiave 1.png
+INPUT ./Immagini/Concetto chiave 1.png
+INPUT ./Immagini/Concetto chiave 1.png
+INPUT ./Immagini/Concetto chiave 2.png
+INPUT ./Immagini/Concetto chiave 2.png
+INPUT ./Immagini/Concetto chiave 2.png
+INPUT ./Immagini/Concetto chiave 2.png
+INPUT ./Immagini/Concetto chiave 2.png
+INPUT ./Immagini/Concetto chiave 3.png
+INPUT ./Immagini/Concetto chiave 3.png
+INPUT ./Immagini/Concetto chiave 3.png
+INPUT ./Immagini/Concetto chiave 3.png
+INPUT ./Immagini/Concetto chiave 3.png
+INPUT ./Immagini/Concetto 4.png
+INPUT ./Immagini/Concetto 4.png
+INPUT ./Immagini/Concetto 4.png
+INPUT ./Immagini/Concetto 4.png
+INPUT ./Immagini/Concetto 4.png
+INPUT ./Immagini/Concetto 5.png
+INPUT ./Immagini/Concetto 5.png
+INPUT ./Immagini/Concetto 5.png
+INPUT ./Immagini/Concetto 5.png
+INPUT ./Immagini/Concetto 5.png
+INPUT ./Immagini/Concetto 6.png
+INPUT ./Immagini/Concetto 6.png
+INPUT ./Immagini/Concetto 6.png
+INPUT ./Immagini/Concetto 6.png
+INPUT ./Immagini/Concetto 6.png
+INPUT ./Immagini/Variabili slack 1.png
+INPUT ./Immagini/Variabili slack 1.png
+INPUT ./Immagini/Variabili slack 1.png
+INPUT ./Immagini/Variabili slack 1.png
+INPUT ./Immagini/Variabili slack 1.png
+INPUT ./Immagini/Esempio forma aumentata.png
+INPUT ./Immagini/Esempio forma aumentata.png
+INPUT ./Immagini/Esempio forma aumentata.png
+INPUT ./Immagini/Esempio forma aumentata.png
+INPUT ./Immagini/Esempio forma aumentata.png
+INPUT ./Immagini/Testo del rapporto minimo.png
+INPUT ./Immagini/Testo del rapporto minimo.png
+INPUT ./Immagini/Testo del rapporto minimo.png
+INPUT ./Immagini/Testo del rapporto minimo.png
+INPUT ./Immagini/Testo del rapporto minimo.png
+INPUT ./Immagini/Bob sinclair.png
+INPUT ./Immagini/Bob sinclair.png
+INPUT ./Immagini/Bob sinclair.png
+INPUT ./Immagini/Bob sinclair.png
+INPUT ./Immagini/Bob sinclair.png
+INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.tex
+OUTPUT Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
+INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.tex
+INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.tex
+INPUT Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbxi10.tfm
 INPUT main.aux
 INPUT ./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.aux
 INPUT ./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.aux
@@ -497,12 +590,20 @@ INPUT Capitoli/Teoria/Modelli nella ricerca/Modelli nella ricerca operativa.aux
 INPUT ./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux
 INPUT ./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux
 INPUT Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux
+INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
+INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
+INPUT Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
+INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
+INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
+INPUT Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.1)  4 OCT 2026 21:58
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.18)  19 OCT 2026 13:06
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -754,7 +754,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
 \l__color_backend_stack_int=\count375
-) (./main.aux (./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.aux) (./Capitoli/Teoria/Modelli nella ricerca/Modelli nella ricerca operativa.aux) (./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux))
+) (./main.aux (./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.aux) (./Capitoli/Teoria/Modelli nella ricerca/Modelli nella ricerca operativa.aux) (./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux) (./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux) (./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux))
 \openout1 = `main.aux'.
 
 LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 7.
@@ -882,23 +882,23 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.63 ...à di $\geq $ e $=$}{16}{subsection.2.4.4}
+l.63 ...à di $\geq $ e $=$}{17}{subsection.2.4.4}
                                                   % [1
 
-])
+] [2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}] [3
+ [3] [4
 
-] [4
+] [5
 
 ]
 \openout2 = `"Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.aux"'.
 
  (./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.tex
 Capitolo 0.
-) [5
+) [6
 
 
 ]
@@ -910,7 +910,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 25
 (/usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<Immagini/minimizzazione-massimizzazione.png, id=182, 826.08624pt x 294.09875pt>
+<Immagini/minimizzazione-massimizzazione.png, id=265, 826.08624pt x 294.09875pt>
 File: Immagini/minimizzazione-massimizzazione.png Graphic file (type png)
 <use Immagini/minimizzazione-massimizzazione.png>
 Package pdftex.def Info: Immagini/minimizzazione-massimizzazione.png  used on input line 32.
@@ -925,18 +925,18 @@ Underfull \hbox (badness 3128) in paragraph at lines 53--53
 []\T1/lmr/bx/n/12 Variabili nu-me-ri-che \T1/lmr/m/n/12 in
  []
 
-[6
+[7
 
 
 
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./Immagini/minimizzazione-massimizzazione.png>]
-<Immagini/ott. non vincolata.png, id=198, 459.7175pt x 202.7575pt>
+<Immagini/ott. non vincolata.png, id=279, 459.7175pt x 202.7575pt>
 File: Immagini/ott. non vincolata.png Graphic file (type png)
 <use Immagini/ott. non vincolata.png>
 Package pdftex.def Info: Immagini/ott. non vincolata.png  used on input line 70.
 (pdftex.def)             Requested size: 229.85818pt x 101.3785pt.
-<Immagini/ott. vincolata.png, id=199, 459.7175pt x 262.9825pt>
+<Immagini/ott. vincolata.png, id=280, 459.7175pt x 262.9825pt>
 File: Immagini/ott. vincolata.png Graphic file (type png)
 <use Immagini/ott. vincolata.png>
 Package pdftex.def Info: Immagini/ott. vincolata.png  used on input line 78.
@@ -952,12 +952,12 @@ Overfull \hbox (1.84341pt too wide) in paragraph at lines 110--111
 \T1/lmr/m/n/12 Quando l'in-sie-me $\OML/lmm/m/it/12 X$ \T1/lmr/m/n/12 del-le so-lu-zio-ni am-mis-si-bi-li di un pro-ble-ma di ot-ti-miz-za-zio-ne |   []   |   []   |   []
  []
 
-[7 <./Immagini/ott. non vincolata.png> <./Immagini/ott. vincolata.png>] [8{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [9]) [10]
+[8 <./Immagini/ott. non vincolata.png> <./Immagini/ott. vincolata.png>] [9{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}] [10]) [11]
 \openout2 = `"Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux"'.
 
  (./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.tex
 Capitolo 2.
-[11
+[12
 
 
 
@@ -965,7 +965,7 @@ Capitolo 2.
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 27.
-<Immagini/Proporzionalità1.png, id=231, 514.92375pt x 629.35126pt>
+<Immagini/Proporzionalità1.png, id=313, 514.92375pt x 629.35126pt>
 File: Immagini/Proporzionalità1.png Graphic file (type png)
 <use Immagini/Proporzionalità1.png>
 Package pdftex.def Info: Immagini/Proporzionalità1.png  used on input line 94.
@@ -975,8 +975,8 @@ Overfull \hbox (20.59366pt too wide) in paragraph at lines 94--95
  [] 
  []
 
-[12]
-<Immagini/Proporzionalità 2.png, id=242, 346.29375pt x 439.6425pt>
+[13]
+<Immagini/Proporzionalità 2.png, id=324, 346.29375pt x 439.6425pt>
 File: Immagini/Proporzionalità 2.png Graphic file (type png)
 <use Immagini/Proporzionalità 2.png>
 Package pdftex.def Info: Immagini/Proporzionalità 2.png  used on input line 108.
@@ -986,8 +986,8 @@ Overfull \hbox (22.85208pt too wide) in paragraph at lines 108--109
  [] 
  []
 
-[13 <./Immagini/Proporzionalità1.png> <./Immagini/Proporzionalità 2.png>]
-<Immagini/Additività.png, id=251, 815.045pt x 298.11375pt>
+[14 <./Immagini/Proporzionalità1.png> <./Immagini/Proporzionalità 2.png>]
+<Immagini/Additività.png, id=333, 815.045pt x 298.11375pt>
 File: Immagini/Additività.png Graphic file (type png)
 <use Immagini/Additività.png>
 Package pdftex.def Info: Immagini/Additività.png  used on input line 122.
@@ -997,18 +997,18 @@ Overfull \hbox (3.39696pt too wide) in paragraph at lines 122--123
  [] 
  []
 
-[14 <./Immagini/Additività.png>]
-<Immagini/Rette.png, id=260, 881.2925pt x 250.9375pt>
+[15 <./Immagini/Additività.png>]
+<Immagini/Rette.png, id=342, 881.2925pt x 250.9375pt>
 File: Immagini/Rette.png Graphic file (type png)
 <use Immagini/Rette.png>
 Package pdftex.def Info: Immagini/Rette.png  used on input line 151.
 (pdftex.def)             Requested size: 440.64517pt x 125.46843pt.
-<Immagini/Semipiano.png, id=261, 402.50375pt x 373.395pt>
+<Immagini/Semipiano.png, id=343, 402.50375pt x 373.395pt>
 File: Immagini/Semipiano.png Graphic file (type png)
 <use Immagini/Semipiano.png>
 Package pdftex.def Info: Immagini/Semipiano.png  used on input line 167.
 (pdftex.def)             Requested size: 201.25137pt x 186.69704pt.
- [15 <./Immagini/Rette.png> <./Immagini/Semipiano.png>]
+ [16 <./Immagini/Rette.png> <./Immagini/Semipiano.png>]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 171.
@@ -1041,37 +1041,269 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 224.
 
-[16]
-<Immagini/RA PL.png, id=275, 598.235pt x 379.4175pt>
+[17]
+<Immagini/RA PL.png, id=357, 598.235pt x 379.4175pt>
 File: Immagini/RA PL.png Graphic file (type png)
 <use Immagini/RA PL.png>
 Package pdftex.def Info: Immagini/RA PL.png  used on input line 285.
 (pdftex.def)             Requested size: 299.11676pt x 189.70828pt.
-) [17 <./Immagini/RA PL.png>] [18
+) [18 <./Immagini/RA PL.png>]
+\openout2 = `"Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux"'.
+
+ (./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.tex
+Capitolo 3.
+[19
 
 
 
-] [19
 
-] (./main.aux (./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.aux) (./Capitoli/Teoria/Modelli nella ricerca/Modelli nella ricerca operativa.aux) (./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux))
+]
+<Immagini/Vertici.png, id=372, 723.70375pt x 617.30624pt>
+File: Immagini/Vertici.png Graphic file (type png)
+<use Immagini/Vertici.png>
+Package pdftex.def Info: Immagini/Vertici.png  used on input line 39.
+(pdftex.def)             Requested size: 253.30011pt x 216.06041pt.
+<Immagini/Spigolo.png, id=373, 715.67375pt x 619.31375pt>
+File: Immagini/Spigolo.png Graphic file (type png)
+<use Immagini/Spigolo.png>
+Package pdftex.def Info: Immagini/Spigolo.png  used on input line 49.
+(pdftex.def)             Requested size: 286.26442pt x 247.72112pt.
+<Immagini/Vertici ammissibili.png, id=374, 722.7pt x 615.29875pt>
+File: Immagini/Vertici ammissibili.png Graphic file (type png)
+<use Immagini/Vertici ammissibili.png>
+Package pdftex.def Info: Immagini/Vertici ammissibili.png  used on input line 55.
+(pdftex.def)             Requested size: 289.07487pt x 246.11513pt.
+ [20 <./Immagini/Vertici.png> <./Immagini/Spigolo.png>]
+<Immagini/Vertici non ammissibili.png, id=381, 735.74875pt x 610.28pt>
+File: Immagini/Vertici non ammissibili.png Graphic file (type png)
+<use Immagini/Vertici non ammissibili.png>
+Package pdftex.def Info: Immagini/Vertici non ammissibili.png  used on input line 60.
+(pdftex.def)             Requested size: 294.29428pt x 244.10767pt.
+ [21 <./Immagini/Vertici ammissibili.png> <./Immagini/Vertici non ammissibili.png>]
+<Immagini/Test di ottimalità.png, id=388, 498.86375pt x 424.58624pt>
+File: Immagini/Test di ottimalità.png Graphic file (type png)
+<use Immagini/Test di ottimalità.png>
+Package pdftex.def Info: Immagini/Test di ottimalità.png  used on input line 70.
+(pdftex.def)             Requested size: 299.32056pt x 254.75371pt.
+<Immagini/Concetto chiave 1.png, id=389, 501.875pt x 431.6125pt>
+File: Immagini/Concetto chiave 1.png Graphic file (type png)
+<use Immagini/Concetto chiave 1.png>
+Package pdftex.def Info: Immagini/Concetto chiave 1.png  used on input line 86.
+(pdftex.def)             Requested size: 250.93687pt x 215.80571pt.
+
+Overfull \hbox (14.06929pt too wide) in paragraph at lines 86--87
+[][] 
+ []
+
+[22 <./Immagini/Test di ottimalità.png> <./Immagini/Concetto chiave 1.png>]
+Underfull \hbox (badness 3260) in paragraph at lines 92--94
+[]\T1/lmr/m/n/12 Il me-to-do del sim-ples-so � un al-go-rit-mo
+ []
+
+<Immagini/Concetto chiave 2.png, id=396, 597.23125pt x 512.91624pt>
+File: Immagini/Concetto chiave 2.png Graphic file (type png)
+<use Immagini/Concetto chiave 2.png>
+Package pdftex.def Info: Immagini/Concetto chiave 2.png  used on input line 104.
+(pdftex.def)             Requested size: 238.88826pt x 205.16286pt.
+
+Overfull \hbox (2.02068pt too wide) in paragraph at lines 104--105
+[][] 
+ []
+
+<Immagini/Concetto chiave 3.png, id=397, 498.86375pt x 422.57875pt>
+File: Immagini/Concetto chiave 3.png Graphic file (type png)
+<use Immagini/Concetto chiave 3.png>
+Package pdftex.def Info: Immagini/Concetto chiave 3.png  used on input line 115.
+(pdftex.def)             Requested size: 249.43126pt x 211.28885pt.
+
+Overfull \hbox (12.56367pt too wide) in paragraph at lines 115--116
+[][] 
+ []
+
+<Immagini/Concetto 4.png, id=398, 502.87875pt x 426.59375pt>
+File: Immagini/Concetto 4.png Graphic file (type png)
+<use Immagini/Concetto 4.png>
+Package pdftex.def Info: Immagini/Concetto 4.png  used on input line 128.
+(pdftex.def)             Requested size: 251.43875pt x 213.29634pt.
+
+Overfull \hbox (14.57117pt too wide) in paragraph at lines 128--129
+[][] 
+ []
+
+<Immagini/Concetto 5.png, id=399, 718.685pt x 605.26125pt>
+File: Immagini/Concetto 5.png Graphic file (type png)
+<use Immagini/Concetto 5.png>
+Package pdftex.def Info: Immagini/Concetto 5.png  used on input line 143.
+(pdftex.def)             Requested size: 251.54352pt x 211.8446pt.
+
+Overfull \hbox (14.67593pt too wide) in paragraph at lines 143--144
+[][] 
+ []
+
+[23 <./Immagini/Concetto chiave 2.png> <./Immagini/Concetto chiave 3.png> <./Immagini/Concetto 4.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+[]|   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+|   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 151--152
+|   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 1142) in paragraph at lines 157--158
+|   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+
+Underfull \hbox (badness 2894) in paragraph at lines 157--158
+|   []   |   []   |   []   |   []   |   []   |   []
+ []
+
+<Immagini/Concetto 6.png, id=409, 594.22pt x 519.9425pt>
+File: Immagini/Concetto 6.png Graphic file (type png)
+<use Immagini/Concetto 6.png>
+Package pdftex.def Info: Immagini/Concetto 6.png  used on input line 162.
+(pdftex.def)             Requested size: 267.39653pt x 233.97197pt.
+
+Overfull \hbox (30.52895pt too wide) in paragraph at lines 162--163
+[][] 
+ []
+
+[24 <./Immagini/Concetto 5.png> <./Immagini/Concetto 6.png>]
+<Immagini/Variabili slack 1.png, id=417, 844.15375pt x 336.25626pt>
+File: Immagini/Variabili slack 1.png Graphic file (type png)
+<use Immagini/Variabili slack 1.png>
+Package pdftex.def Info: Immagini/Variabili slack 1.png  used on input line 185.
+(pdftex.def)             Requested size: 506.49615pt x 201.75531pt.
+ [25 <./Immagini/Variabili slack 1.png>]
+<Immagini/Esempio forma aumentata.png, id=426, 870.25125pt x 230.8625pt>
+File: Immagini/Esempio forma aumentata.png Graphic file (type png)
+<use Immagini/Esempio forma aumentata.png>
+Package pdftex.def Info: Immagini/Esempio forma aumentata.png  used on input line 204.
+(pdftex.def)             Requested size: 522.15479pt x 138.51855pt.
+ [26 <./Immagini/Esempio forma aumentata.png>] [27]
+<Immagini/Testo del rapporto minimo.png, id=443, 752.8125pt x 361.35pt>
+File: Immagini/Testo del rapporto minimo.png Graphic file (type png)
+<use Immagini/Testo del rapporto minimo.png>
+Package pdftex.def Info: Immagini/Testo del rapporto minimo.png  used on input line 296.
+(pdftex.def)             Requested size: 376.40532pt x 180.67456pt.
+ [28]
+<Immagini/Bob sinclair.png, id=452, 790.955pt x 367.3725pt>
+File: Immagini/Bob sinclair.png Graphic file (type png)
+<use Immagini/Bob sinclair.png>
+Package pdftex.def Info: Immagini/Bob sinclair.png  used on input line 310.
+(pdftex.def)             Requested size: 316.3764pt x 146.94638pt.
+ [29 <./Immagini/Testo del rapporto minimo.png> <./Immagini/Bob sinclair.png>]) [30] [31
+
+
+
+]
+\openout2 = `"Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux"'.
+
+ (./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.tex
+pdfTeX warning (ext4): destination with the same identifier (name{chapter.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.1 \chapter{Formulazione del problema}
+                                       
+Capitolo 1.
+
+pdfTeX warning (ext4): destination with the same identifier (name{section.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.2 \section{Pianificazione della produzione}
+                                             
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.1.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.3 \subsection{Traccia}
+                        
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.1.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.38 ...section{Modello di programmazione lineare}
+                                                  
+pdfTeX warning (ext4): destination with the same identifier (name{section.1.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.67 \section{Problema della dieta}
+                                   
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.2.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.68 \subsection{Traccia}
+                          [32
+
+
+]
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.2.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.93 ...section{Modello di programmazione lineare}
+                                                  
+Overfull \hbox (2.61107pt too wide) in paragraph at lines 123--141
+$[]$  $[]$ 
+ []
+
+[33] [34]
+pdfTeX warning (ext4): destination with the same identifier (name{section.1.3}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.143 \section{Reti di distribuzione}
+                                     
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.3.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.144 \subsection{Traccia}
+                          
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.3.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.170 ...ection{Modello di programmazione lineare}
+                                                   [35]
+pdfTeX warning (ext4): destination with the same identifier (name{section.1.4}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.219 \section{Turni di lavoro}
+                               
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.4.1}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.220 \subsection{Traccia}
+                          
+pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.4.2}) has been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.235 ...ection{Modello di programmazione lineare}
+                                                  ) [36] [37
+
+
+
+] (./main.aux (./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.aux) (./Capitoli/Teoria/Modelli nella ricerca/Modelli nella ricerca operativa.aux) (./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux) (./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux) (./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 32091 strings out of 467356
- 638698 string characters out of 5418691
- 1088486 words of memory out of 6000000
- 60509 multiletter control sequences out of 15000+600000
- 720181 words of font info for 101 fonts, out of 8000000 for 9000
+ 32390 strings out of 467356
+ 648174 string characters out of 5418690
+ 1089817 words of memory out of 6000000
+ 60707 multiletter control sequences out of 15000+600000
+ 728714 words of font info for 103 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,13n,107p,1540b,630s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (20 pages, 463207 bytes).
+ 91i,13n,107p,1540b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (38 pages, 1082897 bytes).
 PDF statistics:
- 533 PDF objects out of 1000 (max. 8388607)
- 434 compressed objects within 5 object streams
- 98 named destinations out of 1000 (max. 500000)
- 607 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 915 PDF objects out of 1000 (max. 8388607)
+ 761 compressed objects within 8 object streams
+ 181 named destinations out of 1000 (max. 500000)
+ 1042 words of extra memory for PDF output out of 10000 (max. 10000000)
 

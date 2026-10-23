@@ -342,12 +342,30 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr12.tfm
 INPUT ./main.aux
 INPUT ./main.aux
 INPUT main.aux
-INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
-INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
-INPUT Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
+INPUT ./Capitoli/Teoria/LCS/LCS.aux
+INPUT ./Capitoli/Teoria/LCS/LCS.aux
+INPUT Capitoli/Teoria/LCS/LCS.aux
+INPUT ./Capitoli/Teoria/WIS/WIS.aux
+INPUT ./Capitoli/Teoria/WIS/WIS.aux
+INPUT Capitoli/Teoria/WIS/WIS.aux
+INPUT ./Capitoli/Teoria/LIS/LIS.aux
+INPUT ./Capitoli/Teoria/LIS/LIS.aux
+INPUT Capitoli/Teoria/LIS/LIS.aux
+INPUT ./Capitoli/Teoria/Hateville/Hateville.aux
+INPUT ./Capitoli/Teoria/Hateville/Hateville.aux
+INPUT Capitoli/Teoria/Hateville/Hateville.aux
+INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
+INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
+INPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
+INPUT ./Capitoli/Teoria/LICS/LICS.aux
+INPUT ./Capitoli/Teoria/LICS/LICS.aux
+INPUT Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/Esercizi LCS.aux
+INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
+INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
+INPUT Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
 OUTPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -410,38 +428,39 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/amsfonts/umsb.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
-OUTPUT main.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.tex
-OUTPUT Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
-INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.tex
-INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.tex
-INPUT Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.tex
+OUTPUT main.toc
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT ./Capitoli/Teoria/LCS/LCS.tex
+OUTPUT Capitoli/Teoria/LCS/LCS.aux
+INPUT ./Capitoli/Teoria/LCS/LCS.tex
+INPUT ./Capitoli/Teoria/LCS/LCS.tex
+INPUT Capitoli/Teoria/LCS/LCS.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
-INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
-INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
@@ -467,11 +486,42 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam5.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm5.tfm
+INPUT ./Capitoli/Teoria/WIS/WIS.tex
+OUTPUT Capitoli/Teoria/WIS/WIS.aux
+INPUT ./Capitoli/Teoria/WIS/WIS.tex
+INPUT ./Capitoli/Teoria/WIS/WIS.tex
+INPUT Capitoli/Teoria/WIS/WIS.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
+INPUT ./Capitoli/Teoria/LIS/LIS.tex
+OUTPUT Capitoli/Teoria/LIS/LIS.aux
+INPUT ./Capitoli/Teoria/LIS/LIS.tex
+INPUT ./Capitoli/Teoria/LIS/LIS.tex
+INPUT Capitoli/Teoria/LIS/LIS.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri7.tfm
+INPUT ./Capitoli/Teoria/Hateville/Hateville.tex
+OUTPUT Capitoli/Teoria/Hateville/Hateville.aux
+INPUT ./Capitoli/Teoria/Hateville/Hateville.tex
+INPUT ./Capitoli/Teoria/Hateville/Hateville.tex
+INPUT Capitoli/Teoria/Hateville/Hateville.tex
+INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.tex
+OUTPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
+INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.tex
+INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.tex
+INPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.tex
+INPUT ./Capitoli/Teoria/LICS/LICS.tex
+OUTPUT Capitoli/Teoria/LICS/LICS.aux
+INPUT ./Capitoli/Teoria/LICS/LICS.tex
+INPUT ./Capitoli/Teoria/LICS/LICS.tex
+INPUT Capitoli/Teoria/LICS/LICS.tex
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
 OUTPUT Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
 INPUT Capitoli/Esercitazioni/Esercizi LCS.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
@@ -482,17 +532,58 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmri12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx6.tfm
+INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex
+OUTPUT Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
+INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex
+INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex
+INPUT Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
 INPUT main.aux
-INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
-INPUT ./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
-INPUT Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux
+INPUT ./Capitoli/Teoria/LCS/LCS.aux
+INPUT ./Capitoli/Teoria/LCS/LCS.aux
+INPUT Capitoli/Teoria/LCS/LCS.aux
+INPUT ./Capitoli/Teoria/WIS/WIS.aux
+INPUT ./Capitoli/Teoria/WIS/WIS.aux
+INPUT Capitoli/Teoria/WIS/WIS.aux
+INPUT ./Capitoli/Teoria/LIS/LIS.aux
+INPUT ./Capitoli/Teoria/LIS/LIS.aux
+INPUT Capitoli/Teoria/LIS/LIS.aux
+INPUT ./Capitoli/Teoria/Hateville/Hateville.aux
+INPUT ./Capitoli/Teoria/Hateville/Hateville.aux
+INPUT Capitoli/Teoria/Hateville/Hateville.aux
+INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
+INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
+INPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
+INPUT ./Capitoli/Teoria/LICS/LICS.aux
+INPUT ./Capitoli/Teoria/LICS/LICS.aux
+INPUT Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/Esercizi LCS.aux
+INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
+INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
+INPUT Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
@@ -512,6 +603,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb

@@ -1,0 +1,256 @@
+\floatname{algorithm}{Algoritmo}
+
+\definecolor{darkred}{RGB}{180, 20, 20}
+\definecolor{darkblue}{RGB}{20, 70, 170}
+\definecolor{darkgreen}{RGB}{20, 120, 60}
+
+\chapter{LCS tra $X$ e $Y$ con al massimo 3 rossi e 2 blu}
+
+\section{Traccia}
+Date due sequenze $X$ e $Y$ i cui simboli sono colorati (di rosso, nero e blu), calcolare una più lunga sottosequenza comune di $X$ e $Y$ nella quale vi siano al massimo $3$ simboli rossi e al massimo $2$ simboli blu.
+
+\section{Definizione del problema generale}
+
+\begin{itemize}
+    \item \textbf{Istanza:}
+    \begin{itemize}
+        \item $X = \langle x_1, x_2, \dots, x_m \rangle \quad \text{con } x_i \in \Sigma$
+        \item $Y = \langle y_1, y_2, \dots, y_n \rangle \quad \text{con } y_j \in \Sigma$
+        \item $\text{col} : \Sigma \longrightarrow \{\text{rosso}, \text{nero}, \text{blu}\}$ (ovvero $\{\text{red}, \text{black}, \text{blue}\}$)
+    \end{itemize}
+    \item \textbf{Output:} La più lunga sottosequenza comune tra $X$ e $Y$ la quale contiene al più $3$ elementi rossi e al più $2$ elementi blu.
+\end{itemize}
+
+\section{Definizione del generico sottoproblema}
+
+Per tenere traccia sia dei prefissi delle due sequenze sia del numero di simboli colorati ancora utilizzabili, definiamo una quadrupla di indici $(i, j, r, b)$ tale che:
+\begin{itemize}
+    \item $i \in \{0, 1, \dots, m\}$ indica la lunghezza del prefisso $X_i$ della sequenza $X$;
+    \item $j \in \{0, 1, \dots, n\}$ indica la lunghezza del prefisso $Y_j$ della sequenza $Y$;
+    \item $r \in \{0, 1, 2, 3\}$ indica il numero massimo di elementi \textcolor{darkred}{\textbf{rossi}} ``ancora disponibili'' all'interno della sottosequenza;
+    \item $b \in \{0, 1, 2\}$ indica il numero massimo di elementi \textcolor{darkblue}{\textbf{blu}} ``ancora disponibili'' all'interno della sottosequenza.
+\end{itemize}
+
+\noindent
+\textbf{Enunciato del generico sottoproblema $(i, j, r, b)$:} \\
+Trovare $LCS_{r,b}(X_i, Y_j)$, ovvero una più lunga sottosequenza comune dei prefissi $X_i$ e $Y_j$ con al massimo $r$ elementi rossi e al massimo $b$ elementi blu.
+
+\begin{itemize}
+    \item \textbf{Numero di sottoproblemi:}
+    \[
+        (m + 1) \cdot (n + 1) \cdot (3 + 1) \cdot (2 + 1) = 12 (m + 1)(n + 1)
+    \]
+    \item \textbf{Definizione del coefficiente:}
+    \[
+        c_{i,j,r,b} = \big|LCS_{r,b}(X_i, Y_j)\big|
+    \]
+    rappresenta la lunghezza di una $LCS_{r,b}(X_i, Y_j)$ che tiene conto del limite massimo di elementi rossi ($r$) e blu ($b$).
+    \item \textbf{Problema principale:} Sottoproblema di dimensione $(m, n, 3, 2)$.
+    \item \textbf{Valore ottimo del problema principale:} $c_{m,n,3,2}$.
+\end{itemize}
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base ($i = 0 \lor j = 0$)}
+
+Quando almeno uno dei due prefissi è vuoto ($i = 0 \lor j = 0$), per qualunque disponibilità di rossi $r \in \{0, 1, 2, 3\}$ e di blu $b \in \{0, 1, 2\}$, non è possibile formare alcuna sottosequenza comune non vuota.
+
+\[
+\begin{aligned}
+    X_0 &= \langle\,\rangle && (i = 0) \\
+    Y_3 &= \langle y_1, y_2, y_3 \rangle && (j = 3)
+\end{aligned}
+\quad \longrightarrow \quad
+\text{Impossibile creare una LCS non essendoci elementi in comune.}
+\]
+
+\noindent
+Pertanto, $\forall r \in \{0, 1, 2, 3\}$ e $\forall b \in \{0, 1, 2\}$:
+\[
+    i = 0 \lor j = 0 \implies LCS_{r,b}(X_i, Y_j) = \langle\,\rangle \implies c_{i,j,r,b} = 0
+\]
+
+\subsection{Passo ricorsivo ($i > 0 \land j > 0$)}
+
+\paragraph{Casi in cui $x_i = y_j$:}
+\begin{itemize}
+    \item \textbf{Simbolo nero:} $(x_i = y_j) \land (\text{col}(x_i) = \text{nero})$
+    \[
+        \implies LCS_{r,b}(X_i, Y_j) = LCS_{r,b}(X_{i-1}, Y_{j-1}) + \langle x_i \rangle
+    \]
+    \[
+        \implies c_{i,j,r,b} = c_{i-1,j-1,r,b} + 1
+    \]
+
+    \item \textbf{Simbolo rosso con budget disponibile:} $(x_i = y_j) \land (\text{col}(x_i) = \text{red}) \land (r > 0)$
+    \[
+        \implies LCS_{r,b}(X_i, Y_j) = LCS_{r-1,b}(X_{i-1}, Y_{j-1}) + \textcolor{darkred}{\langle x_i \rangle}
+    \]
+    \[
+        \implies c_{i,j,r,b} = c_{i-1,j-1,r-1,b} + 1
+    \]
+
+    \item \textbf{Simbolo rosso con budget esaurito:} $(x_i = y_j) \land (\text{col}(x_i) = \text{red}) \land (r = 0)$
+    \[
+        \implies LCS_{r,b}(X_i, Y_j) = LCS_{0,b}(X_{i-1}, Y_{j-1})
+    \]
+    \[
+        \implies c_{i,j,r,b} = c_{i-1,j-1,0,b}
+    \]
+
+    \item \textbf{Simbolo blu con budget disponibile:} $(x_i = y_j) \land (\text{col}(x_i) = \text{blue}) \land (b > 0)$
+    \[
+        \implies LCS_{r,b}(X_i, Y_j) = LCS_{r,b-1}(X_{i-1}, Y_{j-1}) + \textcolor{darkblue}{\langle x_i \rangle}
+    \]
+    \[
+        \implies c_{i,j,r,b} = c_{i-1,j-1,r,b-1} + 1
+    \]
+
+    \item \textbf{Simbolo blu con budget esaurito:} $(x_i = y_j) \land (\text{col}(x_i) = \text{blue}) \land (b = 0)$
+    \[
+        \implies LCS_{r,b}(X_i, Y_j) = LCS_{r,0}(X_{i-1}, Y_{j-1})
+    \]
+    \[
+        \implies c_{i,j,r,b} = c_{i-1,j-1,r,0}
+    \]
+\end{itemize}
+
+\paragraph{Casi in cui $x_i \neq y_j$:}
+\begin{itemize}
+    \item \textbf{Simboli diversi:} $x_i \neq y_j$
+    \[
+        \implies LCS_{r,b}(X_i, Y_j) = \text{longest}\big\{LCS_{r,b}(X_{i-1}, Y_j),\, LCS_{r,b}(X_i, Y_{j-1})\big\}
+    \]
+    \[
+        \implies c_{i,j,r,b} = \max\big\{c_{i-1,j,r,b},\, c_{i,j-1,r,b}\big\}
+    \]
+\end{itemize}
+
+\vspace{0.3cm}
+\begin{table}[H]
+\centering
+\small
+\begin{tabular}{ll}
+\toprule
+\textbf{Condizione sul sottoproblema $(i, j, r, b)$} & \textbf{Equazione per $c_{i,j,r,b}$} \\
+\midrule
+$i = 0 \lor j = 0$ & $0$ \\
+$i,j > 0 \land x_i = y_j \land \text{col}(x_i) = \text{nero}$ & $c_{i-1,j-1,r,b} + 1$ \\
+$i,j > 0 \land x_i = y_j \land \text{col}(x_i) = \text{red} \land r > 0$ & $c_{i-1,j-1,r-1,b} + 1$ \\
+$i,j > 0 \land x_i = y_j \land \text{col}(x_i) = \text{red} \land r = 0$ & $c_{i-1,j-1,0,b}$ \\
+$i,j > 0 \land x_i = y_j \land \text{col}(x_i) = \text{blue} \land b > 0$ & $c_{i-1,j-1,r,b-1} + 1$ \\
+$i,j > 0 \land x_i = y_j \land \text{col}(x_i) = \text{blue} \land b = 0$ & $c_{i-1,j-1,r,0}$ \\
+$i,j > 0 \land x_i \neq y_j$ & $\max\{c_{i-1,j,r,b},\, c_{i,j-1,r,b}\}$ \\
+\bottomrule
+\end{tabular}
+\caption{Riepilogo generale dell'equazione di ricorrenza per il calcolo dei coefficienti $c_{i,j,r,b}$.}
+\end{table}
+
+\newpage
+\section{Algoritmo iterativo Bottom-Up}
+\subsection{Algoritmo in pseudocodice}
+
+\begin{algorithm}[H]
+\caption{Costruzione bottom-up della matrice a 4 dimensioni $\text{LCS}_{3r,2b}(X, Y, m, n, r, b)$}
+\begin{algorithmic}[1]
+\Procedure{LCS-3r2b}{$X, Y, m, n, r, b$}
+    \State $c = \text{nuova matrice } [0 \dots m][0 \dots n][0 \dots 3][0 \dots 2]$
+    \For{$r = 0 \textbf{ to } 3$} \Comment{\textcolor{darkgreen}{Casi base: impostiamo la $1^{\text{a}}$ colonna ($j=0$) pari a $0$}}
+        \For{$b = 0 \textbf{ to } 2$}
+            \For{$i = 0 \textbf{ to } m$}
+                \State $c[i][0][r][b] = 0$
+            \EndFor
+        \EndFor
+    \EndFor
+    \For{$r = 0 \textbf{ to } 3$} \Comment{\textcolor{darkgreen}{Casi base: impostiamo la $1^{\text{a}}$ riga ($i=0$) pari a $0$}}
+        \For{$b = 0 \textbf{ to } 2$}
+            \For{$j = 0 \textbf{ to } n$}
+                \State $c[0][j][r][b] = 0$
+            \EndFor
+        \EndFor
+    \EndFor
+    \For{$r = 0 \textbf{ to } 3$} \Comment{\textcolor{darkgreen}{Passo ricorsivo ($i > 0 \land j > 0$)}}
+        \For{$b = 0 \textbf{ to } 2$}
+            \For{$i = 1 \textbf{ to } m$}
+                \For{$j = 1 \textbf{ to } n$}
+                    \If{$x_i \neq y_j$}
+                        \State $c[i][j][r][b] = \max\big(c[i-1][j][r][b],\, c[i][j-1][r][b]\big)$
+                    \Else
+                        \If{$\text{col}(x_i) == \text{red}$}
+                            \If{$r > 0$}
+                                \State $c[i][j][r][b] = c[i-1][j-1][r-1][b] + 1$
+                            \Else
+                                \State $c[i][j][r][b] = c[i-1][j-1][r][b]$
+                            \EndIf
+                        \ElsIf{$\text{col}(x_i) == \text{blue}$}
+                            \If{$b > 0$}
+                                \State $c[i][j][r][b] = c[i-1][j-1][r][b-1] + 1$
+                            \Else
+                                \State $c[i][j][r][b] = c[i-1][j-1][r][b]$
+                            \EndIf
+                        \Else \Comment{\textcolor{darkgreen}{Elemento nero}}
+                            \State $c[i][j][r][b] = c[i-1][j-1][r][b] + 1$
+                        \EndIf
+                    \EndIf
+                \EndFor
+            \EndFor
+        \EndFor
+    \EndFor
+    \State \Return $c[m][n][3][2]$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Analisi della complessità (Bottom-Up)}
+\begin{itemize}
+    \item \textbf{Tempi di calcolo:} $\Theta(m \cdot n)$ (oppure $O(m \cdot n)$). Abbiamo $4$ cicli \texttt{for} annidati, di cui $2$ di lunghezza variabile ($m$ ed $n$) e $2$ di lunghezza fissa costante ($3+1 = 4$ iterazioni per i rossi e $2+1 = 3$ iterazioni per i blu).
+    \item \textbf{Spazio occupato:} $\Theta\big((m+1)(n+1)(3+1)(2+1)\big) = \Theta(m \cdot n)$, poiché utilizziamo una matrice $c$ a $4$ dimensioni in cui le ultime due dimensioni sono costanti.
+\end{itemize}
+
+\newpage
+\section{Algoritmo di ricostruzione della soluzione}
+\subsection{Algoritmo in pseudocodice}
+
+A partire dalla matrice $c$ calcolata dall'algoritmo bottom-up, la procedura ricorsiva seguente ricostruisce e stampa i caratteri della sottosequenza ottima risalendo a ritroso dalla cella $(m, n, 3, 2)$ fino ai casi base $(i = 0 \lor j = 0)$.
+
+\begin{algorithm}[H]
+\caption{Procedura ricorsiva di ricostruzione $\text{Print-LCS}_{3r,2b}(c, X, Y, i, j, r, b)$}
+\begin{algorithmic}[1]
+\Procedure{Print-LCS-3r2b}{$c, X, Y, i, j, r, b$}
+    \If{$i == 0 \lor j == 0$}
+        \State \Return
+    \EndIf
+    \If{$x_i \neq y_j$}
+        \If{$c[i][j][r][b] == c[i-1][j][r][b]$}
+            \State \Call{Print-LCS-3r2b}{$c, X, Y, i-1, j, r, b$}
+        \Else
+            \State \Call{Print-LCS-3r2b}{$c, X, Y, i, j-1, r, b$}
+        \EndIf
+    \Else
+        \If{$\text{col}(x_i) == \text{red}$}
+            \If{$r > 0$}
+                \State \Call{Print-LCS-3r2b}{$c, X, Y, i-1, j-1, r-1, b$}
+                \State $\textbf{print}(x_i)$
+            \Else
+                \State \Call{Print-LCS-3r2b}{$c, X, Y, i-1, j-1, r, b$}
+            \EndIf
+        \ElsIf{$\text{col}(x_i) == \text{blue}$}
+            \If{$b > 0$}
+                \State \Call{Print-LCS-3r2b}{$c, X, Y, i-1, j-1, r, b-1$}
+                \State $\textbf{print}(x_i)$
+            \Else
+                \State \Call{Print-LCS-3r2b}{$c, X, Y, i-1, j-1, r, b$}
+            \EndIf
+        \Else \Comment{\textcolor{darkgreen}{Elemento nero}}
+            \State \Call{Print-LCS-3r2b}{$c, X, Y, i-1, j-1, r, b$}
+            \State $\textbf{print}(x_i)$
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Analisi della complessità (Ricostruzione)}
+\begin{itemize}
+    \item \textbf{Tempo di calcolo:} $O(m + n)$, poiché ad ogni chiamata ricorsiva almeno uno dei due indici $i$ o $j$ viene decrementato di $1$ (risalendo in verticale $i-1$, in orizzontale $j-1$ o in diagonale $i-1, j-1$) fino a raggiungere la condizione di terminazione $i = 0 \lor j = 0$.
+\end{itemize}
