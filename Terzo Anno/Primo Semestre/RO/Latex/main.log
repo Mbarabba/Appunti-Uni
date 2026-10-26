@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.18)  19 OCT 2026 13:06
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.18)  26 OCT 2026 02:49
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -742,18 +742,106 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 28
 \Hy@SectionHShift=\skip66
 )
 Package hyperref Info: Option `colorlinks' set `true' on input line 90.
-) (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
+ (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
  (/usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
 \BKM@id=\count374
+)) (/usr/share/texlive/texmf-dist/tex/latex/nicematrix/nicematrix.sty
+Package: nicematrix 2026/04/23 v7.8b Enhanced arrays with the help of PGF/TikZ
+\l__nicematrix_tmpc_dim=\dimen331
+\l__nicematrix_tmpd_dim=\dimen332
+\l__nicematrix_tmpc_int=\count375
+\g__nicematrix_env_int=\count376
+\l__nicematrix_the_array_box=\box95
+\g__nicematrix_NiceMatrixBlock_int=\count377
+\g__nicematrix_notes_caption_int=\count378
+\l__nicematrix_columns_width_dim=\dimen333
+\l__nicematrix_col_width_dim=\dimen334
+\g__nicematrix_row_total_int=\count379
+\g__nicematrix_col_total_int=\count380
+\g__nicematrix_last_row_node_int=\count381
+\l__nicematrix_key_nb_rows_int=\count382
+\g__nicematrix_blocks_wd_dim=\dimen335
+\g__nicematrix_blocks_ht_dim=\dimen336
+\g__nicematrix_blocks_dp_dim=\dimen337
+\l__nicematrix_width_dim=\dimen338
+\l__nicematrix_tabular_width_dim=\dimen339
+\l__nicematrix_rule_width_before_dim=\dimen340
+\l__nicematrix_rule_width_after_dim=\dimen341
+\l__nicematrix_old_iRow_int=\count383
+\l__nicematrix_old_jCol_int=\count384
+\l__nicematrix_X_columns_dim=\dimen342
+\l__nicematrix_x_initial_dim=\dimen343
+\l__nicematrix_y_initial_dim=\dimen344
+\l__nicematrix_x_final_dim=\dimen345
+\l__nicematrix_y_final_dim=\dimen346
+\g__nicematrix_dp_row_zero_dim=\dimen347
+\g__nicematrix_ht_row_zero_dim=\dimen348
+\g__nicematrix_ht_row_one_dim=\dimen349
+\g__nicematrix_dp_ante_last_row_dim=\dimen350
+\g__nicematrix_ht_last_row_dim=\dimen351
+\g__nicematrix_dp_last_row_dim=\dimen352
+\g__nicematrix_width_last_col_dim=\dimen353
+\g__nicematrix_width_first_col_dim=\dimen354
+\l__nicematrix_multiplicity_int=\count385
+\g__nicematrix_ddots_int=\count386
+\g__nicematrix_iddots_int=\count387
+\g__nicematrix_delta_x_one_dim=\dimen355
+\g__nicematrix_delta_y_one_dim=\dimen356
+\g__nicematrix_delta_x_two_dim=\dimen357
+\g__nicematrix_delta_y_two_dim=\dimen358
+\l__nicematrix_row_min_int=\count388
+\l__nicematrix_row_max_int=\count389
+\l__nicematrix_col_min_int=\count390
+\l__nicematrix_col_max_int=\count391
+\l__nicematrix_initial_i_int=\count392
+\l__nicematrix_initial_j_int=\count393
+\l__nicematrix_final_i_int=\count394
+\l__nicematrix_final_j_int=\count395
+\l__nicematrix_segment_start_int=\count396
+\l__nicematrix_segment_end_int=\count397
+\g__nicematrix_static_num_of_col_int=\count398
+\g__nicematrix_block_box_int=\count399
+\l__nicematrix_first_row_int=\count400
+\l__nicematrix_first_col_int=\count401
+\l__nicematrix_last_row_int=\count402
+\l__nicematrix_last_col_int=\count403
+\c@tabularnote=\count404
+\g__nicematrix_tabularnote_int=\count405
+\c@nicematrix_draft=\count406
+\l__nicematrix_xdots_inter_dim=\dimen359
+\l__nicematrix_xdots_shorten_start_dim=\dimen360
+\l__nicematrix_xdots_shorten_end_dim=\dimen361
+\l__nicematrix_xdots_radius_dim=\dimen362
+\l__nicematrix_brace_shift_dim=\dimen363
+\l__nicematrix_trees_line_width_dim=\dimen364
+\l__nicematrix_trees_rounded_corners_dim=\dimen365
+\l__nicematrix_tab_rounded_corners_dim=\dimen366
+\l__nicematrix_cell_space_top_limit_dim=\dimen367
+\l__nicematrix_cell_space_bottom_limit_dim=\dimen368
+\l__nicematrix_left_margin_dim=\dimen369
+\l__nicematrix_right_margin_dim=\dimen370
+\l__nicematrix_extra_left_margin_dim=\dimen371
+\l__nicematrix_extra_right_margin_dim=\dimen372
+\c__nicematrix_max_l_dim=\dimen373
+\l__nicematrix_rounded_corners_dim=\dimen374
+\l__nicematrix_position_int=\count407
+\l__nicematrix_start_int=\count408
+\l__nicematrix_end_int=\count409
+\l__nicematrix_line_width_dim=\dimen375
+\l__nicematrix_offset_dim=\dimen376
+\l__nicematrix_submatrix_extra_height_dim=\dimen377
+\l__nicematrix_submatrix_left_xshift_dim=\dimen378
+\l__nicematrix_submatrix_right_xshift_dim=\dimen379
+\l__nicematrix_brace_yshift_dim=\dimen380
 ))
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 7.
  (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) (/usr/share/texlive/texmf-dist/tex/latex/l3backend/l3backend-pdftex.def
 File: l3backend-pdftex.def 2026-02-18 L3 backend support: PDF output (pdfTeX)
-\l__color_backend_stack_int=\count375
+\l__color_backend_stack_int=\count410
 ) (./main.aux (./Capitoli/Teoria/Introduzione/Introduzione alla ricerca operativa.aux) (./Capitoli/Teoria/Modelli nella ricerca/Modelli nella ricerca operativa.aux) (./Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux) (./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux) (./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux))
 \openout1 = `main.aux'.
 
@@ -814,16 +902,16 @@ LaTeX Info: Redefining \it@ccap on input line 7.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count376
-\scratchdimen=\dimen331
-\scratchbox=\box95
-\nofMPsegments=\count377
-\nofMParguments=\count378
+\scratchcounter=\count411
+\scratchdimen=\dimen381
+\scratchbox=\box96
+\nofMPsegments=\count412
+\nofMParguments=\count413
 \everyMPshowfont=\toks50
-\MPscratchCnt=\count379
-\MPscratchDim=\dimen332
-\MPnumerator=\count380
-\makeMPintoPDFobject=\count381
+\MPscratchCnt=\count414
+\MPscratchDim=\dimen382
+\MPnumerator=\count415
+\makeMPintoPDFobject=\count416
 \everyMPtoPDFconversion=\toks51
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -839,8 +927,14 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count382
+\c@lstlisting=\count417
 Package hyperref Info: Link coloring ON on input line 7.
+\c__nicematrix_shift_Ldots_last_row_dim=\dimen383
+\c__nicematrix_innersep_middle_dim=\dimen384
+\c@tabularnotesi=\count418
+\enitdp@tabularnotes=\count419
+\c@tabularnotes*i=\count420
+\enitdp@tabularnotes*=\count421
 <Immagini/Logo Bicocca.png, id=43, 298.2342pt x 321.8424pt>
 File: Immagini/Logo Bicocca.png Graphic file (type png)
 <use Immagini/Logo Bicocca.png>
@@ -910,7 +1004,7 @@ LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 25
 (/usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<Immagini/minimizzazione-massimizzazione.png, id=265, 826.08624pt x 294.09875pt>
+<Immagini/minimizzazione-massimizzazione.png, id=281, 826.08624pt x 294.09875pt>
 File: Immagini/minimizzazione-massimizzazione.png Graphic file (type png)
 <use Immagini/minimizzazione-massimizzazione.png>
 Package pdftex.def Info: Immagini/minimizzazione-massimizzazione.png  used on input line 32.
@@ -931,12 +1025,12 @@ Underfull \hbox (badness 3128) in paragraph at lines 53--53
 
 
 {/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc} <./Immagini/minimizzazione-massimizzazione.png>]
-<Immagini/ott. non vincolata.png, id=279, 459.7175pt x 202.7575pt>
+<Immagini/ott. non vincolata.png, id=295, 459.7175pt x 202.7575pt>
 File: Immagini/ott. non vincolata.png Graphic file (type png)
 <use Immagini/ott. non vincolata.png>
 Package pdftex.def Info: Immagini/ott. non vincolata.png  used on input line 70.
 (pdftex.def)             Requested size: 229.85818pt x 101.3785pt.
-<Immagini/ott. vincolata.png, id=280, 459.7175pt x 262.9825pt>
+<Immagini/ott. vincolata.png, id=296, 459.7175pt x 262.9825pt>
 File: Immagini/ott. vincolata.png Graphic file (type png)
 <use Immagini/ott. vincolata.png>
 Package pdftex.def Info: Immagini/ott. vincolata.png  used on input line 78.
@@ -965,7 +1059,7 @@ Capitolo 2.
 ]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 27.
-<Immagini/Proporzionalità1.png, id=313, 514.92375pt x 629.35126pt>
+<Immagini/Proporzionalità1.png, id=330, 514.92375pt x 629.35126pt>
 File: Immagini/Proporzionalità1.png Graphic file (type png)
 <use Immagini/Proporzionalità1.png>
 Package pdftex.def Info: Immagini/Proporzionalità1.png  used on input line 94.
@@ -976,7 +1070,7 @@ Overfull \hbox (20.59366pt too wide) in paragraph at lines 94--95
  []
 
 [13]
-<Immagini/Proporzionalità 2.png, id=324, 346.29375pt x 439.6425pt>
+<Immagini/Proporzionalità 2.png, id=340, 346.29375pt x 439.6425pt>
 File: Immagini/Proporzionalità 2.png Graphic file (type png)
 <use Immagini/Proporzionalità 2.png>
 Package pdftex.def Info: Immagini/Proporzionalità 2.png  used on input line 108.
@@ -987,7 +1081,7 @@ Overfull \hbox (22.85208pt too wide) in paragraph at lines 108--109
  []
 
 [14 <./Immagini/Proporzionalità1.png> <./Immagini/Proporzionalità 2.png>]
-<Immagini/Additività.png, id=333, 815.045pt x 298.11375pt>
+<Immagini/Additività.png, id=349, 815.045pt x 298.11375pt>
 File: Immagini/Additività.png Graphic file (type png)
 <use Immagini/Additività.png>
 Package pdftex.def Info: Immagini/Additività.png  used on input line 122.
@@ -998,12 +1092,12 @@ Overfull \hbox (3.39696pt too wide) in paragraph at lines 122--123
  []
 
 [15 <./Immagini/Additività.png>]
-<Immagini/Rette.png, id=342, 881.2925pt x 250.9375pt>
+<Immagini/Rette.png, id=358, 881.2925pt x 250.9375pt>
 File: Immagini/Rette.png Graphic file (type png)
 <use Immagini/Rette.png>
 Package pdftex.def Info: Immagini/Rette.png  used on input line 151.
 (pdftex.def)             Requested size: 440.64517pt x 125.46843pt.
-<Immagini/Semipiano.png, id=343, 402.50375pt x 373.395pt>
+<Immagini/Semipiano.png, id=359, 402.50375pt x 373.395pt>
 File: Immagini/Semipiano.png Graphic file (type png)
 <use Immagini/Semipiano.png>
 Package pdftex.def Info: Immagini/Semipiano.png  used on input line 167.
@@ -1042,7 +1136,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 224.
 
 [17]
-<Immagini/RA PL.png, id=357, 598.235pt x 379.4175pt>
+<Immagini/RA PL.png, id=373, 598.235pt x 379.4175pt>
 File: Immagini/RA PL.png Graphic file (type png)
 <use Immagini/RA PL.png>
 Package pdftex.def Info: Immagini/RA PL.png  used on input line 285.
@@ -1052,154 +1146,305 @@ Package pdftex.def Info: Immagini/RA PL.png  used on input line 285.
 
  (./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.tex
 Capitolo 3.
+<Immagini/Frontiera del vincolo.png, id=382, 860.21375pt x 759.83875pt>
+File: Immagini/Frontiera del vincolo.png Graphic file (type png)
+<use Immagini/Frontiera del vincolo.png>
+Package pdftex.def Info: Immagini/Frontiera del vincolo.png  used on input line 12.
+(pdftex.def)             Requested size: 258.06612pt x 227.95337pt.
+<Immagini/Vertici.png, id=383, 890.32625pt x 740.7675pt>
+File: Immagini/Vertici.png Graphic file (type png)
+<use Immagini/Vertici.png>
+Package pdftex.def Info: Immagini/Vertici.png  used on input line 22.
+(pdftex.def)             Requested size: 222.58101pt x 185.19142pt.
 [19
 
 
 
 
-]
-<Immagini/Vertici.png, id=372, 723.70375pt x 617.30624pt>
-File: Immagini/Vertici.png Graphic file (type png)
-<use Immagini/Vertici.png>
-Package pdftex.def Info: Immagini/Vertici.png  used on input line 39.
-(pdftex.def)             Requested size: 253.30011pt x 216.06041pt.
-<Immagini/Spigolo.png, id=373, 715.67375pt x 619.31375pt>
+ <./Immagini/Frontiera del vincolo.png>]
+<Immagini/Vertice ammissibile.png, id=391, 719.68875pt x 614.295pt>
+File: Immagini/Vertice ammissibile.png Graphic file (type png)
+<use Immagini/Vertice ammissibile.png>
+Package pdftex.def Info: Immagini/Vertice ammissibile.png  used on input line 32.
+(pdftex.def)             Requested size: 266.28067pt x 227.28558pt.
+<Immagini/Vertice non ammissibile.png, id=392, 719.68875pt x 614.295pt>
+File: Immagini/Vertice non ammissibile.png Graphic file (type png)
+<use Immagini/Vertice non ammissibile.png>
+Package pdftex.def Info: Immagini/Vertice non ammissibile.png  used on input line 42.
+(pdftex.def)             Requested size: 266.28067pt x 227.28558pt.
+ [20 <./Immagini/Vertici.png> <./Immagini/Vertice ammissibile.png>] [21 <./Immagini/Vertice non ammissibile.png>]
+<Immagini/Vertici adiacenti.png, id=409, 719.68875pt x 614.295pt>
+File: Immagini/Vertici adiacenti.png Graphic file (type png)
+<use Immagini/Vertici adiacenti.png>
+Package pdftex.def Info: Immagini/Vertici adiacenti.png  used on input line 50.
+(pdftex.def)             Requested size: 266.28067pt x 227.28558pt.
+<Immagini/Spigolo.png, id=410, 724.7075pt x 618.31pt>
 File: Immagini/Spigolo.png Graphic file (type png)
 <use Immagini/Spigolo.png>
-Package pdftex.def Info: Immagini/Spigolo.png  used on input line 49.
-(pdftex.def)             Requested size: 286.26442pt x 247.72112pt.
-<Immagini/Vertici ammissibili.png, id=374, 722.7pt x 615.29875pt>
-File: Immagini/Vertici ammissibili.png Graphic file (type png)
-<use Immagini/Vertici ammissibili.png>
-Package pdftex.def Info: Immagini/Vertici ammissibili.png  used on input line 55.
-(pdftex.def)             Requested size: 289.07487pt x 246.11513pt.
- [20 <./Immagini/Vertici.png> <./Immagini/Spigolo.png>]
-<Immagini/Vertici non ammissibili.png, id=381, 735.74875pt x 610.28pt>
-File: Immagini/Vertici non ammissibili.png Graphic file (type png)
-<use Immagini/Vertici non ammissibili.png>
-Package pdftex.def Info: Immagini/Vertici non ammissibili.png  used on input line 60.
-(pdftex.def)             Requested size: 294.29428pt x 244.10767pt.
- [21 <./Immagini/Vertici ammissibili.png> <./Immagini/Vertici non ammissibili.png>]
-<Immagini/Test di ottimalità.png, id=388, 498.86375pt x 424.58624pt>
-File: Immagini/Test di ottimalità.png Graphic file (type png)
-<use Immagini/Test di ottimalità.png>
-Package pdftex.def Info: Immagini/Test di ottimalità.png  used on input line 70.
-(pdftex.def)             Requested size: 299.32056pt x 254.75371pt.
-<Immagini/Concetto chiave 1.png, id=389, 501.875pt x 431.6125pt>
+Package pdftex.def Info: Immagini/Spigolo.png  used on input line 72.
+(pdftex.def)             Requested size: 289.87787pt x 247.31961pt.
+ [22 <./Immagini/Vertici adiacenti.png> <./Immagini/Spigolo.png>]
+<Immagini/Test ottimalità 1.png, id=419, 507.8975pt x 432.61626pt>
+File: Immagini/Test ottimalità 1.png Graphic file (type png)
+<use Immagini/Test ottimalità 1.png>
+Package pdftex.def Info: Immagini/Test ottimalità 1.png  used on input line 79.
+(pdftex.def)             Requested size: 253.94814pt x 216.3076pt.
+<Immagini/Test ottimalità 2.png, id=420, 522.95375pt x 431.6125pt>
+File: Immagini/Test ottimalità 2.png Graphic file (type png)
+<use Immagini/Test ottimalità 2.png>
+Package pdftex.def Info: Immagini/Test ottimalità 2.png  used on input line 85.
+(pdftex.def)             Requested size: 261.47623pt x 215.80571pt.
+ [23 <./Immagini/Test ottimalità 1.png> <./Immagini/Test ottimalità 2.png>]
+<Immagini/Concetto chiave 1.png, id=427, 522.95375pt x 431.6125pt>
 File: Immagini/Concetto chiave 1.png Graphic file (type png)
 <use Immagini/Concetto chiave 1.png>
-Package pdftex.def Info: Immagini/Concetto chiave 1.png  used on input line 86.
-(pdftex.def)             Requested size: 250.93687pt x 215.80571pt.
-
-Overfull \hbox (14.06929pt too wide) in paragraph at lines 86--87
-[][] 
- []
-
-[22 <./Immagini/Test di ottimalità.png> <./Immagini/Concetto chiave 1.png>]
-Underfull \hbox (badness 3260) in paragraph at lines 92--94
-[]\T1/lmr/m/n/12 Il me-to-do del sim-ples-so � un al-go-rit-mo
- []
-
-<Immagini/Concetto chiave 2.png, id=396, 597.23125pt x 512.91624pt>
+Package pdftex.def Info: Immagini/Concetto chiave 1.png  used on input line 98.
+(pdftex.def)             Requested size: 261.47623pt x 215.80571pt.
+<Immagini/Concetto chiave 2.png, id=428, 522.95375pt x 431.6125pt>
 File: Immagini/Concetto chiave 2.png Graphic file (type png)
 <use Immagini/Concetto chiave 2.png>
-Package pdftex.def Info: Immagini/Concetto chiave 2.png  used on input line 104.
-(pdftex.def)             Requested size: 238.88826pt x 205.16286pt.
+Package pdftex.def Info: Immagini/Concetto chiave 2.png  used on input line 113.
+(pdftex.def)             Requested size: 261.47623pt x 215.80571pt.
+ [24 <./Immagini/Concetto chiave 1.png> <./Immagini/Concetto chiave 2.png>]
+<Immagini/Concentto chiave 3.png, id=438, 522.95375pt x 431.6125pt>
+File: Immagini/Concentto chiave 3.png Graphic file (type png)
+<use Immagini/Concentto chiave 3.png>
+Package pdftex.def Info: Immagini/Concentto chiave 3.png  used on input line 122.
+(pdftex.def)             Requested size: 261.47623pt x 215.80571pt.
+<Immagini/Concetto chiave 4.png, id=439, 507.8975pt x 431.6125pt>
+File: Immagini/Concetto chiave 4.png Graphic file (type png)
+<use Immagini/Concetto chiave 4.png>
+Package pdftex.def Info: Immagini/Concetto chiave 4.png  used on input line 133.
+(pdftex.def)             Requested size: 253.94814pt x 215.80571pt.
+ [25 <./Immagini/Concentto chiave 3.png> <./Immagini/Concetto chiave 4.png>]
+<Immagini/Concetto chiave 5.png, id=446, 507.8975pt x 431.6125pt>
+File: Immagini/Concetto chiave 5.png Graphic file (type png)
+<use Immagini/Concetto chiave 5.png>
+Package pdftex.def Info: Immagini/Concetto chiave 5.png  used on input line 146.
+(pdftex.def)             Requested size: 253.94814pt x 215.80571pt.
+<Immagini/Concetto chiave 6_1.png, id=447, 507.8975pt x 431.6125pt>
+File: Immagini/Concetto chiave 6_1.png Graphic file (type png)
+<use Immagini/Concetto chiave 6_1.png>
+Package pdftex.def Info: Immagini/Concetto chiave 6_1.png  used on input line 160.
+(pdftex.def)             Requested size: 228.55176pt x 194.22382pt.
+<Immagini/Concetto chiave 6_2.png, id=448, 507.8975pt x 431.6125pt>
+File: Immagini/Concetto chiave 6_2.png Graphic file (type png)
+<use Immagini/Concetto chiave 6_2.png>
+Package pdftex.def Info: Immagini/Concetto chiave 6_2.png  used on input line 164.
+(pdftex.def)             Requested size: 228.55176pt x 194.22382pt.
+ [26 <./Immagini/Concetto chiave 5.png> <./Immagini/Concetto chiave 6_1.png> <./Immagini/Concetto chiave 6_2.png>]
+<Immagini/Variabile slack.png, id=456, 843.15pt x 344.28625pt>
+File: Immagini/Variabile slack.png Graphic file (type png)
+<use Immagini/Variabile slack.png>
+Package pdftex.def Info: Immagini/Variabile slack.png  used on input line 180.
+(pdftex.def)             Requested size: 505.8939pt x 206.57333pt.
+<Immagini/Forma aumentata.png, id=457, 876.27374pt x 241.90375pt>
+File: Immagini/Forma aumentata.png Graphic file (type png)
+<use Immagini/Forma aumentata.png>
+Package pdftex.def Info: Immagini/Forma aumentata.png  used on input line 187.
+(pdftex.def)             Requested size: 525.7683pt x 145.14336pt.
+ [27 <./Immagini/Variabile slack.png> <./Immagini/Forma aumentata.png>]
+<Immagini/Slack=0.png, id=465, 876.27374pt x 241.90375pt>
+File: Immagini/Slack=0.png Graphic file (type png)
+<use Immagini/Slack=0.png>
+Package pdftex.def Info: Immagini/Slack=0.png  used on input line 195.
+(pdftex.def)             Requested size: 525.7683pt x 145.14336pt.
+<Immagini/Slack >.png, id=466, 876.27374pt x 241.90375pt>
+File: Immagini/Slack >.png Graphic file (type png)
+<use Immagini/Slack >.png>
+Package pdftex.def Info: Immagini/Slack >.png  used on input line 202.
+(pdftex.def)             Requested size: 525.7683pt x 145.14336pt.
+<Immagini/Slack <.png, id=467, 876.27374pt x 241.90375pt>
+File: Immagini/Slack <.png Graphic file (type png)
+<use Immagini/Slack <.png>
+Package pdftex.def Info: Immagini/Slack <.png  used on input line 209.
+(pdftex.def)             Requested size: 525.7683pt x 145.14336pt.
+ [28 <./Immagini/Slack=0.png> <./Immagini/Slack >.png> <./Immagini/Slack <.png>]
+<Immagini/Saluzione aumentata.png, id=478, 881.2925pt x 344.28625pt>
+File: Immagini/Saluzione aumentata.png Graphic file (type png)
+<use Immagini/Saluzione aumentata.png>
+Package pdftex.def Info: Immagini/Saluzione aumentata.png  used on input line 217.
+(pdftex.def)             Requested size: 528.77957pt x 206.57333pt.
 
-Overfull \hbox (2.02068pt too wide) in paragraph at lines 104--105
+Overfull \hbox (2.40356pt too wide) in paragraph at lines 217--218
+ [] 
+ []
+
+<Immagini/Soluzione di base.png, id=479, 881.2925pt x 344.28625pt>
+File: Immagini/Soluzione di base.png Graphic file (type png)
+<use Immagini/Soluzione di base.png>
+Package pdftex.def Info: Immagini/Soluzione di base.png  used on input line 224.
+(pdftex.def)             Requested size: 528.77957pt x 206.57333pt.
+
+Overfull \hbox (2.40356pt too wide) in paragraph at lines 224--225
+ [] 
+ []
+
+[29 <./Immagini/Saluzione aumentata.png> <./Immagini/Soluzione di base.png>]
+<Immagini/Soluzione di base ammissibile.png, id=486, 403.5075pt x 434.62375pt>
+File: Immagini/Soluzione di base ammissibile.png Graphic file (type png)
+<use Immagini/Soluzione di base ammissibile.png>
+Package pdftex.def Info: Immagini/Soluzione di base ammissibile.png  used on input line 232.
+(pdftex.def)             Requested size: 201.75325pt x 217.31134pt.
+<Immagini/Variabili di base e non.png, id=487, 446.66875pt x 235.88126pt>
+File: Immagini/Variabili di base e non.png Graphic file (type png)
+<use Immagini/Variabili di base e non.png>
+Package pdftex.def Info: Immagini/Variabili di base e non.png  used on input line 255.
+(pdftex.def)             Requested size: 312.66599pt x 165.11575pt.
+ [30 <./Immagini/Soluzione di base ammissibile.png> <./Immagini/Variabili di base e non.png>]
+<Immagini/Soluzione di base ammissibile_1.png, id=496, 459.7175pt x 260.975pt>
+File: Immagini/Soluzione di base ammissibile_1.png Graphic file (type png)
+<use Immagini/Soluzione di base ammissibile_1.png>
+Package pdftex.def Info: Immagini/Soluzione di base ammissibile_1.png  used on input line 280.
+(pdftex.def)             Requested size: 229.85818pt x 130.48718pt.
+<Immagini/Soluzione di base ammissibile_2.png, id=497, 406.51875pt x 429.605pt>
+File: Immagini/Soluzione di base ammissibile_2.png Graphic file (type png)
+<use Immagini/Soluzione di base ammissibile_2.png>
+Package pdftex.def Info: Immagini/Soluzione di base ammissibile_2.png  used on input line 284.
+(pdftex.def)             Requested size: 203.25887pt x 214.80197pt.
+<Immagini/Soluzione di base ammissibile_3.png, id=498, 521.95pt x 221.82875pt>
+File: Immagini/Soluzione di base ammissibile_3.png Graphic file (type png)
+<use Immagini/Soluzione di base ammissibile_3.png>
+Package pdftex.def Info: Immagini/Soluzione di base ammissibile_3.png  used on input line 302.
+(pdftex.def)             Requested size: 260.97435pt x 110.9141pt.
+
+Overfull \hbox (24.10677pt too wide) in paragraph at lines 302--303
 [][] 
  []
 
-<Immagini/Concetto chiave 3.png, id=397, 498.86375pt x 422.57875pt>
-File: Immagini/Concetto chiave 3.png Graphic file (type png)
-<use Immagini/Concetto chiave 3.png>
-Package pdftex.def Info: Immagini/Concetto chiave 3.png  used on input line 115.
-(pdftex.def)             Requested size: 249.43126pt x 211.28885pt.
-
-Overfull \hbox (12.56367pt too wide) in paragraph at lines 115--116
-[][] 
+<Immagini/Soluzione di base ammissibile_4.png, id=499, 392.46625pt x 437.635pt>
+File: Immagini/Soluzione di base ammissibile_4.png Graphic file (type png)
+<use Immagini/Soluzione di base ammissibile_4.png>
+Package pdftex.def Info: Immagini/Soluzione di base ammissibile_4.png  used on input line 306.
+(pdftex.def)             Requested size: 196.23264pt x 218.81696pt.
+[31 <./Immagini/Soluzione di base ammissibile_1.png> <./Immagini/Soluzione di base ammissibile_2.png>]
+<Immagini/Soluzione di base ammissibile_5.png, id=511, 393.47pt x 444.66125pt>
+File: Immagini/Soluzione di base ammissibile_5.png Graphic file (type png)
+<use Immagini/Soluzione di base ammissibile_5.png>
+Package pdftex.def Info: Immagini/Soluzione di base ammissibile_5.png  used on input line 321.
+(pdftex.def)             Requested size: 196.73451pt x 222.33008pt.
+<Immagini/Soluzione di base ammissibile_6.png, id=512, 454.69875pt x 153.57375pt>
+File: Immagini/Soluzione di base ammissibile_6.png Graphic file (type png)
+<use Immagini/Soluzione di base ammissibile_6.png>
+Package pdftex.def Info: Immagini/Soluzione di base ammissibile_6.png  used on input line 326.
+(pdftex.def)             Requested size: 227.34882pt x 76.78668pt.
+<Immagini/Soluzione di base ammissibile_7.png, id=513, 384.43625pt x 434.62375pt>
+File: Immagini/Soluzione di base ammissibile_7.png Graphic file (type png)
+<use Immagini/Soluzione di base ammissibile_7.png>
+Package pdftex.def Info: Immagini/Soluzione di base ammissibile_7.png  used on input line 330.
+(pdftex.def)             Requested size: 192.21765pt x 217.31134pt.
+ [32 <./Immagini/Soluzione di base ammissibile_3.png> <./Immagini/Soluzione di base ammissibile_4.png> <./Immagini/Soluzione di base ammissibile_5.png>] [33 <./Immagini/Soluzione di base ammissibile_6.png> <./Immagini/Soluzione di base ammissibile_7.png>]
+<Immagini/Interpretazione geometrica_1.png, id=527, 326.21875pt x 227.85126pt>
+File: Immagini/Interpretazione geometrica_1.png Graphic file (type png)
+<use Immagini/Interpretazione geometrica_1.png>
+Package pdftex.def Info: Immagini/Interpretazione geometrica_1.png  used on input line 348.
+(pdftex.def)             Requested size: 163.10896pt x 113.92534pt.
+<Immagini/Interpretazione geometrica_2.png, id=528, 388.45125pt x 439.6425pt>
+File: Immagini/Interpretazione geometrica_2.png Graphic file (type png)
+<use Immagini/Interpretazione geometrica_2.png>
+Package pdftex.def Info: Immagini/Interpretazione geometrica_2.png  used on input line 352.
+(pdftex.def)             Requested size: 194.22514pt x 219.82071pt.
+<Immagini/Forma algebrica_1.png, id=529, 426.59375pt x 231.86626pt>
+File: Immagini/Forma algebrica_1.png Graphic file (type png)
+<use Immagini/Forma algebrica_1.png>
+Package pdftex.def Info: Immagini/Forma algebrica_1.png  used on input line 361.
+(pdftex.def)             Requested size: 213.29634pt x 115.93283pt.
+<Immagini/Forma algebrica_2.png, id=530, 386.44376pt x 434.62375pt>
+File: Immagini/Forma algebrica_2.png Graphic file (type png)
+<use Immagini/Forma algebrica_2.png>
+Package pdftex.def Info: Immagini/Forma algebrica_2.png  used on input line 365.
+(pdftex.def)             Requested size: 193.2214pt x 217.31134pt.
+ [34 <./Immagini/Interpretazione geometrica_1.png> <./Immagini/Interpretazione geometrica_2.png> <./Immagini/Forma algebrica_1.png> <./Immagini/Forma algebrica_2.png>]
+<Immagini/Inizializzazione.png, id=541, 866.23625pt x 221.82875pt>
+File: Immagini/Inizializzazione.png Graphic file (type png)
+<use Immagini/Inizializzazione.png>
+Package pdftex.def Info: Immagini/Inizializzazione.png  used on input line 374.
+(pdftex.def)             Requested size: 519.74577pt x 133.09825pt.
+<Immagini/Test di ottimalità.png, id=542, 871.255pt x 262.9825pt>
+File: Immagini/Test di ottimalità.png Graphic file (type png)
+<use Immagini/Test di ottimalità.png>
+Package pdftex.def Info: Immagini/Test di ottimalità.png  used on input line 383.
+(pdftex.def)             Requested size: 522.75703pt x 157.7907pt.
+<Immagini/Determinazione dello spostamento.png, id=543, 423.5825pt x 226.8475pt>
+File: Immagini/Determinazione dello spostamento.png Graphic file (type png)
+<use Immagini/Determinazione dello spostamento.png>
+Package pdftex.def Info: Immagini/Determinazione dello spostamento.png  used on input line 390.
+(pdftex.def)             Requested size: 254.15146pt x 136.10954pt.
+ [35 <./Immagini/Inizializzazione.png> <./Immagini/Test di ottimalità.png> <./Immagini/Determinazione dello spostamento.png>]
+<Immagini/Determinazione dell'incremento.png, id=551, 574.145pt x 227.85126pt>
+File: Immagini/Determinazione dell'incremento.png Graphic file (type png)
+<use Immagini/Determinazione dell'incremento.png>
+Package pdftex.def Info: Immagini/Determinazione dell'incremento.png  used on input line 402.
+(pdftex.def)             Requested size: 373.18983pt x 148.10155pt.
+<Immagini/incremento_2.png, id=552, 871.255pt x 227.85126pt>
+File: Immagini/incremento_2.png Graphic file (type png)
+<use Immagini/incremento_2.png>
+Package pdftex.def Info: Immagini/incremento_2.png  used on input line 410.
+(pdftex.def)             Requested size: 522.75703pt x 136.71179pt.
+ [36 <./Immagini/Determinazione dell'incremento.png> <./Immagini/incremento_2.png>]
+Overfull \hbox (5.15633pt too wide) in paragraph at lines 421--422
+[]\T1/lmr/m/n/12 Effetuiamo ope-ra-zio-ni al-ge-bri-che ele-men-ta-ri sul \T1/lmr/bx/n/12 si-ste-ma di equa-zio-ni \T1/lmr/m/n/12 per ri-pro-dur-re il pat-tern $\OT1/lmr/m/n/12 (0\OML/lmm/m/it/12 ; \OT1/lmr/m/n/12 0\OML/lmm/m/it/12 ; \OT1/lmr/m/n/12 0\OML/lmm/m/it/12 ; \OT1/lmr/m/n/12 1)$
  []
 
-<Immagini/Concetto 4.png, id=398, 502.87875pt x 426.59375pt>
-File: Immagini/Concetto 4.png Graphic file (type png)
-<use Immagini/Concetto 4.png>
-Package pdftex.def Info: Immagini/Concetto 4.png  used on input line 128.
-(pdftex.def)             Requested size: 251.43875pt x 213.29634pt.
+<Immagini/Determinazione soluzione di base.png, id=560, 829.0975pt x 243.91125pt>
+File: Immagini/Determinazione soluzione di base.png Graphic file (type png)
+<use Immagini/Determinazione soluzione di base.png>
+Package pdftex.def Info: Immagini/Determinazione soluzione di base.png  used on input line 426.
+(pdftex.def)             Requested size: 497.46234pt x 146.34787pt.
+<Immagini/Determinazione soluzione di base_2.png, id=561, 794.97pt x 431.6125pt>
+File: Immagini/Determinazione soluzione di base_2.png Graphic file (type png)
+<use Immagini/Determinazione soluzione di base_2.png>
+Package pdftex.def Info: Immagini/Determinazione soluzione di base_2.png  used on input line 427.
+(pdftex.def)             Requested size: 476.98569pt x 258.96948pt.
+[37 <./Immagini/Determinazione soluzione di base.png> <./Immagini/Determinazione soluzione di base_2.png>]
 
-Overfull \hbox (14.57117pt too wide) in paragraph at lines 128--129
-[][] 
- []
+LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
+(Font)              using `T1/lmr/bx/n' instead on input line 451.
 
-<Immagini/Concetto 5.png, id=399, 718.685pt x 605.26125pt>
-File: Immagini/Concetto 5.png Graphic file (type png)
-<use Immagini/Concetto 5.png>
-Package pdftex.def Info: Immagini/Concetto 5.png  used on input line 143.
-(pdftex.def)             Requested size: 251.54352pt x 211.8446pt.
 
-Overfull \hbox (14.67593pt too wide) in paragraph at lines 143--144
-[][] 
- []
-
-[23 <./Immagini/Concetto chiave 2.png> <./Immagini/Concetto chiave 3.png> <./Immagini/Concetto 4.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-[]|   []   |   []   |   []   |   []   |   []   |   []
+Overfull \vbox (32.21991pt too high) detected at line 453
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-|   []   |   []   |   []   |   []   |   []
+Overfull \hbox (36.14537pt too wide) in paragraph at lines 449--464
+ [][] 
+ []
+
+[38]
+\g__nicematrix_max_cell_width_dim=\dimen385
+\c@iRow=\count422
+\c@jCol=\count423
+\l__nicematrix_cell_box=\box97
+\l__nicematrix_left_delim_dim=\dimen386
+\l__nicematrix_right_delim_dim=\dimen387
+
+Overfull \vbox (32.21991pt too high) detected at line 482
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 151--152
-|   []   |   []   |   []   |   []   |   []   |   []
+Overfull \hbox (36.14534pt too wide) in paragraph at lines 479--499
+ [][][][][][][] 
  []
 
 
-Underfull \hbox (badness 1142) in paragraph at lines 157--158
-|   []   |   []   |   []   |   []   |   []   |   []
+Overfull \vbox (32.21991pt too high) detected at line 519
  []
 
 
-Underfull \hbox (badness 2894) in paragraph at lines 157--158
-|   []   |   []   |   []   |   []   |   []   |   []
+Overfull \hbox (36.14534pt too wide) in paragraph at lines 516--536
+ [][][][][][][] 
  []
 
-<Immagini/Concetto 6.png, id=409, 594.22pt x 519.9425pt>
-File: Immagini/Concetto 6.png Graphic file (type png)
-<use Immagini/Concetto 6.png>
-Package pdftex.def Info: Immagini/Concetto 6.png  used on input line 162.
-(pdftex.def)             Requested size: 267.39653pt x 233.97197pt.
 
-Overfull \hbox (30.52895pt too wide) in paragraph at lines 162--163
-[][] 
+Overfull \vbox (32.21991pt too high) detected at line 551
  []
 
-[24 <./Immagini/Concetto 5.png> <./Immagini/Concetto 6.png>]
-<Immagini/Variabili slack 1.png, id=417, 844.15375pt x 336.25626pt>
-File: Immagini/Variabili slack 1.png Graphic file (type png)
-<use Immagini/Variabili slack 1.png>
-Package pdftex.def Info: Immagini/Variabili slack 1.png  used on input line 185.
-(pdftex.def)             Requested size: 506.49615pt x 201.75531pt.
- [25 <./Immagini/Variabili slack 1.png>]
-<Immagini/Esempio forma aumentata.png, id=426, 870.25125pt x 230.8625pt>
-File: Immagini/Esempio forma aumentata.png Graphic file (type png)
-<use Immagini/Esempio forma aumentata.png>
-Package pdftex.def Info: Immagini/Esempio forma aumentata.png  used on input line 204.
-(pdftex.def)             Requested size: 522.15479pt x 138.51855pt.
- [26 <./Immagini/Esempio forma aumentata.png>] [27]
-<Immagini/Testo del rapporto minimo.png, id=443, 752.8125pt x 361.35pt>
-File: Immagini/Testo del rapporto minimo.png Graphic file (type png)
-<use Immagini/Testo del rapporto minimo.png>
-Package pdftex.def Info: Immagini/Testo del rapporto minimo.png  used on input line 296.
-(pdftex.def)             Requested size: 376.40532pt x 180.67456pt.
- [28]
-<Immagini/Bob sinclair.png, id=452, 790.955pt x 367.3725pt>
-File: Immagini/Bob sinclair.png Graphic file (type png)
-<use Immagini/Bob sinclair.png>
-Package pdftex.def Info: Immagini/Bob sinclair.png  used on input line 310.
-(pdftex.def)             Requested size: 316.3764pt x 146.94638pt.
- [29 <./Immagini/Testo del rapporto minimo.png> <./Immagini/Bob sinclair.png>]) [30] [31
+
+Overfull \hbox (36.14534pt too wide) in paragraph at lines 548--570
+ [][][][][][][] 
+ []
+
+[39] [40] [41] [42]) [43] [44
 
 
 
@@ -1238,7 +1483,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.2
 <to be read again> 
                    \relax 
 l.68 \subsection{Traccia}
-                          [32
+                          [45
 
 
 ]
@@ -1251,7 +1496,7 @@ Overfull \hbox (2.61107pt too wide) in paragraph at lines 123--141
 $[]$  $[]$ 
  []
 
-[33] [34]
+[46] [47]
 pdfTeX warning (ext4): destination with the same identifier (name{section.1.3}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1266,7 +1511,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.3
 <to be read again> 
                    \relax 
 l.170 ...ection{Modello di programmazione lineare}
-                                                   [35]
+                                                   [48]
 pdfTeX warning (ext4): destination with the same identifier (name{section.1.4}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
@@ -1281,7 +1526,7 @@ pdfTeX warning (ext4): destination with the same identifier (name{subsection.1.4
 <to be read again> 
                    \relax 
 l.235 ...ection{Modello di programmazione lineare}
-                                                  ) [36] [37
+                                                  ) [49] [50
 
 
 
@@ -1290,20 +1535,24 @@ l.235 ...ection{Modello di programmazione lineare}
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
+
+
+LaTeX Font Warning: Some font shapes were not available, defaults substituted.
+
  ) 
 Here is how much of TeX's memory you used:
- 32390 strings out of 467356
- 648174 string characters out of 5418690
- 1089817 words of memory out of 6000000
- 60707 multiletter control sequences out of 15000+600000
- 728714 words of font info for 103 fonts, out of 8000000 for 9000
+ 44593 strings out of 467356
+ 934422 string characters out of 5418690
+ 1510969 words of memory out of 6000000
+ 72854 multiletter control sequences out of 15000+600000
+ 730688 words of font info for 109 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,13n,107p,1540b,689s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (38 pages, 1082897 bytes).
+ 91i,16n,107p,1540b,1198s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (51 pages, 1793674 bytes).
 PDF statistics:
- 915 PDF objects out of 1000 (max. 8388607)
- 761 compressed objects within 8 object streams
- 181 named destinations out of 1000 (max. 500000)
- 1042 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 1107 PDF objects out of 1200 (max. 8388607)
+ 883 compressed objects within 9 object streams
+ 229 named destinations out of 1000 (max. 500000)
+ 1241 words of extra memory for PDF output out of 10000 (max. 10000000)
 

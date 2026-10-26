@@ -360,6 +360,9 @@ INPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.aux
 INPUT Capitoli/Teoria/LICS/LICS.aux
+INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
+INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
+INPUT Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/Esercizi LCS.aux
@@ -431,15 +434,15 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmbx12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
-OUTPUT main.toc
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+OUTPUT main.toc
 INPUT ./Capitoli/Teoria/LCS/LCS.tex
 OUTPUT Capitoli/Teoria/LCS/LCS.aux
 INPUT ./Capitoli/Teoria/LCS/LCS.tex
@@ -516,6 +519,12 @@ OUTPUT Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.tex
 INPUT ./Capitoli/Teoria/LICS/LICS.tex
 INPUT Capitoli/Teoria/LICS/LICS.tex
+INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.tex
+INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.tex
+OUTPUT Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
+INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.tex
+INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.tex
+INPUT Capitoli/Teoria/Floyd Warshall/Floyd Warshall.tex
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
 OUTPUT Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
@@ -578,6 +587,9 @@ INPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.aux
 INPUT Capitoli/Teoria/LICS/LICS.aux
+INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
+INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
+INPUT Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/Esercizi LCS.aux

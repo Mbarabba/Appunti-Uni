@@ -67,67 +67,81 @@
 \contentsline {subsection}{\numberline {2.5.3}Possibili soluzioni}{18}{subsection.2.5.3}%
 \contentsline {chapter}{\numberline {3}Metodo del simplesso}{19}{chapter.3}%
 \contentsline {section}{\numberline {3.1}Cosa è il metodo del simplesso?}{19}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Definizione}{19}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Tempi di calcolo}{19}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Procedura generale}{19}{subsection.3.1.3}%
-\contentsline {subsubsection}{Passo 1 - Inizializzazione}{19}{subsubsection*.19}%
-\contentsline {subsubsection}{Passo 2 - Test di ottimalità}{19}{subsubsection*.20}%
-\contentsline {section}{\numberline {3.2}Vertici}{20}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Esempio di vertice ammissibile}{21}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Esempio di vertice non ammissibile}{21}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Test di ottimalità}{22}{subsection.3.2.3}%
-\contentsline {section}{\numberline {3.3}Concetti chiave}{22}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Concetto chiave 1}{22}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Concetto chiave 2}{23}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Concetto chiave 3}{23}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Concetto chiave 4}{23}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Concetto chiave 5}{24}{subsection.3.3.5}%
-\contentsline {subsection}{\numberline {3.3.6}Concetto chiave 6}{24}{subsection.3.3.6}%
-\contentsline {section}{\numberline {3.4}Procedura algebrica per il metodo del simplesso}{25}{section.3.4}%
-\contentsline {subsection}{\numberline {3.4.1}Perchè usare una procedura algebrica?}{25}{subsection.3.4.1}%
-\contentsline {subsection}{\numberline {3.4.2}Definizione delle variabili slack}{25}{subsection.3.4.2}%
-\contentsline {subsubsection}{A cosa servono le variabili slack?}{25}{subsubsection*.21}%
-\contentsline {subsubsection}{Definizione delle variabili di slack}{25}{subsubsection*.22}%
-\contentsline {subsection}{\numberline {3.4.3}Valori assumibili dalle variabili slack e il loro significato}{25}{subsection.3.4.3}%
-\contentsline {section}{\numberline {3.5}Modello in forma aumentata}{26}{section.3.5}%
-\contentsline {subsection}{\numberline {3.5.1}Definizione}{26}{subsection.3.5.1}%
-\contentsline {subsection}{\numberline {3.5.2}Soluzione aumentata}{26}{subsection.3.5.2}%
-\contentsline {subsection}{\numberline {3.5.3}Soluzione di base}{26}{subsection.3.5.3}%
-\contentsline {section}{\numberline {3.6}Variabili di base e Variabili non di base}{26}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Definizione}{26}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Proprietà delle variabili di base e Variabili non di base}{27}{subsection.3.6.2}%
-\contentsline {subsection}{\numberline {3.6.3}Adiacenza tra soluzioni ammissibili}{27}{subsection.3.6.3}%
-\contentsline {section}{\numberline {3.7}Algoritmo del metodo del simplesso in forma algebrica}{28}{section.3.7}%
-\contentsline {subsection}{\numberline {3.7.1}Procedimento generale}{28}{subsection.3.7.1}%
-\contentsline {subsection}{\numberline {3.7.2}Determinazione della direzione di spostamento}{28}{subsection.3.7.2}%
-\contentsline {section}{\numberline {3.8}Procedura tabellare}{30}{section.3.8}%
-\contentsline {part}{II\hspace {1em}Esercitazioni}{31}{part.2}%
-\contentsline {chapter}{\numberline {1}Formulazione del problema}{32}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Pianificazione della produzione}{32}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Traccia}{32}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Modello di programmazione lineare}{32}{subsection.1.1.2}%
-\contentsline {subsubsection}{incognite o variabili decisionali}{32}{subsubsection*.25}%
-\contentsline {subsubsection}{Funzione obiettivo}{32}{subsubsection*.26}%
-\contentsline {subsubsection}{Vincoli}{32}{subsubsection*.27}%
-\contentsline {section}{\numberline {1.2}Problema della dieta}{33}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Traccia}{33}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Modello di programmazione lineare}{33}{subsection.1.2.2}%
-\contentsline {subsubsection}{Variabili}{33}{subsubsection*.28}%
-\contentsline {subsubsection}{Funzione obiettivo}{33}{subsubsection*.29}%
-\contentsline {subsubsection}{Vincoli}{33}{subsubsection*.30}%
-\contentsline {subsubsection}{Formulazione compatta}{34}{subsubsection*.31}%
-\contentsline {section}{\numberline {1.3}Reti di distribuzione}{35}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Traccia}{35}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Modello di programmazione lineare}{35}{subsection.1.3.2}%
-\contentsline {subsubsection}{Parametri}{35}{subsubsection*.32}%
-\contentsline {subsubsection}{Variabili di decisione}{35}{subsubsection*.33}%
-\contentsline {subsubsection}{Funzione obiettivo}{35}{subsubsection*.34}%
-\contentsline {subsubsection}{Vincoli}{35}{subsubsection*.35}%
-\contentsline {section}{\numberline {1.4}Turni di lavoro}{36}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Traccia}{36}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Modello di programmazione lineare}{36}{subsection.1.4.2}%
-\contentsline {subsubsection}{Parametri}{36}{subsubsection*.36}%
-\contentsline {subsubsection}{Variabili di decisione}{36}{subsubsection*.37}%
-\contentsline {subsubsection}{Funzione obiettivo}{36}{subsubsection*.38}%
-\contentsline {subsubsection}{Vincoli}{36}{subsubsection*.39}%
-\contentsline {part}{III\hspace {1em}Laboratori}{37}{part.3}%
+\contentsline {section}{\numberline {3.2}Definizioni geometriche}{19}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Frontiera del vincolo}{19}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Vertici}{19}{subsection.3.2.2}%
+\contentsline {subsubsection}{Definizione generale}{19}{subsubsection*.20}%
+\contentsline {subsubsection}{Vertice ammissibile}{20}{subsubsection*.22}%
+\contentsline {subsubsection}{Vertice non ammissibile}{20}{subsubsection*.24}%
+\contentsline {subsubsection}{Vertici adiacenti}{22}{subsubsection*.26}%
+\contentsline {subsection}{\numberline {3.2.3}Spigolo}{22}{subsection.3.2.3}%
+\contentsline {section}{\numberline {3.3}Test di ottimalità}{23}{section.3.3}%
+\contentsline {section}{\numberline {3.4}Concetti chiave}{24}{section.3.4}%
+\contentsline {subsection}{\numberline {3.4.1}Concetto chiave 1}{24}{subsection.3.4.1}%
+\contentsline {subsection}{\numberline {3.4.2}Concetto chiave 2}{24}{subsection.3.4.2}%
+\contentsline {subsection}{\numberline {3.4.3}Concetto chiave 3}{25}{subsection.3.4.3}%
+\contentsline {subsection}{\numberline {3.4.4}Concetto chiave 4}{25}{subsection.3.4.4}%
+\contentsline {subsection}{\numberline {3.4.5}Concetto chiave 5}{26}{subsection.3.4.5}%
+\contentsline {subsection}{\numberline {3.4.6}Concetto chiave 6}{26}{subsection.3.4.6}%
+\contentsline {section}{\numberline {3.5}Definizioni algebriche}{27}{section.3.5}%
+\contentsline {subsection}{\numberline {3.5.1}Idea di partenza}{27}{subsection.3.5.1}%
+\contentsline {subsection}{\numberline {3.5.2}Variabili slack}{27}{subsection.3.5.2}%
+\contentsline {subsection}{\numberline {3.5.3}Forma aumentata}{27}{subsection.3.5.3}%
+\contentsline {subsubsection}{Slack pari a 0}{28}{subsubsection*.28}%
+\contentsline {subsubsection}{Slack positive}{28}{subsubsection*.29}%
+\contentsline {subsubsection}{Slack negative}{28}{subsubsection*.30}%
+\contentsline {subsection}{\numberline {3.5.4}Soluzione aumentata}{29}{subsection.3.5.4}%
+\contentsline {subsection}{\numberline {3.5.5}Soluzione di base}{29}{subsection.3.5.5}%
+\contentsline {subsubsection}{Soluzione di base ammissibile}{30}{subsubsection*.31}%
+\contentsline {subsection}{\numberline {3.5.6}Variabili di base}{30}{subsection.3.5.6}%
+\contentsline {subsection}{\numberline {3.5.7}Proprietà delle soluzioni di base}{31}{subsection.3.5.7}%
+\contentsline {subsection}{\numberline {3.5.8}Soluzione di base ammissibile}{31}{subsection.3.5.8}%
+\contentsline {subsection}{\numberline {3.5.9}Soluzioni di base ammissibili adiacenti}{32}{subsection.3.5.9}%
+\contentsline {section}{\numberline {3.6}Procedura algebrica}{34}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Intepretazioni}{34}{subsection.3.6.1}%
+\contentsline {subsubsection}{Intepretazione geometrica}{34}{subsubsection*.32}%
+\contentsline {subsubsection}{Intepretazione algebrica}{34}{subsubsection*.33}%
+\contentsline {subsection}{\numberline {3.6.2}Inizializzazione}{35}{subsection.3.6.2}%
+\contentsline {subsection}{\numberline {3.6.3}Test di ottimalità}{35}{subsection.3.6.3}%
+\contentsline {subsection}{\numberline {3.6.4}Passo 1 - Determinazione della direzione di spostamento}{35}{subsection.3.6.4}%
+\contentsline {subsection}{\numberline {3.6.5}Passo 2 - Determinazione dell'incremento}{36}{subsection.3.6.5}%
+\contentsline {subsection}{\numberline {3.6.6}Passo 3 - Determinazione della nuova soluzione di base}{37}{subsection.3.6.6}%
+\contentsline {section}{\numberline {3.7}Forma tabellare}{38}{section.3.7}%
+\contentsline {subsection}{\numberline {3.7.1}Cosa è?}{38}{subsection.3.7.1}%
+\contentsline {subsection}{\numberline {3.7.2}Tabella}{38}{subsection.3.7.2}%
+\contentsline {subsection}{\numberline {3.7.3}Inizializzazione}{39}{subsection.3.7.3}%
+\contentsline {subsection}{\numberline {3.7.4}Test di ottimalità}{39}{subsection.3.7.4}%
+\contentsline {subsection}{\numberline {3.7.5}Passo 1}{39}{subsection.3.7.5}%
+\contentsline {subsection}{\numberline {3.7.6}Passo 2}{40}{subsection.3.7.6}%
+\contentsline {subsection}{\numberline {3.7.7}Passo 3}{41}{subsection.3.7.7}%
+\contentsline {section}{\numberline {3.8}Tie Breaking}{43}{section.3.8}%
+\contentsline {part}{II\hspace {1em}Esercitazioni}{44}{part.2}%
+\contentsline {chapter}{\numberline {1}Formulazione del problema}{45}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Pianificazione della produzione}{45}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Traccia}{45}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Modello di programmazione lineare}{45}{subsection.1.1.2}%
+\contentsline {subsubsection}{incognite o variabili decisionali}{45}{subsubsection*.45}%
+\contentsline {subsubsection}{Funzione obiettivo}{45}{subsubsection*.46}%
+\contentsline {subsubsection}{Vincoli}{45}{subsubsection*.47}%
+\contentsline {section}{\numberline {1.2}Problema della dieta}{46}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Traccia}{46}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Modello di programmazione lineare}{46}{subsection.1.2.2}%
+\contentsline {subsubsection}{Variabili}{46}{subsubsection*.48}%
+\contentsline {subsubsection}{Funzione obiettivo}{46}{subsubsection*.49}%
+\contentsline {subsubsection}{Vincoli}{46}{subsubsection*.50}%
+\contentsline {subsubsection}{Formulazione compatta}{47}{subsubsection*.51}%
+\contentsline {section}{\numberline {1.3}Reti di distribuzione}{48}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Traccia}{48}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Modello di programmazione lineare}{48}{subsection.1.3.2}%
+\contentsline {subsubsection}{Parametri}{48}{subsubsection*.52}%
+\contentsline {subsubsection}{Variabili di decisione}{48}{subsubsection*.53}%
+\contentsline {subsubsection}{Funzione obiettivo}{48}{subsubsection*.54}%
+\contentsline {subsubsection}{Vincoli}{48}{subsubsection*.55}%
+\contentsline {section}{\numberline {1.4}Turni di lavoro}{49}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Traccia}{49}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Modello di programmazione lineare}{49}{subsection.1.4.2}%
+\contentsline {subsubsection}{Parametri}{49}{subsubsection*.56}%
+\contentsline {subsubsection}{Variabili di decisione}{49}{subsubsection*.57}%
+\contentsline {subsubsection}{Funzione obiettivo}{49}{subsubsection*.58}%
+\contentsline {subsubsection}{Vincoli}{49}{subsubsection*.59}%
+\contentsline {part}{III\hspace {1em}Laboratori}{50}{part.3}%

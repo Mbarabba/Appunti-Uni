@@ -1,1 +1,261 @@
 \chapter{LICS - Longest Increasing Common Subsequence}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+{
+    \large
+
+    \begin{gather*}
+        X = X_m = \langle x_1, \dots, x_m \rangle \\ 
+        Y = Y_n = \langle y_1, \dots, y_n \rangle \\
+        \Sigma \text{ munito di una relazione d'ordine } <  
+    \end{gather*}
+}
+
+\subsection{Soluzione}
+Voglia $Z$ una sottosequenza comune di $X$ e $Y$ tale che
+
+{
+    \large
+
+    $$
+    |Z| = max\{|W|: \text{$W$ è sottosequenza crescente comune di $X$ e $Y$}\}
+    $$
+}
+
+ossia, $Z$ è una più lunga sottosequenza di $X$ e $Y$ nella quale gli elementi appaiono in ordine crescente
+
+\subsubsection{Esempio}
+{
+    \large
+
+    \begin{gather*}
+        X = \langle a,b,c,b,a,d,c,g \rangle \\
+        Y = \langle d,a,b,b,a,c,f \rangle \\
+        Z = LICS(X,Y) = \langle a,b,c \rangle
+    \end{gather*}
+}
+
+\newpage
+\section{Formulazione ricorsiva di una LICS Sottoproblema $(i,j)$}
+
+\subsection{Istanza}
+{
+    \large
+
+    \begin{gather*}
+        X_i = \langle x_1, \dots, x_i \rangle \quad i \in \{0, \dots, m\} \\
+        Y_j = \langle y_1, \dots, y_i \rangle \quad j \in \{0, \dots, n\} 
+    \end{gather*}
+}
+
+\subsection{Soluzione}
+Una $LICS\ Z^{(i,j)}$ di $X_i$ e $Y_j$
+
+\subsection{Caso base $i = 0 \lor j=0$}
+{
+    \large
+    $$
+        Z^{(i,j)} = \langle \rangle
+    $$
+}
+
+\subsection{Passo ricorsivo}
+Se $x_i = y_j \implies Z^{(i,j)= Z^{??} | x_i}$. Per capire chi è $Z^{??}$ devo conoscere con cosa termina e questo non si può fare essendo che manca l'informazione (stiamo lavorando con chiamate ricorsive).
+
+Per raggirare questa problematica introduciamo un problema vincolato per ovviare alla mancaza di informazione.
+
+\newpage
+\section{$LICS_V$}
+
+\subsection{Definizione del problema}
+
+\subsubsection{Istanza}
+{
+    \large
+
+    \begin{gather*}
+        X = X_m = \langle x_1, \dots, x_m \rangle \\
+        Y = Y_n = \langle y_1, \dots, y_n \rangle
+    \end{gather*}
+}
+
+\subsubsection{Soluzione}
+Una $LICS\ Z$ di $X_m$ e $Y_n$ la quale termina sia con $x_m$ che con $y_n$ se $x_m = y_n$ mentre è $\langle \rangle$ se $x_m \not = y_n$.
+
+\subsection{Definizione del sottoproblema $(i,j)$}
+\subsubsection{Istanza}
+{
+    \large
+
+    \begin{gather*}
+        X_i = \langle x_1, \dots, x_i \rangle \quad i \in \{1, \dots, m\} \\
+        Y_j = \langle y_1, \dots, y_j \rangle \quad j \in \{1, \dots, n\} \\
+    \end{gather*}
+}
+
+\subsubsection{Soluzione}
+Una $LICS\ Z^{(i,j)}$ di $X_i$ e $Y_j$ la quale termina sia con $x_i$ che con $y_j$ se $x_i=y_j$ mentre è $\langle \rangle$ se $x_i \not = y_j$.
+
+Se $i=0 \lor j=0$ il sottoproblema $(i,j)$ è privo di significato poichè con $i=0 \lor j=0$ stiamo confronto con il previsso vuoto, al cui interno non esiste alcun carattere, quindi inutile chiedere di terminare con un elemento che non esiste
+
+\subsubsection{Definizione dei coefficienti della $LICS_V$}
+{
+    \large
+
+    \begin{gather*}
+        \forall i \in \{1,\dots,m\} \quad \forall j in \{1, \dots, n\} \\
+        c_{ij} = |Z^{(i,j)}| 
+    \end{gather*}
+}
+
+\newpage
+\subsection{Formulazione ricorsiva di $Z^{(i,j)}$}
+\subsubsection{Caso base}
+$\forall (i,j)$ con $i>0 \land j>0$ tale che $x_i \not = y_j$
+
+{
+    \large
+
+    $$
+        Z^{(i,j)} = \langle \rangle \quad c_{ij} = |Z^{(i,j)}| = 0
+    $$
+}
+
+\subsubsection{Passo ricorsivo}
+$\forall(i,j)$ con $i>0 \land j>0$ tale che $x_i = y_j$
+{
+    \large
+
+    $$
+        Z^{(i,j)} = Z^{(\overline{i}, \overline{j})} | x_i
+    $$
+}
+
+$Z^{(\overline{i}, \overline{j})}$ termina con $x_{\overline{i}}$ e con $y_{\overline{j}}$ oppure è $\langle \rangle$.
+
+Si richiede che:
+\begin{itemize}
+    \item $x_{\overline{i}} < x_i$
+    \item $Z^{(\overline{i}, \overline{j})}$ sia la più lunga tra tutte le $Z^{(h,k)}$ con $h<i$ e $k<j$ ed il cui ultimo simbolo $x_h<x_i$
+\end{itemize}
+
+Quindi $Z^{(\overline{i}, \overline{j})}$ è tale che
+
+{
+    \large
+
+    $$
+        c_{ij} = max\{c_{hk} : 1 \leq h < i \land 1 \leq k < j \land x_h < x_i\} + 1 \\
+    $$
+    $$
+        max\emptyset = 0
+    $$
+}
+
+\subsubsection{Lunghezza della soluzione}
+\begin{itemize}
+    \item Del problema vincolato $LICS_V$ su $X_m$ e $Y_n$ non ce ne importa
+    \item Il problema iniziale $LICS$ su $X_m$ e $Y_n$:
+    \begin{gather*}
+        max\{c_ij\} \\
+        1 \leq i \leq m \\
+        1 \leq j \leq n
+    \end{gather*}
+
+    In quanto $LICS(X_m,Y_n)$ è la più lunga tra tutte le $LICS_V(X_i,Y_j)$
+\end{itemize}
+
+\newpage
+\section{Algoritmo Bottom-Up}
+\subsection{Pseudocodice}
+\begin{algorithm}
+    \caption{LICS-LENGTH}
+    \begin{algorithmic}
+        \Procedure{LICS-LENGTH}{$X,Y$}
+            \State $m=length(X)$
+            \State $n=length(Y)$
+            \State $max-sol=0$
+            \State $ind1-max-sol=0$
+            \State $ind2-max-sol=0$
+
+            \For{$i=1$ to $m$}
+                \For{$j=1$ to $n$}
+                    \If{$x_i \not = y_j$} \Comment{Caso base integrato nel passo ricorsivo}
+                        \State $c[i,j]=0$
+                        \State $b[i,j]=(0,0)$
+
+                        \Else
+                            \State $tmp=0$
+                            \State $ind1-max-sol=0$
+                            \State $ind2-max-sol=0$
+
+                            \For{$h=1$ to $i-1$}
+                                \For{$k=1$ to $j-1$}
+                                    \If{$x_h < x_i \land c[h,k] > tmp$}
+                                        \State $tmp=c[h,k]$
+                                        \State $ind1-max-sol = h$
+                                        \State $ind2-max-sol=k$
+                                    \EndIf
+                                    
+                                    \State $c[i,j] = tmp + 1$
+                                    \State $b[i,j] = (ind1-max-sol, ind2-max-sol)$ \Comment{Mi indica dove ho trovato il max}
+
+                                    \If{$c[i,j]>max-sol$}
+                                        \State $max-sol=c[i,j]$
+                                        \State $ind1-max-sol = i$
+                                        \State $ind2-max-sol = j$
+                                    \EndIf
+                                \EndFor
+                            \EndFor
+                    \EndIf
+                \EndFor
+            \EndFor
+
+            \State \Return $c,b,max-sol,ind1-max-sol,ind2-max-sol$
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+\subsection{Spiegazione dell'algoritmo}
+\begin{itemize}
+    \item $c[i,j]$ è la matrice dei coefficienti
+    \item $b[i,j]$ è dove si memroizza $(\overline{i}, \overline{j})$, qua dentro si trova il max all'interno della matrice oppure $(0,0)$ qualora si cerchi il max di $\emptyset$
+    \item In max-sol si memorizza $\max_{\substack{1 \leq i \leq m \\ 1 \leq j \leq n}} \{ c_{ij} \}$
+    \item In ind1-max-sol e ind2-max-sol si memorizza $i^*$ e $j^*$ tale che $c[i^*, j^*]$ contiene max sol
+\end{itemize}
+\subsection{Complessità}
+\begin{itemize}
+    \item \textbf{Spazio:} $\Theta(m \cdot n)$ abbiamo 2 matrici ($c,b$) di m righe ed n colonne
+    
+    \item \textbf{Tempo:} $O(m^2 \cdot n^2)$
+\end{itemize}
+
+\newpage
+\section{Algoritmo di ricostruzione}
+\subsection{Pseudocodice}
+\begin{algorithm}
+    \caption{Ricostruzione di una LICS}
+    \begin{algorithmic}
+        \Procedure{PRINT-LICSV}{$i,j,b,c,X,Y$}
+            \If{$c[i,j]=0$} \Comment{È come scrivere if $x_i \not = y_j$}
+                \State print("Non esiste alcuna $LICS_V$ di $X_i$ e $Y_j$)
+            
+            \Else
+                \If{$b[i,j]=(0,0)$} \Comment{La $LICS$ è formata da un solo carattere}
+                    \State print($x_i$)
+
+                    \Else \Comment{Abbiamo altri caratteri}
+                        \State PRINT-LICSV($b[i,j],b,c,X,Y$)
+                        \State print($x_i$) 
+                \EndIf
+
+            \EndIf
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+\newpage
+\section{Problema della sottostruttura ottima}
+\subsection{Teorema}
+\subsection{Dimostrazione}
