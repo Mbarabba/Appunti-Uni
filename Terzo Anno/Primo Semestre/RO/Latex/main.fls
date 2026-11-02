@@ -327,6 +327,12 @@ INPUT Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux
 INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
 INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
 INPUT Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
+INPUT ./Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.aux
+INPUT ./Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.aux
+INPUT Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.aux
+INPUT ./Capitoli/Teoria/Teoria della dualità/Teoria della dualità.aux
+INPUT ./Capitoli/Teoria/Teoria della dualità/Teoria della dualità.aux
+INPUT Capitoli/Teoria/Teoria della dualità/Teoria della dualità.aux
 INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
 INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
 INPUT Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
@@ -716,6 +722,170 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
+INPUT ./Immagini/VAriabile entrante.png
+INPUT ./Immagini/VAriabile entrante.png
+INPUT ./Immagini/VAriabile entrante.png
+INPUT ./Immagini/VAriabile entrante.png
+INPUT ./Immagini/VAriabile entrante.png
+INPUT ./Immagini/nessuna variaible uscente_1.png
+INPUT ./Immagini/nessuna variaible uscente_1.png
+INPUT ./Immagini/nessuna variaible uscente_1.png
+INPUT ./Immagini/nessuna variaible uscente_1.png
+INPUT ./Immagini/nessuna variaible uscente_1.png
+INPUT ./Immagini/nessuna variaible uscente_2.png
+INPUT ./Immagini/nessuna variaible uscente_2.png
+INPUT ./Immagini/nessuna variaible uscente_2.png
+INPUT ./Immagini/nessuna variaible uscente_2.png
+INPUT ./Immagini/nessuna variaible uscente_2.png
+INPUT ./Immagini/nessuna variabile uscente_3.png
+INPUT ./Immagini/nessuna variabile uscente_3.png
+INPUT ./Immagini/nessuna variabile uscente_3.png
+INPUT ./Immagini/nessuna variabile uscente_3.png
+INPUT ./Immagini/nessuna variabile uscente_3.png
+INPUT ./Immagini/nessuna variaible uscente_2.png
+INPUT ./Immagini/nessuna variaible uscente_2.png
+INPUT ./Immagini/nessuna variaible uscente_2.png
+INPUT ./Immagini/nessuna variaible uscente_2.png
+INPUT ./Immagini/nessuna variabile uscente_4.png
+INPUT ./Immagini/nessuna variabile uscente_4.png
+INPUT ./Immagini/nessuna variabile uscente_4.png
+INPUT ./Immagini/nessuna variabile uscente_4.png
+INPUT ./Immagini/nessuna variabile uscente_4.png
+INPUT ./Immagini/Molteplici soluzioni_1.png
+INPUT ./Immagini/Molteplici soluzioni_1.png
+INPUT ./Immagini/Molteplici soluzioni_1.png
+INPUT ./Immagini/Molteplici soluzioni_1.png
+INPUT ./Immagini/Molteplici soluzioni_1.png
+INPUT ./Immagini/Molteplici soluzioni_2.png
+INPUT ./Immagini/Molteplici soluzioni_2.png
+INPUT ./Immagini/Molteplici soluzioni_2.png
+INPUT ./Immagini/Molteplici soluzioni_2.png
+INPUT ./Immagini/Molteplici soluzioni_2.png
+INPUT ./Immagini/molteplici soluzioni tb_1.png
+INPUT ./Immagini/molteplici soluzioni tb_1.png
+INPUT ./Immagini/molteplici soluzioni tb_1.png
+INPUT ./Immagini/molteplici soluzioni tb_1.png
+INPUT ./Immagini/molteplici soluzioni tb_1.png
+INPUT ./Immagini/molteplici soluzioni tb_2.png
+INPUT ./Immagini/molteplici soluzioni tb_2.png
+INPUT ./Immagini/molteplici soluzioni tb_2.png
+INPUT ./Immagini/molteplici soluzioni tb_2.png
+INPUT ./Immagini/molteplici soluzioni tb_2.png
+INPUT ./Immagini/molteplici soluzioni tb_3.png
+INPUT ./Immagini/molteplici soluzioni tb_3.png
+INPUT ./Immagini/molteplici soluzioni tb_3.png
+INPUT ./Immagini/molteplici soluzioni tb_3.png
+INPUT ./Immagini/molteplici soluzioni tb_3.png
+INPUT ./Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.tex
+OUTPUT Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.aux
+INPUT ./Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.tex
+INPUT ./Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.tex
+INPUT Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.tex
+INPUT ./Immagini/equazione della frontiera di un vincolo.png
+INPUT ./Immagini/equazione della frontiera di un vincolo.png
+INPUT ./Immagini/equazione della frontiera di un vincolo.png
+INPUT ./Immagini/equazione della frontiera di un vincolo.png
+INPUT ./Immagini/equazione della frontiera di un vincolo.png
+INPUT ./Immagini/equazione della frontiera di un vincolo funzionale.png
+INPUT ./Immagini/equazione della frontiera di un vincolo funzionale.png
+INPUT ./Immagini/equazione della frontiera di un vincolo funzionale.png
+INPUT ./Immagini/equazione della frontiera di un vincolo funzionale.png
+INPUT ./Immagini/equazione della frontiera di un vincolo funzionale.png
+INPUT ./Immagini/Frontiera della regione ammissibile.png
+INPUT ./Immagini/Frontiera della regione ammissibile.png
+INPUT ./Immagini/Frontiera della regione ammissibile.png
+INPUT ./Immagini/Frontiera della regione ammissibile.png
+INPUT ./Immagini/Frontiera della regione ammissibile.png
+INPUT ./Immagini/Vertice ammissibile_2.png
+INPUT ./Immagini/Vertice ammissibile_2.png
+INPUT ./Immagini/Vertice ammissibile_2.png
+INPUT ./Immagini/Vertice ammissibile_2.png
+INPUT ./Immagini/Vertice ammissibile_2.png
+INPUT ./Immagini/Vertice ammissibile_3.png
+INPUT ./Immagini/Vertice ammissibile_3.png
+INPUT ./Immagini/Vertice ammissibile_3.png
+INPUT ./Immagini/Vertice ammissibile_3.png
+INPUT ./Immagini/Vertice ammissibile_3.png
+INPUT ./Immagini/vertice ammissible_4.png
+INPUT ./Immagini/vertice ammissible_4.png
+INPUT ./Immagini/vertice ammissible_4.png
+INPUT ./Immagini/vertice ammissible_4.png
+INPUT ./Immagini/vertice ammissible_4.png
+INPUT ./Immagini/vertice non ammissibile_2.png
+INPUT ./Immagini/vertice non ammissibile_2.png
+INPUT ./Immagini/vertice non ammissibile_2.png
+INPUT ./Immagini/vertice non ammissibile_2.png
+INPUT ./Immagini/vertice non ammissibile_2.png
+INPUT ./Immagini/vertice non ammissibile_1.png
+INPUT ./Immagini/vertice non ammissibile_1.png
+INPUT ./Immagini/vertice non ammissibile_1.png
+INPUT ./Immagini/vertice non ammissibile_1.png
+INPUT ./Immagini/vertice non ammissibile_1.png
+INPUT ./Immagini/vertice non ammissibile_3.png
+INPUT ./Immagini/vertice non ammissibile_3.png
+INPUT ./Immagini/vertice non ammissibile_3.png
+INPUT ./Immagini/vertice non ammissibile_3.png
+INPUT ./Immagini/vertice non ammissibile_3.png
+INPUT ./Immagini/vertice non ammissibile_4.png
+INPUT ./Immagini/vertice non ammissibile_4.png
+INPUT ./Immagini/vertice non ammissibile_4.png
+INPUT ./Immagini/vertice non ammissibile_4.png
+INPUT ./Immagini/vertice non ammissibile_4.png
+INPUT ./Immagini/vertice non ammissibile 5.png
+INPUT ./Immagini/vertice non ammissibile 5.png
+INPUT ./Immagini/vertice non ammissibile 5.png
+INPUT ./Immagini/vertice non ammissibile 5.png
+INPUT ./Immagini/vertice non ammissibile 5.png
+INPUT ./Immagini/vertice ammissibile adiacente_1.png
+INPUT ./Immagini/vertice ammissibile adiacente_1.png
+INPUT ./Immagini/vertice ammissibile adiacente_1.png
+INPUT ./Immagini/vertice ammissibile adiacente_1.png
+INPUT ./Immagini/vertice ammissibile adiacente_1.png
+INPUT ./Immagini/vertici ammissibili adiacente_3.png
+INPUT ./Immagini/vertici ammissibili adiacente_3.png
+INPUT ./Immagini/vertici ammissibili adiacente_3.png
+INPUT ./Immagini/vertici ammissibili adiacente_3.png
+INPUT ./Immagini/vertici ammissibili adiacente_3.png
+INPUT ./Immagini/vertici ammissibili adiacente_2.png
+INPUT ./Immagini/vertici ammissibili adiacente_2.png
+INPUT ./Immagini/vertici ammissibili adiacente_2.png
+INPUT ./Immagini/vertici ammissibili adiacente_2.png
+INPUT ./Immagini/vertici ammissibili adiacente_2.png
+INPUT ./Immagini/poliedro verde.png
+INPUT ./Immagini/poliedro verde.png
+INPUT ./Immagini/poliedro verde.png
+INPUT ./Immagini/poliedro verde.png
+INPUT ./Immagini/poliedro verde.png
+INPUT ./Immagini/poliedro colorato.png
+INPUT ./Immagini/poliedro colorato.png
+INPUT ./Immagini/poliedro colorato.png
+INPUT ./Immagini/poliedro colorato.png
+INPUT ./Immagini/poliedro colorato.png
+INPUT ./Immagini/Prop1.png
+INPUT ./Immagini/Prop1.png
+INPUT ./Immagini/Prop1.png
+INPUT ./Immagini/Prop1.png
+INPUT ./Immagini/Prop1.png
+INPUT ./Immagini/Prop1_2.png
+INPUT ./Immagini/Prop1_2.png
+INPUT ./Immagini/Prop1_2.png
+INPUT ./Immagini/Prop1_2.png
+INPUT ./Immagini/Prop1_2.png
+INPUT ./Immagini/Propo2.png
+INPUT ./Immagini/Propo2.png
+INPUT ./Immagini/Propo2.png
+INPUT ./Immagini/Propo2.png
+INPUT ./Immagini/Propo2.png
+INPUT ./Immagini/Prop3_1.png
+INPUT ./Immagini/Prop3_1.png
+INPUT ./Immagini/Prop3_1.png
+INPUT ./Immagini/Prop3_1.png
+INPUT ./Immagini/Prop3_1.png
+INPUT ./Capitoli/Teoria/Teoria della dualità/Teoria della dualità.tex
+OUTPUT Capitoli/Teoria/Teoria della dualità/Teoria della dualità.aux
+INPUT ./Capitoli/Teoria/Teoria della dualità/Teoria della dualità.tex
+INPUT ./Capitoli/Teoria/Teoria della dualità/Teoria della dualità.tex
+INPUT Capitoli/Teoria/Teoria della dualità/Teoria della dualità.tex
 INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.tex
 OUTPUT Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
 INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.tex
@@ -736,6 +906,12 @@ INPUT Capitoli/Teoria/Programmazione lineare/Programmazione lineare.aux
 INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
 INPUT ./Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
 INPUT Capitoli/Teoria/Metodo del simplesso/Metodo del simplesso.aux
+INPUT ./Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.aux
+INPUT ./Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.aux
+INPUT Capitoli/Teoria/Teoria del simplesso/Teoria del simplesso.aux
+INPUT ./Capitoli/Teoria/Teoria della dualità/Teoria della dualità.aux
+INPUT ./Capitoli/Teoria/Teoria della dualità/Teoria della dualità.aux
+INPUT Capitoli/Teoria/Teoria della dualità/Teoria della dualità.aux
 INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
 INPUT ./Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux
 INPUT Capitoli/Esercitazioni/Esercitazione 1: Formulazione del problema/Esercitazione 1.aux

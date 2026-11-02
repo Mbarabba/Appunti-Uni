@@ -335,6 +335,8 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/bookmark/bookmark.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
 INPUT /usr/share/texlive/texmf-dist/tex/latex/bookmark/bkm-pdftex.def
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
+INPUT /usr/share/texlive/texmf-dist/tex/latex/cancel/cancel.sty
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
@@ -354,15 +356,18 @@ INPUT Capitoli/Teoria/LIS/LIS.aux
 INPUT ./Capitoli/Teoria/Hateville/Hateville.aux
 INPUT ./Capitoli/Teoria/Hateville/Hateville.aux
 INPUT Capitoli/Teoria/Hateville/Hateville.aux
-INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
-INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
-INPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.aux
 INPUT Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
 INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
 INPUT Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
+INPUT ./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux
+INPUT ./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux
+INPUT Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux
+INPUT ./Capitoli/Teoria/Knapsack/Knapsack.aux
+INPUT ./Capitoli/Teoria/Knapsack/Knapsack.aux
+INPUT Capitoli/Teoria/Knapsack/Knapsack.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/Esercizi LCS.aux
@@ -436,11 +441,11 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmbx12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
 OUTPUT main.toc
 INPUT ./Capitoli/Teoria/LCS/LCS.tex
@@ -509,11 +514,6 @@ OUTPUT Capitoli/Teoria/Hateville/Hateville.aux
 INPUT ./Capitoli/Teoria/Hateville/Hateville.tex
 INPUT ./Capitoli/Teoria/Hateville/Hateville.tex
 INPUT Capitoli/Teoria/Hateville/Hateville.tex
-INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.tex
-OUTPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
-INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.tex
-INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.tex
-INPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.tex
 INPUT ./Capitoli/Teoria/LICS/LICS.tex
 OUTPUT Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.tex
@@ -525,6 +525,33 @@ OUTPUT Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
 INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.tex
 INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.tex
 INPUT Capitoli/Teoria/Floyd Warshall/Floyd Warshall.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathmorphing.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathreplacing.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/decorations/pgflibrarydecorations.pathreplacing.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/pgflibraryarrows.meta.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
+INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/omslmr.fd
+INPUT ./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.tex
+OUTPUT Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux
+INPUT ./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.tex
+INPUT ./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.tex
+INPUT Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.tex
+INPUT ./Capitoli/Teoria/Knapsack/Knapsack.tex
+OUTPUT Capitoli/Teoria/Knapsack/Knapsack.aux
+INPUT ./Capitoli/Teoria/Knapsack/Knapsack.tex
+INPUT ./Capitoli/Teoria/Knapsack/Knapsack.tex
+INPUT Capitoli/Teoria/Knapsack/Knapsack.tex
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
 OUTPUT Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
@@ -581,21 +608,25 @@ INPUT Capitoli/Teoria/LIS/LIS.aux
 INPUT ./Capitoli/Teoria/Hateville/Hateville.aux
 INPUT ./Capitoli/Teoria/Hateville/Hateville.aux
 INPUT Capitoli/Teoria/Hateville/Hateville.aux
-INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
-INPUT ./Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
-INPUT Capitoli/Teoria/Stringa Palindroma/Problema della stringa palindroma.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Teoria/LICS/LICS.aux
 INPUT Capitoli/Teoria/LICS/LICS.aux
 INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
 INPUT ./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
 INPUT Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux
+INPUT ./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux
+INPUT ./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux
+INPUT Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux
+INPUT ./Capitoli/Teoria/Knapsack/Knapsack.aux
+INPUT ./Capitoli/Teoria/Knapsack/Knapsack.aux
+INPUT Capitoli/Teoria/Knapsack/Knapsack.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
 INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
 INPUT Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
@@ -621,4 +652,5 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb

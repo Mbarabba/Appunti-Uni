@@ -115,33 +115,50 @@
 \contentsline {subsection}{\numberline {3.7.6}Passo 2}{40}{subsection.3.7.6}%
 \contentsline {subsection}{\numberline {3.7.7}Passo 3}{41}{subsection.3.7.7}%
 \contentsline {section}{\numberline {3.8}Tie Breaking}{43}{section.3.8}%
-\contentsline {part}{II\hspace {1em}Esercitazioni}{44}{part.2}%
-\contentsline {chapter}{\numberline {1}Formulazione del problema}{45}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Pianificazione della produzione}{45}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Traccia}{45}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Modello di programmazione lineare}{45}{subsection.1.1.2}%
-\contentsline {subsubsection}{incognite o variabili decisionali}{45}{subsubsection*.45}%
-\contentsline {subsubsection}{Funzione obiettivo}{45}{subsubsection*.46}%
-\contentsline {subsubsection}{Vincoli}{45}{subsubsection*.47}%
-\contentsline {section}{\numberline {1.2}Problema della dieta}{46}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Traccia}{46}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Modello di programmazione lineare}{46}{subsection.1.2.2}%
-\contentsline {subsubsection}{Variabili}{46}{subsubsection*.48}%
-\contentsline {subsubsection}{Funzione obiettivo}{46}{subsubsection*.49}%
-\contentsline {subsubsection}{Vincoli}{46}{subsubsection*.50}%
-\contentsline {subsubsection}{Formulazione compatta}{47}{subsubsection*.51}%
-\contentsline {section}{\numberline {1.3}Reti di distribuzione}{48}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Traccia}{48}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Modello di programmazione lineare}{48}{subsection.1.3.2}%
-\contentsline {subsubsection}{Parametri}{48}{subsubsection*.52}%
-\contentsline {subsubsection}{Variabili di decisione}{48}{subsubsection*.53}%
-\contentsline {subsubsection}{Funzione obiettivo}{48}{subsubsection*.54}%
-\contentsline {subsubsection}{Vincoli}{48}{subsubsection*.55}%
-\contentsline {section}{\numberline {1.4}Turni di lavoro}{49}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Traccia}{49}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Modello di programmazione lineare}{49}{subsection.1.4.2}%
-\contentsline {subsubsection}{Parametri}{49}{subsubsection*.56}%
-\contentsline {subsubsection}{Variabili di decisione}{49}{subsubsection*.57}%
-\contentsline {subsubsection}{Funzione obiettivo}{49}{subsubsection*.58}%
-\contentsline {subsubsection}{Vincoli}{49}{subsubsection*.59}%
-\contentsline {part}{III\hspace {1em}Laboratori}{50}{part.3}%
+\contentsline {subsection}{\numberline {3.8.1}Variabile entrante}{43}{subsection.3.8.1}%
+\contentsline {subsection}{\numberline {3.8.2}Variabile uscente}{43}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}Nessuna variabile uscente}{44}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}Molteplici soluzioni ottimali}{45}{subsection.3.8.4}%
+\contentsline {chapter}{\numberline {4}Teoria del simplesso}{48}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Terminologia}{48}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Equazione della frontiera di un vincolo}{48}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Equazione della frontiera di un vincolo funzionale}{48}{subsection.4.1.2}%
+\contentsline {subsection}{\numberline {4.1.3}Frontiera della regione ammissibile}{49}{subsection.4.1.3}%
+\contentsline {subsection}{\numberline {4.1.4}Vertice ammissibile}{49}{subsection.4.1.4}%
+\contentsline {subsection}{\numberline {4.1.5}Vertice non ammissibile}{50}{subsection.4.1.5}%
+\contentsline {section}{\numberline {4.2}Vertice ammissibile adiacente}{51}{section.4.2}%
+\contentsline {section}{\numberline {4.3}Proprietà dei vertici ammissibili}{54}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Proprietà 1}{54}{subsection.4.3.1}%
+\contentsline {subsection}{\numberline {4.3.2}Proprietà 2}{55}{subsection.4.3.2}%
+\contentsline {subsection}{\numberline {4.3.3}Proprietà 3}{55}{subsection.4.3.3}%
+\contentsline {chapter}{\numberline {5}Teoria della dualità}{56}{chapter.5}%
+\contentsline {part}{II\hspace {1em}Esercitazioni}{57}{part.2}%
+\contentsline {chapter}{\numberline {1}Formulazione del problema}{58}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Pianificazione della produzione}{58}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Traccia}{58}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Modello di programmazione lineare}{58}{subsection.1.1.2}%
+\contentsline {subsubsection}{incognite o variabili decisionali}{58}{subsubsection*.45}%
+\contentsline {subsubsection}{Funzione obiettivo}{58}{subsubsection*.46}%
+\contentsline {subsubsection}{Vincoli}{58}{subsubsection*.47}%
+\contentsline {section}{\numberline {1.2}Problema della dieta}{59}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Traccia}{59}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Modello di programmazione lineare}{59}{subsection.1.2.2}%
+\contentsline {subsubsection}{Variabili}{59}{subsubsection*.48}%
+\contentsline {subsubsection}{Funzione obiettivo}{59}{subsubsection*.49}%
+\contentsline {subsubsection}{Vincoli}{59}{subsubsection*.50}%
+\contentsline {subsubsection}{Formulazione compatta}{60}{subsubsection*.51}%
+\contentsline {section}{\numberline {1.3}Reti di distribuzione}{61}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Traccia}{61}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Modello di programmazione lineare}{61}{subsection.1.3.2}%
+\contentsline {subsubsection}{Parametri}{61}{subsubsection*.52}%
+\contentsline {subsubsection}{Variabili di decisione}{61}{subsubsection*.53}%
+\contentsline {subsubsection}{Funzione obiettivo}{61}{subsubsection*.54}%
+\contentsline {subsubsection}{Vincoli}{61}{subsubsection*.55}%
+\contentsline {section}{\numberline {1.4}Turni di lavoro}{62}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Traccia}{62}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Modello di programmazione lineare}{62}{subsection.1.4.2}%
+\contentsline {subsubsection}{Parametri}{62}{subsubsection*.56}%
+\contentsline {subsubsection}{Variabili di decisione}{62}{subsubsection*.57}%
+\contentsline {subsubsection}{Funzione obiettivo}{62}{subsubsection*.58}%
+\contentsline {subsubsection}{Vincoli}{62}{subsubsection*.59}%
+\contentsline {part}{III\hspace {1em}Laboratori}{63}{part.3}%

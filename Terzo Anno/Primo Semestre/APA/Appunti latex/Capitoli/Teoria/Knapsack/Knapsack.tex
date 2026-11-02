@@ -1,0 +1,265 @@
+\chapter{Knapsack}
+
+\section{Defunizione del problema}
+
+\subsection{Istanza}
+\begin{itemize}
+    \item $X_n = \{1, \dots, n\}$ un insieme di n oggetti
+    \item $\forall i \in X_n$
+    \begin{itemize}
+        \item $v_i \in \mathbb{N} \quad v_i > 0$ valore dell'oggetto $i$
+        \item $w_i \in \mathbb{N} \quad w_i > 0$ ingombro dell'oggetto $i$
+    \end{itemize}
+    \item $C \in \mathbb{N} \quad C>0$ capacità dello zaino
+\end{itemize}
+
+\subsection{Soluzione}
+{
+    \large
+    $$
+    S \subseteq X_n : V(S) = \max_{\substack{A \subseteq X_n : \\ W(A) \leq C}} \{ V(A) \} \quad \text{dove } \forall A \subseteq X_n
+    $$
+}
+
+Cioè un sottoinsieme di $X_n$ di massimo valore tra tutti i sottoinsiemi di $X_n$ di ingombro complessivo $\leq$ C
+
+\begin{minipage}{0.45\textwidth}
+    $$
+    V(A) = 
+    \begin{cases}
+        \sum_{i \in A} v_i & \text{se } A \not = \emptyset \\
+        \emptyset & \text{se } A = \emptyset
+    \end{cases}
+    $$
+
+    \begin{center}
+        Valore di un sottoinsieme
+    \end{center}
+\end{minipage}
+\hfil
+\begin{minipage}{0.45\textwidth}
+    $$
+        W(A) = 
+        \begin{cases}
+            \sum_{i \in A} w_i & \text{se } A \not = \emptyset \\
+            \emptyset & \text{se } A = \emptyset
+        \end{cases}
+    $$
+
+    \begin{center}
+        Ingombro di un sottoinsieme
+    \end{center}
+\end{minipage}
+
+\section{Definizione del sottoproblema}
+
+\subsection{Istanza}
+\begin{itemize}
+    \item $i \in \{0, \dots, n\}$ un indice
+    \item $c \in \{0, \dots, c\}$ capacità residua dello zaino
+\end{itemize}
+
+{
+    \large
+
+    $$
+        X_i = \{1, \dots, i\}
+    $$
+
+
+}
+    \begin{center}
+        Sottoinsieme di $i$ oggetti con $X_0 = \emptyset$
+    \end{center}
+
+\subsection{Soluzione}
+{
+    \large
+
+    $$
+    S_{ic} \subseteq X_i : V(S_{ic}) = \max_{\substack{A \subseteq X_i : \\ W(A) \leq c}} \{ V(A) \}
+    $$
+
+
+}
+    \begin{center}
+        Vogliamo il sottoinsieme con il valore più alto possivile rispettando l'ingombro
+    \end{center}
+
+\newpage
+\section{Definizione del coefficiente $\mathbf{val_{ic}}$}
+
+{
+    \large
+
+    $$val_{ic} = V(S_{ic})$$
+}
+
+\begin{center}
+    È il valore di un sottoinsieme di $X_i$ di massimo valore tra tutti i sottoinsiemi di $X_i$ che hanno ingombro complessivo $leq c$
+\end{center}
+
+\section{Formulazione ricorsiva}
+\subsection{Caso base}
+
+{
+    \large
+
+    \begin{gather*}
+        \forall A(i,c) \text{ con } i=0 \lor c=0 \\
+        S_{ic} = \emptyset \quad val_{ic} = 0
+    \end{gather*}
+}
+
+\subsubsection{Spiegazione}
+{
+    \large
+    \begin{gather*}
+        \forall (i,c) \text{ con } i \in \{0, \dots, n\} \text{ e } c \in \{0 , \dots, c\} \\ 
+        S_{\emptyset c} = \emptyset \quad val_{ic} = 0
+    \end{gather*}
+}
+    \begin{center}
+        Essendo che abbiamo preso "il vuoto" anche se abbiamo spazio residuo il vuoto non ha valore
+    \end{center}
+
+{
+    \large
+
+    \begin{gather*}
+        \forall(i,c) \text{ con } i \in \{0, \dots, n\} \text{ e } c=0 \\
+        S_{i\emptyset} = \emptyset \quad val_{ic} = 0
+    \end{gather*}
+}
+
+\begin{center}
+    Essendo che non abbiamo spazio non possiamo prendere oggetti, quindi il valore è pari a 0
+\end{center}
+
+\newpage
+\subsection{Passo ricorsivo}
+{
+    \large
+
+    \begin{gather*}
+        S_{ic} = 
+        \begin{cases}
+            S_{i-1, c} & \text{se } w_i > c \\
+            S_{i-1, c - w_i} \cup \{i\} & \text{se } w_i \leq c \text{ e } val_{i-c, c- w_i} \geq val_{i-1, c} \\
+            S_{i-1, c} & \text{se } w_i \leq c \text{ e } val_{i-c, c- w_i} < val_{i-1, c}
+        \end{cases} \\
+        val_{ic} = 
+        \begin{cases}
+            val_{i-1,c} & \text{se } w_i > c \\
+            \max\{val_{i-1,c-w_i} + v_i, val_{i-1,c}\} & \text{se } w_i \leq c
+        \end{cases}
+    \end{gather*}
+}
+
+\subsubsection{Spiegazione}
+\begin{itemize}
+    \item Se $\mathbf{w_i > c}$ sicuramente $i \not \in S_{ic}$ e quindi
+    $$
+    S_{ic} = S_{i-1,c} \quad val_{ic} = val_{i-1,c}
+    $$
+
+    \item Se $\mathbf{w_i \leq c}$ si verifica uno dei 2 seguenti casi
+    \begin{itemize}
+        \item $\mathbf{i \not \in S_{ic}}$
+        $$ S_{ic} = S_{i-1,c} \quad val_{ic} = val_{i-1,c}$$
+
+        \item $\mathbf{i \in S_{ic}}$
+        $$ S_{ic} = S_{i-1, c-w_i} \cup \{i\} \quad val_{ic} = val_{i-1, c-w_i} + v_i $$ 
+    \end{itemize}
+
+    A priori non sappiamo quale dei 2 casi si verifica, sarà il migliore ossia quello che dà luogo al più grande valore $val_{ic}$
+
+    Pertanto
+    $$
+    S_{ic} = 
+    \begin{cases}
+        S_{i-1, c- w_i} \cup \{i\} & \text{se } val_{i-1, c-w_i} + v_i \geq val_{i-1,c} \\
+        S_{i-1,c} & \text{se } val_{i-1, c-w_i} + v_i < val_{i-1,c}
+    \end{cases}
+    $$
+    $$
+    val_{ic} = \max\{val_{i-1, c-w_i} + v_i, val_{i-1,c}\}
+    $$
+\end{itemize}
+
+\section{Soluzione}
+{
+    \large
+
+    \begin{gather*}
+        S_{mC} \quad \text{in termini di sottoinsieme} \\
+        val_{mC} \quad \text{in termini di valore}
+    \end{gather*}
+}
+
+\newpage
+\section{Algoritmo Bottom-up}
+
+\subsection{Algoritmo in pseudocodice}
+\begin{algorithm}
+    \caption{Algoritmo Bottom-up}
+    \begin{algorithmic}
+        \Procedure{KS-VAL}{$n,C$}
+            \Comment{Caso base}
+            \For{$c=0$ to $C$}
+                \State $val[0,c] = 0$
+            \EndFor
+
+            \For{$i=1$ to $n$}
+                \State $val[i,0] = 0$ 
+            \EndFor
+
+            \Comment{Passo ricorsivo}
+            \For{$i=1$ to $n$}
+                \For{$c=1$ to $C$}
+                    \If{$w_i > c$}
+                        \State $val[i,c] = val[i-1,c]$
+                        \Else
+                            \State $val[i,c] = \max\{val[i-1,c-w_i] + v_i,val[i-1,c]\}$
+                    \EndIf
+                \EndFor
+            \EndFor
+
+            \State \Return $val$
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+\subsection{Complessità}
+\begin{itemize}
+    \item \textbf{In spazio:} $\theta(n \cdot C)$
+    \item \textbf{In tempo:} $\theta(n \cdot C)$
+\end{itemize}
+
+\newpage
+\section{Algoritmo di ricostruzione}
+\begin{algorithm}
+    \begin{algorithmic}
+        \Procedure{PRINT-KS}{$i,c,val$}
+            \If{$i=0 \lor c=0$}
+                \State printina($\emptyset$)
+
+                \Else
+                    \If{$w_i > c$}
+                        \State PRINT-KS($i-1,c,val$) \Comment{Stampa $S_{i-1,c}$}
+
+                        \Else
+                            \If{$val[i-1, c - w_i] + v_i < val[i-1,c]$}
+                                \State  PRINT-KS($i-1,c,val$) \Comment{Stampa $S_{i-1,c}$}
+
+                                \Else
+                                    \State PRINT-KS($i-1, c-w_i,val$) \Comment{Stampa $S_{i-1, c - w_i}$}
+                                    \State print($i$)
+                            \EndIf
+                    \EndIf
+            \EndIf
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+\section{Proprietà Sottostruttura Ottima}

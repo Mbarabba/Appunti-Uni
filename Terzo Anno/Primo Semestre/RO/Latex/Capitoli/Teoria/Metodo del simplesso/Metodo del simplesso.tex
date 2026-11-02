@@ -791,3 +791,171 @@ Determinare la \textbf{nuova soluzione di base} applicando operazioni che consen
 
 \newpage
 \section{Tie Breaking}
+\subsection{Variabile entrante}
+Il \textbf{passo 1} di ogni iterazione del metodo del simplesso sceglie come variabile entrante in base, la variabile non di base cui corrisponde il minimo valore (negativo) del coefficiente nell'equazione.
+
+Supponiamo che due o più variabili non di base abbiano lo stesso valore minimo (negativo) per i rispettivi coefficienti dell'equazione. 
+
+\begin{center}
+    \includegraphics[scale=0.6]{Immagini/VAriabile entrante.png}
+\end{center}
+
+
+La scelta di quale variabile debba entrare in base può essere effettuata arbitrariamente.
+
+La soluzione ottimale verrà comunque ottenuta, indipendentemente dalla variabile scelta come variabile entrante in base, e non sono disponibili metodi per prevedere quale scelta condurrà più rapidamente alla soluzione ottimale.
+
+Nel caso specifico si ha che la soluzione ottimale $(2,6)$ viene raggiunta in:
+\begin{itemize}
+    \item Tre iterazioni se si sceglie $x_1$ come variabile di base
+    \item Due iterazione se si sceglie $x_2$ come variabile di base
+\end{itemize}
+
+\subsection{Variabile uscente}
+Supponiamo che al \textbf{passo 2 dell'algoritmo del simplesso} due o più variabili di base competano per uscire di base.
+
+Fa differenza quale variabile viene scelta per uscire di base? \textbf{Assolutamente si}, è la fa in termini molto critici in base alla seguente catena di eventi:
+\begin{itemize}
+    \item Quando il valore della variabile entrante viene aumentato, le variabili di base che sono selezionabili come variabili uscenti dalla base, raggiungono contemporaneamente il valore zero.
+
+    Pertanto, le variabili non selezionate come variabili uscenti avranno comunque un valore nullo nella nuova soluzione di base (una variabile di base che assume valore nullo è detta \textbf{variabile degenere})
+   
+   \item Se una \textbf{variabile degenere} mantiene il proprio valore nullo sino ad un'iterazione successiva, dove viene selezionata come variabile uscente, la corrispondente variabile entrante in base deve rimanere nulla (dato che non può essere aumentata senza far assumere un valore negativo alla variabile uscente). Pertanto, il valore della funzione obiettivo $Z$ resta invariato.
+   
+   \item Se il valore della funzione obiettivo $Z$ resta costante invece di aumentare ad ogni iterazione, il \textbf{metodo del simplesso potrebbe entrare in loop}, ripetendo la medesima sequenza di soluzioni senza raggiungere la soluzione ottimale.
+   
+   Sono stati prodotti esempi sintetici che mostrano come il metodo del simplesso venga intrappolato in un \textbf{loop perpetuo}. Tuttavia questo accade raramente sono state sviluppate strategie apposite per controllare questa \textbf{situazione patologica}
+\end{itemize}
+
+\subsection{Nessuna variabile uscente}
+Il \textbf{passo 2} di ogni iterazione del metodo del simplesso può portare ad un'ulteriore esito che non abbiamo ancora discusso, vale a dire che nessuna variabile di base si qualifichi come variabile uscente di base (la stessa cosa non può accadere al \textbf{passo 1}, un quanto il test di ottimalità arresterebbe l'algoritmo).
+
+Tale situazione si verifica se il valore della variabile entrante può essere aumentato illimitatamente senza implicare il valore di almeno una variabile di base divenga negativo.
+
+\begin{minipage}{0.45\textwidth}
+    \includegraphics{Immagini/nessuna variaible uscente_1.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[scale=0.6]{Immagini/nessuna variaible uscente_2.png}
+\end{minipage}
+
+Nella \textbf{forma tabellare} significa che ogni coefficiente della \textbf{colonna pivot} (esclusa la riga 0) assume valore non positivo
+
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[scale=0.5]{Immagini/nessuna variabile uscente_3.png}
+\end{minipage}
+\hfill
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[scale=0.6]{Immagini/nessuna variaible uscente_2.png}
+\end{minipage}
+
+\begin{itemize}
+    \item $x_2$ variabile entrante
+    \item singolo coefficiente (0) per selezionare variabile uscente
+    \item il test del rapporto usa solo coefficienti positivi per cui nessuna variabile è selezionabile come variabile uscente
+\end{itemize}
+
+Con $x_1=0$ e $x_2$ che aumenta, abbiamo quanto segue:
+
+$$
+    x_2=4-1 \cdot x_1 - 0 \cdot x_2 = 4 > 0
+$$
+
+\begin{center}
+    \includegraphics[scale=0.65]{Immagini/nessuna variabile uscente_4.png}
+\end{center}
+
+Il tableau è interpretabile come segue: i vincoli non impediscono che il valore della funzione obiettivo $Z$ cresca illimitatamente, pertanto il metodo del simplesso si arresta segnalando che il \textbf{valore della funzione obiettivo $Z$ è illimitato}.
+
+\subsection{Molteplici soluzioni ottimali}
+Consideriamo il seguente problema di PL
+
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[scale=0.6]{Immagini/Molteplici soluzioni_1.png}
+\end{minipage}
+\hfil
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[scale=0.6]{Immagini/Molteplici soluzioni_2.png}
+\end{minipage}
+
+\begin{itemize}
+    \item Ogni problema di PL che ammette soluzioni ottimali multiple (con regione ammissibile limitata) ha almeno due \textbf{vertici ammissibili} che sono \textbf{ottimali}
+    \item Ogni soluzione ottimale è una combinazione convessa di questi vertici ammissibili ottimali
+    \item Di conseguenza, nella forma aumentata del problema di PL, \textbf{ogni soluzione ottimale risulta essere una combinazione convessa delle soluzioni di base ammissibili ottimali}
+\end{itemize}
+
+Il metodo del simplesso si arresta automaticamente non appena individua una soluzione di base ottimale.
+
+Comunque in molte applicazioni di PL, sussistono fattori non tangibili, non inclusi nel modello di PL, sfruttabili per scegliere adeguamente tra le soluzioni ottimali alternative. In questo caso, le soluzioni alternative devono essere comunque individuate.
+
+Come menzionato, questo richiede di trovare tutte le altre soluzioni di base ottimali, e quindi ogni soluzione ottimale sarà calcolabile come combinazione convessa di tali soluzioni ottimali di base.
+
+Una volta che il metodo del simplesso ha individuato una soluzione di base ottimale, è possibile identificare se ne esistono altre, ed in caso affermativo, trovarle come segue:
+
+\begin{quote}
+\textbf{Se un problema ha più di una soluzione di base ottimale, almeno una delle variabili non di base ha un coefficiente nullo nella riga (0), il che implica che incrementare il valore di una qualsiasi di tali variabili non cambia il valore della funzione obiettivo $Z$.}
+
+\textbf{Pertanto, queste soluzioni di base ottimali sono identificabili (se necessario) effettuando ulteriori iterazioni del metodo del simplesso, scegliendo ogni volta una variabili non di base con coefficiente nullo come variabile entrante.}
+\end{quote}
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.45\textwidth}
+    Il metodo del simplesso genera i primi tre tableau a destra e si arresta identificando una soluzione di base ottimale.
+
+    Comunque, siccome una variabile non di base $(x_3)$ ha coefficiente nullo nella riga 0, eseguiamo un'ulteriore iterazione per identificare un'altra soluzione di base ottimale.
+
+    Le due \textbf{soluzioni di base ottimali} sono:
+    \begin{itemize}
+        \item $(4,3,0,6,0)$
+        \item $(2,6,2,0,0)$
+    \end{itemize}
+    ed entrambe portano ad un valore della funzione obiettivo $Z=18$
+\end{minipage}
+\hfil
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[scale=0.6]{Immagini/molteplici soluzioni tb_1.png}
+\end{minipage}
+
+\vspace{0.5cm}
+
+\begin{minipage}{0.45\textwidth}
+Il metodo del simplesso genera i primi tre tableau a destra e si arresta identificando una soluzione di base ottimale.
+
+    Comunque, siccome una variabile non di base $(x_3)$ ha coefficiente nullo nella riga 0, eseguiamo un'ulteriore iterazione per identificare un'altra soluzione di base ottimale.
+
+    Le due \textbf{soluzioni di base ottimali} sono:
+    \begin{itemize}
+        \item $(4,3,0,6,0)$
+        \item $(2,6,2,0,0)$
+    \end{itemize}
+    ed entrambe portano ad un valore della funzione obiettivo $Z=18$
+\end{minipage}
+\hfil
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[scale=0.6]{Immagini/molteplici soluzioni tb_2.png}
+\end{minipage}
+
+\newpage
+\begin{minipage}{0.45\textwidth}
+    Si noti che l'ultimo tableau ha anche una \textbf{variabile non di base $(\mathbf{x_4})$} con coefficiente nullo nella riga 0.
+
+    Questo è inevitabile in quanto l'iterazione Extra non modifica la riga 0, per cui $x_4$ (variabile uscente di base) mantiene valore nullo dal coefficiente.
+
+    Porre $x_4$ come variabile entrante in base implicherebbe solo di tornare al terzo tableau.
+
+    Pertanto, $\mathbf{(2,6,2,0,0)}$ e $\mathbf{(4,3,0,6,0)}$ sono le sole \textbf{soluzioni ammissibili di base ottimali}, mentre tutte le altre soluzioni ottimali sono loro combinazioni convesse
+
+    $$
+    (x_1,x_2,x_3,x_4,x_5) = w_1 \cdot (2,6,2,0,0) + w_2 \cdot (4,3,0,6,0)
+    $$
+    $$
+    w_1,w_2 \geq 0 \qquad w_1+w_2=1
+    $$
+
+\end{minipage}
+\hfil
+\begin{minipage}{0.45\textwidth}
+    \includegraphics[scale=0.6]{Immagini/molteplici soluzioni tb_3.png}
+\end{minipage}

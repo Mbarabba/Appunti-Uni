@@ -1,84 +1,80 @@
-\chapter{Sequenze e sottosequenze}
-
-    \section{Sequenze}
-        \subsection{Definizione}
-        Data $X = <x_1, \dots, x_n>$ tale che $\forall i \in \Sigma,\ x_i \in \Sigma$ possiamo definire $X$ come una \textbf{sequeza}
-
-        \subsection{Sequenza vuota}
-        Data $X = <>$ essa si definisce \textbf{sequenza vuota}
-
-        \subsection{Lunghezza della sequenza}
-        Si indica con $|X|$ la \textbf{lunghezza della sequenza}.
-
-        La lunghezza della sequenza vuota è pari a 0
-
-        \subsection{Esempio di sequenza}
-        { 
-            \Large
-
-            \begin{gather*}
-                X = \langle 
-                \underset{\substack{\uparrow \\ x_1}}{a}, 
-                \underset{\substack{\uparrow \\ x_2}}{b}, 
-                \underset{\substack{\uparrow \\ x_3}}{c}, 
-                \underset{\substack{\uparrow \\ x_4}}{b}, 
-                \underset{\substack{\uparrow \\ x_5}}{d}, 
-                \underset{\substack{\uparrow \\ x_6}}{a}, 
-                \underset{\substack{\uparrow \\ x_7}}{b} 
-                \rangle \quad \Sigma \text{ è l'alfabeto italiano} \\ \\
-                |X| = 7 \text{ (Lunghezza di X)}
-            \end{gather*}
-        }
-
-
-        \subsection{Prefisso}
-        Data una sequenza $X = <x_1, \dots, x_n>$ sia $i \in \{0,1,\dots,n\}$ il prefisso i-esimo di $X$ è:
-        {
-            \Large
-        
-            \begin{gather*}
-                X_i = <x_1, \dots, x_n> \text{ con } i>0 \\
-                X_0 = \epsilon = <> \text{ (sequenza vuota) con }i=0
-            \end{gather*}
-        }
-
-        \subsection{Esempio di prefisso}
-        {
-            \Large
-
-            \begin{gather*}
-                X = <a,b,c,b,d,a,b> \quad |X| = 7 \\
-                X_3 = <a,b,c> \\
-                X_5 = <a,b,c,b,d> \\
-                X_7 = <a,b,c,b,d,a,b> = X \\
-                X_0 = <>
-            \end{gather*}
-        }
-        
-
-    \section{Sottosequenze}
-        \subsection{Definizione}
-        Data una sequenza $X=<x_1, \dots, x_n>$ e un'altra sequenza $Z=<z_1, \dots, z_k>$ si dice che $Z$ è \textbf{sottosequenza} di X se e solo se \uline{esiste una sequenza strettamente crescente di indici $<i_1, \dots, i_k>$ tale che $\forall j \in \{1, \dots, k\}\ z_j = x_{i_{j}}$} 
-
-        \subsection{Esempio di sottosequenza}
-        {
-            \Large
-
-            \begin{gather*}
-                X = <a, b, c, b, d, a, b> \quad |X|=7 \\
-                Z = <b, c, d, b> \quad |Z| = 4 \\ 
-                \\
-                <i_1, i_2, i_3, i,4> = <2, 3, 5, 7> \ \text{infatti} \\ 
-                \\
-                \mathbf{z_1} = b = x_{i_{1}} = \mathbf{x_2} \\
-                \mathbf{z_2} = c = x_{i_2} = \mathbf{x_3} \\
-                \mathbf{z_3} = d = x_{i_3} = \mathbf{x_5} \\
-                \mathbf{z_4} = b = x_{i_4} = \mathbf{x_7}
-            \end{gather*}
-        }
-
-
 \chapter{LCS - Longest Common Subsequence}
+\section{Sequenze}
+    \subsection{Definizione}
+    Data $X = <x_1, \dots, x_n>$ tale che $\forall i \in \Sigma,\ x_i \in \Sigma$ possiamo definire $X$ come una \textbf{sequeza}
+
+    \subsection{Sequenza vuota}
+    Data $X = <>$ essa si definisce \textbf{sequenza vuota}
+
+    \subsection{Lunghezza della sequenza}
+    Si indica con $|X|$ la \textbf{lunghezza della sequenza}.
+
+    La lunghezza della sequenza vuota è pari a 0
+
+    \subsection{Esempio di sequenza}
+    { 
+        \Large
+
+        \begin{gather*}
+            X = \langle 
+            \underset{\substack{\uparrow \\ x_1}}{a}, 
+            \underset{\substack{\uparrow \\ x_2}}{b}, 
+            \underset{\substack{\uparrow \\ x_3}}{c}, 
+            \underset{\substack{\uparrow \\ x_4}}{b}, 
+            \underset{\substack{\uparrow \\ x_5}}{d}, 
+            \underset{\substack{\uparrow \\ x_6}}{a}, 
+            \underset{\substack{\uparrow \\ x_7}}{b} 
+            \rangle \quad \Sigma \text{ è l'alfabeto italiano} \\ \\
+            |X| = 7 \text{ (Lunghezza di X)}
+        \end{gather*}
+    }
+
+
+    \subsection{Prefisso}
+    Data una sequenza $X = <x_1, \dots, x_n>$ sia $i \in \{0,1,\dots,n\}$ il prefisso i-esimo di $X$ è:
+    {
+        \Large
+    
+        \begin{gather*}
+            X_i = <x_1, \dots, x_n> \text{ con } i>0 \\
+            X_0 = \epsilon = <> \text{ (sequenza vuota) con }i=0
+        \end{gather*}
+    }
+
+    \subsection{Esempio di prefisso}
+    {
+        \Large
+
+        \begin{gather*}
+            X = <a,b,c,b,d,a,b> \quad |X| = 7 \\
+            X_3 = <a,b,c> \\
+            X_5 = <a,b,c,b,d> \\
+            X_7 = <a,b,c,b,d,a,b> = X \\
+            X_0 = <>
+        \end{gather*}
+    }
+    
+
+\section{Sottosequenze}
+    \subsection{Definizione}
+    Data una sequenza $X=<x_1, \dots, x_n>$ e un'altra sequenza $Z=<z_1, \dots, z_k>$ si dice che $Z$ è \textbf{sottosequenza} di X se e solo se \uline{esiste una sequenza strettamente crescente di indici $<i_1, \dots, i_k>$ tale che $\forall j \in \{1, \dots, k\}\ z_j = x_{i_{j}}$} 
+
+    \subsection{Esempio di sottosequenza}
+    {
+        \Large
+
+        \begin{gather*}
+            X = <a, b, c, b, d, a, b> \quad |X|=7 \\
+            Z = <b, c, d, b> \quad |Z| = 4 \\ 
+            \\
+            <i_1, i_2, i_3, i,4> = <2, 3, 5, 7> \ \text{infatti} \\ 
+            \\
+            \mathbf{z_1} = b = x_{i_{1}} = \mathbf{x_2} \\
+            \mathbf{z_2} = c = x_{i_2} = \mathbf{x_3} \\
+            \mathbf{z_3} = d = x_{i_3} = \mathbf{x_5} \\
+            \mathbf{z_4} = b = x_{i_4} = \mathbf{x_7}
+        \end{gather*}
+    }
 
 \section{Definizione del problema LCS}
 Date 2 o più sequenze vogliamo essere in grado di definire la più lunga sottosequenza in comune tra le date sequenze.
