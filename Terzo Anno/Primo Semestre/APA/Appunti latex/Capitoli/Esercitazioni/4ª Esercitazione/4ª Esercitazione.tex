@@ -1,0 +1,189 @@
+\chapter{4ª Esercitazione}
+
+\section{Cammini minimi in cui si alterna il colore degli archi}
+
+\subsection{Definizione del problema}
+
+\subsubsection{Istanza}
+\begin{itemize}
+    \item Un DAG $G=(V,E,w)$
+    \begin{itemize}
+        \item $V = \{1,\dots,n\}$, insieme dei vertici
+        \item $E \subseteq V^2$, insieme degli archi
+        \item $w:E \to \mathbb{R}^+$, funzione che attribuisce un peso ad ogni arco
+    \end{itemize}
+    \item $col:E \to \{red, green\}$, funzione che associa un colore per ogni arco
+\end{itemize}
+
+\subsubsection{Soluzione}
+Per ogni coppia di vertici $i$ e $j$, trovare il peso $d_{ij}$ del cammino minimo $P_{ij}$ in cui si alternano archi verdi e rossi
+
+\subsection{Definizione del sottoproblema $(k,a,b)$}
+{
+    \large
+    $$
+        0 \leq k \leq n, \quad a \in \{red, green\}, \quad b \in \{red, green\}
+    $$
+}
+
+Trovare un cammino $P_{ij}^{(kab)}$ dal vertice $i$ al vertice $j$ tale che, se $k>0$ eventuali vertici intermedi appartengono all'insieme $\{1,\dots,k\}$ e se $k=0$ non ci sono vertici intermedi, in cui il coloro del primo arco è $a$, il coloro dell'ultimo arco è $b$ e si alternano archi verdi e rossi
+
+\subsection{Definizione del coefficiente}
+
+\newpage
+\subsection{Formulazione ricorsiva}
+\subsubsection{Caso base $k=0$}
+\begin{itemize}
+    \item $i = j$
+    \begin{itemize}
+        \item $\forall (a,b) \in \{red, green\}^2,\ d_{ij}^{(0ab)} = +\infty$
+    \end{itemize}
+
+    \item $i \not = j \land (i,j) \in E$
+    \begin{itemize}
+        \item $a = b$
+        \begin{itemize}
+            \item $a = col(i,j) \implies d_{ij}^{(0ab)} = w(i,j)$
+            \item $a \not = col(i,j) \implies d_{ij}^{(0ab)} = +\infty$
+        \end{itemize}z
+        \item $a \not = b \implies d_{ij}^{(0ab)} = + \infty$
+    \end{itemize}
+
+    \item $i \not = j \land (i,j) \not \in E$
+    \begin{itemize}
+        \item $\forall (a,b) \in \{red, green\}^2,\ d_{ij}^{(0ab)} = + \infty$
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Passo ricorsivo $k > 0$}
+\begin{itemize}
+    \item $k \not \in P_{ij}^{(kab)} \implies d_{ij}^{(kab)} = d_{ij}^{(k-1\ ab)} \quad (E1)$
+    \item $k \in P_{ij}^{(kab)} \implies d_{ij}^{(kab)} = \min\{d_{ik}^{(k-1)\ ac} + d_{kj}^{(k-1\ db)} : (c,d) \in \{red, green\}^2 \land c \not = d\} \quad (E2)$
+\end{itemize}
+
+{
+    \large
+
+    $$
+    d_{ij}^{(k)} = \min\{E1,E2\}
+    $$
+}
+
+\newpage
+\section{Esistenza di cammini in cui si alterna il colore dei vertici}
+
+\subsection{Definizione del problema}
+
+\subsubsection{Istanza}
+\begin{itemize}
+    \item Un DAG $G=\{V,E\}$
+    \begin{itemize}
+        \item $V = \{1, \dots, n\}$, insieme dei vertici
+        \item $E \subseteq V^2$, insieme degli archi
+    \end{itemize}
+    \item $col: V \to \{red, green\}$, funzione che associa un colore ad ogni vertice
+\end{itemize}
+
+\subsubsection{Soluzione}
+Per ogni coppiadi vertici $i$ e $j$, verificare se esiste un cammino $P_{ij}$ in cui si alternano vertici verdi e rossi
+
+\subsection{Definizione sottoproblema $k(0 \leq k \leq n)$}
+Verificare se esiste un cammino $P_{ij}^{(k)}$ dal vertice $i$ al vertice $j$ tale che, se $k>0$ eventuali vertici intermedi appartengono all'insieme $\{1,\dots,k\}$ e se $k=0$ non ci sono vertici intermedi, e in cui si alternano vertici verdi e rossi
+
+\subsection{Definizione del coefficiente}
+$c_{ij}^{(k)}$ 1 se e solo se $\exists P_{ij}^{(k)}$
+
+\subsection{Formulazione ricorsiva}
+
+\subsubsection{Caso base $k=0$}
+\begin{itemize}
+    \item $i = j \implies c_{ij}^{(0)} = 1$
+
+    \item $i \not = j \land (i,j) \in E$
+    \begin{itemize}
+        \item $col(i) = col(j) \implies c_{ij}^{(0)} = 0$ 
+        \item $col(i) \not = col(j) \implies c_{ij}^{(0)} = 1$
+    \end{itemize}
+
+    \item $i \not = j \land (i,j) \not \in E \implies c_{ij}^{(0)} = 0$
+\end{itemize}
+
+\subsubsection{Passo ricorsivo $k>0$}
+\begin{itemize}
+    \item $k \not \in P_{ij}^{(k)} \implies c_{ij}^{(k)} = c_{ij}^{(k-1)} \quad (E1)$
+    \item $k \in P_{ij}^{(k)} \implies c_{ij}^{(k)} = c_{ik}^{(k-1)} \land c_{kj}^{(k-1)} \quad (E2)$
+\end{itemize}
+
+{
+    \large
+
+    $$
+        c_{ij}^{(k)} = E1 \lor E2
+    $$
+}
+
+\newpage
+\section{Esistenza di cammini in cui si alterna il colore degli archi}
+
+\subsection{Definizione del problema}
+
+\subsubsection{Istanza}
+\begin{itemize}
+    \item Un DAG $G=(V,E)$
+    \begin{itemize}
+        \item $V = \{1, \dots, n\}$, insieme dei vertici
+        \item $E \subseteq V^2$, insieme degli archi
+    \end{itemize}
+
+    \item $col: E \to \{red, green\}$, funzione che associa un colore ad ogni arco
+\end{itemize}
+
+\subsubsection{Soluzione}
+Per ogni coppia di vertici $i$ e $j$, verificare se esiste un cammino $P_{ij}$ in cui si alternano archi verdi e rossi
+
+\subsection{Definizione del sottoproblema}
+{
+    \large
+    $$
+        0 \leq k \leq n, \quad a \in \{red, green\}, \quad b \in \{red, green\}
+    $$
+}
+
+Verificare se esiste un cammino $P_{ij}^{(kab)}$ dal vertice $i$ al vertice $j$ tale che se $k>0$ eventuali vertici intermedi appartengono all'insieme $\{1, \dots, k\}$ e se $k=0$ eventuali vertici intermedi appartengono all'insieme $\{1, \dots, k\}$ non ci sono vertici intermedi, in cui il colore del primo arco è $a$, il colore dell'ultimo arco è $b$ e si alternano archi verdi e rossi
+
+\subsection{Definizione del coefficiente}
+$c_{ij}^{(kab)}$ 1 se e solo se $\exists P_{ij}^{(kab)}$
+
+\subsection{Formulazione ricorsiva}
+
+\subsubsection{Caso base $k=0$}
+\begin{itemize}
+    \item $i=j \implies \forall(a,b) \in \{red, green\}^2, c_{ij}^{(0ab)} = 0$
+    \item $i \not = j \land (i,j) \in E$
+    \begin{itemize}
+        \item $a=b$
+        \begin{itemize}
+            \item $a = col(i,j) \implies c_{ij}^{(0ab)} = 1$
+            \item $a \not = col(i,j) \implies c_{ij}^{(0ab)} = 0$
+        \end{itemize}
+        \item $a \not = b \implies c_{ij}^{(0ab)} = 0$
+    \end{itemize}
+
+    \item $i \not = j \land (i,j) \not \in E$
+    \begin{itemize}
+        \item $\forall (a,b) \in \{red, green\}^2, c_{ij}^{(0ab)} = 0$
+    \end{itemize}
+\end{itemize}
+
+\subsubsection{Passo ricorsivo $k>0$}
+\begin{itemize}
+    \item $k \not \in P_{ij}^{(k-1\ ab)} \quad (E1)$
+    \item $k \in P_{ij}^{(kab)} \implies c_{ij}^{(k a b)} = \bigvee \{ c_{ik}^{(k-1\ a\ c)} \wedge c_{kj}^{(k-1\ d\ b)} \mid (c, d) \in \{red, green\}^2 \wedge c \neq d \} \quad (E2)$
+\end{itemize}
+
+{
+
+    $$
+    c_{ij}^{(kab)} = E1 \lor E2
+    $$
+}

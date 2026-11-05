@@ -3,17 +3,113 @@
 \section{Definizione del problema}
 
 \subsection{Istanza}
+\begin{itemize}
+    \item Un DAG $G=(V,E,w)$
+    \begin{itemize}
+        \item $V=\{1,2,\dots,n\}$ è l'insieme dei vertici, $|V|=n$
+        \item $E \subseteq V^2$ è l'insieme degli archi
+        \item $w:E \to \mathbb{R}^+$ stabilisce l'esistenza di un dato commino tra le coppie $(i,j)$ gerica di vertici
+    \end{itemize}
+    \item Il grafo è rappresentato in memoria mediante la sua matrice di adiacenza booleana $M=(m_{ij})$ di dimensione $n \times n$
+    {
+        \large
+
+            $$
+                m_{ij} = 
+                \begin{cases}
+                    1 (true) & \text{se } i=j \lor (i,j) \in E \\
+                    0 (false) & \text{se } i \not = j \land (i,j) \not \in E
+                \end{cases}
+            $$
+    }
+\end{itemize}
 
 \subsection{Soluzione}
+Costruire la chiusura transitiva del grafo $G$, ovvero il grafo $G^* = (V,E^*)$ avente lo stesso insieme di vertici $V$ e un insieme di archi ampliato $E^* = \{(i,j) \in V^2 : \text{esiste un cammino da $i$ a $j$ in $G$}\}$.
 
-\section{Definizione del sottoproblema}
+L'output è rappresentato dalla matrice booleana $T=(t_{ij})$ in cui $t_{ij} = 1$ se esiste almeno un cammino da $i$ a $j$, e $0$ altrimenti.
 
-\section{Definizione dei coefficienti}
 
+\section{Definizione del sottoproblema $k(0 \leq k \leq n)$}
+Fissando un indice $k$ per ogni coppia di vertici $(i,j)$ il sottoproblema consiste nello stabilire se esiste un cammino da $i$ a $j$ tale che eventuali vertici intermedi appartengono esclusivamente al sottoinsieme $\{1,2,\dots,k\}$(se $k=0$, l'insieme dei vertici intermedi è vuoto $\emptyset$)
+
+\section{Definizione del coefficiente $\mathbf{t^{(k)_{ij}}}$}
+Per ogni $k$ e per ogni coppia $(i,j)$, introduciamo la variabile booleana
+
+{
+    \large
+
+    $$
+    t^{k}_{ij} = 
+    \begin{cases}
+        1 (true) & \text{se esiste un cammino da $i$ a $j$ con vertici intermedi in $\{1,\dots,k\}$} \\
+        0 (false) & \text{altrimenti}
+    \end{cases}
+    $$
+}
+
+\newpage
 \section{Formulazione ricorsiva}
+\subsection{Caso base $\mathbf{k=0}$}
+Non essendoci vertici intermedi ammessi $\emptyset$, un cammino da $i$ a $j$ esiste se e solo se $i=j$ oppure esiste l'arco diretto $(i,j) \in E$.
 
-\section{Soluzione}
+I coefficienti iniziali coincidono con la matrice di adiacenza del grafo $(T^{(0)}=M)$
+
+{
+    \large
+
+    $$
+        t^{(0)}_{ij} = m_{ij}
+    $$
+}
+
+\subsection{Passo ricorsivo $\mathbf{k>0}$}
+
+
+{
+    \large
+    $$
+    t_{ij}^{(k)} = t_{ij}^{k-1} \lor (t_{ik}^{(k-1)} \land t_{kj}^{(k-1)})
+    $$
+}
+
+\subsubsection{Spiegazione}
+Assumendo di aver calcolato i coefficienti al passo $k-1$, per determinare $t^{(k)}_{ij}$ si valutano due casi rispetto al vertice $k$
+
+\begin{itemize}
+    \item \textbf{Il vertice $\mathbf{k}$ non è un vertice intermedio del cammino}\\
+    Il cammina usa solo vertici in $\{1,\dots,k-1\}$, quindi il valore è $t_{ij}^{(k-1)}$
+
+    \item \textbf{Il vertice $\mathbf{k}$ è un vertice intermedio del cammino}\\
+    Il cammino esiste se e solo se esistono entrambi i sottocammini da $i$ a $k$ e da $k$ a $j$ con vertici intermedi in $1,\dots,k-1$, espresso dal termine $t_{ik}^{(k-1)} \land t_{kj}^{(k-1)}$
+\end{itemize}
+
+\section{Soluzione del problema principale}
+Quando $k=n$, l'insieme dei possibili vertici intermedi coincide con l'intero insieme $V$.
+
+La matrice finale della chiusura transitiva corrisponde a $T^{(n)} = (t_{ij}^{(n)})$
 
 \section{Algoritmo Bottom-up}
+\subsection{Algoritmo bottom-up}
 
-\section{Algoritmo di ricostruzione}
+\begin{algorithm}
+    \begin{algorithmic}
+        \Procedure{CHIUSURA-TRANSITIVA}{$M,n$}
+            T = M \Comment{Caso base $k=0$: inzializzazione con la matrice di adiacenza}
+
+            \For{$k=1$ to $n$}
+                \For{$j=1$ to $n$}
+                    \State $t_{i,j}=t_{i,j} \lor (t_{i,k} \land t_{k,j})$
+                \EndFor
+            \EndFor
+
+            \State \Return $T$
+        \EndProcedure
+    \end{algorithmic}
+\end{algorithm}
+
+\subsection{Complessità}
+\begin{itemize}
+    \item \textbf{Complessità temporale:} $\Theta(n^3)$, dovuta ai tre cicli for annidati su $k$, $i$ e $j$ che eseguono operazioni logiche elementari a costo costante $\Theta(1)$.
+    \item \textbf{Complessità spaziale:} $\Theta(n^2)$
+\end{itemize}

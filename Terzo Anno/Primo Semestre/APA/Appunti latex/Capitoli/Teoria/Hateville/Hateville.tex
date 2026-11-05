@@ -174,7 +174,35 @@ Riassumendo
 
 \newpage
 \section{Ricostruzione mediante stampa di $S_i$}
+\begin{algorithm}[H]
+\caption{\textsc{Print-HV}$(i, c)$}
+\begin{algorithmic}[1]
+\If{$i == 0$}
+    \State \Return
+\ElsIf{$i == 1$}
+    \State $\text{print}(1)$
+\ElsIf{$c[i-1] > c[i-2] + d_i$}
+    \State \Call{Print-HV}{$i-1, c$} \Comment{Stampa $S_{i-1}$}
+\Else
+    \State \Call{Print-HV}{$i-2, c$} \Comment{Stampa $S_{i-2}$}
+    \State $\text{print}(i)$
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
 
 \section{Ricorstruzione che ritorna $S_i$}
-
-\section{Esempio: Riempimento matrice e ricostruzione}
+\begin{algorithm}[H]
+\caption{\textsc{Set-HV}$(i, c)$}
+\begin{algorithmic}[1]
+\If{$i == 0$}
+    \State \Return $\emptyset$
+\ElsIf{$i == 1$}
+    \State \Return $\{1\}$
+\ElsIf{$c[i-1] > c[i-2] + d_i$}
+    \State \Return \Call{Set-HV}{$i-1, c$}
+\Else
+    \State \Return \Call{Set-HV}{$i-2, c$} $\cup \{i\}$
+\EndIf
+\end{algorithmic}
+\end{algorithm}

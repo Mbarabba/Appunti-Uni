@@ -1,0 +1,130 @@
+\chapter{3ª Esercitazione}
+
+\section{Cammino minimo con esattamete 3 archi rossi}
+
+\subsection{Definizione del problema}
+
+\subsubsection{Istanza}
+\begin{itemize}
+    \item Un DAG $G=(V,E,w)$
+    \begin{itemize}
+        \item $V  =\{1,\dots,n\}$, insieme di vertici
+        \item $E \subseteq V^2$, insieme di archi
+        \item $w:E \to \mathbb{R}^+$, funzione che associa ad ogni arco un peso
+    \end{itemize}
+    \item $col:E \to \{red,green,blue\}$, funzione che associa ad ogni arco un colore
+\end{itemize}
+
+\subsubsection{Soluzione}
+Per ogni coppia di vertici $i$ e $j$, trovare il peso $d_{ij}$ del cammino minimo $P_{ij}$ in cui gli archi rossi sono esattamente tre
+
+\subsection{Definizione del sottoproblema $\mathbf{(k,r)(0 \leq k \leq n, 0 \leq r \leq 3)}$}
+Trovare un cammino minimo $P_{ij}^{(kr)}$ dal vertice $i$ al vertice $j$ tale che, se $k>0$ eventuali vertici intermedi appartengono all'insieme $\{1, \dots, k\}$ e se $k=0$ non ci sono vertici intermedi, e in cui gli archi rossi sono esattamente $r$
+
+\subsection{Definizione del coefficiente}
+$d_{ij}^{(kr)}$ è il peso del sottocammino $P_{ij}^{(kr)}$
+
+\newpage
+\subsection{Formulazione ricorsiva $\mathbf{k=0}$}
+
+\subsubsection{Caso base}
+
+\begin{itemize}
+    \item $i=j$ stiamo indicando un cammino da un vertice a se stesso (niente archi)
+    \begin{itemize}
+        \item $r = 0 \implies d_{ij}^{(0r)} = 0  \qquad P_{ij}^{(0r)} = \langle i \rangle$
+        \item $1 \leq r \leq 3 \implies d_{ij}^{(0r)} = +\infty \qquad \not \exists P_{ij}^{(0r)}$\\
+        Non possiamo avere archi rossi se non abbiamo archi che collegano 2 vertici (essendo che ne abbiamo solo 1)
+    \end{itemize}
+
+    \item $i \not = j \land (i,j) \in E$ abbiamo 2 nodi diversi collegati da un arco
+    \begin{itemize}
+        \item $r=0$
+        \begin{itemize}
+            \item $col(i,j) = red \implies d_{ij}^{(0r)} = +\infty$\\ 
+            Avendo un solo arco ed essendo che il contatore rosso è a 0 allora è impossibile che l'arco corrente sia rosso
+            \item $col(i,j) \not = red \implies d_{ij}^{(0r)} = w(i,j)$
+        \end{itemize}
+        \item $r=1$
+        \begin{itemize}
+            \item $col(i,j) = red \implies d_{ij}^{(0r)} = w(i,j)$
+            \item $col(i,j) \not = red \implies d_{ij}^{(0r)} = +\infty$
+        \end{itemize}
+        \item $2 \leq r \leq 3 \implies d_{ij}$ \\
+        Impossibile avere più di un arco rosso quando non ci sono vertici intermedi tra i 2 vertici
+    \end{itemize}
+    \item $i \not = j \land (i,j) \not \in E \implies d_{ij}^{(0r)} = +\infty$\\
+    Non esiste un arco che collega i 2 vertici
+\end{itemize}
+
+\subsubsection{Passo ricorsivo $k>0$}
+\begin{itemize}
+    \item $k \not \in P_{ij}^{(kr)}$
+    \begin{itemize}
+        \item $d_{ij}^{(kr)} = d_{ij}^{(k-1\ r)} \quad (E1)$
+    \end{itemize}
+    \item $k \in P_{ij}^{(kr)}$
+    \begin{itemize}
+        \item $d_{ij}^{(kr)} = \min\{d_{ik}^{(k-1\ r_1)} + d_{kj}^{(k-1 \ r_2)} : 0 \leq r_1, r_2 \leq r \land r_1 + r_2 = r\} \quad (E2)$ 
+    \end{itemize}
+\end{itemize}
+
+{
+    \large
+
+    $$
+        d_{ij}^{(kr)} = \min\{E1,E2\}
+    $$
+}
+
+\newpage
+\section{Cammini minimi in cui si alterna il colore dei vertici}
+
+\subsection{Definizione del problema}
+\subsubsection{Istanza}
+\begin{itemize}
+    \item Un DAG $G=\{V,E,w\}$
+    \begin{itemize}
+        \item $V = \{1,\dots,n\}$, insieme di vertici
+        \item $E \subseteq V^2$, insieme degli archi
+        \item $w:E \to \mathbb{R}^+$, funzione che associa ad ogni arco un peso
+    \end{itemize}
+    \item $col: V \to \{red, green\}$, funzione che associa ad ogni vertice un colore
+\end{itemize}
+
+\subsubsection{Soluzione}
+Per ogni coppia di vertici $i$ e $j$, trovare il peso $d_{ij}$ del cammino minimo $P_{ij}$ in cui si alternano vertici verdi e rossi
+
+\subsection{Definizione del sottoproblema $k(0 \leq k \leq n)$}
+Trovare un cammino minimo $P_{ij}^{(k)}$ dal vertice $i$ al vertice $j$ tale che, se $k>0$ eventuali vertici intermedi appartengono all'insieme $\{1,\dots,k\}$ e se $k=0$ non ci sono vertici intermedi, e in cui si alternano vertici verdi e rossi
+
+\subsection{Definizione del coefficiente}
+
+$d_{ij}^{(k)}$ è il peso di $P_{ij}^{(k)}$
+
+\subsection{Formulazione ricorsiva}
+
+\subsubsection{Caso base $\mathbf{k=0 \implies D^{(0)} \not = W}$}
+\begin{itemize}
+    \item $i = j \implies d_{ij}^{(0)} = w_{ij} \quad P_{ij}^{(0)} = \langle i \rangle$
+    
+    \item $i \not = j \land (i,j) \in E$
+    \begin{itemize}
+        \item $col(i) = col(j) \implies d_{ij}^{(0)} = +\infty \quad \not \exists P_{ij}^{(0)}$
+        \item $col(i) \not = col(j) \implies d_{ij}^{(0)} = w_{ij} \quad P^{(0)}_{ij} = \langle i,j \rangle$
+    \end{itemize}
+
+    \item $i \not = j \land (i,j) \not \in E \implies d_{ij}^{0} = w_{ij}$
+\end{itemize}
+
+\subsubsection{Passo ricorsivo $\mathbf{k>0}$}
+\begin{itemize}
+    \item $k \not \in P_{ij}^{(k)} \implies d_{ij}^{(k)} = d_{ij}^{(k-1)} \quad (E1)$
+    \item $k \in P_{ij}^{(k)} \implies d_{ij}^{(k)} = d_{ik}^{(k-1)} + d_{kj}^{(k-1)} \quad (E2)$
+\end{itemize}
+{
+    \large
+    $$
+    d_{ij}^{(k)} = \min\{E1,E2\}
+    $$
+}

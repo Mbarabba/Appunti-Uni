@@ -368,12 +368,27 @@ INPUT Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux
 INPUT ./Capitoli/Teoria/Knapsack/Knapsack.aux
 INPUT ./Capitoli/Teoria/Knapsack/Knapsack.aux
 INPUT Capitoli/Teoria/Knapsack/Knapsack.aux
-INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
-INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
-INPUT Capitoli/Esercitazioni/Esercizi LCS.aux
-INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
-INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
-INPUT Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
+INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
+INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
+INPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
+INPUT ./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux
+INPUT Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux
+INPUT Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
+INPUT Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
+INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
+INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
+INPUT Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
+INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux
+INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux
+INPUT Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux
+INPUT ./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux
+INPUT ./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux
+INPUT Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux
 OUTPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 INPUT /usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
@@ -552,11 +567,11 @@ OUTPUT Capitoli/Teoria/Knapsack/Knapsack.aux
 INPUT ./Capitoli/Teoria/Knapsack/Knapsack.tex
 INPUT ./Capitoli/Teoria/Knapsack/Knapsack.tex
 INPUT Capitoli/Teoria/Knapsack/Knapsack.tex
-INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
-OUTPUT Capitoli/Esercitazioni/Esercizi LCS.aux
-INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
-INPUT ./Capitoli/Esercitazioni/Esercizi LCS.tex
-INPUT Capitoli/Esercitazioni/Esercizi LCS.tex
+INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
+OUTPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
+INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
+INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
+INPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmib10.tfm
@@ -570,11 +585,27 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmbsy7.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx8.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx6.tfm
-INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex
-OUTPUT Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
-INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex
-INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex
-INPUT Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex
+INPUT ./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.tex
+OUTPUT Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.tex
+INPUT ./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.tex
+INPUT Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.tex
+INPUT ./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.tex
+OUTPUT Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.tex
+INPUT ./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.tex
+INPUT Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.tex
+INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.tex
+OUTPUT Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.tex
+INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.tex
+INPUT Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.tex
+INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.tex
+INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.tex
+OUTPUT Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
+INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.tex
+INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.tex
+INPUT Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.tex
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr17.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmi12.tfm
@@ -587,14 +618,19 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmmi10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
+INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.tex
+INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.tex
+OUTPUT Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux
+INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.tex
+INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.tex
+INPUT Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
+INPUT ./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.tex
+OUTPUT Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux
+INPUT ./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.tex
+INPUT ./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.tex
+INPUT Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.tex
 INPUT main.aux
 INPUT ./Capitoli/Teoria/LCS/LCS.aux
 INPUT ./Capitoli/Teoria/LCS/LCS.aux
@@ -620,16 +656,32 @@ INPUT Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux
 INPUT ./Capitoli/Teoria/Knapsack/Knapsack.aux
 INPUT ./Capitoli/Teoria/Knapsack/Knapsack.aux
 INPUT Capitoli/Teoria/Knapsack/Knapsack.aux
-INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
-INPUT ./Capitoli/Esercitazioni/Esercizi LCS.aux
-INPUT Capitoli/Esercitazioni/Esercizi LCS.aux
-INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
-INPUT ./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
-INPUT Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux
+INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
+INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
+INPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
+INPUT ./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux
+INPUT Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux
+INPUT Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
+INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
+INPUT Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
+INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
+INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
+INPUT Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
+INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux
+INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux
+INPUT Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux
+INPUT ./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux
+INPUT ./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux
+INPUT Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb
@@ -646,7 +698,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb
-INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri8.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb

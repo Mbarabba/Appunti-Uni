@@ -1,0 +1,274 @@
+% Definizione di un verde leggibile come nelle slide
+\definecolor{slidegreen}{RGB}{0, 166, 81}
+
+\chapter{2ª Esercitazione}
+
+\section{Alternanza pari e dispari}
+\subsection{Definizione del problema}
+
+\subsubsection{Istanza}
+Una sequenza $X = \langle x_1,x_2, \dots, x_n \rangle$ di numeri
+
+\subsubsection{Soluzione}
+Una sottosequenza $Z = \langle z_1, z_2, \dots, z_k \rangle$ tale che:
+\begin{itemize}
+    \item In $Z$ si alternino elementi pari e dispari
+    \item $k$ sia massimo
+\end{itemize}
+
+\subsection{Definizione del sottoproblema}
+Travare la più lunga sottosequenza $ALT_{V}(X_i)$ con $i \in \{1,\dots,n\}$ del prefisso $X_i$, che alterna pari e dispari che termina con l'elemento $x_i$
+
+\subsection{Definizione del coefficiente $\mathbf{c_i}$}
+$c_i$ è la lunghezza della sequenza $ALT1_V(X_i)$
+
+\subsection{Formulazione ricorsiva}
+
+\subsubsection{Caso base}
+\begin{itemize}
+    \item $\mathbf{i=1} \quad X_1= \langle x_1 \rangle$ \\
+    $\implies ALT1_V(X_1) = \langle x_1 \rangle$ \\
+    $\implies c_1 = 1$
+\end{itemize}
+
+\subsubsection{Passo ricorsivo}
+\begin{itemize}
+    \item $\mathbf{i > 1}$ \\
+    $\implies ALT_V(X_i) = longest\{ALT1_V(X_j) : 1 \leq j < i, x\%2 \not = x_j \%2\} + \langle x_i \rangle$ \\
+    $\implies c_i = \max\{c_j : 1 \leq j < i, x_i\%2 \not = x_j \% 2 \} + 1$
+\end{itemize}
+
+\newpage
+\section{Alternanza dei colori}
+
+\subsection{Definizione del problema}
+\subsubsection{Istanza}
+\begin{itemize}
+    \item $X = \langle x_1, x_2, \dots, x_n \rangle$
+    \item $col:\Sigma \to \{red, green, black\}$
+\end{itemize}
+
+\subsubsection{Soluzione}
+Una sottosequenza $Z = \langle z_1, z_2, \dots, z_k \rangle$ tale che:
+\begin{itemize}
+    \item in $Z$ si alternino elementi rossi e neri
+    \item $k$ sia massimo
+\end{itemize}
+
+\subsection{Definizione del sottoproblema}
+Trovare la più lunga sottosequenza $ALT_V(X_i)$ del prefisso $X_i$ con $i \in \{1,\dots,n\}$ che alternino rossi e neri che termina con l'elemento $x_i$
+
+\subsection{Formulazione ricorsiva}
+
+\subsubsection{Caso base}
+\begin{itemize}
+    \item $i=1 \land col(x_1) \not = green$ \\
+    $\implies ALT_V(X_1) = \langle x_1 \rangle$ \\
+    $\implies c_1 = 1$
+
+    \item $\forall i, col(x_i) = green$ \\
+    $\implies ALT_V(X_i) = NIL$ \\
+    $\implies c_i = 0$
+\end{itemize}
+
+\subsubsection{Passo ricorsivo}
+\begin{itemize}
+    \item $i>1 \land col(x_i) \not = green$\\
+    $\implies ALT_V(X_i) = longest\{ALT_V(X_i) \not = NIL : 1 \leq j < i, col(x_i) \not = col(x_j)\} + \langle x_i \rangle$ \\
+    $\implies c_i = \max\{c_j : 1 \leq j < i, col(x_j) \not = col(x_i)\} +1$
+\end{itemize}
+
+\newpage
+\section{Elementi non consecutivamenti rossi}
+
+\subsection{Definizione del problema}
+\subsubsection{Istanza}
+\begin{itemize}
+    \item $X = \langle x_1, x_2, \dots, x_n \rangle$
+    \item $col: \Sigma \to \{red, green, black\}$
+\end{itemize}
+
+\subsubsection{Soluzione}
+Una sottosequenza $Z = \langle z_1, z_2, \dots, z_k \rangle$ tale che:
+\begin{itemize}
+    \item In $Z$ non vi sono elementi consecutivi rossi
+    \item $k$ sia massimo
+\end{itemize}
+
+\subsection{Definizione del sottoproblema}
+Trovare la più lunga sottosequenza $NC_V(X_i)$ del prefisso $X_i$ in cui non vi sono elementi consecutivi rossi e che termina con l'elemento $x_i$
+
+\subsection{Definizione del coefficiente}
+Lunghezza di $NC_V(X_i)$
+
+\subsection{Formulazione ricorsiva}
+
+\subsubsection{Caso base}
+\begin{itemize}
+    \item $\mathbf{i=1}$ \\
+    $\implies NC_V(X_i) = \langle x_i \rangle$
+    $\implies c_i = 1$
+\end{itemize}
+
+\subsubsection{Passo ricorsivo}
+\begin{itemize}
+    \item $i>1$\\
+    $\implies NC_V(X_i) = longest\{NC_V(X_j): 1 \leq j < i, col(x_j) \not = red \lor col(x_i) = red\} + \langle x_i \rangle $ \\
+    $\implies c_i = \max\{c_j : 1 \leq j < i, col(x_j) \not = red \lor col(x_i) \not = red\} + \langle x_i \rangle$
+\end{itemize}
+
+\newpage
+\section{Elementi non consecutivamente dello stesso colore}
+
+\subsection{Definizione del problema}
+\subsubsection{Istanza}
+\begin{itemize}
+    \item $X = \langle x_1, x_2, \dots, x_n \rangle$
+    \item $col: \Sigma \to \{red, green, black\}$
+\end{itemize}
+
+\subsubsection{Soluzione}
+Una sottosequenza $Z = \langle z_1, z_2, \dots, z_k \rangle$ tale che:
+\begin{itemize}
+    \item in $Z$ non vi siano elementi consecutivi dello stesso colore
+    \item $k$ sia massimo
+\end{itemize}
+
+\subsection{Definizione del sottoproblema}
+Trovare la più lunga sottosequenza $NC_V(X_i)$ del prefisso $X_i$, in cui non vi siano elementi consecutivi dello stesso coloro e che termina con l'elemento $x_i$
+
+\subsection{Definizione del coefficiente}
+$c_i$ è la lunghezza di $NC_V(X_i)$
+
+
+\subsection{Formulazione ricorsiva}
+
+\subsubsection{Caso base}
+\begin{itemize}
+    \item $i = 1$ \\
+    $\implies NC_V(X_1) = \langle x_1 \rangle$ \\
+    $\implies c_1 = 1$
+\end{itemize}
+
+
+\subsubsection{Passo ricorsivo}
+\begin{itemize}
+    \item $i>1$ \\
+    $\implies NC_V(X_i) = longest\{NC_V(x_j) : 1 \leq j < i, col(x_j) \not = col(x_i)\} + \langle x_i \rangle$ \\
+    $\implies c_i = \max\{c_j : 1 \leq j < i, col(x_j) \not = col(x_i)\} + 1$
+\end{itemize} 
+
+\newpage
+\section{Problema della Edit Distance}
+\subsection{Testo del problema}
+
+$S(X,Y)$ è la minima sequenza di operazioni di cancellazione, inserimento, sostituzione di un singolo elemento da applicare su $X$ (da sinistra) per trasformarla in Y
+
+\begin{enumerate}
+    % Passo 1
+    \item \textbf{Sequenze iniziali:}
+    \[
+    \begin{aligned}
+    X &= \langle 2, 4, 10, 3, 1 \rangle \\
+    Y &= \langle 2, 3, 4, 2, 1 \rangle
+    \end{aligned}
+    \]
+
+    % Passo 2
+    \item \textbf{Inserimento di $\textcolor{slidegreen}{\mathbf{3}}$:}
+    \[
+    \begin{aligned}
+    X &= \langle 2, \underset{\textcolor{slidegreen}{\vee}}{\phantom{,}} 4, 10, 3, 1 \rangle \\
+    Y &= \langle 2, 3, 4, 2, 1 \rangle
+    \end{aligned}
+    \]
+    \[
+    S(X, Y) = \langle \text{inserisco } \textcolor{slidegreen}{\mathbf{3}}
+    \]
+
+    % Passo 3
+    \item \textbf{Cancellazione di $\textcolor{red}{\mathbf{10}}$:}
+    \[
+    \begin{aligned}
+    X &= \langle 2, \overset{\textcolor{slidegreen}{\mathbf{3}}}{\underset{\textcolor{slidegreen}{\vee}}{\phantom{,}}}, 4, \textcolor{red}{\xcancel{\mathbf{10}}}, 3, 1 \rangle \\
+    Y &= \langle 2, 3, 4, 2, 1 \rangle
+    \end{aligned}
+    \]
+    \[
+    S(X, Y) = \langle \text{inserisco } \textcolor{slidegreen}{\mathbf{3}}, \text{ cancello } \textcolor{red}{\mathbf{10}}
+    \]
+
+    % Passo 4 e 5
+    \item \textbf{Sostituzione di $\textcolor{blue}{\mathbf{3}}$ con $2$ e calcolo di $ED(X, Y)$:}
+    \[
+    \begin{aligned}
+    X &= \langle 2, \overset{\textcolor{slidegreen}{\mathbf{3}}}{\underset{\textcolor{slidegreen}{\vee}}{\phantom{,}}}, 4, \textcolor{red}{\xcancel{\mathbf{10}}}, \overset{\textcolor{blue}{\mathbf{2}}}{\textcolor{blue}{\cancel{\mathbf{3}}}}, 1 \rangle \\
+    Y &= \langle 2, 3, 4, 2, 1 \rangle
+    \end{aligned}
+    \]
+    \begin{align*}
+    S(X, Y) &= \langle \text{inserisco } \textcolor{slidegreen}{\mathbf{3}}, \text{ cancello } \textcolor{red}{\mathbf{10}}, \text{ sostituisco } \textcolor{blue}{\mathbf{3}} \text{ con } 2 \rangle \\
+    ED(X, Y) &= |S(X, Y)| = 3 \qquad (\text{Edit Distance})
+    \end{align*}
+
+    % Passo 6 e 7
+    \item \textbf{Sequenza alternativa $S(X, Y)$:}
+    \[
+    \begin{aligned}
+    X &= \langle 2, \overset{\textcolor{slidegreen}{\mathbf{3}}}{\underset{\textcolor{slidegreen}{\vee}}{\phantom{,}}}, 4, \overset{\textcolor{red}{\mathbf{2}}}{\textcolor{red}{\cancel{\mathbf{10}}}}, \textcolor{blue}{\xcancel{\mathbf{3}}}, 1 \rangle \\
+    Y &= \langle 2, 3, 4, 2, 1 \rangle
+    \end{aligned}
+    \qquad \text{Un'altra sequenza } S(X, Y)\text{?}
+    \]
+    \begin{align*}
+    S(X, Y) &= \langle \text{inserisco } \textcolor{slidegreen}{\mathbf{3}}, \text{ sostituisco } \textcolor{red}{\mathbf{10}} \text{ con } 2, \text{ cancello } \textcolor{blue}{\mathbf{3}} \rangle \\
+    ED(X, Y) &= |S(X, Y)| = 3 \qquad (\text{Edit Distance})
+    \end{align*}
+\end{enumerate}
+
+\subsection{Definizione del problema}
+\subsubsection{Istanza}
+\begin{itemize}
+    \item $X = \langle x_1, \dots, x_m \rangle$ 
+    \item $Y = \langle y_1, \dots, y_n \rangle$
+\end{itemize}
+
+\subsubsection{Soluzione}
+Una sequenza $S(X,Y) = \langle o_1, \dots, o_k \rangle$ di operazioni di cancellazione, inserimento e sostituzione che trasformano $X$ in $Y$ tale che $k$ sia minimo
+
+\subsection{Definizione del sottoproblema}
+Trovare $S(X_i,Y_j)$ dove:
+\begin{itemize}
+    \item $i \in \{0, \dots, m\}$
+    \item $j \in \{0, \dots, n\}$
+\end{itemize}
+
+\subsection{Definizione del coefficiente}
+$c_{ij}$ è la lunghezza di $S(X_i, Y_j)$
+
+\subsection{Formulazione ricorsiva}
+\subsubsection{Caso base}
+\begin{itemize}
+    \item $i = 0 \land j=0$\\
+    $\implies S(X_i, Y_j) = \langle \rangle$\\
+    $c_{ij} = 0$
+\end{itemize}
+
+\subsubsection{Passo ricorsivo}
+\begin{itemize}
+    \item $(i > 0 \land j > 0) \land (x_i \not = y_j)$ \\
+    $\implies S(X_i, Y_j) = shortest 
+    \begin{cases}
+        S(X_{i-1}, Y_{j-1}) + \langle \text{subst } x_i \text{ con } y_i \rangle \\
+        S(X_{i-1},Y_j) + \langle \text{delete } x_i\rangle \\
+        S(X_i, Y_{j-1}) + \langle \text{insert } y_j \rangle
+    \end{cases}
+    $ \\
+    $\implies c_{ij} = min 
+    \begin{cases}
+        c_{i-1\ j-1} + 1 \\
+        c_{i-1\ j} + 1 \\
+        c_{i\ j-1} + 1    
+    \end{cases}
+    $
+\end{itemize}

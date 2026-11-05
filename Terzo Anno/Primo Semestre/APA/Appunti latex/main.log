@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.18)  2 NOV 2026 14:15
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.10.18)  5 NOV 2026 15:30
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -846,7 +846,7 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./main.aux (./Capitoli/Teoria/LCS/LCS.aux) (./Capitoli/Teoria/WIS/WIS.aux) (./Capitoli/Teoria/LIS/LIS.aux) (./Capitoli/Teoria/Hateville/Hateville.aux) (./Capitoli/Teoria/LICS/LICS.aux) (./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux) (./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux) (./Capitoli/Teoria/Knapsack/Knapsack.aux) (./Capitoli/Esercitazioni/Esercizi LCS.aux) (./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux)
+) (./main.aux (./Capitoli/Teoria/LCS/LCS.aux) (./Capitoli/Teoria/WIS/WIS.aux) (./Capitoli/Teoria/LIS/LIS.aux) (./Capitoli/Teoria/Hateville/Hateville.aux) (./Capitoli/Teoria/LICS/LICS.aux) (./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux) (./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux) (./Capitoli/Teoria/Knapsack/Knapsack.aux) (./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux) (./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux) (./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux) (./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux) (./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux) (./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux) (./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux)
 \c@algpx@indentEndPage-0@totc=\count398
 \c@algpx@indentEndPage-1@totc=\count399
 \c@algpx@indentEndPage-2@totc=\count400
@@ -886,158 +886,199 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 \c@algpx@indentEndPage-28@totc=\count434
 \c@algpx@indentEndPage-29@totc=\count435
 \c@algpx@indentEndPage-30@totc=\count436
-\c@algpx@indentEndCoordIndex-28@totc=\count437
-\c@algpx@indentEndCoordIndex-27@totc=\count438
-\c@algpx@indentEndCoordIndex-26@totc=\count439
-\c@algpx@indentEndCoordIndex-24@totc=\count440
-\c@algpx@indentEndCoordIndex-23@totc=\count441
-\c@algpx@indentEndPage-31@totc=\count442
-\c@algpx@indentEndPage-32@totc=\count443
-\c@algpx@indentEndPage-33@totc=\count444
-\c@algpx@indentEndPage-34@totc=\count445
-\c@algpx@indentEndPage-35@totc=\count446
-\c@algpx@indentEndCoordIndex-33@totc=\count447
-\c@algpx@indentEndCoordIndex-31@totc=\count448
-\c@algpx@indentEndPage-36@totc=\count449
-\c@algpx@indentEndPage-37@totc=\count450
-\c@algpx@indentEndPage-38@totc=\count451
-\c@algpx@indentEndPage-39@totc=\count452
-\c@algpx@indentEndPage-40@totc=\count453
-\c@algpx@indentEndPage-41@totc=\count454
-\c@algpx@indentEndCoordIndex-40@totc=\count455
+\c@algpx@indentEndPage-31@totc=\count437
+\c@algpx@indentEndPage-32@totc=\count438
+\c@algpx@indentEndPage-33@totc=\count439
+\c@algpx@indentEndPage-34@totc=\count440
+\c@algpx@indentEndPage-35@totc=\count441
+\c@algpx@indentEndPage-36@totc=\count442
+\c@algpx@indentEndPage-37@totc=\count443
+\c@algpx@indentEndPage-38@totc=\count444
+\c@algpx@indentEndCoordIndex-36@totc=\count445
+\c@algpx@indentEndCoordIndex-35@totc=\count446
+\c@algpx@indentEndCoordIndex-34@totc=\count447
+\c@algpx@indentEndCoordIndex-32@totc=\count448
+\c@algpx@indentEndCoordIndex-31@totc=\count449
+\c@algpx@indentEndPage-39@totc=\count450
+\c@algpx@indentEndPage-40@totc=\count451
+\c@algpx@indentEndPage-41@totc=\count452
+\c@algpx@indentEndPage-42@totc=\count453
+\c@algpx@indentEndPage-43@totc=\count454
+\c@algpx@indentEndCoordIndex-41@totc=\count455
 \c@algpx@indentEndCoordIndex-39@totc=\count456
-\c@algpx@indentEndCoordIndex-38@totc=\count457
-\c@algpx@indentEndPage-42@totc=\count458
-\c@algpx@indentEndPage-43@totc=\count459
-\c@algpx@indentEndPage-44@totc=\count460
-\c@algpx@indentEndPage-45@totc=\count461
-\c@algpx@indentEndPage-46@totc=\count462
-\c@algpx@indentEndCoordIndex-44@totc=\count463
-\c@algpx@indentEndCoordIndex-42@totc=\count464
-\c@algpx@indentEndPage-47@totc=\count465
-\c@algpx@indentEndPage-48@totc=\count466
-\c@algpx@indentEndPage-49@totc=\count467
-\c@algpx@indentEndPage-50@totc=\count468
-\c@algpx@indentEndPage-51@totc=\count469
-\c@algpx@indentEndPage-52@totc=\count470
-\c@algpx@indentEndPage-53@totc=\count471
-\c@algpx@indentEndCoordIndex-51@totc=\count472
-\c@algpx@indentEndCoordIndex-50@totc=\count473
-\c@algpx@indentEndPage-54@totc=\count474
-\c@algpx@indentEndPage-55@totc=\count475
-\c@algpx@indentEndPage-56@totc=\count476
-\c@algpx@indentEndPage-57@totc=\count477
-\c@algpx@indentEndPage-58@totc=\count478
-\c@algpx@indentEndPage-59@totc=\count479
-\c@algpx@indentEndPage-60@totc=\count480
-\c@algpx@indentEndCoordIndex-58@totc=\count481
-\c@algpx@indentEndCoordIndex-56@totc=\count482
-\c@algpx@indentEndCoordIndex-54@totc=\count483
-\c@algpx@indentEndPage-61@totc=\count484
-\c@algpx@indentEndPage-62@totc=\count485
-\c@algpx@indentEndPage-63@totc=\count486
-\c@algpx@indentEndPage-64@totc=\count487
-\c@algpx@indentEndPage-65@totc=\count488
-\c@algpx@indentEndPage-66@totc=\count489
-\c@algpx@indentEndCoordIndex-64@totc=\count490
-\c@algpx@indentEndCoordIndex-61@totc=\count491
-\c@algpx@indentEndPage-67@totc=\count492
-\c@algpx@indentEndPage-68@totc=\count493
-\c@algpx@indentEndPage-69@totc=\count494
-\c@algpx@indentEndPage-70@totc=\count495
-\c@algpx@indentEndPage-71@totc=\count496
-\c@algpx@indentEndPage-72@totc=\count497
-\c@algpx@indentEndPage-73@totc=\count498
-\c@algpx@indentEndCoordIndex-71@totc=\count499
-\c@algpx@indentEndCoordIndex-70@totc=\count500
-\c@algpx@indentEndPage-74@totc=\count501
-\c@algpx@indentEndPage-75@totc=\count502
-\c@algpx@indentEndPage-76@totc=\count503
-\c@algpx@indentEndPage-77@totc=\count504
-\c@algpx@indentEndPage-78@totc=\count505
-\c@algpx@indentEndPage-79@totc=\count506
-\c@algpx@indentEndCoordIndex-77@totc=\count507
-\c@algpx@indentEndCoordIndex-74@totc=\count508
-\c@algpx@indentEndPage-80@totc=\count509
-\c@algpx@indentEndPage-81@totc=\count510
-\c@algpx@indentEndPage-82@totc=\count511
+\c@algpx@indentEndPage-44@totc=\count457
+\c@algpx@indentEndPage-45@totc=\count458
+\c@algpx@indentEndPage-46@totc=\count459
+\c@algpx@indentEndPage-47@totc=\count460
+\c@algpx@indentEndPage-48@totc=\count461
+\c@algpx@indentEndPage-49@totc=\count462
+\c@algpx@indentEndCoordIndex-48@totc=\count463
+\c@algpx@indentEndCoordIndex-47@totc=\count464
+\c@algpx@indentEndCoordIndex-46@totc=\count465
+\c@algpx@indentEndPage-50@totc=\count466
+\c@algpx@indentEndPage-51@totc=\count467
+\c@algpx@indentEndPage-52@totc=\count468
+\c@algpx@indentEndPage-53@totc=\count469
+\c@algpx@indentEndPage-54@totc=\count470
+\c@algpx@indentEndCoordIndex-52@totc=\count471
+\c@algpx@indentEndCoordIndex-50@totc=\count472
+\c@algpx@indentEndPage-55@totc=\count473
+\c@algpx@indentEndPage-56@totc=\count474
+\c@algpx@indentEndPage-57@totc=\count475
+\c@algpx@indentEndCoordIndex-56@totc=\count476
+\c@algpx@indentEndPage-58@totc=\count477
+\c@algpx@indentEndPage-59@totc=\count478
+\c@algpx@indentEndPage-60@totc=\count479
+\c@algpx@indentEndPage-61@totc=\count480
+\c@algpx@indentEndPage-62@totc=\count481
+\c@algpx@indentEndPage-63@totc=\count482
+\c@algpx@indentEndPage-64@totc=\count483
+\c@algpx@indentEndCoordIndex-62@totc=\count484
+\c@algpx@indentEndCoordIndex-61@totc=\count485
+\c@algpx@indentEndPage-65@totc=\count486
+\c@algpx@indentEndPage-66@totc=\count487
+\c@algpx@indentEndPage-67@totc=\count488
+\c@algpx@indentEndPage-68@totc=\count489
+\c@algpx@indentEndPage-69@totc=\count490
+\c@algpx@indentEndPage-70@totc=\count491
+\c@algpx@indentEndPage-71@totc=\count492
+\c@algpx@indentEndCoordIndex-69@totc=\count493
+\c@algpx@indentEndCoordIndex-67@totc=\count494
+\c@algpx@indentEndCoordIndex-65@totc=\count495
+\c@algpx@indentEndPage-72@totc=\count496
+\c@algpx@indentEndPage-73@totc=\count497
+\c@algpx@indentEndPage-74@totc=\count498
+\c@algpx@indentEndPage-75@totc=\count499
+\c@algpx@indentEndPage-76@totc=\count500
+\c@algpx@indentEndPage-77@totc=\count501
+\c@algpx@indentEndCoordIndex-75@totc=\count502
+\c@algpx@indentEndCoordIndex-72@totc=\count503
+\c@algpx@indentEndPage-78@totc=\count504
+\c@algpx@indentEndPage-79@totc=\count505
+\c@algpx@indentEndPage-80@totc=\count506
+\c@algpx@indentEndPage-81@totc=\count507
+\c@algpx@indentEndPage-82@totc=\count508
+\c@algpx@indentEndPage-83@totc=\count509
+\c@algpx@indentEndPage-84@totc=\count510
+\c@algpx@indentEndCoordIndex-82@totc=\count511
 \c@algpx@indentEndCoordIndex-81@totc=\count512
-\c@algpx@indentEndPage-83@totc=\count513
-\c@algpx@indentEndPage-84@totc=\count514
-\c@algpx@indentEndCoordIndex-83@totc=\count515
-\c@algpx@indentEndPage-85@totc=\count516
-\c@algpx@indentEndPage-86@totc=\count517
-\c@algpx@indentEndCoordIndex-85@totc=\count518
-\c@algpx@indentEndCoordIndex-80@totc=\count519
-\c@algpx@indentEndPage-87@totc=\count520
-\c@algpx@indentEndPage-88@totc=\count521
-\c@algpx@indentEndPage-89@totc=\count522
-\c@algpx@indentEndPage-90@totc=\count523
-\c@algpx@indentEndPage-91@totc=\count524
-\c@algpx@indentEndPage-92@totc=\count525
-\c@algpx@indentEndPage-93@totc=\count526
-\c@algpx@indentEndPage-94@totc=\count527
-\c@algpx@indentEndPage-95@totc=\count528
-\c@algpx@indentEndCoordIndex-93@totc=\count529
-\c@algpx@indentEndCoordIndex-91@totc=\count530
-\c@algpx@indentEndCoordIndex-89@totc=\count531
-\c@algpx@indentEndCoordIndex-88@totc=\count532
-\c@algpx@indentEndCoordIndex-87@totc=\count533
-\c@algpx@indentEndPage-96@totc=\count534
-\c@algpx@indentEndPage-97@totc=\count535
-\c@algpx@indentEndPage-98@totc=\count536
-\c@algpx@indentEndPage-99@totc=\count537
-\c@algpx@indentEndPage-100@totc=\count538
-\c@algpx@indentEndPage-101@totc=\count539
-\c@algpx@indentEndPage-102@totc=\count540
-\c@algpx@indentEndPage-103@totc=\count541
-\c@algpx@indentEndCoordIndex-101@totc=\count542
-\c@algpx@indentEndCoordIndex-99@totc=\count543
-\c@algpx@indentEndCoordIndex-96@totc=\count544
-\c@algpx@indentEndPage-104@totc=\count545
-\c@algpx@indentEndPage-105@totc=\count546
-\c@algpx@indentEndPage-106@totc=\count547
-\c@algpx@indentEndPage-107@totc=\count548
-\c@algpx@indentEndCoordIndex-106@totc=\count549
-\c@algpx@indentEndCoordIndex-105@totc=\count550
-\c@algpx@indentEndPage-108@totc=\count551
-\c@algpx@indentEndPage-109@totc=\count552
-\c@algpx@indentEndPage-110@totc=\count553
-\c@algpx@indentEndCoordIndex-109@totc=\count554
-\c@algpx@indentEndCoordIndex-108@totc=\count555
-\c@algpx@indentEndPage-111@totc=\count556
-\c@algpx@indentEndPage-112@totc=\count557
-\c@algpx@indentEndPage-113@totc=\count558
-\c@algpx@indentEndPage-114@totc=\count559
-\c@algpx@indentEndPage-115@totc=\count560
-\c@algpx@indentEndPage-116@totc=\count561
-\c@algpx@indentEndPage-117@totc=\count562
-\c@algpx@indentEndPage-118@totc=\count563
-\c@algpx@indentEndPage-119@totc=\count564
-\c@algpx@indentEndPage-120@totc=\count565
-\c@algpx@indentEndPage-121@totc=\count566
-\c@algpx@indentEndPage-122@totc=\count567
-\c@algpx@indentEndPage-123@totc=\count568
-\c@algpx@indentEndCoordIndex-116@totc=\count569
-\c@algpx@indentEndCoordIndex-114@totc=\count570
-\c@algpx@indentEndCoordIndex-113@totc=\count571
-\c@algpx@indentEndCoordIndex-112@totc=\count572
-\c@algpx@indentEndCoordIndex-111@totc=\count573
-\c@algpx@indentEndPage-124@totc=\count574
-\c@algpx@indentEndPage-125@totc=\count575
-\c@algpx@indentEndPage-126@totc=\count576
-\c@algpx@indentEndPage-127@totc=\count577
-\c@algpx@indentEndPage-128@totc=\count578
-\c@algpx@indentEndPage-129@totc=\count579
-\c@algpx@indentEndPage-130@totc=\count580
-\c@algpx@indentEndPage-131@totc=\count581
-\c@algpx@indentEndPage-132@totc=\count582
-\c@algpx@indentEndPage-133@totc=\count583
-\c@algpx@indentEndPage-134@totc=\count584
-\c@algpx@indentEndPage-135@totc=\count585
-\c@algpx@indentEndPage-136@totc=\count586
-\c@algpx@indentEndCoordIndex-129@totc=\count587
-\c@algpx@indentEndCoordIndex-124@totc=\count588
+\c@algpx@indentEndPage-85@totc=\count513
+\c@algpx@indentEndPage-86@totc=\count514
+\c@algpx@indentEndPage-87@totc=\count515
+\c@algpx@indentEndPage-88@totc=\count516
+\c@algpx@indentEndPage-89@totc=\count517
+\c@algpx@indentEndPage-90@totc=\count518
+\c@algpx@indentEndCoordIndex-88@totc=\count519
+\c@algpx@indentEndCoordIndex-85@totc=\count520
+\c@algpx@indentEndPage-91@totc=\count521
+\c@algpx@indentEndPage-92@totc=\count522
+\c@algpx@indentEndPage-93@totc=\count523
+\c@algpx@indentEndCoordIndex-92@totc=\count524
+\c@algpx@indentEndPage-94@totc=\count525
+\c@algpx@indentEndPage-95@totc=\count526
+\c@algpx@indentEndCoordIndex-94@totc=\count527
+\c@algpx@indentEndPage-96@totc=\count528
+\c@algpx@indentEndPage-97@totc=\count529
+\c@algpx@indentEndCoordIndex-96@totc=\count530
+\c@algpx@indentEndCoordIndex-91@totc=\count531
+\c@algpx@indentEndPage-98@totc=\count532
+\c@algpx@indentEndPage-99@totc=\count533
+\c@algpx@indentEndPage-100@totc=\count534
+\c@algpx@indentEndPage-101@totc=\count535
+\c@algpx@indentEndPage-102@totc=\count536
+\c@algpx@indentEndPage-103@totc=\count537
+\c@algpx@indentEndPage-104@totc=\count538
+\c@algpx@indentEndPage-105@totc=\count539
+\c@algpx@indentEndPage-106@totc=\count540
+\c@algpx@indentEndCoordIndex-104@totc=\count541
+\c@algpx@indentEndCoordIndex-102@totc=\count542
+\c@algpx@indentEndCoordIndex-100@totc=\count543
+\c@algpx@indentEndCoordIndex-99@totc=\count544
+\c@algpx@indentEndCoordIndex-98@totc=\count545
+\c@algpx@indentEndPage-107@totc=\count546
+\c@algpx@indentEndPage-108@totc=\count547
+\c@algpx@indentEndPage-109@totc=\count548
+\c@algpx@indentEndPage-110@totc=\count549
+\c@algpx@indentEndPage-111@totc=\count550
+\c@algpx@indentEndPage-112@totc=\count551
+\c@algpx@indentEndPage-113@totc=\count552
+\c@algpx@indentEndPage-114@totc=\count553
+\c@algpx@indentEndCoordIndex-112@totc=\count554
+\c@algpx@indentEndCoordIndex-110@totc=\count555
+\c@algpx@indentEndCoordIndex-107@totc=\count556
+\c@algpx@indentEndPage-115@totc=\count557
+\c@algpx@indentEndPage-116@totc=\count558
+\c@algpx@indentEndPage-117@totc=\count559
+\c@algpx@indentEndPage-118@totc=\count560
+\c@algpx@indentEndCoordIndex-116@totc=\count561
+\c@algpx@indentEndCoordIndex-115@totc=\count562
+\c@algpx@indentEndPage-119@totc=\count563
+\c@algpx@indentEndPage-120@totc=\count564
+\c@algpx@indentEndPage-121@totc=\count565
+\c@algpx@indentEndPage-122@totc=\count566
+\c@algpx@indentEndCoordIndex-120@totc=\count567
+\c@algpx@indentEndCoordIndex-119@totc=\count568
+\c@algpx@indentEndPage-123@totc=\count569
+\c@algpx@indentEndPage-124@totc=\count570
+\c@algpx@indentEndPage-125@totc=\count571
+\c@algpx@indentEndPage-126@totc=\count572
+\c@algpx@indentEndPage-127@totc=\count573
+\c@algpx@indentEndPage-128@totc=\count574
+\c@algpx@indentEndPage-129@totc=\count575
+\c@algpx@indentEndPage-130@totc=\count576
+\c@algpx@indentEndCoordIndex-125@totc=\count577
+\c@algpx@indentEndCoordIndex-124@totc=\count578
+\c@algpx@indentEndCoordIndex-123@totc=\count579
+\c@algpx@indentEndPage-131@totc=\count580
+\c@algpx@indentEndPage-132@totc=\count581
+\c@algpx@indentEndPage-133@totc=\count582
+\c@algpx@indentEndPage-134@totc=\count583
+\c@algpx@indentEndPage-135@totc=\count584
+\c@algpx@indentEndPage-136@totc=\count585
+\c@algpx@indentEndPage-137@totc=\count586
+\c@algpx@indentEndPage-138@totc=\count587
+\c@algpx@indentEndPage-139@totc=\count588
+\c@algpx@indentEndPage-140@totc=\count589
+\c@algpx@indentEndPage-141@totc=\count590
+\c@algpx@indentEndCoordIndex-139@totc=\count591
+\c@algpx@indentEndCoordIndex-136@totc=\count592
+\c@algpx@indentEndPage-142@totc=\count593
+\c@algpx@indentEndPage-143@totc=\count594
+\c@algpx@indentEndPage-144@totc=\count595
+\c@algpx@indentEndPage-145@totc=\count596
+\c@algpx@indentEndPage-146@totc=\count597
+\c@algpx@indentEndPage-147@totc=\count598
+\c@algpx@indentEndCoordIndex-145@totc=\count599
+\c@algpx@indentEndCoordIndex-143@totc=\count600
+\c@algpx@indentEndPage-148@totc=\count601
+\c@algpx@indentEndPage-149@totc=\count602
+\c@algpx@indentEndPage-150@totc=\count603
+\c@algpx@indentEndPage-151@totc=\count604
+\c@algpx@indentEndPage-152@totc=\count605
+\c@algpx@indentEndPage-153@totc=\count606
+\c@algpx@indentEndCoordIndex-151@totc=\count607
+\c@algpx@indentEndCoordIndex-149@totc=\count608
+\c@algpx@indentEndCoordIndex-148@totc=\count609
+\c@algpx@indentEndPage-154@totc=\count610
+\c@algpx@indentEndPage-155@totc=\count611
+\c@algpx@indentEndPage-156@totc=\count612
+\c@algpx@indentEndPage-157@totc=\count613
+\c@algpx@indentEndPage-158@totc=\count614
+\c@algpx@indentEndPage-159@totc=\count615
+\c@algpx@indentEndPage-160@totc=\count616
+\c@algpx@indentEndCoordIndex-158@totc=\count617
+\c@algpx@indentEndPage-161@totc=\count618
+\c@algpx@indentEndPage-162@totc=\count619
+\c@algpx@indentEndPage-163@totc=\count620
+\c@algpx@indentEndPage-164@totc=\count621
+\c@algpx@indentEndPage-165@totc=\count622
+\c@algpx@indentEndPage-166@totc=\count623
+\c@algpx@indentEndPage-167@totc=\count624
+\c@algpx@indentEndPage-168@totc=\count625
+\c@algpx@indentEndPage-169@totc=\count626
+\c@algpx@indentEndCoordIndex-165@totc=\count627
+\c@algpx@indentEndCoordIndex-161@totc=\count628
+\c@algpx@indentEndCoordIndex-154@totc=\count629
 )
 \openout1 = `main.aux'.
 
@@ -1098,16 +1139,16 @@ LaTeX Info: Redefining \it@ccap on input line 5.
 
 (/usr/share/texlive/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count589
+\scratchcounter=\count630
 \scratchdimen=\dimen339
 \scratchbox=\box97
-\nofMPsegments=\count590
-\nofMParguments=\count591
+\nofMPsegments=\count631
+\nofMParguments=\count632
 \everyMPshowfont=\toks51
-\MPscratchCnt=\count592
+\MPscratchCnt=\count633
 \MPscratchDim=\dimen340
-\MPnumerator=\count593
-\makeMPintoPDFobject=\count594
+\MPnumerator=\count634
+\makeMPintoPDFobject=\count635
 \everyMPtoPDFconversion=\toks52
 ) (/usr/share/texlive/texmf-dist/tex/latex/epstopdf-pkg/epstopdf-base.sty
 Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
@@ -1123,7 +1164,7 @@ Package caption Info: longtable package is loaded.
 Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
 )
 Package caption Info: End \AtBeginDocument code.
-\c@lstlisting=\count595
+\c@lstlisting=\count636
 Package hyperref Info: Link coloring ON on input line 5.
 <Immagini/Logo Bicocca.png, id=43, 298.2342pt x 321.8424pt>
 File: Immagini/Logo Bicocca.png Graphic file (type png)
@@ -1166,18 +1207,18 @@ File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has been already used, duplicate ignored
 <to be read again> 
                    \relax 
-l.62 ...ne {2.1.2}Soluzione}{19}{subsection.2.1.2}
+l.62 ...ne {2.1.2}Soluzione}{20}{subsection.2.1.2}
                                                   % [1
 
 ] [2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [3{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 206.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 209.
  (/usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) [4{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}])
+) [4{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}] [5])
 \tf@toc=\write4
 \openout4 = `main.toc'.
 
- [5] [6
+ [6] [7
 
 ]
 \openout2 = `Capitoli/Teoria/LCS/LCS.aux'.
@@ -1188,10 +1229,10 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <17.28> on input line 18.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <10> on input line 18.
-[7
+[8
 
 
-] [8] [9] [10] [11{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
+] [9] [10] [11] [12{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc}]
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <14.4> on input line 217.
 LaTeX Font Info:    External font `lmex10' loaded for size
@@ -1202,7 +1243,7 @@ File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 237.
- [12] [13] [14] [15] [16]) [17]
+ [13] [14] [15] [16] [17]) [18]
 \openout2 = `Capitoli/Teoria/WIS/WIS.aux'.
 
  (./Capitoli/Teoria/WIS/WIS.tex
@@ -1211,16 +1252,16 @@ Capitolo 2.
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `\\' on input line 2.
 
-[18
+[19
 
 
 
 
-] [19] [20]
+] [20] [21]
 Package hyperref Info: bookmark level for unknown algorithm defaults to 0 on input line 186.
-\c@algpx@indentEndPage-0=\count596
-\c@algpx@indentEndPage-1=\count597
- [21]
+\c@algpx@indentEndPage-0=\count637
+\c@algpx@indentEndPage-1=\count638
+ [22]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 216.
@@ -1233,27 +1274,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 216.
 
-\c@algpx@indentEndPage-2=\count598
-\c@algpx@indentEndPage-3=\count599
-\c@algpx@indentEndPage-4=\count600
-\c@algpx@indentEndPage-5=\count601
-\c@algpx@indentEndPage-6=\count602
-\c@algpx@indentEndCoordIndex-4=\count603
-\c@algpx@indentEndCoordIndex-2=\count604
-[22]
-\c@algpx@indentEndPage-7=\count605
-\c@algpx@indentEndPage-8=\count606
-\c@algpx@indentEndPage-9=\count607
-\c@algpx@indentEndPage-10=\count608
-\c@algpx@indentEndPage-11=\count609
-\c@algpx@indentEndCoordIndex-9=\count610
-\c@algpx@indentEndCoordIndex-7=\count611
- [23]) [24]
+\c@algpx@indentEndPage-2=\count639
+\c@algpx@indentEndPage-3=\count640
+\c@algpx@indentEndPage-4=\count641
+\c@algpx@indentEndPage-5=\count642
+\c@algpx@indentEndPage-6=\count643
+\c@algpx@indentEndCoordIndex-4=\count644
+\c@algpx@indentEndCoordIndex-2=\count645
+[23]
+\c@algpx@indentEndPage-7=\count646
+\c@algpx@indentEndPage-8=\count647
+\c@algpx@indentEndPage-9=\count648
+\c@algpx@indentEndPage-10=\count649
+\c@algpx@indentEndPage-11=\count650
+\c@algpx@indentEndCoordIndex-9=\count651
+\c@algpx@indentEndCoordIndex-7=\count652
+ [24]) [25]
 \openout2 = `Capitoli/Teoria/LIS/LIS.aux'.
 
  (./Capitoli/Teoria/LIS/LIS.tex
 Capitolo 3.
-[25
+[26
 
 
 
@@ -1267,7 +1308,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 53.
 
-[26]
+[27]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 68.
@@ -1292,19 +1333,19 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 79.
 
-[27]
-\c@algpx@indentEndPage-12=\count612
-\c@algpx@indentEndPage-13=\count613
-\c@algpx@indentEndPage-14=\count614
-\c@algpx@indentEndPage-15=\count615
-\c@algpx@indentEndCoordIndex-14=\count616
-\c@algpx@indentEndPage-16=\count617
-\c@algpx@indentEndCoordIndex-13=\count618
-\c@algpx@indentEndPage-17=\count619
-\c@algpx@indentEndPage-18=\count620
-\c@algpx@indentEndPage-19=\count621
-\c@algpx@indentEndCoordIndex-17=\count622
- [28]
+[28]
+\c@algpx@indentEndPage-12=\count653
+\c@algpx@indentEndPage-13=\count654
+\c@algpx@indentEndPage-14=\count655
+\c@algpx@indentEndPage-15=\count656
+\c@algpx@indentEndCoordIndex-14=\count657
+\c@algpx@indentEndPage-16=\count658
+\c@algpx@indentEndCoordIndex-13=\count659
+\c@algpx@indentEndPage-17=\count660
+\c@algpx@indentEndPage-18=\count661
+\c@algpx@indentEndPage-19=\count662
+\c@algpx@indentEndCoordIndex-17=\count663
+ [29]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 174.
@@ -1317,12 +1358,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 174.
 
-) [29]
+) [30]
 \openout2 = `Capitoli/Teoria/Hateville/Hateville.aux'.
 
  (./Capitoli/Teoria/Hateville/Hateville.tex
 Capitolo 4.
-[30
+[31
 
 
 
@@ -1360,11 +1401,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 151.
 
-[31]
-\c@algpx@indentEndPage-20=\count623
-\c@algpx@indentEndPage-21=\count624
-\c@algpx@indentEndCoordIndex-20=\count625
- [32]
+[32]
+\c@algpx@indentEndPage-20=\count664
+\c@algpx@indentEndPage-21=\count665
+\c@algpx@indentEndCoordIndex-20=\count666
+ [33]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 176.
@@ -1377,19 +1418,27 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 176.
 
+\c@algpx@indentEndPage-22=\count667
+\c@algpx@indentEndPage-23=\count668
+\c@algpx@indentEndPage-24=\count669
+\c@algpx@indentEndPage-25=\count670
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 178.
+(hyperref)                removing `math shift' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `subscript' on input line 178.
+(hyperref)                removing `subscript' on input line 194.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 178.
+(hyperref)                removing `math shift' on input line 194.
 
-) [33]
+\c@algpx@indentEndPage-26=\count671
+\c@algpx@indentEndPage-27=\count672
+\c@algpx@indentEndPage-28=\count673
+\c@algpx@indentEndPage-29=\count674
+) [34]
 \openout2 = `Capitoli/Teoria/LICS/LICS.aux'.
 
  (./Capitoli/Teoria/LICS/LICS.tex
@@ -1399,7 +1448,7 @@ Overfull \hbox (4.85185pt too wide) in paragraph at lines 1--1
 |[]\T1/lmr/bx/n/24.88 LICS - Lon-ge-st In-crea-sing Com-mon Sub-
  []
 
-[34
+[35
 
 
 
@@ -1425,7 +1474,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 56.
 
-[35]
+[36]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 70.
@@ -1446,7 +1495,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 87.
 
-[36]
+[37]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 114.
@@ -1459,30 +1508,30 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 114.
 
-[37]
-\c@algpx@indentEndPage-22=\count626
-\c@algpx@indentEndPage-23=\count627
-\c@algpx@indentEndPage-24=\count628
-\c@algpx@indentEndPage-25=\count629
-\c@algpx@indentEndPage-26=\count630
-\c@algpx@indentEndPage-27=\count631
-\c@algpx@indentEndPage-28=\count632
-\c@algpx@indentEndPage-29=\count633
-\c@algpx@indentEndPage-30=\count634
-\c@algpx@indentEndCoordIndex-28=\count635
-\c@algpx@indentEndCoordIndex-27=\count636
-\c@algpx@indentEndCoordIndex-26=\count637
-\c@algpx@indentEndCoordIndex-24=\count638
-\c@algpx@indentEndCoordIndex-23=\count639
- [38]
-\c@algpx@indentEndPage-31=\count640
-\c@algpx@indentEndPage-32=\count641
-\c@algpx@indentEndPage-33=\count642
-\c@algpx@indentEndPage-34=\count643
-\c@algpx@indentEndPage-35=\count644
-\c@algpx@indentEndCoordIndex-33=\count645
-\c@algpx@indentEndCoordIndex-31=\count646
- [39]) [40]
+[38]
+\c@algpx@indentEndPage-30=\count675
+\c@algpx@indentEndPage-31=\count676
+\c@algpx@indentEndPage-32=\count677
+\c@algpx@indentEndPage-33=\count678
+\c@algpx@indentEndPage-34=\count679
+\c@algpx@indentEndPage-35=\count680
+\c@algpx@indentEndPage-36=\count681
+\c@algpx@indentEndPage-37=\count682
+\c@algpx@indentEndPage-38=\count683
+\c@algpx@indentEndCoordIndex-36=\count684
+\c@algpx@indentEndCoordIndex-35=\count685
+\c@algpx@indentEndCoordIndex-34=\count686
+\c@algpx@indentEndCoordIndex-32=\count687
+\c@algpx@indentEndCoordIndex-31=\count688
+ [39]
+\c@algpx@indentEndPage-39=\count689
+\c@algpx@indentEndPage-40=\count690
+\c@algpx@indentEndPage-41=\count691
+\c@algpx@indentEndPage-42=\count692
+\c@algpx@indentEndPage-43=\count693
+\c@algpx@indentEndCoordIndex-41=\count694
+\c@algpx@indentEndCoordIndex-39=\count695
+ [40]) [41]
 \openout2 = `"Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux"'.
 
  (./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.pathmorphing.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarydecorations.code.tex (/usr/share/texlive/texmf-dist/tex/generic/pgf/modules/pgfmoduledecorations.code.tex
@@ -1491,7 +1540,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 \pgfdecoratedinputsegmentcompleteddistance=\dimen343
 \pgfdecoratedinputsegmentremainingdistance=\dimen344
 \pgf@decorate@distancetomove=\dimen345
-\pgf@decorate@repeatstate=\count647
+\pgf@decorate@repeatstate=\count696
 \pgfdecorationsegmentamplitude=\dimen346
 \pgfdecorationsegmentlength=\dimen347
 )
@@ -1564,7 +1613,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 50.
 
-[41
+[42
 
 
 
@@ -1584,39 +1633,92 @@ File: omslmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Font shape `OMS/lmr/m/n' in size <12> not available
 (Font)              Font shape `OMS/lmsy/m/n' tried instead on input line 118.
- [42]
-\c@algpx@indentEndPage-36=\count648
-\c@algpx@indentEndPage-37=\count649
-\c@algpx@indentEndPage-38=\count650
-\c@algpx@indentEndPage-39=\count651
-\c@algpx@indentEndPage-40=\count652
-\c@algpx@indentEndPage-41=\count653
-\c@algpx@indentEndCoordIndex-40=\count654
-\c@algpx@indentEndCoordIndex-39=\count655
-\c@algpx@indentEndCoordIndex-38=\count656
-\c@algpx@indentEndPage-42=\count657
-\c@algpx@indentEndPage-43=\count658
-\c@algpx@indentEndPage-44=\count659
-\c@algpx@indentEndPage-45=\count660
-\c@algpx@indentEndPage-46=\count661
-\c@algpx@indentEndCoordIndex-44=\count662
-\c@algpx@indentEndCoordIndex-42=\count663
-) [43]
+ [43]
+\c@algpx@indentEndPage-44=\count697
+\c@algpx@indentEndPage-45=\count698
+\c@algpx@indentEndPage-46=\count699
+\c@algpx@indentEndPage-47=\count700
+\c@algpx@indentEndPage-48=\count701
+\c@algpx@indentEndPage-49=\count702
+\c@algpx@indentEndCoordIndex-48=\count703
+\c@algpx@indentEndCoordIndex-47=\count704
+\c@algpx@indentEndCoordIndex-46=\count705
+\c@algpx@indentEndPage-50=\count706
+\c@algpx@indentEndPage-51=\count707
+\c@algpx@indentEndPage-52=\count708
+\c@algpx@indentEndPage-53=\count709
+\c@algpx@indentEndPage-54=\count710
+\c@algpx@indentEndCoordIndex-52=\count711
+\c@algpx@indentEndCoordIndex-50=\count712
+) [44]
 \openout2 = `"Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux"'.
 
  (./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.tex
 Capitolo 7.
-) [44
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 33.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 33.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 33.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 33.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `superscript' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `subscript' on input line 36.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 36.
+
+[45
 
 
 
 
 ]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 53.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 53.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 66.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 66.
+
+\c@algpx@indentEndPage-55=\count713
+\c@algpx@indentEndPage-56=\count714
+\c@algpx@indentEndPage-57=\count715
+\c@algpx@indentEndCoordIndex-56=\count716
+) [46]
 \openout2 = `Capitoli/Teoria/Knapsack/Knapsack.aux'.
 
  (./Capitoli/Teoria/Knapsack/Knapsack.tex
 Capitolo 8.
-[45
+[47
 
 
 
@@ -1634,35 +1736,35 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 90.
 
-[46] [47]
-\c@algpx@indentEndPage-47=\count664
-\c@algpx@indentEndPage-48=\count665
-\c@algpx@indentEndPage-49=\count666
-\c@algpx@indentEndPage-50=\count667
-\c@algpx@indentEndPage-51=\count668
-\c@algpx@indentEndPage-52=\count669
-\c@algpx@indentEndPage-53=\count670
-\c@algpx@indentEndCoordIndex-51=\count671
-\c@algpx@indentEndCoordIndex-50=\count672
- [48]
-\c@algpx@indentEndPage-54=\count673
-\c@algpx@indentEndPage-55=\count674
-\c@algpx@indentEndPage-56=\count675
-\c@algpx@indentEndPage-57=\count676
-\c@algpx@indentEndPage-58=\count677
-\c@algpx@indentEndPage-59=\count678
-\c@algpx@indentEndPage-60=\count679
-\c@algpx@indentEndCoordIndex-58=\count680
-\c@algpx@indentEndCoordIndex-56=\count681
-\c@algpx@indentEndCoordIndex-54=\count682
-) [49] [50
+[48] [49]
+\c@algpx@indentEndPage-58=\count717
+\c@algpx@indentEndPage-59=\count718
+\c@algpx@indentEndPage-60=\count719
+\c@algpx@indentEndPage-61=\count720
+\c@algpx@indentEndPage-62=\count721
+\c@algpx@indentEndPage-63=\count722
+\c@algpx@indentEndPage-64=\count723
+\c@algpx@indentEndCoordIndex-62=\count724
+\c@algpx@indentEndCoordIndex-61=\count725
+ [50]
+\c@algpx@indentEndPage-65=\count726
+\c@algpx@indentEndPage-66=\count727
+\c@algpx@indentEndPage-67=\count728
+\c@algpx@indentEndPage-68=\count729
+\c@algpx@indentEndPage-69=\count730
+\c@algpx@indentEndPage-70=\count731
+\c@algpx@indentEndPage-71=\count732
+\c@algpx@indentEndCoordIndex-69=\count733
+\c@algpx@indentEndCoordIndex-67=\count734
+\c@algpx@indentEndCoordIndex-65=\count735
+) [51] [52
 
 
 
 ]
-\openout2 = `"Capitoli/Esercitazioni/Esercizi LCS.aux"'.
+\openout2 = `"Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux"'.
 
- (./Capitoli/Esercitazioni/Esercizi LCS.tex
+ (./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
 Capitolo 9.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
@@ -1672,123 +1774,137 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 40.
 
-[51
+[53
 
 
 ]
-\c@algpx@indentEndPage-61=\count683
-\c@algpx@indentEndPage-62=\count684
-\c@algpx@indentEndPage-63=\count685
-\c@algpx@indentEndPage-64=\count686
-\c@algpx@indentEndPage-65=\count687
+\c@algpx@indentEndPage-72=\count736
+\c@algpx@indentEndPage-73=\count737
+\c@algpx@indentEndPage-74=\count738
+\c@algpx@indentEndPage-75=\count739
+\c@algpx@indentEndPage-76=\count740
 
 Underfull \hbox (badness 10000) in paragraph at lines 108--109
 | []$\OML/lmm/m/it/12 .$ \T1/lmr/m/it/12 Pas-so ri-cor-si-vo in cui $\OMS/lmsy/m/n/12 j\OML/lmm/m/it/12 LCS\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 X[]; Y[]\OT1/lmr/m/n/12 )\OMS/lmsy/m/n/12 j ^^U
  []
 
-\c@algpx@indentEndPage-66=\count688
+\c@algpx@indentEndPage-77=\count741
 
 Underfull \hbox (badness 10000) in paragraph at lines 110--111
 | []$\OML/lmm/m/it/12 .$ \T1/lmr/m/it/12 Pas-so ri-cor-si-vo in cui $\OMS/lmsy/m/n/12 j\OML/lmm/m/it/12 LCS\OT1/lmr/m/n/12 (\OML/lmm/m/it/12 X[]; Y[]\OT1/lmr/m/n/12 )\OMS/lmsy/m/n/12 j \OML/lmm/m/it/12 <
  []
 
-\c@algpx@indentEndCoordIndex-64=\count689
-\c@algpx@indentEndCoordIndex-61=\count690
-[52]
-\c@algpx@indentEndPage-67=\count691
-\c@algpx@indentEndPage-68=\count692
-\c@algpx@indentEndPage-69=\count693
-\c@algpx@indentEndPage-70=\count694
-\c@algpx@indentEndPage-71=\count695
-\c@algpx@indentEndPage-72=\count696
-\c@algpx@indentEndPage-73=\count697
-\c@algpx@indentEndCoordIndex-71=\count698
-\c@algpx@indentEndCoordIndex-70=\count699
- [53]
-\c@algpx@indentEndPage-74=\count700
-\c@algpx@indentEndPage-75=\count701
-\c@algpx@indentEndPage-76=\count702
-\c@algpx@indentEndPage-77=\count703
-\c@algpx@indentEndPage-78=\count704
-\c@algpx@indentEndPage-79=\count705
-\c@algpx@indentEndCoordIndex-77=\count706
-\c@algpx@indentEndCoordIndex-74=\count707
- [54] [55]
-\c@algpx@indentEndPage-80=\count708
-\c@algpx@indentEndPage-81=\count709
-\c@algpx@indentEndPage-82=\count710
-\c@algpx@indentEndCoordIndex-81=\count711
-\c@algpx@indentEndPage-83=\count712
-\c@algpx@indentEndPage-84=\count713
-\c@algpx@indentEndCoordIndex-83=\count714
-\c@algpx@indentEndPage-85=\count715
-\c@algpx@indentEndPage-86=\count716
-\c@algpx@indentEndCoordIndex-85=\count717
-\c@algpx@indentEndCoordIndex-80=\count718
-\c@algpx@indentEndPage-87=\count719
-\c@algpx@indentEndPage-88=\count720
-\c@algpx@indentEndPage-89=\count721
-\c@algpx@indentEndPage-90=\count722
-\c@algpx@indentEndPage-91=\count723
-\c@algpx@indentEndPage-92=\count724
-\c@algpx@indentEndPage-93=\count725
-\c@algpx@indentEndPage-94=\count726
-\c@algpx@indentEndPage-95=\count727
-\c@algpx@indentEndCoordIndex-93=\count728
-\c@algpx@indentEndCoordIndex-91=\count729
-\c@algpx@indentEndCoordIndex-89=\count730
-\c@algpx@indentEndCoordIndex-88=\count731
-\c@algpx@indentEndCoordIndex-87=\count732
- [56]
-\c@algpx@indentEndPage-96=\count733
-\c@algpx@indentEndPage-97=\count734
-\c@algpx@indentEndPage-98=\count735
-\c@algpx@indentEndPage-99=\count736
-\c@algpx@indentEndPage-100=\count737
-\c@algpx@indentEndPage-101=\count738
-\c@algpx@indentEndPage-102=\count739
-\c@algpx@indentEndPage-103=\count740
-\c@algpx@indentEndCoordIndex-101=\count741
-\c@algpx@indentEndCoordIndex-99=\count742
-\c@algpx@indentEndCoordIndex-96=\count743
- [57]) [58]
-\openout2 = `"Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux"'.
+\c@algpx@indentEndCoordIndex-75=\count742
+\c@algpx@indentEndCoordIndex-72=\count743
+[54]
+\c@algpx@indentEndPage-78=\count744
+\c@algpx@indentEndPage-79=\count745
+\c@algpx@indentEndPage-80=\count746
+\c@algpx@indentEndPage-81=\count747
+\c@algpx@indentEndPage-82=\count748
+\c@algpx@indentEndPage-83=\count749
+\c@algpx@indentEndPage-84=\count750
+\c@algpx@indentEndCoordIndex-82=\count751
+\c@algpx@indentEndCoordIndex-81=\count752
+ [55]
+\c@algpx@indentEndPage-85=\count753
+\c@algpx@indentEndPage-86=\count754
+\c@algpx@indentEndPage-87=\count755
+\c@algpx@indentEndPage-88=\count756
+\c@algpx@indentEndPage-89=\count757
+\c@algpx@indentEndPage-90=\count758
+\c@algpx@indentEndCoordIndex-88=\count759
+\c@algpx@indentEndCoordIndex-85=\count760
+ [56] [57]
+\c@algpx@indentEndPage-91=\count761
+\c@algpx@indentEndPage-92=\count762
+\c@algpx@indentEndPage-93=\count763
+\c@algpx@indentEndCoordIndex-92=\count764
+\c@algpx@indentEndPage-94=\count765
+\c@algpx@indentEndPage-95=\count766
+\c@algpx@indentEndCoordIndex-94=\count767
+\c@algpx@indentEndPage-96=\count768
+\c@algpx@indentEndPage-97=\count769
+\c@algpx@indentEndCoordIndex-96=\count770
+\c@algpx@indentEndCoordIndex-91=\count771
+\c@algpx@indentEndPage-98=\count772
+\c@algpx@indentEndPage-99=\count773
+\c@algpx@indentEndPage-100=\count774
+\c@algpx@indentEndPage-101=\count775
+\c@algpx@indentEndPage-102=\count776
+\c@algpx@indentEndPage-103=\count777
+\c@algpx@indentEndPage-104=\count778
+\c@algpx@indentEndPage-105=\count779
+\c@algpx@indentEndPage-106=\count780
+\c@algpx@indentEndCoordIndex-104=\count781
+\c@algpx@indentEndCoordIndex-102=\count782
+\c@algpx@indentEndCoordIndex-100=\count783
+\c@algpx@indentEndCoordIndex-99=\count784
+\c@algpx@indentEndCoordIndex-98=\count785
+ [58]
+\c@algpx@indentEndPage-107=\count786
+\c@algpx@indentEndPage-108=\count787
+\c@algpx@indentEndPage-109=\count788
+\c@algpx@indentEndPage-110=\count789
+\c@algpx@indentEndPage-111=\count790
+\c@algpx@indentEndPage-112=\count791
+\c@algpx@indentEndPage-113=\count792
+\c@algpx@indentEndPage-114=\count793
+\c@algpx@indentEndCoordIndex-112=\count794
+\c@algpx@indentEndCoordIndex-110=\count795
+\c@algpx@indentEndCoordIndex-107=\count796
+ [59]) [60]
+\openout2 = `"Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux"'.
 
- (./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.tex
+ (./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.tex
 Capitolo 10.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7.
+(hyperref)                removing `math shift' on input line 22.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7.
+(hyperref)                removing `subscript' on input line 22.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7.
+(hyperref)                removing `math shift' on input line 22.
+
+[61
+
+
+
+
+] [62] [63] [64] [65]) [66]
+\openout2 = `"Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux"'.
+
+ (./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.tex
+Capitolo 11.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 21.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 7.
-
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <24.88> on input line 7.
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <20.74> on input line 7.
-
-Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 54.
+(hyperref)                removing `\leq' on input line 21.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\lor' on input line 54.
+(hyperref)                removing `\leq' on input line 21.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 54.
+(hyperref)                removing `\leq' on input line 21.
 
-[59
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 21.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 21.
+
+[67
 
 
 
@@ -1796,83 +1912,211 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 ]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 73.
+(hyperref)                removing `math shift' on input line 28.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `\land' on input line 73.
+(hyperref)                removing `math shift' on input line 28.
+
+[68]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 98.
 
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
-(hyperref)                removing `math shift' on input line 73.
+(hyperref)                removing `\leq' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 98.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 98.
+
+) [69]
+\openout2 = `"Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux"'.
+
+ (./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.tex
+Capitolo 12.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 21.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 21.
+
+[70
+
+
+
+
+] [71]
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 90.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 90.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `\leq' on input line 90.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 90.
+
+[72]) [73] [74
+
+
+
+]
+\openout2 = `"Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux"'.
+
+ (./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.tex
+Capitolo 13.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 1.
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10.95> on input line 133.
-[60] [61]
-\c@algpx@indentEndPage-104=\count744
-\c@algpx@indentEndPage-105=\count745
-\c@algpx@indentEndPage-106=\count746
-\c@algpx@indentEndPage-107=\count747
-\c@algpx@indentEndCoordIndex-106=\count748
-\c@algpx@indentEndCoordIndex-105=\count749
-\c@algpx@indentEndPage-108=\count750
-\c@algpx@indentEndPage-109=\count751
-\c@algpx@indentEndPage-110=\count752
-\c@algpx@indentEndCoordIndex-109=\count753
-\c@algpx@indentEndCoordIndex-108=\count754
-\c@algpx@indentEndPage-111=\count755
-\c@algpx@indentEndPage-112=\count756
-\c@algpx@indentEndPage-113=\count757
-\c@algpx@indentEndPage-114=\count758
-\c@algpx@indentEndPage-115=\count759
-\c@algpx@indentEndPage-116=\count760
-\c@algpx@indentEndPage-117=\count761
-\c@algpx@indentEndPage-118=\count762
-\c@algpx@indentEndPage-119=\count763
-\c@algpx@indentEndPage-120=\count764
-\c@algpx@indentEndPage-121=\count765
-\c@algpx@indentEndPage-122=\count766
-\c@algpx@indentEndPage-123=\count767
-\c@algpx@indentEndCoordIndex-116=\count768
-\c@algpx@indentEndCoordIndex-114=\count769
-\c@algpx@indentEndCoordIndex-113=\count770
-\c@algpx@indentEndCoordIndex-112=\count771
-\c@algpx@indentEndCoordIndex-111=\count772
- [62]
-\c@algpx@indentEndPage-124=\count773
-\c@algpx@indentEndPage-125=\count774
-\c@algpx@indentEndPage-126=\count775
-\c@algpx@indentEndPage-127=\count776
-\c@algpx@indentEndPage-128=\count777
-\c@algpx@indentEndPage-129=\count778
-\c@algpx@indentEndPage-130=\count779
-\c@algpx@indentEndPage-131=\count780
-\c@algpx@indentEndPage-132=\count781
-\c@algpx@indentEndPage-133=\count782
-\c@algpx@indentEndPage-134=\count783
-\c@algpx@indentEndPage-135=\count784
-\c@algpx@indentEndPage-136=\count785
-\c@algpx@indentEndCoordIndex-129=\count786
-\c@algpx@indentEndCoordIndex-124=\count787
-) [63] (./main.aux (./Capitoli/Teoria/LCS/LCS.aux) (./Capitoli/Teoria/WIS/WIS.aux) (./Capitoli/Teoria/LIS/LIS.aux) (./Capitoli/Teoria/Hateville/Hateville.aux) (./Capitoli/Teoria/LICS/LICS.aux) (./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux) (./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux) (./Capitoli/Teoria/Knapsack/Knapsack.aux) (./Capitoli/Esercitazioni/Esercizi LCS.aux) (./Capitoli/Esercitazioni/LCS al massimo 3 rossi e 2 blue.aux))
+(Font)              <24.88> on input line 1.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <20.74> on input line 1.
+[75
+
+
+]
+\c@algpx@indentEndPage-115=\count797
+\c@algpx@indentEndPage-116=\count798
+\c@algpx@indentEndPage-117=\count799
+\c@algpx@indentEndPage-118=\count800
+\c@algpx@indentEndCoordIndex-116=\count801
+\c@algpx@indentEndCoordIndex-115=\count802
+\c@algpx@indentEndPage-119=\count803
+\c@algpx@indentEndPage-120=\count804
+\c@algpx@indentEndPage-121=\count805
+\c@algpx@indentEndPage-122=\count806
+\c@algpx@indentEndCoordIndex-120=\count807
+\c@algpx@indentEndCoordIndex-119=\count808
+\c@algpx@indentEndPage-123=\count809
+\c@algpx@indentEndPage-124=\count810
+\c@algpx@indentEndPage-125=\count811
+\c@algpx@indentEndPage-126=\count812
+\c@algpx@indentEndPage-127=\count813
+\c@algpx@indentEndPage-128=\count814
+\c@algpx@indentEndPage-129=\count815
+\c@algpx@indentEndPage-130=\count816
+\c@algpx@indentEndCoordIndex-125=\count817
+\c@algpx@indentEndCoordIndex-124=\count818
+\c@algpx@indentEndCoordIndex-123=\count819
+ [76]
+\c@algpx@indentEndPage-131=\count820
+\c@algpx@indentEndPage-132=\count821
+\c@algpx@indentEndPage-133=\count822
+\c@algpx@indentEndPage-134=\count823
+\c@algpx@indentEndPage-135=\count824
+\c@algpx@indentEndPage-136=\count825
+\c@algpx@indentEndPage-137=\count826
+\c@algpx@indentEndPage-138=\count827
+\c@algpx@indentEndPage-139=\count828
+\c@algpx@indentEndPage-140=\count829
+\c@algpx@indentEndPage-141=\count830
+\c@algpx@indentEndCoordIndex-139=\count831
+\c@algpx@indentEndCoordIndex-136=\count832
+) [77] [78]
+\openout2 = `"Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux"'.
+
+ (./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.tex
+Capitolo 14.
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 58.
+
+
+Package hyperref Warning: Token not allowed in a PDF string (Unicode):
+(hyperref)                removing `math shift' on input line 58.
+
+[79
+
+
+
+
+]
+\c@algpx@indentEndPage-142=\count833
+\c@algpx@indentEndPage-143=\count834
+\c@algpx@indentEndPage-144=\count835
+\c@algpx@indentEndPage-145=\count836
+\c@algpx@indentEndPage-146=\count837
+\c@algpx@indentEndPage-147=\count838
+\c@algpx@indentEndCoordIndex-145=\count839
+\c@algpx@indentEndCoordIndex-143=\count840
+\c@algpx@indentEndPage-148=\count841
+\c@algpx@indentEndPage-149=\count842
+\c@algpx@indentEndPage-150=\count843
+\c@algpx@indentEndPage-151=\count844
+\c@algpx@indentEndPage-152=\count845
+\c@algpx@indentEndPage-153=\count846
+\c@algpx@indentEndCoordIndex-151=\count847
+\c@algpx@indentEndCoordIndex-149=\count848
+\c@algpx@indentEndCoordIndex-148=\count849
+\c@algpx@indentEndPage-154=\count850
+\c@algpx@indentEndPage-155=\count851
+\c@algpx@indentEndPage-156=\count852
+\c@algpx@indentEndPage-157=\count853
+\c@algpx@indentEndPage-158=\count854
+\c@algpx@indentEndPage-159=\count855
+\c@algpx@indentEndPage-160=\count856
+\c@algpx@indentEndCoordIndex-158=\count857
+\c@algpx@indentEndPage-161=\count858
+\c@algpx@indentEndPage-162=\count859
+\c@algpx@indentEndPage-163=\count860
+\c@algpx@indentEndPage-164=\count861
+\c@algpx@indentEndPage-165=\count862
+\c@algpx@indentEndPage-166=\count863
+\c@algpx@indentEndPage-167=\count864
+\c@algpx@indentEndPage-168=\count865
+\c@algpx@indentEndPage-169=\count866
+\c@algpx@indentEndCoordIndex-165=\count867
+\c@algpx@indentEndCoordIndex-161=\count868
+\c@algpx@indentEndCoordIndex-154=\count869
+ [80]) [81]
+\openout2 = `"Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux"'.
+
+ (./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.tex
+Capitolo 15.
+) [82
+
+
+
+
+] (./main.aux (./Capitoli/Teoria/LCS/LCS.aux) (./Capitoli/Teoria/WIS/WIS.aux) (./Capitoli/Teoria/LIS/LIS.aux) (./Capitoli/Teoria/Hateville/Hateville.aux) (./Capitoli/Teoria/LICS/LICS.aux) (./Capitoli/Teoria/Floyd Warshall/Floyd Warshall.aux) (./Capitoli/Teoria/FW: Chiusura Transitiva/FW chiusura transitiva.aux) (./Capitoli/Teoria/Knapsack/Knapsack.aux) (./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux) (./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux) (./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux) (./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux) (./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux) (./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux) (./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 42910 strings out of 467356
- 883488 string characters out of 5418690
- 1744448 words of memory out of 6000000
- 70825 multiletter control sequences out of 15000+600000
- 775421 words of font info for 147 fonts, out of 8000000 for 9000
+ 44919 strings out of 467356
+ 936445 string characters out of 5418690
+ 1903187 words of memory out of 6000000
+ 72656 multiletter control sequences out of 15000+600000
+ 768067 words of font info for 141 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,17n,107p,1549b,4718s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (64 pages, 665266 bytes).
+ 91i,21n,107p,1549b,5810s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on main.pdf (83 pages, 713575 bytes).
 PDF statistics:
- 1808 PDF objects out of 2073 (max. 8388607)
- 1635 compressed objects within 17 object streams
- 443 named destinations out of 1000 (max. 500000)
- 1826 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2275 PDF objects out of 2487 (max. 8388607)
+ 2080 compressed objects within 21 object streams
+ 581 named destinations out of 1000 (max. 500000)
+ 2306 words of extra memory for PDF output out of 10000 (max. 10000000)
 

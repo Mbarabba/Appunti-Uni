@@ -1,0 +1,149 @@
+\chapter{SCS con ingombro $=k$}
+
+Vogliamo calcolare, mediante la tecnica della programmazione dinamica, la lunghezza e la sequenza di una più corta sottosequenza comune (SCS) di due sequenze $X$ e $Y$ tale che il suo ingombro complessivo sia esattamente pari a $K$ (dove $K \in \mathbb{N}^+$).
+
+\section{Definizione del problema, istanza e sottoproblema}
+Siano $X = \langle x_1, x_2, \dots, x_m \rangle$ e $Y = \langle y_1, y_2, \dots, y_n \rangle$ due sequenze di caratteri appartenenti a un alfabeto $\Sigma$, e sia $w: \Sigma \to \mathbb{N}^+$ una funzione di peso (o ingombro) che associa a ogni carattere un intero strettamente positivo.
+
+\section{Definizione del coefficiente}
+Definiamo il generico sottoproblema di dimensione $(i, j, k)$ come la ricerca della lunghezza di \textbf{una} più corta sottosequenza comune tra i prefissi $X_i$ e $Y_j$ che abbia un ingombro \textbf{esattamente pari a $k$}, dove:
+\begin{align*}
+    i &\in \{0, 1, \dots, m\} \\
+    j &\in \{0, 1, \dots, n\} \\
+    k &\in \{0, 1, \dots, K\}
+\end{align*}
+Il coefficiente $c_{ij}^k$ rappresenta la lunghezza di tale sottosequenza ottima. Se non esiste alcuna sottosequenza comune tra $X_i$ e $Y_j$ di ingombro esattamente $k$, poniamo $c_{ij}^k = +\infty$.
+
+\section{Formulazione ricorsiva}
+
+\subsection{Caso base}
+I casi base si configurano quando almeno una delle due sequenze è vuota ($i = 0 \lor j = 0$) oppure quando l'ingombro richiesto è $k = 0$:
+\begin{enumerate}
+    \item \textbf{Se $(i = 0 \lor j = 0) \land k = 0$:} L'unica sottosequenza comune possibile è quella vuota $\langle \rangle$, la quale ha lunghezza $0$ e ingombro $0$:
+    \begin{equation*}
+        c_{0j}^0 = 0, \quad c_{i0}^0 = 0
+    \end{equation*}
+    \item \textbf{Se $(i = 0 \lor j = 0) \land k > 0$:} Non è possibile formare alcuna sottosequenza di ingombro positivo partendo da un prefisso vuoto. Trattandosi di un problema di minimizzazione, poniamo:
+    \begin{equation*}
+        c_{0j}^k = +\infty, \quad c_{i0}^k = +\infty
+    \end{equation*}
+    \item \textbf{Se $i > 0 \land j > 0 \land k = 0$:} L'unico ingombro nullo si ottiene con la sequenza vuota di lunghezza $0$:
+    \begin{equation*}
+        c_{ij}^0 = 0
+    \end{equation*}
+\end{enumerate}
+
+\subsection{Passo Ricorsivo}
+Siano $i > 0$, $j > 0$ e $k > 0$. Analizziamo i casi in base al confronto tra gli elementi $x_i$ e $y_j$:
+\begin{enumerate}
+    \item \textbf{Se $x_i \neq y_j$:} I caratteri non coincidono, quindi non possono appartenere entrambi alla SCS. Si sceglie il minimo tra i due sottoproblemi in cui si esclude alternativamente $x_i$ o $y_j$:
+    \begin{equation*}
+        c_{ij}^k = \min\{c_{i-1, j}^k, \; c_{i, j-1}^k\}
+    \end{equation*}
+    
+    \item \textbf{Se $x_i = y_j$:} I caratteri coincidono. Valutiamo l'ingombro $w(x_i)$ del carattere:
+    \begin{itemize}
+        \item \textbf{Se $w(x_i) = k$:} Il carattere $x_i$ da solo copre esattamente l'ingombro $k$ richiesto:
+        \begin{equation*}
+            c_{ij}^k = 1
+        \end{equation*}
+        \item \textbf{Se $w(x_i) > k$:} L'ingombro del carattere eccede il budget $k$ richiesto, quindi $x_i$ non può essere incluso nella soluzione:
+        \begin{equation*}
+            c_{ij}^k = c_{i-1, j-1}^k
+        \end{equation*}
+        \item \textbf{Se $w(x_i) < k$:} Possiamo scegliere se includere $x_i$ (consumando parte dell'ingombro) oppure scartarlo:
+        \begin{equation*}
+            c_{ij}^k = \min\left\{c_{i-1, j-1}^{k - w(x_i)} + 1, \; c_{i-1, j-1}^k\right\}
+        \end{equation*}
+    \end{itemize}
+\end{enumerate}
+
+\section{Soluzione del problema}
+Il valore ottimo del problema principale (la lunghezza della più corta sottosequenza comune di $X$ e $Y$ con ingombro esattamente pari a $K$) si trova valutando il coefficiente sull'intera estensione delle sequenze con il budget completo $K$:
+\begin{equation*}
+    \text{Valore ottimo} = c_{m,n}^K
+\end{equation*}
+Se $c_{m,n}^K = +\infty$, significa che non esiste alcuna sottosequenza comune di ingombro $K$.
+
+\section{Algoritmo Bottom-up}
+
+\begin{algorithm}[H]
+\caption{Algoritmo Bottom-Up \textsc{SCSBU}$(X, Y, K)$}
+\begin{algorithmic}[1]
+\State $m = \text{length}(X)$
+\State $n = \text{length}(Y)$
+\State Inizializza la matrice tridimensionale $c[0 \dots m, 0 \dots n, 0 \dots K]$
+\For{$i = 0 \textbf{ to } m$}
+    \For{$k = 0 \textbf{ to } K$}
+        \If{$k == 0$}
+            \State $c_{i,0}^k = 0$
+        \Else
+            \State $c_{i,0}^k = +\infty$
+        \EndIf
+    \EndFor
+\EndFor
+\For{$j = 0 \textbf{ to } n$}
+    \For{$k = 0 \textbf{ to } K$}
+        \If{$k == 0$}
+            \State $c_{0,j}^k = 0$
+        \Else
+            \State $c_{0,j}^k = +\infty$
+        \EndIf
+    \EndFor
+\EndFor
+\For{$i = 1 \textbf{ to } m$}
+    \For{$j = 1 \textbf{ to } n$}
+        \For{$k = 0 \textbf{ to } K$}
+            \If{$k == 0$}
+                \State $c_{ij}^k = 0$
+            \ElsIf{$x_i \neq y_j$}
+                \State $c_{ij}^k = \min\{c_{i-1, j}^k, \; c_{i, j-1}^k\}$
+            \ElsIf{$w(x_i) == k$}
+                \State $c_{ij}^k = 1$
+            \ElsIf{$w(x_i) > k$}
+                \State $c_{ij}^k = c_{i-1, j-1}^k$
+            \Else
+                \State $c_{ij}^k = \min\left\{c_{i-1, j-1}^{k - w(x_i)} + 1, \; c_{i-1, j-1}^k\right\}$
+            \EndIf
+        \EndFor
+    \EndFor
+\EndFor
+\State \Return $c$
+\end{algorithmic}
+\end{algorithm}
+
+
+\section{Algoritmo di ricostruzione}
+\begin{algorithm}[H]
+\caption{Procedura di Ricostruzione \textsc{SCSR}$(X, Y, i, j, k, c)$}
+\begin{algorithmic}[1]
+\If{$c_{ij}^k == +\infty$}
+    \State $\textbf{print } \text{``Non esiste''}$
+    \State \Return
+\EndIf
+\If{$i == 0 \lor j == 0 \lor k == 0$}
+    \State \Return
+\EndIf
+\If{$x_i \neq y_j$}
+    \If{$c_{i-1, j}^k \le c_{i, j-1}^k$}
+        \State \Call{SCSR}{$X, Y, i-1, j, k, c$}
+    \Else
+        \State \Call{SCSR}{$X, Y, i, j-1, k, c$}
+    \EndIf
+\Else
+    \If{$w(x_i) == k$}
+        \State $\textbf{print } x_i$
+        \State \Return
+    \ElsIf{$w(x_i) > k$}
+        \State \Call{SCSR}{$X, Y, i-1, j-1, k, c$}
+    \Else
+        \If{$c_{i-1, j-1}^{k - w(x_i)} + 1 \le c_{i-1, j-1}^k$}
+            \State \Call{SCSR}{$X, Y, i-1, j-1, k - w(x_i), c$}
+            \State $\textbf{print } x_i$
+        \Else
+            \State \Call{SCSR}{$X, Y, i-1, j-1, k, c$}
+        \EndIf
+    \EndIf
+\EndIf
+\end{algorithmic}
+\end{algorithm}

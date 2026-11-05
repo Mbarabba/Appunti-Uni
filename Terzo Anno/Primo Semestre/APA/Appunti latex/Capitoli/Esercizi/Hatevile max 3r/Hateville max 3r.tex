@@ -1,0 +1,200 @@
+% Capitolo: Hateville con al massimo 3 case rosse
+% Da includere con \input{hateville_3_rossi} o \include{hateville_3_rossi}
+% Pacchetti necessari nel preambolo del documento principale:
+%   \usepackage[italian]{babel}
+%   \usepackage{amsmath, amssymb}
+%   \usepackage{algorithm}
+%   \usepackage{algpseudocode}
+
+\chapter{Hateville con al massimo 3 case rosse}
+
+\newcommand{\col}{\mathrm{col}}
+\newcommand{\rosso}{\mathrm{rosso}}
+\newcommand{\HVBU}{\textsc{HVBU}}
+\newcommand{\HVR}{\textsc{HVR}}
+
+\section{Definizione del coefficiente}
+
+Siano $X_n = \{1,\dots,n\}$ le case di Hateville, ciascuna con una donazione
+$d(i)$ e un colore $\col(i)$. Due case adiacenti non possono essere scelte
+insieme, e si possono scegliere al massimo $3$ case rosse.
+
+Per $i \in \{0,\dots,n\}$ e $r \in \{0,\dots,3\}$ sia
+\[
+  S_i^r \subseteq X_i
+\]
+un insieme ottimo di case mutuamente compatibili (non adiacenti) scelte tra le
+prime $i$ case, con $r$ case rosse ancora disponibili. Il coefficiente è
+\[
+  e_i^r = D(S_i^r),
+\]
+dove $D(\cdot)$ indica la somma delle donazioni delle case dell'insieme.
+
+\section{Casi base}
+
+\paragraph{Caso $i = 0$.} Per ogni $r \in \{0,\dots,3\}$ non ci sono case, quindi
+\[
+  S_0^r = \emptyset \;\Longrightarrow\; e_0^r = 0.
+\]
+
+\paragraph{Caso $i = 1$, $\col(1) \neq \rosso$.} La casa può essere presa senza
+consumare rosse:
+\[
+  S_1^r = S_0^r \cup \{1\} \;\Longrightarrow\; e_1^r = e_0^r + d(1) = d(1).
+\]
+
+\paragraph{Caso $i = 1$, $\col(1) = \rosso$.}
+\begin{itemize}
+  \item Se $r > 0$, la casa può essere presa consumando una rossa:
+  \[
+    S_1^r = S_0^{r-1} \cup \{1\} \;\Longrightarrow\; e_1^r = e_0^{r-1} + d(1) = d(1).
+  \]
+  \item Se $r = 0$, la casa non può essere presa:
+  \[
+    S_1^0 = S_0^0 \;\Longrightarrow\; e_1^0 = e_0^0 = 0.
+  \]
+\end{itemize}
+
+\section{Caso ricorsivo ($i > 1$)}
+
+\subsection*{Se $\col(i) \neq \rosso$}
+
+Si sceglie tra prendere la casa $i$ (e quindi saltare la $i-1$) oppure non
+prenderla:
+\begin{align*}
+  e_{i-2}^r + d(i) \geq e_{i-1}^r
+    &\;\Longrightarrow\; S_i^r = S_{i-2}^r \cup \{i\}
+     \;\Longrightarrow\; e_i^r = e_{i-2}^r + d(i),\\
+  e_{i-2}^r + d(i) < e_{i-1}^r
+    &\;\Longrightarrow\; S_i^r = S_{i-1}^r
+     \;\Longrightarrow\; e_i^r = e_{i-1}^r.
+\end{align*}
+
+\subsection*{Se $\col(i) = \rosso$}
+
+\paragraph{Caso $r = 0$.} Non ci sono rosse disponibili, quindi la casa $i$ non
+può essere presa:
+\[
+  S_i^0 = S_{i-1}^0 \;\Longrightarrow\; e_i^0 = e_{i-1}^0.
+\]
+
+\paragraph{Caso $r > 0$.} Prendere la casa $i$ consuma una rossa:
+\begin{align*}
+  e_{i-2}^{r-1} + d(i) \geq e_{i-1}^r
+    &\;\Longrightarrow\; S_i^r = S_{i-2}^{r-1} \cup \{i\}
+     \;\Longrightarrow\; e_i^r = e_{i-2}^{r-1} + d(i),\\
+  e_{i-2}^{r-1} + d(i) < e_{i-1}^r
+    &\;\Longrightarrow\; S_i^r = S_{i-1}^r
+     \;\Longrightarrow\; e_i^r = e_{i-1}^r.
+\end{align*}
+
+\subsection*{Ricorrenza in forma compatta}
+
+\[
+  e_i^r =
+  \begin{cases}
+    0 & i = 0,\\[2pt]
+    d(1) & i = 1,\ \col(1) \neq \rosso,\\[2pt]
+    d(1) & i = 1,\ \col(1) = \rosso,\ r > 0,\\[2pt]
+    0 & i = 1,\ \col(1) = \rosso,\ r = 0,\\[2pt]
+    \max\{e_{i-1}^r,\ e_{i-2}^r + d(i)\} & i > 1,\ \col(i) \neq \rosso,\\[2pt]
+    e_{i-1}^0 & i > 1,\ \col(i) = \rosso,\ r = 0,\\[2pt]
+    \max\{e_{i-1}^r,\ e_{i-2}^{r-1} + d(i)\} & i > 1,\ \col(i) = \rosso,\ r > 0.
+  \end{cases}
+\]
+
+\section{Soluzione}
+
+La soluzione del problema è l'insieme $S_n^3$, il cui valore è $e_n^3$.
+
+\section{Algoritmo bottom-up}
+
+\begin{algorithm}[ht]
+\caption{Calcolo della tabella $e$ (bottom-up)}
+\begin{algorithmic}[1]
+\Procedure{\HVBU}{$n$}
+  \State \textit{// Caso base}
+  \For{$r = 0$ \textbf{to} $3$}
+    \State $e_0^r \gets 0$
+    \If{$\col(1) \neq \rosso$}
+      \State $e_1^r \gets d(1)$
+    \Else
+      \If{$r > 0$}
+        \State $e_1^r \gets d(1)$
+      \Else
+        \State $e_1^r \gets 0$
+      \EndIf
+    \EndIf
+  \EndFor
+  \State \textit{// Caso ricorsivo}
+  \For{$i = 2$ \textbf{to} $n$}
+    \For{$r = 0$ \textbf{to} $3$}
+      \If{$\col(i) \neq \rosso$}
+        \State $e_i^r \gets \max\{e_{i-1}^r,\ e_{i-2}^r + d(i)\}$
+      \Else
+        \If{$r > 0$}
+          \State $e_i^r \gets \max\{e_{i-1}^r,\ e_{i-2}^{r-1} + d(i)\}$
+        \Else
+          \State $e_i^r \gets e_{i-1}^r$
+        \EndIf
+      \EndIf
+    \EndFor
+  \EndFor
+  \State \Return $e$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\paragraph{Complessità.} La tabella ha $4(n+1)$ celle e ogni cella si calcola in
+tempo costante, quindi tempo e spazio sono $\Theta(n)$.
+
+\section{Algoritmo di ricostruzione}
+
+La procedura va chiamata come $\HVR(n, 3, e)$ e stampa gli indici delle case
+scelte in ordine crescente.
+
+\begin{algorithm}[ht]
+\caption{Ricostruzione della soluzione}
+\begin{algorithmic}[1]
+\Procedure{\HVR}{$i, r, e$}
+  \If{$i = 0$}
+    \State \Return
+  \ElsIf{$i = 1$}
+    \If{$\col(i) \neq \rosso$}
+      \State \textbf{print}($i$)
+      \State \Return
+    \Else
+      \If{$r > 0$}
+        \State \textbf{print}($i$)
+        \State \Return
+      \Else
+        \State \Call{\HVR}{$i-1, r, e$}
+      \EndIf
+    \EndIf
+  \Else
+    \If{$\col(i) \neq \rosso$}
+      \If{$e_{i-1}^r \leq e_{i-2}^r + d(i)$}
+        \State \Call{\HVR}{$i-2, r, e$}
+        \State \textbf{print}($i$)
+      \Else
+        \State \Call{\HVR}{$i-1, r, e$}
+      \EndIf
+    \Else
+      \If{$r > 0$}
+        \If{$e_{i-2}^{r-1} + d(i) \geq e_{i-1}^r$}
+          \State \Call{\HVR}{$i-2, r-1, e$}
+          \State \textbf{print}($i$)
+        \Else
+          \State \Call{\HVR}{$i-1, r, e$}
+        \EndIf
+      \Else
+        \State \Call{\HVR}{$i-1, r, e$}
+      \EndIf
+    \EndIf
+  \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\paragraph{Complessità.} Ogni chiamata ricorsiva riduce $i$ di almeno $1$ e fa
+lavoro costante, quindi la ricostruzione costa $O(n)$.
