@@ -1,0 +1,133 @@
+\chapter{Heaviest Common Subsequence (HCS)}
+
+\section{Definizione del problema}
+
+\paragraph{Istanza:}
+\begin{itemize}
+    \item Due sequenze su un alfabeto finito $\Sigma$:
+    \[
+        X = \langle x_1, x_2, \dots, x_m \rangle, \qquad Y = \langle y_1, y_2, \dots, y_n \rangle
+    \]
+    \item Una funzione peso definita sui simboli dell'alfabeto:
+    \[
+        w : \Sigma \to \mathbb{N}^+
+    \]
+\end{itemize}
+
+\paragraph{Soluzioni ammissibili:}
+Tutte le sottosequenze comuni di $X$ e $Y$.
+
+\paragraph{Funzione obiettivo:}
+Il peso complessivo $W(Z)$ di una sottosequenza comune $Z = \langle z_1, z_2, \dots, z_k \rangle$, definito come la somma dei pesi dei suoi elementi:
+\[
+    W(Z) = \sum_{l=1}^k w(z_l)
+\]
+
+\paragraph{Soluzione ottima:}
+Una sottosequenza comune $Z = \text{HCS}(X, Y)$ che massimizza il peso totale $W(Z)$. La dimensione del problema principale è $(m, n)$.
+
+\section{Definizione del generico sottoproblema}
+
+Per ogni coppia di indici $i \in \{0, 1, \dots, m\}$ e $j \in \{0, 1, \dots, n\}$, consideriamo i prefissi:
+\[
+    X_i = \langle x_1, \dots, x_i \rangle \quad (X_0 = \langle \rangle), \qquad Y_j = \langle y_1, \dots, y_j \rangle \quad (Y_0 = \langle \rangle)
+\]
+
+\paragraph{Sottoproblema di dimensione $(i, j)$:} Trovare una più pesante sottosequenza comune tra i prefissi $X_i$ e $Y_j$.
+\begin{itemize}
+    \item \textbf{Numero totale di sottoproblemi:} $(m+1)(n+1)$.
+    \item \textbf{Coefficiente $c_{i,j}$ (valore ottimo):} Peso totale della più pesante sottosequenza comune tra $X_i$ e $Y_j$.
+    \item \textbf{Valore ottimo del problema principale:} $c_{m,n}$.
+\end{itemize}
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Casi base}
+Se almeno una delle due sequenze è vuota ($i = 0 \lor j = 0$), l'unica sottosequenza comune è la sequenza vuota $\langle \rangle$, che ha peso nullo:
+\begin{equation}
+    c_{i,j} = 0 \qquad \text{se } i = 0 \lor j = 0
+\end{equation}
+
+\subsection{Passo ricorsivo}
+Per $i > 0$ e $j > 0$, l'equazione si articola in base al confronto tra gli ultimi caratteri dei prefissi $x_i$ e $y_j$:
+\begin{enumerate}
+    \item \textbf{Se $x_i \ne y_j$:} I caratteri non possono appartenere entrambi a un match comune finale. Il valore ottimo corrisponde al massimo tra le soluzioni dei due sottoproblemi ridotti:
+    \begin{equation}
+        c_{i,j} = \max\{c_{i-1,j}, \, c_{i,j-1}\}
+    \end{equation}
+    \item \textbf{Se $x_i = y_j$:} Il carattere comune entra a far parte della sottosequenza e contribuisce con il proprio peso $w(x_i)$:
+    \begin{equation}
+        c_{i,j} = c_{i-1,j-1} + w(x_i)
+    \end{equation}
+\end{enumerate}
+
+\section{Algoritmo iterativo Bottom-Up}
+
+L'algoritmo calcola sistematicamente i valori della matrice $c[0 \dots m, \, 0 \dots n]$ procedendo per righe o per colonne a partire dai casi base.
+
+\begin{algorithm}[H]
+\caption{Calcolo della matrice HCS}\label{alg:hcs}
+\begin{algorithmic}[1]
+\Procedure{HCS}{$X, Y, w$}
+    \State $m \gets |X|$
+    \State $n \gets |Y|$
+    \State $c[0 \dots m, \, 0 \dots n] \gets \text{nuova matrice}$
+    \Statex \Comment{Inizializzazione dei casi base}
+    \For{$i \gets 0 \textbf{ to } m$}
+        \State $c[i, 0] \gets 0$
+    \EndFor
+    \For{$j \gets 0 \textbf{ to } n$}
+        \State $c[0, j] \gets 0$
+    \EndFor
+    \Statex \Comment{Passo ricorsivo}
+    \For{$i \gets 1 \textbf{ to } m$}
+        \For{$j \gets 1 \textbf{ to } n$}
+            \If{$x_i \ne y_j$}
+                \State $c[i, j] \gets \max(c[i-1, j], \, c[i, j-1])$
+            \Else
+                \State $c[i, j] \gets c[i-1, j-1] + w(x_i)$
+            \EndIf
+        \EndFor
+    \EndFor
+    \State \Return $c$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\paragraph{Analisi della complessità di \textsc{HCS}:}
+\begin{itemize}
+    \item \textbf{Tempo:} $\Theta(m \cdot n)$, determinato dai due cicli for annidati in cui ogni cella viene calcolata in tempo costante $\Theta(1)$.
+    \item \textbf{Spazio:} $\Theta(m \cdot n)$ per memorizzare la tabella dei coefficienti $c$.
+\end{itemize}
+
+\newpage
+\section{Algoritmo di ricostruzione}
+
+La procedura \textsc{HCSR} risale la matrice a ritroso partendo da $(m, n)$ fino a raggiungere un caso base ($i=0 \lor j=0$). La stampa in post-ordine (eseguita dopo la chiamata ricorsiva) garantisce che i caratteri della soluzione ottima vengano stampati nell'ordine corretto da sinistra verso destra.
+
+\begin{algorithm}[H]
+\caption{Ricostruzione della soluzione HCS}\label{alg:hcsr}
+\begin{algorithmic}[1]
+\Procedure{HCSR}{$c, i, j, X, Y$}
+    \If{$i == 0 \lor j == 0$}
+        \State \Return
+    \EndIf
+    \If{$x_i \ne y_j$}
+        \If{$c[i-1, j] \ge c[i, j-1]$}
+            \State \Call{HCSR}{$c, i-1, j, X, Y$}
+        \Else
+            \State \Call{HCSR}{$c, i, j-1, X, Y$}
+        \EndIf
+    \Else
+        \State \Call{HCSR}{$c, i-1, j-1, X, Y$}
+        \State $\textbf{print}(x_i)$
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\paragraph{Analisi della complessità di \textsc{HCSR}:}
+\begin{itemize}
+    \item \textbf{Tempo:} $O(m + n)$, poiché a ogni passo ricorsivo viene decrementato almeno uno dei due indici $i$ o $j$.
+    \item \textbf{Spazio ausiliario:} $O(m + n)$ dovuto alla profondità massima dello stack delle chiamate ricorsive.
+\end{itemize}

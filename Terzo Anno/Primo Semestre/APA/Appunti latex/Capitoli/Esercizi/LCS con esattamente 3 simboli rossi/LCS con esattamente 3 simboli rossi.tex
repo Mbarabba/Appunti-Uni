@@ -1,0 +1,197 @@
+\chapter{LCS con esattamente 3 elementi rossi}
+
+\section{Definizione del problema e dei sottoproblemi}
+
+\subsection{Istanza e obiettivo}
+Siano date due sequenze di caratteri:
+\begin{align*}
+    X &= \langle x_1, x_2, \dots, x_m \rangle \\
+    Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+e una funzione di colorazione $\text{col}: \Sigma \to \{\text{rosso}, \text{nero}, \text{blu}\}$ che associa a ogni elemento un colore.
+
+L'obiettivo è determinare una più lunga sottosequenza comune (LCS) tra $X$ e $Y$ che contenga \textbf{esattamente 3 simboli di colore rosso}.
+
+\subsection{Definizione del generico sottoproblema e del coefficiente}
+Definiamo il generico sottoproblema tramite la tupla di indici $(i, j, r)$, dove:
+\begin{align*}
+    i &\in \{0, 1, \dots, m\} \quad (\text{lunghezza del prefisso } X_i) \\
+    j &\in \{0, 1, \dots, n\} \quad (\text{lunghezza del prefisso } Y_j) \\
+    r &\in \{0, 1, 2, 3\} \quad (\text{numero esatto di elementi rossi richiesti})
+\end{align*}
+Il numero totale di sottoproblemi distinti è $(m + 1)(n + 1)(4)$.
+
+Definiamo il coefficiente $c_{i,j}^r$ come la lunghezza della più lunga sottosequenza comune tra i prefissi $X_i$ e $Y_j$ contenente \textbf{esattamente $r$ simboli rossi}. Se per una data configurazione non esiste alcuna sottosequenza comune valida che soddisfi il vincolo dei rossi esatti, poniamo per convenzione:
+\begin{equation*}
+    c_{i,j}^r = -\infty
+\end{equation*}
+
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Casi base}
+I casi base corrispondono alle configurazioni in cui almeno uno dei due prefissi considerati è vuoto ($i = 0 \lor j = 0$). Poiché la sequenza vuota $\langle \rangle$ ha lunghezza $0$ e contiene esattamente $0$ elementi rossi, si distinguono due casi:
+\begin{align*}
+    (i = 0 \lor j = 0) \land r = 0 &\implies c_{i,j}^0 = 0 \\
+    (i = 0 \lor j = 0) \land r > 0 &\implies c_{i,j}^r = -\infty
+\end{align*}
+Il valore $-\infty$ impedisce all'operatore di massimo ($\max$) di selezionare stati privi di soluzioni ammissibili.
+
+\subsection{Passo ricorsivo}
+Per $i > 0$ e $j > 0$, confrontiamo gli ultimi caratteri dei prefissi correnti ($x_i$ e $y_j$):
+\begin{enumerate}
+    \item \textbf{Se $x_i \neq y_j$:} I caratteri non possono far parte simultaneamente della LCS. Si massimizza escludendo l'uno o l'altro prefisso a parità di vincolo $r$:
+    \begin{equation*}
+        c_{i,j}^r = \max\{c_{i-1, j}^r, \, c_{i, j-1}^r\}
+    \end{equation*}
+
+    \item \textbf{Se $x_i = y_j$ e $\text{col}(x_i) \neq \text{rosso}$:} Il carattere comune non è rosso; pertanto viene incluso nella sottosequenza (+1) senza alterare il numero di rossi accumulati:
+    \begin{equation*}
+        c_{i,j}^r = c_{i-1, j-1}^r + 1
+    \end{equation*}
+
+    \item \textbf{Se $x_i = y_j$ e $\text{col}(x_i) = \text{rosso}$:} Il carattere comune è rosso. Il comportamento varia a seconda del parametro $r$:
+    \begin{itemize}
+        \item \textbf{Se $r = 0$:} Poiché non possiamo ammettere elementi rossi, il match deve essere obbligatoriamente scartato:
+        \begin{equation*}
+            c_{i,j}^0 = c_{i-1, j-1}^0
+        \end{equation*}
+        \item \textbf{Se $r > 0$:} Possiamo scegliere se includere il carattere rosso (attingendo a una sottosequenza con $r-1$ rossi ed estendendola di $1$) oppure escluderlo (mantenendo la richiesta di $r$ rossi dal prefisso precedente):
+        \begin{equation*}
+            c_{i,j}^r = \max\{c_{i-1, j-1}^{r-1} + 1, \, c_{i-1, j-1}^r\}
+        \end{equation*}
+    \end{itemize}
+\end{enumerate}
+
+\subsection{Soluzione del problema principale}
+La lunghezza ottima della più lunga sottosequenza comune contenente esattamente 3 rossi sull'intera estensione delle sequenze è data da:
+\begin{equation*}
+    \text{Lunghezza Ottima} = c_{m, n}^3
+\end{equation*}
+Se $c_{m, n}^3 = -\infty$, significa che non esiste alcuna sottosequenza comune tra $X$ e $Y$ con esattamente 3 elementi rossi.
+
+\section{Algoritmo Bottom-Up}
+L'algoritmo riempie iterativamente la tabella $C[0 \dots m, 0 \dots n, 0 \dots 3]$ rispettando l'ordine topologico delle dipendenze:
+
+\begin{algorithm}[H]
+\caption{Costruzione Bottom-Up per LCS con esattamente 3 rossi}
+\begin{algorithmic}[1]
+\Procedure{LCS-Esattamente-3-Rossi}{$X, Y$}
+    \State $m = \text{length}(X)$
+    \State $n = \text{length}(Y)$
+    \State Alloca $C[0 \dots m, \, 0 \dots n, \, 0 \dots 3]$
+    
+    \Statex \Comment{\textbf{Inizializzazione casi base}}
+    \For{$i = 0 \textbf{ to } m$}
+        \State $C[i, 0, 0] = 0$
+        \For{$r = 1 \textbf{ to } 3$}
+            \State $C[i, 0, r] = -\infty$
+        \EndFor
+    \EndFor
+    \For{$j = 0 \textbf{ to } n$}
+        \State $C[0, j, 0] = 0$
+        \For{$r = 1 \textbf{ to } 3$}
+            \State $C[0, j, r] = -\infty$
+        \EndFor
+    \EndFor
+
+    \Statex \Comment{\textbf{Passo ricorsivo}}
+    \For{$i = 1 \textbf{ to } m$}
+        \For{$j = 1 \textbf{ to } n$}
+            \For{$r = 0 \textbf{ to } 3$}
+                \If{$x_i \neq y_j$}
+                    \State $C[i, j, r] = \max(C[i-1, j, r], \, C[i, j-1, r])$
+                \ElsIf{$\text{col}(x_i) \neq \text{rosso}$}
+                    \If{$C[i-1, j-1, r] \neq -\infty$}
+                        \State $C[i, j, r] = C[i-1, j-1, r] + 1$
+                    \Else
+                        \State $C[i, j, r] = -\infty$
+                    \EndIf
+                \Else \Comment{$x_i = y_j \land \text{col}(x_i) = \text{rosso}$}
+                    \If{$r == 0$}
+                        \State $C[i, j, 0] = C[i-1, j-1, 0]$
+                    \Else
+                        \State $v_1 = (C[i-1, j-1, r-1] \neq -\infty) \ ? \ C[i-1, j-1, r-1] + 1 : -\infty$
+                        \State $v_2 = C[i-1, j-1, r]$
+                        \State $C[i, j, r] = \max(v_1, \, v_2)$
+                    \EndIf
+                \EndIf
+            \EndFor
+        \EndFor
+    \EndFor
+    \State \Return $C$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Procedura di Ricostruzione della Soluzione}
+La procedura ricorsiva risale la matrice $C$ a partire dallo stato $(m, n, 3)$, stampando i simboli ammissibili solo dopo il ritorno della chiamata ricorsiva, garantendo l'ordine da sinistra a destra.
+
+\begin{algorithm}[H]
+\caption{Ricostruzione della soluzione ottima}
+\begin{algorithmic}[1]
+\Procedure{Stampa-LCS-3R}{$C, X, Y, i, j, r$}
+    \If{$i == 0 \lor j == 0$}
+        \State \Return
+    \EndIf
+
+    \If{$x_i \neq y_j$}
+        \If{$C[i-1, j, r] \ge C[i, j-1, r]$}
+            \State \Call{Stampa-LCS-3R}{$C, X, Y, i-1, j, r$}
+        \Else
+            \State \Call{Stampa-LCS-3R}{$C, X, Y, i, j-1, r$}
+        \EndIf
+    \Else
+        \If{$\text{col}(x_i) \neq \text{rosso}$}
+            \State \Call{Stampa-LCS-3R}{$C, X, Y, i-1, j-1, r$}
+            \State \textbf{print} $x_i$
+        \Else \Comment{$x_i = y_j \land \text{col}(x_i) = \text{rosso}$}
+            \If{$r == 0$}
+                \State \Call{Stampa-LCS-3R}{$C, X, Y, i-1, j-1, 0$}
+            \Else
+                \If{$C[i, j, r] == C[i-1, j-1, r-1] + 1$}
+                    \State \Call{Stampa-LCS-3R}{$C, X, Y, i-1, j-1, r-1$}
+                    \State \textbf{print} $x_i$
+                \Else
+                    \State \Call{Stampa-LCS-3R}{$C, X, Y, i-1, j-1, r$}
+                \EndIf
+            \EndIf
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\paragraph{Invocazione iniziale:} La ricostruzione viene avviata solo se il problema ammette soluzione:
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+\If{$C[m, n, 3] == -\infty$}
+    \State \textbf{print} ``Nessuna sottosequenza comune ammissibile con esattamente 3 rossi''
+\Else
+    \State \Call{Stampa-LCS-3R}{$C, X, Y, m, n, 3$}
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+
+\section{Analisi della complessità}
+
+\subsection{Complessità temporale}
+\begin{itemize}
+    \item \textbf{Inizializzazione casi base:} Richiede $\Theta(m \cdot 4 + n \cdot 4) = \Theta(m + n)$ operazioni elementari.
+    \item \textbf{Riempimento della tabella:} La matrice contiene $(m+1)(n+1) \times 4$ celle. Ciascuna cella $(i, j, r)$ viene calcolata in tempo $\mathcal{O}(1)$, eseguendo solo confronti tra valori già presenti in memoria. Il tempo totale speso dall'algoritmo Bottom-Up è dunque:
+    \begin{equation*}
+        T_{\text{costruzione}}(m, n) = \Theta(m \cdot n \cdot 4) = \Theta(m \cdot n)
+    \end{equation*}
+    \item \textbf{Ricostruzione:} Ad ogni passo ricorsivo della procedura \textsc{Stampa-LCS-3R}, almeno uno degli indici $i$ o $j$ decrementa di 1. La profondità massima dell'albero di ricorsione è $m + n$, rendendo il tempo di stampa:
+    \begin{equation*}
+        T_{\text{ricostruzione}}(m, n) = \mathcal{O}(m + n)
+    \end{equation*}
+\end{itemize}
+
+\subsection{Complessità spaziale}
+La memoria ausiliaria occupata è dominata dall'allocazione della matrice tridimensionale $C$:
+\begin{equation*}
+    S(m, n) = \Theta(m \cdot n \cdot 4) = \Theta(m \cdot n)
+\end{equation*}
+La procedura di ricostruzione impiega inoltre uno spazio su stack di chiamate pari a $\mathcal{O}(m + n)$ nel caso pessimo.

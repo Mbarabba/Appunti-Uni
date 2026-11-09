@@ -1,0 +1,198 @@
+% ==============================================================================
+% Capitolo: LCS con al massimo 3 simboli rossi
+% Da includere nel documento principale tramite:
+%   \input{lcs_massimo_3_rossi.tex} oppure \include{lcs_massimo_3_rossi}
+%
+% Requisiti nel preambolo del documento principale:
+%   \usepackage{amsmath, amssymb}
+%   \usepackage{algorithm}
+%   \usepackage[noend]{algpseudocode}  (oppure algpseudocodex)
+% ==============================================================================
+
+\chapter{LCS con al massimo 3 simboli rossi}
+
+In questo capitolo esaminiamo la variante del problema della \emph{Longest Common Subsequence} (LCS) in cui ciascun carattere dell'alfabeto possiede un colore associato e la sottosequenza comune cercata deve rispettare un vincolo sul numero massimo di elementi rossi ammessi.
+
+\section{Definizione del problema}
+
+\paragraph{Istanza:}
+\begin{itemize}
+    \item Due sequenze $X = \langle x_1, x_2, \dots, x_m \rangle$ e $Y = \langle y_1, y_2, \dots, y_n \rangle$ su un alfabeto finito $\Sigma$.
+    \item Una funzione di colorazione $\text{col}: \Sigma \to \{\text{rosso}, \text{blu}, \text{nero}\}$ che associa a ciascun carattere uno specifico colore.
+    \item Una soglia massima di elementi rossi consentiti pari a $R = 3$.
+\end{itemize}
+
+\paragraph{Soluzione:}
+Una più lunga sottosequenza comune $Z = \langle z_1, z_2, \dots, z_k \rangle$ a $X$ e $Y$ che contenga al più $3$ elementi di colore rosso, ossia tale che:
+\[
+|\{ \ell \in \{1, \dots, k\} \mid \text{col}(z_\ell) = \text{rosso} \}| \le 3
+\]
+con lunghezza $k = |Z|$ massima.
+
+\section{Definizione dei sottoproblemi e del coefficiente}
+
+Poiché l'ammissibilità dell'inclusione di un carattere rosso dipende da quanti simboli rossi sono già stati scelti, non è sufficiente considerare unicamente i prefissi $X_i$ e $Y_j$. È necessario introdurre una variabile di stato $r$ che rappresenti il budget residuo di elementi rossi utilizzabili.
+
+\paragraph{Generico sottoproblema di dimensione $(i, j, r)$:}
+Trovare una più lunga sottosequenza comune tra i prefissi $X_i$ e $Y_j$ avente al massimo $r$ elementi di colore rosso, con:
+\begin{align*}
+    i &\in \{0, 1, \dots, m\} \\
+    j &\in \{0, 1, \dots, n\} \\
+    r &\in \{0, 1, 2, 3\}
+\end{align*}
+
+\paragraph{Numero totale di sottoproblemi:}
+La cardinalità complessiva dello spazio degli stati è:
+\[
+(m + 1) \cdot (n + 1) \cdot (3 + 1) = 4(m + 1)(n + 1)
+\]
+
+\paragraph{Coefficiente $c_{i,j}^r$:}
+Definiamo $c_{i,j}^r$ come la lunghezza della soluzione ottima del generico sottoproblema $(i, j, r)$, ovvero la lunghezza di una LCS tra i prefissi $X_i$ e $Y_j$ con al più $r$ elementi rossi.
+
+\paragraph{Soluzione del problema principale:}
+Il problema originario corrisponde al sottoproblema calcolato sulle intere sequenze con l'intero budget iniziale di rossi disponibile:
+\[
+\text{Valore Ottimo} = c_{m, n}^3
+\]
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Casi base}
+Se almeno una delle due sequenze è vuota ($i = 0$ oppure $j = 0$), non è possibile formare alcuna sottosequenza comune non vuota. La sequenza vuota $\langle \rangle$ ha lunghezza $0$ e rispetta il vincolo di avere al massimo $r$ rossi per qualsiasi $r \ge 0$:
+\begin{equation}
+    \forall r \in \{0, 1, 2, 3\}, \quad (i = 0 \lor j = 0) \implies c_{i,j}^r = 0
+\end{equation}
+
+\subsection{Passo ricorsivo}
+Siano $i > 0$ e $j > 0$. Si analizzano i casi in base al confronto tra gli ultimi caratteri dei prefissi considerati ($x_i$ e $y_j$):
+
+\paragraph{1. Se $x_i \ne y_j$:}
+I due caratteri sono distinti e non possono far parte contemporaneamente di una sottosequenza comune. La soluzione ottima è il massimo tra le soluzioni ottenute escludendo $x_i$ oppure $y_j$, lasciando inalterato il budget $r$:
+\begin{equation}
+    c_{i,j}^r = \max\{c_{i-1, j}^r, \; c_{i, j-1}^r\}
+\end{equation}
+
+\paragraph{2. Se $x_i = y_j$ e $\text{col}(x_i) \ne \text{rosso}$:}
+I caratteri coincidono e il colore non è rosso. L'elemento può essere incluso nella LCS senza consumare quote del budget dei rossi:
+\begin{equation}
+    c_{i,j}^r = c_{i-1, j-1}^r + 1
+\end{equation}
+
+\paragraph{3. Se $x_i = y_j$ e $\text{col}(x_i) = \text{rosso}$:}
+I caratteri coincidono ed entrambi sono rossi. Si distinguono due situazioni in base al budget residuo:
+\begin{itemize}
+    \item \textbf{Se $r = 0$:} il budget è esaurito e non è consentito includere ulteriori elementi rossi. Si valuta il sottoproblema sui prefissi precedenti senza variare il budget:
+    \begin{equation}
+        c_{i,j}^0 = c_{i-1, j-1}^0
+    \end{equation}
+    \item \textbf{Se $r > 0$:} possiamo scegliere se includere il match rosso (consumando un'unità di budget e incrementando la lunghezza di 1) oppure scartarlo:
+    \begin{equation}
+        c_{i,j}^r = \max\{c_{i-1, j-1}^{r-1} + 1, \; c_{i-1, j-1}^r\}
+    \end{equation}
+\end{itemize}
+
+\newpage
+\section{Algoritmo Bottom-Up}
+
+L'algoritmo iterativo riempie una tabella tridimensionale $c[0 \dots m, 0 \dots n, 0 \dots 3]$. I casi base vengono azzerati su tutti i piani $r$. I tre cicli annidati per $i$, $j$ ed $r$ garantiscono che ogni cella venga calcolata solo dopo che i valori precedenti ($i-1$ o $j-1$) sono già disponibili.
+
+\begin{algorithm}[H]
+\caption{Calcolo della tabella delle lunghezze (\textsc{LCS-3R-Length})}
+\label{alg:lcs3r-length}
+\begin{algorithmic}[1]
+\Require Sequenze $X = \langle x_1, \dots, x_m \rangle$, $Y = \langle y_1, \dots, y_n \rangle$ e funzione $\text{col}$
+\Ensure Tabella tridimensionale $c$ con le lunghezze ottime
+\State $m \gets \text{length}(X)$
+\State $n \gets \text{length}(Y)$
+\State Sia $c[0 \dots m, 0 \dots n, 0 \dots 3]$ una nuova tabella tridimensionale
+\For{$i \gets 0 \textbf{ to } m$} \Comment{Inizializzazione casi base per $j = 0$}
+    \For{$r \gets 0 \textbf{ to } 3$}
+        \State $c[i, 0, r] \gets 0$
+    \EndFor
+\EndFor
+\For{$j \gets 0 \textbf{ to } n$} \Comment{Inizializzazione casi base per $i = 0$}
+    \For{$r \gets 0 \textbf{ to } 3$}
+        \State $c[0, j, r] \gets 0$
+    \EndFor
+\EndFor
+\For{$i \gets 1 \textbf{ to } m$}
+    \For{$j \gets 1 \textbf{ to } n$}
+        \For{$r \gets 0 \textbf{ to } 3$}
+            \If{$x_i \ne y_j$}
+                \State $c[i, j, r] \gets \max(c[i-1, j, r], \, c[i, j-1, r])$
+            \ElsIf{$\text{col}(x_i) \ne \text{rosso}$}
+                \State $c[i, j, r] \gets c[i-1, j-1, r] + 1$
+            \ElsIf{$r = 0$}
+                \State $c[i, j, 0] \gets c[i-1, j-1, 0]$
+            \Else
+                \State $c[i, j, r] \gets \max(c[i-1, j-1, r-1] + 1, \, c[i-1, j-1, r])$
+            \EndIf
+        \EndFor
+    \EndFor
+\EndFor
+\State \Return $c$
+\end{algorithmic}
+\end{algorithm}
+
+\newpage
+\section{Algoritmo di Ricostruzione}
+
+La procedura di ricostruzione ripercorre la tabella $c$ a ritroso a partire dalla cella $(m, n, 3)$ senza necessitare di una matrice ausiliaria di puntatori. La stampa del carattere avviene al ritorno della ricorsione, garantendo l'emissione nell'ordine naturale da sinistra a destra.
+
+\begin{algorithm}[H]
+\caption{Ricostruzione ricorsiva della soluzione ottima (\textsc{Print-LCS-3R})}
+\label{alg:print-lcs3r}
+\begin{algorithmic}[1]
+\Require Tabella $c$, sequenze $X, Y$, indici correnti $i, j$ e budget $r$
+\If{$i = 0 \lor j = 0$}
+    \State \Return
+\EndIf
+\If{$x_i \ne y_j$}
+    \If{$c[i, j, r] = c[i-1, j, r]$}
+        \State \Call{Print-LCS-3R}{$c, X, Y, i-1, j, r$}
+    \Else
+        \State \Call{Print-LCS-3R}{$c, X, Y, i, j-1, r$}
+    \EndIf
+\ElsIf{$\text{col}(x_i) \ne \text{rosso}$}
+    \State \Call{Print-LCS-3R}{$c, X, Y, i-1, j-1, r$}
+    \State \textbf{print} $x_i$
+\ElsIf{$r = 0$}
+    \State \Call{Print-LCS-3R}{$c, X, Y, i-1, j-1, 0$}
+\Else
+    \If{$c[i, j, r] = c[i-1, j-1, r-1] + 1$}
+        \State \Call{Print-LCS-3R}{$c, X, Y, i-1, j-1, r-1$}
+        \State \textbf{print} $x_i$
+    \Else
+        \State \Call{Print-LCS-3R}{$c, X, Y, i-1, j-1, r$}
+    \EndIf
+\EndIf
+\end{algorithmic}
+\end{algorithm}
+
+\paragraph{Chiamata iniziale:}
+La ricostruzione della sequenza ottima viene avviata invocando:
+\[
+\Call{Print-LCS-3R}{c, X, Y, m, n, 3}
+\]
+
+\section{Analisi della Complessità}
+
+\paragraph{Complessità temporale dell'algoritmo Bottom-Up:}
+L'inizializzazione richiede tempo $\Theta(m + n)$. I tre cicli annidati compiono esattamente $4 \cdot m \cdot n$ iterazioni, ciascuna eseguita in tempo $O(1)$. Poiché il limite di rossi $R = 3$ è costante, il tempo totale di esecuzione è:
+\[
+T(m, n) = \Theta(m \cdot n)
+\]
+
+\paragraph{Complessità spaziale dell'algoritmo Bottom-Up:}
+Lo spazio di memoria è dominato dalla tabella tridimensionale $c$ di dimensioni $(m + 1) \times (n + 1) \times 4$:
+\[
+S(m, n) = \Theta(m \cdot n)
+\]
+
+\paragraph{Complessità della procedura di ricostruzione:}
+A ogni chiamata ricorsiva almeno uno tra gli indici $i$ e $j$ viene decrementato di $1$, per un numero massimo di chiamate pari a $m + n$. Ciascun passo richiede tempo $O(1)$.
+\begin{itemize}
+    \item \textbf{Tempo di ricostruzione:} $O(m + n)$.
+    \item \textbf{Spazio ausiliario:} $O(m + n)$ dovuto all'altezza dello stack delle chiamate ricorsive.
+\end{itemize}

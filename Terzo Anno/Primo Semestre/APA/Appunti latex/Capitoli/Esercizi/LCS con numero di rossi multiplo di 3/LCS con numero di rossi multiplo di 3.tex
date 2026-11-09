@@ -1,0 +1,135 @@
+\chapter{LCS con un numero di simboli rossi multiplo di 3}\section{Definizione del Problema}Siano date due sequenze:
+\begin{align*}
+X &= \langle x_1, x_2, \dots, x_m \rangle \
+Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+su un generico alfabeto finito $\Sigma$, e sia definita una funzione colore:
+$$\text{col} : \Sigma \to \{\text{rosso}, \text{non-rosso}\}$$
+Il problema richiede di trovare la più lunga sottosequenza comune (LCS) tra $X$ e $Y$ tale che il numero complessivo di elementi di colore rosso sia un \textbf{multiplo di 3} (ovvero pari a $0, 3, 6, 9, \dots$).\section{Definizione del Generico Sottoproblema e del Coefficiente}Per modellare il vincolo di divisibilità per 3 mediante la programmazione dinamica, introduciamo uno stato modulare:
+$$p \in \{0, 1, 2\}$$
+che rappresenta il resto della divisione intera per 3 del numero di simboli rossi inclusi nella sottosequenza comune (aritmetica modulare $\pmod 3$):
+\begin{itemize}
+\item $p = 0$: il numero di rossi è $3k$ ($0 \pmod 3$, cioè multiplo di 3);
+\item $p = 1$: il numero di rossi è $3k + 1$ ($1 \pmod 3$);
+\item $p = 2$: il numero di rossi è $3k + 2$ ($2 \pmod 3$).
+\end{itemize}\subsection{Sottoproblema di dimensione $(i, j, p)$}
+Dati i prefissi $X_i = \langle x_1, \dots, x_i \rangle$ e $Y_j = \langle y_1, \dots, y_j \rangle$ con:
+$$i \in \{0, 1, \dots, m\}, \quad j \in \{0, 1, \dots, n\}, \quad p \in \{0, 1, 2\}$$
+il sottoproblema consiste nel calcolare una più lunga sottosequenza comune tra $X_i$ e $Y_j$ che contenga un numero di simboli rossi congruo a $p \pmod 3$.\subsection{Definizione del Coefficiente $c_{i,j}^p$}
+Definiamo il coefficiente $c_{i,j}^p$ come:
+$$c_{i,j}^p = \begin{cases} \vert{}Z^{(i,j,p)}\vert{} & \text{se esiste una sottosequenza comune tra } X_i \text{ e } Y_j \text{ con numero di rossi } \equiv p \pmod 3 \\ -\infty & \text{altrimenti (configurazione inammissibile)} \end{cases}$$\subsection{Soluzione Ottima del Problema Principale}
+Il problema principale corrisponde all'intera estensione delle due sequenze con richiesta di un numero di rossi multiplo di 3 ($p = 0$):
+\begin{itemize}
+\item \textbf{Lunghezza ottima:} $c_{m,n}^0$ (se $c_{m,n}^0 = -\infty$, non esiste alcuna sottosequenza ammissibile);
+\item \textbf{Sottosequenza ottima:} $Z^{(m,n,0)}$.
+\end{itemize}\section{Equazioni di Ricorrenza}\subsection{Casi Base}
+I casi base si hanno quando almeno uno dei due prefissi è vuoto, ossia quando $i = 0 \lor j = 0$:
+$$\forall p \in \{0, 1, 2\}, \quad (i = 0 \lor j = 0) \implies c_{i,j}^p = \begin{cases} 0 & \text{se } p = 0 \quad (\text{la sequenza vuota } \langle \rangle \text{ ha } 0 \text{ rossi, e } 0 \equiv 0 \pmod 3) \\ -\infty & \text{se } p \in \{1, 2\} \quad (\text{impossibile avere resti positivi con } \langle \rangle) \end{cases}$$\subsection{Passo Ricorsivo ($i > 0 \land j > 0$)}
+Siano $i \in \{1, \dots, m\}$ e $j \in \{1, \dots, n\}$. Si distinguono i seguenti casi:\paragraph{Caso 1: $x_i \neq y_j$}
+Gli elementi finali non coincidono; il miglior allineamento non può includerli contemporaneamente:
+$$\forall p \in \{0, 1, 2\}, \quad c_{i,j}^p = \max \{ c_{i-1,j}^p, \, c_{i,j-1}^p \}$$\paragraph{Caso 2: $x_i = y_j$ e $\text{col}(x_i) \neq \text{rosso}$}
+Il carattere comune non è rosso; la sua inclusione incrementa la lunghezza di 1 senza variare il numero di rossi accumulati:
+$$\forall p \in \{0, 1, 2\}, \quad c_{i,j}^p = c_{i-1,j-1}^p + 1$$
+\textit{Nota convenzionale:} se $c_{i-1,j-1}^p = -\infty$, si assume $-\infty + 1 = -\infty$.\paragraph{Caso 3: $x_i = y_j$ e $\text{col}(x_i) = \text{rosso}$}
+Il carattere comune è rosso. Includendolo, la parità modulare passa da $(p - 1) \pmod 3$ a $p$:
+\begin{itemize}
+\item \textbf{Se $p = 0$:} possiamo scegliere se includere $x_i$ (agganciandoci a una soluzione ottima con resto $2$, poiché $(2 + 1) \equiv 0 \pmod 3$) oppure scartarlo mantenendo il resto $0$:
+$$c_{i,j}^0 = \max \{ c_{i-1,j-1}^2 + 1, \, c_{i-1,j-1}^0 \}$$
+\item \textbf{Se $p = 1$:} per ottenere resto $1$ dobbiamo necessariamente accodare $x_i$ a una soluzione con resto $0$ (infatti $0 + 1 = 1$):
+$$c_{i,j}^1 = c_{i-1,j-1}^0 + 1$$
+\item \textbf{Se $p = 2$:} per ottenere resto $2$ dobbiamo necessariamente accodare $x_i$ a una soluzione con resto $1$ (infatti $1 + 1 = 2$):
+$$c_{i,j}^2 = c_{i-1,j-1}^1 + 1$$
+\end{itemize}\section{Algoritmo Iterativo Bottom-Up}Riportiamo lo pseudocodice corretto per la costruzione della tabella tridimensionale $c[0\dots m, 0\dots n, 0\dots 2]$.\begin{algorithm}[H]
+\caption{Calcolo Bottom-Up per LCS con rossi multipli di 3}
+\begin{algorithmic}[1]
+\Procedure{LCS-M3R}{$X, Y$}
+\State $m \gets \vert{}X\vert{}$
+\State $n \gets \vert{}Y\vert{}$
+\State Inizializza matrice $c[0 \dots m, \, 0 \dots n, \, 0 \dots 2]$ con $-\infty$\Comment{\textbf{Inizializzazione dei Casi Base}}
+\For{$i \gets 0 \textbf{ to } m$}
+    \State $c[i, 0, 0] \gets 0$
+    \State $c[i, 0, 1] \gets -\infty$
+    \State $c[i, 0, 2] \gets -\infty$
+\EndFor
+\For{$j \gets 0 \textbf{ to } n$}
+    \State $c[0, j, 0] \gets 0$
+    \State $c[0, j, 1] \gets -\infty$
+    \State $c[0, j, 2] \gets -\infty$
+\EndFor
+
+\Comment{\textbf{Riempimento Bottom-Up}}
+\For{$i \gets 1 \textbf{ to } m$}
+    \For{$j \gets 1 \textbf{ to } n$}
+        \If{$x_i \neq y_j$}
+            \For{$p \gets 0 \textbf{ to } 2$}
+                \State $c[i, j, p] \gets \max\{ c[i-1, j, p], \, c[i, j-1, p] \}$
+            \EndFor
+        \Else \Comment{$x_i = y_j$}
+            \If{$\text{col}(x_i) \neq \text{rosso}$}
+                \For{$p \gets 0 \textbf{ to } 2$}
+                    \State $c[i, j, p] \gets c[i-1, j-1, p] + 1$
+                \EndFor
+            \Else \Comment{$x_i = y_j \land \text{col}(x_i) = \text{rosso}$}
+                \State $c[i, j, 0] \gets \max\{ c[i-1, j-1, 2] + 1, \, c[i-1, j-1, 0] \}$
+                \State $c[i, j, 1] \gets c[i-1, j-1, 0] + 1$
+                \State $c[i, j, 2] \gets c[i-1, j-1, 1] + 1$
+            \EndIf
+        \EndIf
+    \EndFor
+\EndFor
+\State \Return $c$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}\section{Algoritmo di Ricostruzione della Soluzione}La procedura di ricostruzione risale la tabella $c$ determinando all'indietro le scelte ottime effettuate. La stampa dei caratteri avviene in post-ordine (dopo la chiamata ricorsiva), garantendo che la sottosequenza sia stampata da sinistra verso destra.\begin{algorithm}[H]
+\caption{Ricostruzione Ricorsiva della LCS vincolata}
+\begin{algorithmic}[1]
+\Procedure{PRINT-LCS-M3R}{$c, X, Y, i, j, p$}
+\If{$i = 0 \lor j = 0$}
+\State \Return
+\EndIf\If{$x_i \neq y_j$}
+    \If{$c[i, j, p] == c[i-1, j, p]$}
+        \State \Call{PRINT-LCS-M3R}{$c, X, Y, i-1, j, p$}
+    \Else
+        \State \Call{PRINT-LCS-M3R}{$c, X, Y, i, j-1, p$}
+    \EndIf
+\Else \Comment{$x_i = y_j$}
+    \If{$\text{col}(x_i) \neq \text{rosso}$}
+        \State \Call{PRINT-LCS-M3R}{$c, X, Y, i-1, j-1, p$}
+        \State \textbf{print} $x_i$
+    \Else \Comment{$\text{col}(x_i) = \text{rosso}$}
+        \If{$p = 0$}
+            \If{$c[i, j, 0] == c[i-1, j-1, 2] + 1$}
+                \State \Call{PRINT-LCS-M3R}{$c, X, Y, i-1, j-1, 2$}
+                \State \textbf{print} $x_i$
+            \Else
+                \State \Call{PRINT-LCS-M3R}{$c, X, Y, i-1, j-1, 0$}
+            \EndIf
+        \ElsIf{$p = 1$}
+            \State \Call{PRINT-LCS-M3R}{$c, X, Y, i-1, j-1, 0$}
+            \State \textbf{print} $x_i$
+        \ElsIf{$p = 2$}
+            \State \Call{PRINT-LCS-M3R}{$c, X, Y, i-1, j-1, 1$}
+            \State \textbf{print} $x_i$
+        \EndIf
+    \EndIf
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}\subsection{Procedura Principale (Driver)}
+Per avviare la ricostruzione sulla soluzione globale del problema:
+\begin{algorithmic}[1]
+\If{$c[m, n, 0] == -\infty$}
+\State \textbf{print} "Nessuna sottosequenza comune con numero di rossi multiplo di 3"
+\Else
+\State \Call{PRINT-LCS-M3R}{$c, X, Y, m, n, 0$}
+\EndIf
+\end{algorithmic}\section{Analisi della Complessità}\subsection{Complessità Temporale}
+\begin{itemize}
+\item \textbf{Calcolo Bottom-Up:} I cicli su $i$ e $j$ iterano $(m+1)(n+1)$ volte. All'interno, lo stato $p$ assume esattamente 3 valori ($0, 1, 2$). Ogni operazione interna (confronto o incremento) richiede tempo $O(1)$. Il tempo totale è quindi:
+$$T(m, n) = \Theta(m \cdot n \cdot 3) = \Theta(m \cdot n)$$
+\item \textbf{Ricostruzione:} Ad ogni passo ricorsivo, almeno uno tra gli indici $i$ e $j$ decresce di almeno 1. La procedura esegue al più $m + n$ passi, ciascuno di costo $O(1)$:
+$$T_{\text{ricostruzione}}(m, n) = O(m + n)$$
+\end{itemize}\subsection{Complessità Spaziale}
+L'algoritmo memorizza la tabella $c$ di dimensioni $(m + 1) \times (n + 1) \times 3$:
+$$S(m, n) = \Theta(m \cdot n)$$
+Lo spazio ausiliario per lo stack della ricorsione nella procedura di ricostruzione è limitato a $O(m + n)$.

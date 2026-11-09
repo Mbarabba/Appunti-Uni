@@ -380,6 +380,27 @@ INPUT Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux
 INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
 INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
 INPUT Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
+INPUT ./Capitoli/Esercizi/HCS/HCS.aux
+INPUT ./Capitoli/Esercizi/HCS/HCS.aux
+INPUT Capitoli/Esercizi/HCS/HCS.aux
+INPUT ./Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.aux
+INPUT Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.aux
+INPUT Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.aux
+INPUT Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.aux
+INPUT Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.aux
+INPUT ./Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.aux
+INPUT ./Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.aux
+INPUT Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.aux
+INPUT ./Capitoli/Esercizi/LDCS/LDCS.aux
+INPUT ./Capitoli/Esercizi/LDCS/LDCS.aux
+INPUT Capitoli/Esercizi/LDCS/LDCS.aux
 INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
 INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
 INPUT Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
@@ -462,6 +483,9 @@ INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 OUTPUT main.toc
 INPUT ./Capitoli/Teoria/LCS/LCS.tex
 OUTPUT Capitoli/Teoria/LCS/LCS.aux
@@ -482,8 +506,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ts1-lmr12.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr8.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmr6.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathex.enc
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmr7.tfm
@@ -600,6 +622,57 @@ OUTPUT Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
 INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.tex
 INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.tex
 INPUT Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.tex
+INPUT ./Capitoli/Esercizi/HCS/HCS.tex
+OUTPUT Capitoli/Esercizi/HCS/HCS.aux
+INPUT ./Capitoli/Esercizi/HCS/HCS.tex
+INPUT ./Capitoli/Esercizi/HCS/HCS.tex
+INPUT Capitoli/Esercizi/HCS/HCS.tex
+INPUT ./Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.tex
+OUTPUT Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.tex
+INPUT ./Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.tex
+INPUT Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
+INPUT ./Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.tex
+INPUT ./Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.tex
+OUTPUT Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.tex
+INPUT ./Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.tex
+INPUT Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbxi10.tfm
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.tex
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.tex
+OUTPUT Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.tex
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.tex
+INPUT Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.tex
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.tex
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.tex
+OUTPUT Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.tex
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.tex
+INPUT Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.tex
+INPUT ./Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.tex
+INPUT ./Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.tex
+OUTPUT Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.aux
+INPUT ./Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.tex
+INPUT ./Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.tex
+INPUT Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmbx7.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmri8.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
+INPUT ./Capitoli/Esercizi/LDCS/LDCS.tex
+INPUT ./Capitoli/Esercizi/LDCS/LDCS.tex
+OUTPUT Capitoli/Esercizi/LDCS/LDCS.aux
+INPUT ./Capitoli/Esercizi/LDCS/LDCS.tex
+INPUT ./Capitoli/Esercizi/LDCS/LDCS.tex
+INPUT Capitoli/Esercizi/LDCS/LDCS.tex
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmri10.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmri7.tfm
 INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.tex
 INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.tex
 OUTPUT Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
@@ -614,6 +687,9 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
+INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmri12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
@@ -624,8 +700,6 @@ OUTPUT Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.aux
 INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.tex
 INPUT ./Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.tex
 INPUT Capitoli/Esercizi/Hatevile max 3r/Hateville max 3r.tex
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
-INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/ec-lmcsc10.tfm
 INPUT ./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.tex
 OUTPUT Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.aux
 INPUT ./Capitoli/Esercizi/DAG con almeno un arco rosso e almeno un arco blu/DAG con almeno un arco rosso e almeo un arco blu.tex
@@ -668,6 +742,27 @@ INPUT Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux
 INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
 INPUT ./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
 INPUT Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux
+INPUT ./Capitoli/Esercizi/HCS/HCS.aux
+INPUT ./Capitoli/Esercizi/HCS/HCS.aux
+INPUT Capitoli/Esercizi/HCS/HCS.aux
+INPUT ./Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.aux
+INPUT Capitoli/Esercizi/LCS con al massimo 3 simboli rossi/LCS con al massimo 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.aux
+INPUT Capitoli/Esercizi/LCS con esattamente 3 simboli rossi/LCS con esattamente 3 simboli rossi.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.aux
+INPUT Capitoli/Esercizi/LCS con numero di rossi pari/LCS con numero di rossi pari.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.aux
+INPUT ./Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.aux
+INPUT Capitoli/Esercizi/LCS con numero di rossi multiplo di 3/LCS con numero di rossi multiplo di 3.aux
+INPUT ./Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.aux
+INPUT ./Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.aux
+INPUT Capitoli/Esercizi/LDS - Longest Decreasing Subsequence/LDS.aux
+INPUT ./Capitoli/Esercizi/LDCS/LDCS.aux
+INPUT ./Capitoli/Esercizi/LDCS/LDCS.aux
+INPUT Capitoli/Esercizi/LDCS/LDCS.aux
 INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
 INPUT ./Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
 INPUT Capitoli/Esercizi/SCS con ingombro = k/SCS con ingombro = k.aux
@@ -683,6 +778,7 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx6.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbxi10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb

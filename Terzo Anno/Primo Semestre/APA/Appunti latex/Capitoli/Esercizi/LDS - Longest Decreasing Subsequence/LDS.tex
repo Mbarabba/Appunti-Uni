@@ -1,0 +1,85 @@
+\chapter{LDS -- Longest Decreasing Subsequence}\section{Definizione del problema}\subsection{Istanza}
+Sia $X = \langle x_1, x_2, \dots, x_n \rangle$ una sequenza finita di $n$ elementi appartenenti a un insieme totalmente ordinato $(\Sigma, >)$.\subsection{Soluzione}
+Una più lunga sottosequenza decrescente $Z = \langle z_1, z_2, \dots, z_k \rangle$ di $X$, ovvero una sottosequenza di indici $1 \le i_1 < i_2 < \dots < i_k \le n$ tale che:
+\begin{equation*}
+z_1 > z_2 > \dots > z_k \quad \text{con } z_r = x_{i_r} \ \forall r \in {1, \dots, k}
+\end{equation*}
+avente lunghezza $k = \vert{}Z\vert{}$ massima.\section{Definizione del sottoproblema vincolato e coefficienti}Per garantire la proprietà della sottostruttura ottima retrospettiva, non è sufficiente considerare i prefissi generici: occorre conoscere l'ultimo elemento selezionato per stabilire se un nuovo elemento possa estendere validamente la sequenza rispettando la decrescenza.\subsection{Sottoproblema vincolato $\text{LDS}_V(X_i)$}
+Dato il prefisso $X_i = \langle x_1, \dots, x_i \rangle$ per ogni $i \in \{1, \dots, n\}$, il sottoproblema vincolato $\text{LDS}_V(X_i)$ consiste nel determinare una più lunga sottosequenza decrescente di $X_i$ \textbf{vincolata a terminare tassativamente con l'elemento $x_i$}.\subsection{Coefficiente $c_i$}
+Per ogni $i \in \{1, \dots, n\}$, si definisce il coefficiente $c_i$ come la lunghezza della soluzione ottima del rispettivo sottoproblema vincolato:
+\begin{equation*}
+c_i = |\text{LDS}_V(X_i)|
+\end{equation*}\section{Equazioni di ricorrenza}\subsection{Caso base}
+Per il prefisso di dimensione minima $i = 1$, l'unica sottosequenza decrescente vincolata a terminare in $x_1$ è la sequenza banale formata dal solo elemento $\langle x_1 \rangle$:
+\begin{equation*}
+i = 1 \implies c_1 = 1
+\end{equation*}\subsection{Passo ricorsivo}
+Per $i > 1$, l'elemento $x_i$ può estendere una qualunque sottosequenza ottima terminante in un precedente elemento $x_j$ (con $1 \le j < i$) purché sia rispettata la condizione di decrescenza stretta ($x_j > x_i$). Si sceglie quindi il predecessore che massimizza la lunghezza:
+\begin{equation*}
+c_i = \max { c_j : 1 \le j < i \land x_j > x_i } + 1 \quad \text{con la convenzione } \max \emptyset = 0
+\end{equation*}
+Se nessun elemento antecedente soddisfa la condizione $x_j > x_i$, l'insieme risulta vuoto e la formula restituisce $0 + 1 = 1$, corrispondente alla sottosequenza composta dal solo elemento isolato $\langle x_i \rangle$.\subsection{Soluzione del problema principale}
+Poiché la sottosequenza decrescente ottima globale non termina necessariamente con l'ultimo elemento $x_n$, il valore ottimo dell'istanza non vincolata si ottiene prendendo il massimo tra tutti i coefficienti calcolati nella tabella:
+\begin{equation*}
+\text{Valore Ottimo} = \max_{1 \le i \le n} { c_i }
+\end{equation*}\section{Algoritmo Bottom-Up}L'algoritmo iterativo riempie il vettore delle lunghezze $c[1 \dots n]$ e il vettore dei puntatori ai predecessori $b[1 \dots n]$, mantenendo aggiornati ad ogni passo il valore massimo globale $m$ e l'indice terminale $\mathit{ind\text{-}m}$.\begin{algorithm}[H]
+\caption{Calcolo della LDS e dei puntatori ai predecessori}
+\label{alg:lds-bottom-up}
+\begin{algorithmic}[1]
+\Procedure{LDS-Length}{$X$}
+\State $n = \text{length}(X)$ \Comment{Dimensione della sequenza di input $X = \langle x_1, \dots, x_n \rangle$}
+\State $c[1] = 1$ \Comment{Caso base: $X_1$ ammette solo $\langle x_1 \rangle$ come LDS valida}
+\State $b[1] = 0$ \Comment{$0$ indica che $x_1$ non ha alcun predecessore}
+\State $m = c[1]$ \Comment{Inizializza la lunghezza massima globale}
+\State $\mathit{ind\text{-}m} = 1$ \Comment{Indice terminale in cui si realizza l'ottimo globale corrente}
+\For{$i = 2 \textbf{ to } n$} \Comment{Calcolo di ciascun sottoproblema vincolato $\text{LDS}_V(X_i)$}
+\State $\mathit{tmp} = 0$ \Comment{Elemento neutro per gestire la convenzione $\max \emptyset = 0$}
+\State $h = 0$ \Comment{Puntatore neutro in assenza di predecessori validi}
+\For{$j = 1 \textbf{ to } i - 1$} \Comment{Scansione retrospettiva dei predecessori}
+\If{$x_j > x_i \textbf{ and } c[j] > \mathit{tmp}$} \Comment{Verifica decrescenza e miglioramento locale}
+\State $\mathit{tmp} = c[j]$ \Comment{Aggiorna la lunghezza massima trovata}
+\State $h = j$ \Comment{Memorizza l'indice del miglior predecessore}
+\EndIf
+\EndFor
+\State $c[i] = \mathit{tmp} + 1$ \Comment{Passo ricorsivo: estensione della catena decrescente}
+\State $b[i] = h$ \Comment{Memorizza il predecessore ottimo per la ricostruzione}
+\If{$c[i] > m$} \Comment{Verifica se la soluzione in $x_i$ migliora l'ottimo globale}
+\State $m = c[i]$ \Comment{Aggiorna la lunghezza massima globale}
+\State $\mathit{ind\text{-}m} = i$ \Comment{Aggiorna l'indice terminale dell'ottimo}
+\EndIf
+\EndFor
+\State \Return $c, b, m, \mathit{ind\text{-}m}$ \Comment{Restituisce tabelle e riferimenti all'ottimo}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}\section{Algoritmo di Ricostruzione}La procedura ricorsiva \textsc{Print-LDS} percorre a ritroso i puntatori registrati nel vettore $b$. Effettuando la stampa dell'elemento dopo il ritorno della chiamata ricorsiva (in post-ordine), gli elementi vengono emessi nell'ordine cronologico corretto da sinistra verso destra.\begin{algorithm}[H]
+\caption{Ricostruzione e stampa della sottosequenza ottima}
+\label{alg:print-lds}
+\begin{algorithmic}[1]
+\Procedure{Print-LDS}{$i, b, X$}
+\If{$b[i] == 0$} \Comment{Raggiunto il primo elemento della sottosequenza decrescente}
+\State $\text{print}(x_i)$
+\Else
+\State \Call{Print-LDS}{$b[i], b, X$} \Comment{Risalita ricorsiva verso il predecessore}
+\State $\text{print}(x_i)$ \Comment{Stampa in fase di ritorno (ordine naturale)}
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}\subsection{Chiamata principale (Driver)}
+Per ricostruire la sequenza decrescente ottima dell'intera sequenza $X$, la procedura viene invocata passando l'indice in cui si realizza il massimo globale:
+\begin{equation*}
+\Call{Print-LDS}{\mathit{ind\text{-}m}, b, X}
+\end{equation*}\section{Analisi di Complessità}\subsection{Complessità temporale}
+\begin{itemize}
+\item \textbf{\textsc{LDS-Length}:} Il ciclo esterno compie $n-1$ iterazioni. Per ogni indice $i$, il ciclo interno esegue $i-1$ confronti elementari a tempo costante $\Theta(1)$. Il tempo complessivo di calcolo è quindi:
+\begin{equation*}
+T(n) = \sum_{i=2}^{n} \sum_{j=1}^{i-1} \Theta(1) = \sum_{i=2}^{n} \Theta(i-1) = \Theta\left(\frac{n(n-1)}{2}\right) = \Theta(n^2)
+\end{equation*}
+\item \textbf{\textsc{Print-LDS}:} A ogni livello di ricorsione si risale di esattamente un elemento lungo la catena dei predecessori fino all'elemento iniziale ($b[i] = 0$). Il numero di chiamate è pari alla lunghezza $m$ della LDS ottima, con complessità temporale pari a:
+\begin{equation*}
+T_{\text{rec}}(m) = \Theta(m) = O(n)
+\end{equation*}
+\end{itemize}\subsection{Complessità spaziale}
+\begin{itemize}
+\item \textbf{Memoria ausiliaria:} Vengono allocati due array monodimensionali di dimensione $n$ ($c$ e $b$), per un'occupazione di memoria complessiva pari a $\Theta(n)$.
+\item \textbf{Stack di ricorsione:} La profondità massima dell'albero di chiamate di \textsc{Print-LDS} è limitata dalla lunghezza della sottosequenza ottima $m \le n$, comportando un'occupazione di memoria su stack pari a $O(n)$.
+\end{itemize}

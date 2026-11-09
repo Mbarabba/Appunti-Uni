@@ -1,0 +1,168 @@
+\chapter{LCS con un numero pari di simboli rossi}\section{Definizione del problema e dei sottoproblemi}\subsection{Istanza e obiettivo}
+Siano date due sequenze di caratteri:
+\begin{align*}
+X &= \langle x_1, x_2, \dots, x_m \rangle \
+Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+e sia $\text{col}: \Sigma \to \{\text{rosso}, \text{nero}, \text{blu}\}$ una funzione di colorazione che associa a ciascun carattere della sequenza un colore.L'obiettivo consiste nel determinare la lunghezza e una sequenza ottima per la più lunga sottosequenza comune (LCS) tra $X$ e $Y$ che contenga un \textbf{numero pari di simboli di colore rosso}.\subsection{Definizione del generico sottoproblema e del coefficiente}
+Dato che il vincolo richiede di monitorare la parità dei caratteri rossi accumulati, estendiamo lo stato del sottoproblema introducendo una variabile booleana di parità $p \in \{0, 1\}$.Definiamo il generico sottoproblema tramite la tupla di indici $(i, j, p)$, dove:
+\begin{align*}
+i &\in {0, 1, \dots, m} \quad (\text{lunghezza del prefisso } X_i) \
+j &\in {0, 1, \dots, n} \quad (\text{lunghezza del prefisso } Y_j) \
+p &\in {0, 1} \quad (\text{stato di parità del numero di elementi rossi})
+\end{align*}
+in cui:
+\begin{itemize}
+\item $p = 0$ indica che la sottosequenza comune contiene un numero \textbf{pari} di elementi rossi;
+\item $p = 1$ indica che la sottosequenza comune contiene un numero \textbf{dispari} di elementi rossi.
+\end{itemize}Il numero totale di sottoproblemi distinti è pari a:
+\begin{equation*}
+(m + 1) \times (n + 1) \times 2
+\end{equation*}Definiamo il coefficiente $c_{i,j}^p$ come la lunghezza della più lunga sottosequenza comune tra i prefissi $X_i$ e $Y_j$ avente parità di elementi rossi pari a $p$ (pari per $p=0$, dispari per $p=1$). Se per una determinata terna $(i, j, p)$ non esiste alcuna sottosequenza comune ammissibile, poniamo per convenzione:
+\begin{equation*}
+c_{i,j}^p = -\infty
+\end{equation*}
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Casi base}
+I casi base corrispondono alle configurazioni in cui almeno uno dei due prefissi considerati è vuoto ($i = 0 \lor j = 0$).La sottosequenza comune vuota $\langle \rangle$ ha lunghezza $0$ e contiene esattamente $0$ elementi rossi. Poiché lo zero è un numero pari, si distinguono i seguenti casi:
+\begin{align*}
+(i = 0 \lor j = 0) \land p = 0 &\implies c_{i,j}^0 = 0 \
+(i = 0 \lor j = 0) \land p = 1 &\implies c_{i,j}^1 = -\infty
+\end{align*}
+Il valore $-\infty$ rappresenta una configurazione impossibile (non si può avere un numero dispari di rossi a partire da sequenze vuote) ed evita che tale stato venga selezionato dall'operatore di massimo.\subsection{Passo ricorsivo}
+Siano $i > 0$ e $j > 0$. Si esaminano gli ultimi elementi dei prefissi correnti $x_i$ e $y_j$:\begin{enumerate}
+\item \textbf{Se $x_i \neq y_j$:} \
+I caratteri non coincidono e non possono comparire contemporaneamente nella stessa sottosequenza comune. La parità $p$ rimane inalterata e si sceglie il massimo escludendo l'uno o l'altro elemento:
+\begin{equation*}
+c_{i,j}^p = \max { c_{i-1, j}^p, , c_{i, j-1}^p }
+\end{equation*}\item \textbf{Se $x_i = y_j$ e $\text{col}(x_i) \neq \text{rosso}$:} \\
+Il carattere comune non è rosso (es. nero o blu) e non altera il conteggio dei simboli rossi. La parità $p$ resta la medesima e la lunghezza aumenta di $1$:
+\begin{equation*}
+    c_{i,j}^p = c_{i-1, j-1}^p + 1
+\end{equation*}
+
+\item \textbf{Se $x_i = y_j$ e $\text{col}(x_i) = \text{rosso}$:} \\
+Il carattere comune è rosso. L'inclusione di un elemento rosso inverte la parità della sottosequenza ($0 \leftrightarrow 1$):
+\begin{itemize}
+    \item \textbf{Se $p = 0$ (vogliamo ottenere parità pari):} \\
+    Possiamo includere il carattere rosso corrente aggiungendolo a una sottosequenza con parità dispari ($c_{i-1, j-1}^1 + 1$), oppure possiamo decidere di scartare il match per conservare una soluzione già pari precedentemente costruita ($c_{i-1, j-1}^0$):
+    \begin{equation*}
+        c_{i,j}^0 = \max \{ c_{i-1, j-1}^1 + 1, \, c_{i-1, j-1}^0 \}
+    \end{equation*}
+    \item \textbf{Se $p = 1$ (vogliamo ottenere parità dispari):} \\
+    Estendiamo di $1$ la migliore sottosequenza precedente avente un numero pari di elementi rossi:
+    \begin{equation*}
+        c_{i,j}^1 = c_{i-1, j-1}^0 + 1
+    \end{equation*}
+\end{itemize}
+\end{enumerate}
+
+\subsection{Soluzione del problema principale}
+La lunghezza ottima della LCS tra le sequenze complete $X$ e $Y$ con un numero pari di simboli rossi ($p=0$) corrisponde a:
+\begin{equation*}
+\text{Valore Ottimo} = c_{m, n}^0
+\end{equation*}
+Se $c_{m, n}^0 = -\infty$, non esiste alcuna sottosequenza comune ammissibile con parità richiesta.
+\section{Algoritmi}
+
+\newpage
+\subsection{Algoritmo Bottom-Up}
+L'algoritmo calcola iterativamente le celle della matrice tridimensionale $C[0 \dots m, \, 0 \dots n, \, 0 \dots 1]$ secondo l'ordine topologico delle dipendenze.\begin{algorithm}[H]
+\caption{Costruzione Bottom-Up per LCS con numero pari di elementi rossi}
+\begin{algorithmic}[1]
+\Procedure{LCS-RP}{$X, Y$}
+\State $m = \text{length}(X)$
+\State $n = \text{length}(Y)$
+\State Alloca matrice $C[0 \dots m, \, 0 \dots n, \, 0 \dots 1]$\Statex \Comment{\textbf{Inizializzazione casi base}}
+\For{$i = 0 \textbf{ to } m$}
+    \State $C[i, 0, 0] = 0$
+    \State $C[i, 0, 1] = -\infty$
+\EndFor
+\For{$j = 1 \textbf{ to } n$}
+    \State $C[0, j, 0] = 0$
+    \State $C[0, j, 1] = -\infty$
+\EndFor
+
+\Statex \Comment{\textbf{Passo iterativo}}
+\For{$i = 1 \textbf{ to } m$}
+    \For{$j = 1 \textbf{ to } n$}
+        \For{$p = 0 \textbf{ to } 1$}
+            \If{$x_i \neq y_j$}
+                \State $C[i, j, p] = \max(C[i-1, j, p], \, C[i, j-1, p])$
+            \ElsIf{$\text{col}(x_i) \neq \text{rosso}$}
+                \State $C[i, j, p] = C[i-1, j-1, p] + 1$
+            \Else \Comment{$x_i = y_j \land \text{col}(x_i) = \text{rosso}$}
+                \If{$p == 0$}
+                    \State $C[i, j, 0] = \max(C[i-1, j-1, 1] + 1, \, C[i-1, j-1, 0])$
+                \Else \Comment{$p == 1$}
+                    \State $C[i, j, 1] = C[i-1, j-1, 0] + 1$
+                \EndIf
+            \EndIf
+        \EndFor
+    \EndFor
+\EndFor
+\State \Return $C$ \Comment{Il valore ottimo si trova in $C[m, n, 0]$}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\newpage
+\subsection{Procedura di Ricostruzione della Soluzione}
+La procedura ricorsiva risale la matrice $C$ a partire dallo stato target $(m, n, 0)$, emettendo la stampa del simbolo in post-ordine rispetto alla chiamata ricorsiva, così da ottenere la sottosequenza comune nell'ordine naturale da sinistra a destra.\begin{algorithm}[H]
+\caption{Ricostruzione della soluzione ottima}
+\begin{algorithmic}[1]
+\Procedure{LCSRPR}{$C, X, Y, i, j, p$}
+\If{$i == 0 \lor j == 0$}
+\State \Return
+\EndIf\If{$x_i \neq y_j$}
+    \If{$C[i-1, j, p] \ge C[i, j-1, p]$}
+        \State \Call{LCSRPR}{$C, X, Y, i-1, j, p$}
+    \Else
+        \State \Call{LCSRPR}{$C, X, Y, i, j-1, p$}
+    \EndIf
+\ElsIf{$\text{col}(x_i) \neq \text{rosso}$}
+    \State \Call{LCSRPR}{$C, X, Y, i-1, j-1, p$}
+    \State \textbf{print} $x_i$
+\Else \Comment{$x_i = y_j \land \text{col}(x_i) = \text{rosso}$}
+    \If{$p == 0$}
+        \If{$C[i-1, j-1, 1] + 1 \ge C[i-1, j-1, 0]$}
+            \State \Call{LCSRPR}{$C, X, Y, i-1, j-1, 1$}
+            \State \textbf{print} $x_i$
+        \Else
+            \State \Call{LCSRPR}{$C, X, Y, i-1, j-1, 0$}
+        \EndIf
+    \Else \Comment{$p == 1$}
+        \State \Call{LCSRPR}{$C, X, Y, i-1, j-1, 0$}
+        \State \textbf{print} $x_i$
+    \EndIf
+\EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}\paragraph{Invocazione principale (Driver):} La procedura di ricostruzione viene avviata unicamente se esiste almeno una soluzione ammissibile:
+\begin{algorithm}[H]
+\begin{algorithmic}[1]
+\If{$C[m, n, 0] == -\infty$}
+\State \textbf{print} ``Nessuna sottosequenza comune con numero pari di elementi rossi''
+\Else
+\State \Call{LCSRPR}{$C, X, Y, m, n, 0$}
+\EndIf
+\end{algorithmic}
+\end{algorithm}\section{Analisi della complessità}\subsection{Complessità temporale}
+\begin{itemize}
+\item \textbf{Inizializzazione casi base:} Vengono assegnate $2 \times (m + 1)$ celle per la colonna $0$ e $2 \times n$ celle per la riga $0$, con un costo totale di $\Theta(m + n)$.
+\item \textbf{Riempimento della tabella:} La matrice contiene $(m + 1)(n + 1) \times 2$ celle. Ciascuna cella richiede una quantità costante di operazioni di confronto e assegnazione $\mathcal{O}(1)$. Il tempo complessivo impiegato dall'algoritmo Bottom-Up è pertanto:
+\begin{equation*}
+T_{\text{costruzione}}(m, n) = \Theta(m \cdot n \cdot 2) = \Theta(m \cdot n)
+\end{equation*}
+\item \textbf{Ricostruzione:} Ad ogni chiamata ricorsiva di \textsc{LCSRPR}, almeno uno degli indici $i$ o $j$ decrementa strettamente di $1$. L'albero di ricorsione ha profondità massima pari a $m + n$, garantendo un tempo di esecuzione pari a:
+\begin{equation*}
+T_{\text{ricostruzione}}(m, n) = \mathcal{O}(m + n)
+\end{equation*}
+\end{itemize}\subsection{Complessità spaziale}
+La memoria ausiliaria è dominata dall'allocazione della tabella $C$ di dimensione $(m + 1) \times (n + 1) \times 2$:
+\begin{equation*}
+S(m, n) = \Theta(m \cdot n \cdot 2) = \Theta(m \cdot n)
+\end{equation*}
+Lo stack delle chiamate ricorsive della procedura di risalita \textsc{LCSRPR} occupa inoltre uno spazio ausiliario aggiuntivo nel caso pessimo pari a $\mathcal{O}(m + n)$.

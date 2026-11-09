@@ -1,0 +1,148 @@
+\chapter{LDCS - Longest Decreasing Common Subsequence}
+
+\section{Definizione formale del problema}
+
+\subsection{Istanza}
+Due sequenze finite $X = \langle x_1, x_2, \dots, x_m \rangle$ e $Y = \langle y_1, y_2, \dots, y_n \rangle$ di elementi appartenenti a un insieme $\Sigma$ munito di una relazione d'ordine totale stretta ($>$).
+
+\subsection{Soluzione}
+Una più lunga sottosequenza comune a $X$ e $Y$ ordinata in modo strettamente decrescente, ovvero una sequenza $Z = \langle z_1, z_2, \dots, z_k \rangle$ tale che:
+\begin{itemize}
+    \item $Z$ sia sottosequenza comune di $X$ e $Y$;
+    \item $z_1 > z_2 > \dots > z_k$;
+    \item la lunghezza $k = |Z|$ sia massima.
+\end{itemize}
+
+---
+
+\section{Sottoproblema vincolato e coefficiente}
+
+Per garantire la proprietà della sottostruttura ottima retrospettiva e verificare la decrescenza rispetto all'ultimo carattere comune scelto, si definisce il sottoproblema ausiliario vincolato $\text{LDCS}_V(X_i, Y_j)$.
+
+\subsection{Sottoproblema vincolato $\text{LDCS}_V(X_i, Y_j)$}
+Dati i prefissi $X_i = \langle x_1, \dots, x_i \rangle$ e $Y_j = \langle y_1, \dots, y_j \rangle$ per ogni $i \in \{0, \dots, m\}$ e $j \in \{0, \dots, n\}$, si cerca la più lunga sottosequenza comune decrescente \textbf{vincolata a terminare tassativamente con l'elemento comune} $x_i = y_j$. Se $x_i \neq y_j$, la sottosequenza vincolata non esiste (restituisce la sequenza vuota $\langle \rangle$).
+
+\subsection{Coefficiente $c_{i,j}$}
+Definiamo il coefficiente $c_{i,j}$ come la lunghezza della sottosequenza ottima vincolata:
+\begin{equation*}
+    c_{i,j} = |\text{LDCS}_V(X_i, Y_j)|
+\end{equation*}
+
+---
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Casi base}
+Se almeno uno dei due prefissi è vuoto ($i = 0 \lor j = 0$), oppure se i caratteri terminali non coincidono ($x_i \neq y_j$), non è possibile formare alcuna sottosequenza comune vincolata a terminare con $x_i = y_j$:
+\begin{equation*}
+    (i = 0 \lor j = 0 \lor x_i \neq y_j) \implies c_{i,j} = 0
+\end{equation*}
+
+\subsection{Passo ricorsivo}
+Per $i > 0$, $j > 0$ e $x_i = y_j$, l'elemento comune $x_i$ viene concatenato alla migliore sottosequenza comune decrescente precedente terminante in una coppia di indici compatibile $x_h = y_k$ (con $1 \le h < i$ e $1 \le k < j$) che rispetti la decrescenza stretta ($x_h > x_i$):
+\begin{equation*}
+    c_{i,j} = \max \Big(\{ c_{h,k} : 1 \le h < i \land 1 \le k < j \land x_h = y_k \land x_h > x_i \} \cup \{0\}\Big) + 1
+\end{equation*}
+con la convenzione $\max \emptyset = 0$. Se nessun predecessore comune è maggiore di $x_i$, si ottiene $c_{i,j} = 0 + 1 = 1$, corrispondente alla sottosequenza formata dal solo elemento $\langle x_i \rangle$.
+
+\subsection{Soluzione del problema principale}
+Poiché la sottosequenza ottima globale non termina necessariamente con gli ultimi elementi delle sequenze ($x_m = y_n$), il valore ottimo globale del problema non vincolato corrisponde al massimo calcolato su tutta la matrice:
+\begin{equation*}
+    \text{Soluzione} = \max_{\substack{1 \le i \le m \\ 1 \le j \le n}} \{ c_{i,j} \}
+\end{equation*}
+
+---
+
+\section{Algoritmo Bottom-Up}
+
+La procedura iterativa compila la matrice delle lunghezze $c[0 \dots m, 0 \dots n]$ e la matrice dei puntatori ai predecessori $b[0 \dots m, 0 \dots n]$, mantenendo aggiornati ad ogni passo il massimo globale $\mathit{max\_tot}$ e le coordinate $(\mathit{ind\_m1}, \mathit{ind\_m2})$ della cella terminale ottima.
+
+\begin{algorithm}[H]
+\caption{Calcolo della tabella LDCS e dei predecessori}
+\label{alg:ldcs-bottom-up}
+\begin{algorithmic}[1]
+\Procedure{LDCS}{$X, Y$}
+    \State $m = \text{length}(X)$ \Comment{Dimensione della sequenza $X$}
+    \State $n = \text{length}(Y)$ \Comment{Dimensione della sequenza $Y$}
+    \State alloca matrice $c[0 \dots m, 0 \dots n]$ inizializzata a $0$
+    \State alloca matrice $b[0 \dots m, 0 \dots n]$ inizializzata a $(0, 0)$
+    \State $\mathit{max\_tot} = 0$ \Comment{Traccia della lunghezza ottima globale}
+    \State $\mathit{ind\_m1} = 0$, $\mathit{ind\_m2} = 0$ \Comment{Coordinate della cella terminale dell'ottimo}
+    \For{$i = 1 \textbf{ to } m$}
+        \For{$j = 1 \textbf{ to } n$}
+            \If{$x_i == y_j$} \Comment{Match comune: ricerca del miglior predecessore}
+                \State $\mathit{tmp} = 0$ \Comment{Valore neutro per $\max \emptyset = 0$}
+                \State $h_{\max} = 0$, $k_{\max} = 0$ \Comment{Puntatori neutri al predecessore}
+                \For{$h = 1 \textbf{ to } i - 1$}
+                    \For{$k = 1 \textbf{ to } j - 1$}
+                        \If{$x_h == y_k \textbf{ and } x_h > x_i \textbf{ and } c[h, k] > \mathit{tmp}$}
+                            \State $\mathit{tmp} = c[h, k]$ \Comment{Aggiorna il massimo tra i predecessori compatibili}
+                            \State $h_{\max} = h$
+                            \State $k_{\max} = k$
+                        \EndIf
+                    \EndFor
+                \EndFor
+                \State $c[i, j] = \mathit{tmp} + 1$ \Comment{Estende la sottosequenza ottima precedente}
+                \State $b[i, j] = (h_{\max}, k_{\max})$ \Comment{Memorizza i puntatori di risalita}
+                \If{$c[i, j] > \mathit{max\_tot}$} \Comment{Aggiornamento dell'ottimo globale}
+                    \State $\mathit{max\_tot} = c[i, j]$
+                    \State $\mathit{ind\_m1} = i$
+                    \State $\mathit{ind\_m2} = j$
+                \EndIf
+            \Else
+                \State $c[i, j] = 0$ \Comment{Caratteri diversi: nessuna LDCS vincolata valida}
+                \State $b[i, j] = (0, 0)$
+            \EndIf
+        \EndFor
+    \EndFor
+    \State \Return $c, b, \mathit{max\_tot}, \mathit{ind\_m1}, \mathit{ind\_m2}$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+---
+
+\section{Algoritmo di Ricostruzione}
+
+La procedura risale a ritroso i puntatori memorizzati in $b$ partendo dalle coordinate dell'ottimo globale $(\mathit{ind\_m1}, \mathit{ind\_m2})$. La stampa posizionata al ritorno della chiamata ricorsiva (post-ordine) assicura l'emissione degli elementi nell'ordine originale da sinistra verso destra.
+
+\begin{algorithm}[H]
+\caption{Ricostruzione e stampa della LDCS ottima}
+\label{alg:print-ldcs}
+\begin{algorithmic}[1]
+\Procedure{Print-LDCS}{$i, j, b, X$}
+    \If{$i == 0 \lor j == 0$} \Comment{Terminatore di risalita}
+        \State \Return
+    \EndIf
+    \State $(h, k) = b[i, j]$ \Comment{Estrae gli indici del predecessore}
+    \State \Call{Print-LDCS}{$h, k, b, X$} \Comment{Chiamata ricorsiva a ritroso}
+    \State $\text{print}(x_i)$ \Comment{Stampa in risalita l'elemento della soluzione}
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\subsection{Invocazione principale (Driver)}
+Per avviare la ricostruzione sulla soluzione calcolata dall'algoritmo \textsc{LDCS}, si verifica preventivamente l'esistenza di una sottosequenza non vuota:
+\begin{algorithmic}[1]
+\If{$\mathit{max\_tot} == 0$}
+    \State $\text{print}(\text{"Non esiste alcuna sottosequenza comune decrescente non vuota"})$
+\Else
+    \State \Call{Print-LDCS}{$\mathit{ind\_m1}, \mathit{ind\_m2}, b, X$}
+\EndIf
+\end{algorithmic}
+
+---
+
+\section{Analisi di Complessità}
+
+\subsection{Complessità temporale}
+\begin{itemize}
+    \item \textbf{\textsc{LDCS} (Bottom-Up):} I due cicli esterni su $i$ e $j$ compiono $m \times n$ iterazioni. Per ogni cella con $x_i = y_j$, i due cicli annidati retrospettivi scandiscono $(i-1) \times (j-1)$ celle a costo unitario. Nel caso pessimo la complessità temporale è:
+    \begin{equation*}
+        T(m, n) = O\left( \sum_{i=1}^{m} \sum_{j=1}^{n} i \cdot j \right) = O(m^2 \cdot n^2)
+    \end{equation*}
+    \item \textbf{\textsc{Print-LDCS} (Ricostruzione):} A ciascun passo ricorsivo si retrocede di un match lungo la sequenza dei puntatori. Il numero di chiamate è pari alla lunghezza $k = \mathit{max\_tot}$ della sequenza ottima ($k \le \min(m, n)$), richiedendo tempo $O(\min(m, n))$.
+\end{itemize}
+
+\subsection{Complessità spaziale}
+L'algoritmo alloca due matrici bidimensionali $c$ e $b$ di dimensioni $(m+1) \times (n+1)$, con costo in memoria ausiliaria pari a $\Theta(m \cdot n)$. Lo stack di ricorsione della procedura \textsc{Print-LDCS} occupa spazio pari a $O(\min(m, n))$.
