@@ -1,0 +1,123 @@
+\chapter{Heaviest Common Subsequence (HCS)}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Siano date due sequenze di caratteri sull'alfabeto $\Sigma$:
+\begin{align*}
+    X &= \langle x_1, x_2, \dots, x_m \rangle \\
+    Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+e una funzione peso $w : \Sigma \to \mathbb{N}^+$ che associa a ciascun simbolo dell'alfabeto un peso intero strettamente positivo.
+
+\subsection{Soluzione}
+Una sottosequenza comune $Z = \langle z_1, z_2, \dots, z_k \rangle$ tra $X$ e $Y$ la quale ha peso complessivo massimo, ovvero tale da massimizzare:
+\[
+    W(Z) = \sum_{t=1}^{k} w(z_t)
+\]
+
+\section{Definizione del sottoproblema e del coefficiente}
+Per ogni $i \in \{0, \dots, m\}$ e per ogni $j \in \{0, \dots, n\}$, siano $X_i = \langle x_1, \dots, x_i \rangle$ il prefisso di lunghezza $i$ di $X$ e $Y_j = \langle y_1, \dots, y_j \rangle$ il prefisso di lunghezza $j$ di $Y$ (con $X_0 = \langle \rangle$ e $Y_0 = \langle \rangle$).
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $c_{i,j}$:} Per ogni $i \in \{0, \dots, m\}$ e $j \in \{0, \dots, n\}$, $c_{i,j}$ è il peso della più pesante sottosequenza comune tra i prefissi $X_i$ e $Y_j$.
+
+\medskip
+\noindent
+\textbf{Numero totale di sottoproblemi:} $(m + 1) \cdot (n + 1)$.
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+\[
+    i = 0 \lor j = 0 \implies c_{i,j} = 0
+\]
+\textbf{Giustificazione:} Se almeno uno dei due prefissi è la sequenza vuota $\langle \rangle$, l'unica sottosequenza comune ammissibile è la sequenza vuota stessa, il cui peso complessivo è nullo.
+
+\subsection{Passo ricorsivo}
+Per $i > 0 \land j > 0$:
+\begin{itemize}
+    \item \textbf{Caso $x_i \neq y_j$:}
+    \[
+        c_{i,j} = \max \{ c_{i-1, j}, \, c_{i, j-1} \}
+    \]
+    \textbf{Giustificazione:} Poiché gli ultimi due caratteri dei prefissi non coincidono, non possono far parte contemporaneamente della fine della sottosequenza comune di peso massimo. Quest'ultima deve quindi coincidere con la soluzione ottima tra $X_{i-1}$ e $Y_j$ oppure tra $X_i$ e $Y_{j-1}$.
+
+    \item \textbf{Caso $x_i = y_j$:}
+    \[
+        c_{i,j} = c_{i-1, j-1} + w(x_i)
+    \]
+    \textbf{Giustificazione:} Poiché gli ultimi caratteri coincidono e la funzione peso assume valori strettamente positivi ($w(x_i) > 0$), conviene sempre includere il simbolo $x_i = y_j$ in coda alla sottosequenza comune di peso massimo tra i prefissi $X_{i-1}$ e $Y_{j-1}$, incrementandone il peso di $w(x_i)$.
+\end{itemize}
+
+\subsection{Soluzione del problema principale}
+Il peso della più pesante sottosequenza comune tra le intere sequenze $X$ e $Y$ è dato dal coefficiente:
+\[
+    \text{Soluzione} = c_{m, n}
+\]
+
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up dei coefficienti per HCS}
+\begin{algorithmic}[1]
+\Procedure{HCS}{$X, Y, w$}
+    \State $m \gets |X|$
+    \State $n \gets |Y|$
+    \State $c \gets \text{nuova matrice } c[0 \dots m, \, 0 \dots n]$
+    \Comment{Inizializzazione dei casi base}
+    \For{$i = 0 \textbf{ to } m$}
+        \State $c[i, 0] \gets 0$
+    \EndFor
+    \For{$j = 0 \textbf{ to } n$}
+        \State $c[0, j] \gets 0$
+    \EndFor
+    \Comment{Passo ricorsivo}
+    \For{$i = 1 \textbf{ to } m$}
+        \For{$j = 1 \textbf{ to } n$}
+            \If{$x_i \neq y_j$}
+                \State $c[i, j] \gets \max \{ c[i-1, j], \, c[i, j-1] \}$
+            \Else
+                \State $c[i, j] \gets c[i-1, j-1] + w(x_i)$
+            \EndIf
+        \EndFor
+    \EndFor
+    \State \Return $c$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+La ricostruzione avviene ripercorrendo a ritroso le scelte ottime direttamente sulla matrice $c$, stampando i caratteri di match in post-ordine (dopo la chiamata ricorsiva) così da produrli da sinistra verso destra.
+
+\begin{algorithm}[htbp]
+\caption{Ricostruzione della sequenza HCS}
+\begin{algorithmic}[1]
+\Procedure{HCSR}{$c, i, j, X, Y$}
+    \If{$i == 0 \lor j == 0$}
+        \State \Return
+    \Else
+        \If{$x_i \neq y_j$}
+            \If{$c[i-1, j] \ge c[i, j-1]$}
+                \State \Call{HCSR}{$c, i-1, j, X, Y$}
+            \Else
+                \State \Call{HCSR}{$c, i, j-1, X, Y$}
+            \EndIf
+        \Else
+            \State \Call{HCSR}{$c, i-1, j-1, X, Y$}
+            \State \textbf{print} $x_i$
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+\textbf{Chiamata principale (Driver):} Per stampare la sottosequenza ottima relativa all'intero problema si invoca $\Call{HCSR}{c, m, n, X, Y}$.
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} La matrice $c$ ha dimensione $(m+1) \times (n+1)$, pertanto l'occupazione di memoria è $\Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Bottom-Up):} L'inizializzazione dei casi base richiede $\Theta(m + n)$, mentre i due cicli annidati eseguono operazioni in tempo $\Theta(1)$ per ciascuna delle $m \cdot n$ celle. Il tempo complessivo è $\Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Ricostruzione):} Ad ogni chiamata ricorsiva di $\textsc{HCSR}$ almeno uno degli indici $i$ o $j$ decresce di $1$, raggiungendo il caso base in al più $m + n$ passi. Il tempo di ricostruzione è quindi $O(m + n)$.
+\end{itemize}

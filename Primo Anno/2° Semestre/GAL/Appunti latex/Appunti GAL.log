@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.9.9)  28 SEP 2026 12:16
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.11.13)  23 NOV 2026 13:31
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -41,7 +41,7 @@ LaTeX Encoding Info:    Ignoring declaration for text command \ij (encoding ?) o
 LaTeX Encoding Info:    Ignoring declaration for text command \IJ (encoding ?) on input line 2086.
 LaTeX Encoding Info:    Ignoring declaration for text command \SS (encoding ?) on input line 2111.
 \U@D=\dimen151
-\l@unhyphenated=\language90
+\l@unhyphenated=\language89
  (/usr/share/texlive/texmf-dist/tex/generic/babel/txtbabel.def)
 \bbl@readstream=\read2
 \bbl@dirlevel=\count285
@@ -870,10 +870,10 @@ L3 programming layer <2026-03-20>
  ***********
  ) 
 Here is how much of TeX's memory you used:
- 31582 strings out of 467356
- 624708 string characters out of 5418692
- 1062345 words of memory out of 6000000
- 60173 multiletter control sequences out of 15000+600000
+ 31582 strings out of 467363
+ 624708 string characters out of 5419000
+ 1062308 words of memory out of 6000000
+ 60172 multiletter control sequences out of 15000+600000
  649911 words of font info for 50 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  91i,5n,107p,1554b,500s stack positions out of 10000i,1000n,20000p,200000b,200000s

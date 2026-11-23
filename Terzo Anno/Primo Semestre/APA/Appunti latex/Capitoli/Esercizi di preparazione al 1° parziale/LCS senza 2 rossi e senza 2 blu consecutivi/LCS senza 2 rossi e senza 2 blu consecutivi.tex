@@ -1,0 +1,107 @@
+\chapter{Sottosequenza senza 2 simboli rossi o 2 simboli blu consecutivi}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Sia data una sequenza $X = \langle x_1, x_2, \dots, x_n \rangle$ di simboli sull'alfabeto $\Sigma$ e una funzione di colorazione $\text{col} : \Sigma \to \{\text{rosso}, \text{blu}, \text{nero}\}$.
+
+\subsection{Soluzione}
+Una più lunga sottosequenza di $X$ nella quale non compaiono mai due elementi rossi consecutivi né due elementi blu consecutivi (mentre sono ammessi due o più elementi neri consecutivi).
+
+\section{Mancanza di informazione e definizione del coefficiente}
+Poiché il vincolo riguarda il colore di elementi adiacenti all'interno della sottosequenza, il solo prefisso $X_i$ non fornisce informazione sul colore dell'ultimo elemento scelto. Si ricorre quindi al sottoproblema vincolato a terminare con $x_i$.
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $c_i$:} Per ogni $i \in \{1, \dots, n\}$, $c_i$ è la lunghezza della più lunga sottosequenza del prefisso $X_i$ la quale è \textbf{vincolata a terminare con $x_i$} e non presenta due elementi rossi consecutivi né due elementi blu consecutivi.
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+\[
+    i = 1 \implies c_1 = 1
+\]
+\textbf{Giustificazione:} La sottosequenza $\langle x_1 \rangle$ contiene un solo elemento, quindi non può violare il vincolo sui colori consecutivi ed ha lunghezza $1$.
+
+\subsection{Passo ricorsivo}
+Per $i > 1$:
+\begin{itemize}
+    \item \textbf{Caso $\text{col}(x_i) = \text{nero}$:}
+    \[
+        c_i = \max \{ c_j : 1 \le j < i \} + 1
+    \]
+    \textbf{Giustificazione:} Un elemento di colore nero può seguire qualsiasi elemento precedente $x_j$ (rosso, blu o nero) senza mai generare una coppia di rossi o di blu consecutivi.
+
+    \item \textbf{Caso $\text{col}(x_i) \neq \text{nero}$ (ovvero $\text{col}(x_i) \in \{\text{rosso}, \text{blu}\}$):}
+    \[
+        c_i = \max \{ c_j : 1 \le j < i \land \text{col}(x_j) \neq \text{col}(x_i) \} + 1 \quad (\text{con } \max \emptyset = 0)
+    \]
+    \textbf{Giustificazione:} Se $x_i$ è rosso (risp. blu), il penultimo elemento $x_j$ della sottosequenza non può essere anch'esso rosso (risp. blu), per cui si ricerca il massimo solo tra gli indici $j < i$ aventi colore diverso da $\text{col}(x_i)$. Se nessun $x_j$ soddisfa la condizione, $x_i$ avvia una sottosequenza di lunghezza $0 + 1 = 1$.
+\end{itemize}
+
+\subsection{Soluzione del problema principale}
+La lunghezza della più lunga sottosequenza valida dell'intera sequenza $X$ è:
+\[
+    \text{Soluzione} = \max_{1 \le i \le n} \{ c_i \}
+\]
+
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up per Sottosequenza senza 2 rossi o 2 blu consecutivi}
+\begin{algorithmic}[1]
+\Procedure{2R2B}{$X, \text{col}$}
+    \State $n \gets |X|$
+    \State $c \gets \text{nuovo array } c[1 \dots n]$ \Comment{Array dei coefficienti}
+    \State $b \gets \text{nuovo array } b[1 \dots n]$ \Comment{Array dei predecessori}
+    \State $c[1] \gets 1$
+    \State $b[1] \gets 0$
+    \State $m \gets c[1]$
+    \State $\text{ind\_m} \gets 1$
+    \For{$i = 2 \textbf{ to } n$}
+        \State $\text{tmp} \gets 0$
+        \State $k \gets 0$
+        \For{$j = 1 \textbf{ to } i - 1$}
+            \If{$\text{col}(x_i) == \text{nero} \lor \text{col}(x_j) \neq \text{col}(x_i)$}
+                \If{$c[j] > \text{tmp}$}
+                    \State $\text{tmp} \gets c[j]$
+                    \State $k \gets j$
+                \EndIf
+            \EndIf
+        \EndFor
+        \State $c[i] \gets \text{tmp} + 1$
+        \State $b[i] \gets k$
+        \If{$c[i] > m$}
+            \State $m \gets c[i]$
+            \State $\text{ind\_m} \gets i$
+        \EndIf
+    \EndFor
+    \State \Return $c, b, m, \text{ind\_m}$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+\begin{algorithm}[htbp]
+\caption{Ricostruzione della sottosequenza senza 2 rossi o 2 blu consecutivi}
+\begin{algorithmic}[1]
+\Procedure{Print-2R2B}{$b, i, X$}
+    \If{$b[i] == 0$}
+        \State \textbf{print} $x_i$
+        \State \Return
+    \Else
+        \State \Call{Print-2R2B}{$b, b[i], X$}
+        \State \textbf{print} $x_i$
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+\textbf{Chiamata principale (Driver):} Si invoca $\Call{Print-2R2B}{b, \text{ind\_m}, X}$.
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} $\Theta(n)$ per memorizzare i vettori $c$ e $b$.
+    \item \textbf{Complessità temporale (Bottom-Up):} Il doppio ciclo annidato comporta $\sum_{i=2}^{n} (i-1) = \Theta(n^2)$ iterazioni di costo costante, pertanto il tempo è $\Theta(n^2)$.
+    \item \textbf{Complessità temporale (Ricostruzione):} $O(n)$.
+\end{itemize}

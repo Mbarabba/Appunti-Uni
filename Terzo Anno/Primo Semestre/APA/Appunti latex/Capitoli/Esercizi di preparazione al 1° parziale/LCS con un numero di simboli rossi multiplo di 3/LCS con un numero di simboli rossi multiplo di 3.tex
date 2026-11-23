@@ -1,0 +1,176 @@
+\chapter{LCS con un numero di simboli rossi multiplo di 3}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Siano date due sequenze di elementi sull'alfabeto $\Sigma$:
+\begin{align*}
+    X &= \langle x_1, x_2, \dots, x_m \rangle \\
+    Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+e una funzione di colorazione $\text{col} : \Sigma \to \{\text{rosso}, \text{blu}, \text{nero}\}$.
+
+\subsection{Soluzione}
+Una più lunga sottosequenza comune tra $X$ e $Y$ la quale contiene un numero di elementi rossi che è multiplo di $3$.
+
+\section{Definizione del sottoproblema e del coefficiente}
+Per ogni $i \in \{0, \dots, m\}$, per ogni $j \in \{0, \dots, n\}$ e per ogni $p \in \{0, 1, 2\}$, siano $X_i$ e $Y_j$ i prefissi di lunghezza $i$ e $j$ di $X$ e $Y$, e sia $p$ il resto della divisione per $3$ del numero $k$ di simboli rossi contenuti nella sottosequenza ($k \bmod 3 = p$).
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $c_{i,j}^p$:} Per ogni $i \in \{0, \dots, m\}$, $j \in \{0, \dots, n\}$ e $p \in \{0, 1, 2\}$, $c_{i,j}^p$ è la lunghezza della più lunga sottosequenza comune tra $X_i$ e $Y_j$ il cui numero di elementi rossi $k$ soddisfa $k \equiv p \pmod 3$:
+\begin{itemize}
+    \item $p = 0$: il numero di elementi rossi è un multiplo di $3$ ($k \bmod 3 = 0$);
+    \item $p = 1$: il numero di elementi rossi diviso per $3$ dà resto $1$ ($k \bmod 3 = 1$);
+    \item $p = 2$: il numero di elementi rossi diviso per $3$ dà resto $2$ ($k \bmod 3 = 2$).
+\end{itemize}
+Se per una tripla $(i, j, p)$ non esiste alcuna sottosequenza comune ammissibile, si pone $c_{i,j}^p = -\infty$.
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+\begin{align*}
+    (i = 0 \lor j = 0) \land p = 0 &\implies c_{i,j}^0 = 0 \\
+    (i = 0 \lor j = 0) \land p \in \{1, 2\} &\implies c_{i,j}^p = -\infty
+\end{align*}
+\textbf{Giustificazione:} La sottosequenza comune a un prefisso vuoto è $\langle \rangle$, che contiene $0$ simboli rossi. Poiché $0 \bmod 3 = 0$, per $p = 0$ si ha lunghezza $0$, mentre per $p \in \{1, 2\}$ è impossibile formare sottosequenze dal vuoto ($-\infty$).
+
+\subsection{Passo ricorsivo}
+Per $i > 0 \land j > 0$ e per ogni $p \in \{0, 1, 2\}$:
+\begin{itemize}
+    \item \textbf{Caso $x_i \neq y_j$:}
+    \[
+        c_{i,j}^p = \max \{ c_{i-1, j}^p, \, c_{i, j-1}^p \}
+    \]
+    \textbf{Giustificazione:} Gli elementi correnti non coincidono; il resto modulo $3$ rimane invariato e si eredita il massimo tra i sottoproblemi $(i-1, j, p)$ e $(i, j-1, p)$.
+
+    \item \textbf{Caso $x_i = y_j$ con $\text{col}(x_i) \neq \text{rosso}$:}
+    \[
+        c_{i,j}^p = c_{i-1, j-1}^p + 1
+    \]
+    \textbf{Giustificazione:} L'aggiunta di un simbolo non rosso non modifica il numero di simboli rossi né il suo resto modulo $3$, incrementando di $1$ la soluzione di $(i-1, j-1, p)$.
+
+    \item \textbf{Caso $x_i = y_j$ con $\text{col}(x_i) = \text{rosso}$:}
+    Aggiungendo un simbolo rosso, il resto modulo $3$ avanza di $1$; pertanto per ottenere resto $p$ includendo $x_i = y_j$ occorre provenire dallo stato $(p - 1) \bmod 3$:
+    \begin{itemize}
+        \item Se $p = 0$:
+        \[
+            c_{i,j}^0 = \max \{ c_{i-1, j-1}^2 + 1, \, c_{i-1, j-1}^0 \}
+        \]
+        \textbf{Giustificazione:} Un multiplo di $3$ ($p=0$) si ottiene aggiungendo il rosso corrente a una sottosequenza con resto $2$ ($2 + 1 \equiv 0 \pmod 3$), oppure scartando il rosso corrente e mantenendo la soluzione di resto $0$.
+        \item Se $p = 1$:
+        \[
+            c_{i,j}^1 = \max \{ c_{i-1, j-1}^0 + 1, \, c_{i-1, j-1}^1 \} = c_{i-1, j-1}^0 + 1
+        \]
+        \textbf{Giustificazione:} Un resto $1$ si ottiene aggiungendo il rosso corrente a una sottosequenza con resto $0$ ($0 + 1 \equiv 1 \pmod 3$).
+        \item Se $p = 2$:
+        \[
+            c_{i,j}^2 = \max \{ c_{i-1, j-1}^1 + 1, \, c_{i-1, j-1}^2 \} = c_{i-1, j-1}^1 + 1
+        \]
+        \textbf{Giustificazione:} Un resto $2$ si ottiene aggiungendo il rosso corrente a una sottosequenza con resto $1$ ($1 + 1 \equiv 2 \pmod 3$).
+    \end{itemize}
+\end{itemize}
+
+\subsection{Soluzione del problema principale}
+La lunghezza della più lunga sottosequenza comune tra $X$ e $Y$ con un numero di simboli rossi multiplo di $3$ è:
+\[
+    \text{Soluzione} = c_{m, n}^0
+\]
+
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up per LCS con numero di rossi multiplo di 3}
+\begin{algorithmic}[1]
+\Procedure{LCSM3R}{$X, Y, \text{col}$}
+    \State $m \gets |X|$
+    \State $n \gets |Y|$
+    \State $c \gets \text{nuova matrice } c[0 \dots m, \, 0 \dots n, \, 0 \dots 2]$
+    \Comment{Caso base}
+    \For{$i = 0 \textbf{ to } m$}
+        \State $c[i, 0, 0] \gets 0$
+        \For{$p = 1 \textbf{ to } 2$}
+            \State $c[i, 0, p] \gets -\infty$
+        \EndFor
+    \EndFor
+    \For{$j = 0 \textbf{ to } n$}
+        \State $c[0, j, 0] \gets 0$
+        \For{$p = 1 \textbf{ to } 2$}
+            \State $c[0, j, p] \gets -\infty$
+        \EndFor
+    \EndFor
+    \Comment{Passo ricorsivo}
+    \For{$i = 1 \textbf{ to } m$}
+        \For{$j = 1 \textbf{ to } n$}
+            \For{$p = 0 \textbf{ to } 2$}
+                \If{$x_i \neq y_j$}
+                    \State $c[i, j, p] \gets \max \{ c[i-1, j, p], \, c[i, j-1, p] \}$
+                \Else
+                    \If{$\text{col}(x_i) \neq \text{rosso}$}
+                        \State $c[i, j, p] \gets c[i-1, j-1, p] + 1$
+                    \Else
+                        \If{$p == 0$}
+                            \State $c[i, j, 0] \gets \max \{ c[i-1, j-1, 2] + 1, \, c[i-1, j-1, 0] \}$
+                        \ElsIf{$p == 1$}
+                            \State $c[i, j, 1] \gets c[i-1, j-1, 0] + 1$
+                        \Else
+                            \State $c[i, j, 2] \gets c[i-1, j-1, 1] + 1$
+                        \EndIf
+                    \EndIf
+                \EndIf
+            \EndFor
+        \EndFor
+    \EndFor
+    \State \Return $c$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+\begin{algorithm}[htbp]
+\caption{Ricostruzione della sequenza LCS con numero di rossi multiplo di 3}
+\begin{algorithmic}[1]
+\Procedure{LCSM3RR}{$c, X, Y, i, j, p$}
+    \If{$i == 0 \lor j == 0$}
+        \State \Return
+    \Else
+        \If{$x_i \neq y_j$}
+            \If{$c[i-1, j, p] \ge c[i, j-1, p]$}
+                \State \Call{LCSM3RR}{$c, X, Y, i-1, j, p$}
+            \Else
+                \State \Call{LCSM3RR}{$c, X, Y, i, j-1, p$}
+            \EndIf
+        \Else
+            \If{$\text{col}(x_i) \neq \text{rosso}$}
+                \State \Call{LCSM3RR}{$c, X, Y, i-1, j-1, p$}
+                \State \textbf{print} $x_i$
+            \Else
+                \If{$p == 0$}
+                    \If{$c[i-1, j-1, 2] + 1 \ge c[i-1, j-1, 0]$}
+                        \State \Call{LCSM3RR}{$c, X, Y, i-1, j-1, 2$}
+                        \State \textbf{print} $x_i$
+                    \Else
+                        \State \Call{LCSM3RR}{$c, X, Y, i-1, j-1, 0$}
+                    \EndIf
+                \ElsIf{$p == 1$}
+                    \State \Call{LCSM3RR}{$c, X, Y, i-1, j-1, 0$}
+                    \State \textbf{print} $x_i$
+                \Else
+                    \State \Call{LCSM3RR}{$c, X, Y, i-1, j-1, 1$}
+                    \State \textbf{print} $x_i$
+                \EndIf
+            \EndIf
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+\textbf{Chiamata principale (Driver):} Si invoca $\Call{LCSM3RR}{c, X, Y, m, n, 0}$.
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} $\Theta(3 \cdot m \cdot n) = \Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Bottom-Up):} $\Theta(3 \cdot m \cdot n) = \Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Ricostruzione):} $O(m + n)$.
+\end{itemize}

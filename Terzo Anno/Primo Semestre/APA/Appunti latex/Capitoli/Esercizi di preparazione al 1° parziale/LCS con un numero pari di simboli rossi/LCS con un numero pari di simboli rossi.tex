@@ -1,0 +1,160 @@
+\chapter{LCS con un numero pari di simboli rossi}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Siano date due sequenze di elementi sull'alfabeto $\Sigma$:
+\begin{align*}
+    X &= \langle x_1, x_2, \dots, x_m \rangle \\
+    Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+e una funzione di colorazione $\text{col} : \Sigma \to \{\text{rosso}, \text{blu}, \text{nero}\}$.
+
+\subsection{Soluzione}
+Una più lunga sottosequenza comune tra $X$ e $Y$ la quale contiene un numero pari di simboli di colore rosso.
+
+\section{Definizione del sottoproblema e del coefficiente}
+Per ogni $i \in \{0, \dots, m\}$, per ogni $j \in \{0, \dots, n\}$ e per ogni $p \in \{0, 1\}$, siano $X_i$ e $Y_j$ i prefissi di lunghezza $i$ e $j$ di $X$ e $Y$, e sia $p$ un indice booleano di parità ($k \bmod 2 = p$, dove $k$ è il numero di elementi rossi nella sottosequenza).
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $c_{i,j}^p$:} Per ogni $i \in \{0, \dots, m\}$, $j \in \{0, \dots, n\}$ e $p \in \{0, 1\}$, $c_{i,j}^p$ è la lunghezza della più lunga sottosequenza comune tra $X_i$ e $Y_j$ la quale contiene:
+\begin{itemize}
+    \item un numero \textbf{pari} di elementi rossi, se $p = 0$;
+    \item un numero \textbf{dispari} di elementi rossi, se $p = 1$.
+\end{itemize}
+Qualora non esista alcuna sottosequenza comune con la parità richiesta, si pone $c_{i,j}^p = -\infty$.
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+\begin{align*}
+    (i = 0 \lor j = 0) \land p = 0 &\implies c_{i,j}^0 = 0 \\
+    (i = 0 \lor j = 0) \land p = 1 &\implies c_{i,j}^1 = -\infty
+\end{align*}
+\textbf{Giustificazione:} Se almeno uno dei due prefissi è vuoto, l'unica sottosequenza comune è $\langle \rangle$, che contiene $0$ elementi rossi. Poiché $0$ è un numero pari, per $p = 0$ la lunghezza ottima è $0$; non potendo invece avere un numero dispari di elementi rossi nel prefisso vuoto, per $p = 1$ lo stato è inammissibile ($-\infty$).
+
+\subsection{Passo ricorsivo}
+Per $i > 0 \land j > 0$ e per ogni $p \in \{0, 1\}$:
+\begin{itemize}
+    \item \textbf{Caso $x_i \neq y_j$:}
+    \[
+        c_{i,j}^p = \max \{ c_{i-1, j}^p, \, c_{i, j-1}^p \}
+    \]
+    \textbf{Giustificazione:} Non essendovi match tra $x_i$ e $y_j$, la parità richiesta $p$ rimane invariata e si prende il massimo tra i sottoproblemi $(i-1, j, p)$ e $(i, j-1, p)$.
+
+    \item \textbf{Caso $x_i = y_j$ con $\text{col}(x_i) \neq \text{rosso}$:}
+    \[
+        c_{i,j}^p = c_{i-1, j-1}^p + 1
+    \]
+    \textbf{Giustificazione:} Un elemento non rosso lascia inalterata la parità del numero di simboli rossi e incrementa di $1$ la lunghezza della sottosequenza ottima proveniente da $(i-1, j-1, p)$.
+
+    \item \textbf{Caso $x_i = y_j$ con $\text{col}(x_i) = \text{rosso}$:}
+    \begin{itemize}
+        \item Se $p = 0$:
+        \[
+            c_{i,j}^0 = \max \{ c_{i-1, j-1}^1 + 1, \, c_{i-1, j-1}^0 \}
+        \]
+        \textbf{Giustificazione:} Per ottenere un numero pari di rossi ($p=0$), possiamo includere il rosso corrente $x_i = y_j$ agganciandolo a una sottosequenza con numero dispari di rossi ($c_{i-1, j-1}^1 + 1$), oppure scartarlo mantenendo la migliore sottosequenza già pari ($c_{i-1, j-1}^0$).
+        \item Se $p = 1$:
+        \[
+            c_{i,j}^1 = \max \{ c_{i-1, j-1}^0 + 1, \, c_{i-1, j-1}^1 \} = c_{i-1, j-1}^0 + 1
+        \]
+        \textbf{Giustificazione:} Per ottenere un numero dispari di rossi ($p=1$), includendo il rosso corrente si passa da una sottosequenza con numero pari di rossi ($c_{i-1, j-1}^0 + 1$). Si noti che vale sempre $c_{i-1, j-1}^0 + 1 \ge c_{i-1, j-1}^1$, poiché rimuovendo un elemento rosso da una qualsiasi sottosequenza con numero dispari di rossi si ottiene una sottosequenza valida con numero pari di rossi di lunghezza $c_{i-1, j-1}^1 - 1 \le c_{i-1, j-1}^0$.
+    \end{itemize}
+\end{itemize}
+
+\subsection{Soluzione del problema principale}
+La lunghezza della più lunga sottosequenza comune tra $X$ e $Y$ con un numero pari di simboli rossi è:
+\[
+    \text{Soluzione} = c_{m, n}^0
+\]
+
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up per LCS con un numero pari di simboli rossi}
+\begin{algorithmic}[1]
+\Procedure{LCSRP}{$X, Y, \text{col}$}
+    \State $m \gets |X|$
+    \State $n \gets |Y|$
+    \State $c \gets \text{nuova matrice } c[0 \dots m, \, 0 \dots n, \, 0 \dots 1]$
+    \Comment{Caso base}
+    \For{$i = 0 \textbf{ to } m$}
+        \State $c[i, 0, 0] \gets 0$
+        \State $c[i, 0, 1] \gets -\infty$
+    \EndFor
+    \For{$j = 0 \textbf{ to } n$}
+        \State $c[0, j, 0] \gets 0$
+        \State $c[0, j, 1] \gets -\infty$
+    \EndFor
+    \Comment{Passo ricorsivo}
+    \For{$i = 1 \textbf{ to } m$}
+        \For{$j = 1 \textbf{ to } n$}
+            \For{$p = 0 \textbf{ to } 1$}
+                \If{$x_i \neq y_j$}
+                    \State $c[i, j, p] \gets \max \{ c[i-1, j, p], \, c[i, j-1, p] \}$
+                \Else
+                    \If{$\text{col}(x_i) \neq \text{rosso}$}
+                        \State $c[i, j, p] \gets c[i-1, j-1, p] + 1$
+                    \Else
+                        \If{$p == 0$}
+                            \State $c[i, j, 0] \gets \max \{ c[i-1, j-1, 1] + 1, \, c[i-1, j-1, 0] \}$
+                        \Else
+                            \State $c[i, j, 1] \gets c[i-1, j-1, 0] + 1$
+                        \EndIf
+                    \EndIf
+                \EndIf
+            \EndFor
+        \EndFor
+    \EndFor
+    \State \Return $c$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+\begin{algorithm}[htbp]
+\caption{Ricostruzione della sequenza LCS con numero pari di rossi}
+\begin{algorithmic}[1]
+\Procedure{LCSRPR}{$c, X, Y, i, j, p$}
+    \If{$i == 0 \lor j == 0$}
+        \State \Return
+    \Else
+        \If{$x_i \neq y_j$}
+            \If{$c[i-1, j, p] \ge c[i, j-1, p]$}
+                \State \Call{LCSRPR}{$c, X, Y, i-1, j, p$}
+            \Else
+                \State \Call{LCSRPR}{$c, X, Y, i, j-1, p$}
+            \EndIf
+        \Else
+            \If{$\text{col}(x_i) \neq \text{rosso}$}
+                \State \Call{LCSRPR}{$c, X, Y, i-1, j-1, p$}
+                \State \textbf{print} $x_i$
+            \Else
+                \If{$p == 0$}
+                    \If{$c[i-1, j-1, 1] + 1 \ge c[i-1, j-1, 0]$}
+                        \State \Call{LCSRPR}{$c, X, Y, i-1, j-1, 1$}
+                        \State \textbf{print} $x_i$
+                    \Else
+                        \State \Call{LCSRPR}{$c, X, Y, i-1, j-1, 0$}
+                    \EndIf
+                \Else
+                    \State \Call{LCSRPR}{$c, X, Y, i-1, j-1, 0$}
+                    \State \textbf{print} $x_i$
+                \EndIf
+            \EndIf
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+\textbf{Chiamata principale (Driver):} Si invoca $\Call{LCSRPR}{c, X, Y, m, n, 0}$ (notando che una soluzione esiste sempre poiché la sequenza vuota ha $0$ rossi e garantisce $c[m, n, 0] \ge 0$).
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} $\Theta(2 \cdot m \cdot n) = \Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Bottom-Up):} $\Theta(2 \cdot m \cdot n) = \Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Ricostruzione):} $O(m + n)$.
+\end{itemize}

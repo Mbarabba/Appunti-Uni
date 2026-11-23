@@ -1,0 +1,121 @@
+\chapter{Longest Decreasing Common Subsequence (LDCS)}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Siano date due sequenze di numeri reali (o interi):
+\begin{align*}
+    X &= \langle x_1, x_2, \dots, x_m \rangle \\
+    Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+
+\subsection{Soluzione}
+Una più lunga sottosequenza comune a $X$ e $Y$ i cui elementi sono ordinati in senso strettamente decrescente.
+
+\section{Mancanza di informazione e definizione del coefficiente}
+Analogamente al problema della LICS, per verificare se un nuovo elemento comune $x_i = y_j$ rispetti l'ordinamento strettamente decrescente rispetto all'elemento precedente della sottosequenza, è necessario conoscere il valore dell'ultimo elemento inserito. Si introduce quindi il sottoproblema vincolato a terminare in $x_i = y_j$.
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $c_{i,j}$:} Per ogni $i \in \{1, \dots, m\}$ e per ogni $j \in \{1, \dots, n\}$, $c_{i,j}$ è la lunghezza della più lunga sottosequenza comune tra i prefissi $X_i$ e $Y_j$, ordinata in senso strettamente decrescente e \textbf{vincolata a terminare con $x_i = y_j$} (se $x_i = y_j$), mentre vale $0$ se $x_i \neq y_j$.
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+\[
+    (i = 0 \lor j = 0) \lor x_i \neq y_j \implies c_{i,j} = 0
+\]
+\textbf{Giustificazione:} Se almeno uno dei prefissi è vuoto o se gli elementi finali $x_i$ e $y_j$ sono diversi tra loro, non può esistere alcuna sottosequenza comune che termini simultaneamente con $x_i$ e con $y_j$; la lunghezza associata è quindi $0$.
+
+\subsection{Passo ricorsivo}
+Per $i > 0 \land j > 0 \land x_i = y_j$:
+\[
+    c_{i,j} = \max \{ c_{h, k} : 1 \le h < i \land 1 \le k < j \land x_h = y_k \land x_h > x_i \} + 1 \quad (\text{con } \max \emptyset = 0)
+\]
+\textbf{Giustificazione:} Poiché $x_i = y_j$, l'elemento comune può estendere qualsiasi sottosequenza comune decrescente dei prefissi $X_h$ e $Y_k$ (con $h < i$ e $k < j$) terminante in una coppia coincidente $x_h = y_k$ tale che $x_h > x_i$. Scegliendo la coppia $(h, k)$ che massimizza $c_{h,k}$ e sommando $1$ si ottiene l'ottimo per $(i, j)$; se nessuna coppia precedente soddisfa il vincolo, $\langle x_i \rangle$ costituisce una sottosequenza valida di lunghezza $0 + 1 = 1$.
+
+\subsection{Soluzione del problema principale}
+Poiché la LDCS ottima può terminare in una qualunque coppia $(i, j)$ di caratteri uguali, la lunghezza massima globale è:
+\[
+    \text{Soluzione} = \max_{\substack{1 \le i \le m \\ 1 \le j \le n}} \{ c_{i,j} \}
+\]
+
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up per LDCS}
+\begin{algorithmic}[1]
+\Procedure{LDCS}{$X, Y$}
+    \State $m \gets |X|$
+    \State $n \gets |Y|$
+    \State $c \gets \text{nuova matrice } c[1 \dots m, \, 1 \dots n]$
+    \State $b \gets \text{nuova matrice } b[1 \dots m, \, 1 \dots n]$
+    \State $\text{max\_sol} \gets 0$
+    \State $\text{ind\_m1} \gets 0$
+    \State $\text{ind\_m2} \gets 0$
+    \For{$i = 1 \textbf{ to } m$}
+        \For{$j = 1 \textbf{ to } n$}
+            \If{$x_i \neq y_j$}
+                \State $c[i, j] \gets 0$
+                \State $b[i, j] \gets (0, 0)$
+            \Else
+                \State $\text{tmp} \gets 0$
+                \State $\text{ind1\_tmp} \gets 0$
+                \State $\text{ind2\_tmp} \gets 0$
+                \For{$h = 1 \textbf{ to } i - 1$}
+                    \For{$k = 1 \textbf{ to } j - 1$}
+                        \If{$x_h > x_i \land c[h, k] > \text{tmp}$}
+                            \State $\text{tmp} \gets c[h, k]$
+                            \State $\text{ind1\_tmp} \gets h$
+                            \State $\text{ind2\_tmp} \gets k$
+                        \EndIf
+                    \EndFor
+                \EndFor
+                \State $c[i, j] \gets \text{tmp} + 1$
+                \State $b[i, j] \gets (\text{ind1\_tmp}, \text{ind2\_tmp})$
+                \If{$c[i, j] > \text{max\_sol}$}
+                    \State $\text{max\_sol} \gets c[i, j]$
+                    \State $\text{ind\_m1} \gets i$
+                    \State $\text{ind\_m2} \gets j$
+                \EndIf
+            \EndIf
+        \EndFor
+    \EndFor
+    \State \Return $c, b, \text{max\_sol}, \text{ind\_m1}, \text{ind\_m2}$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+\begin{algorithm}[htbp]
+\caption{Ricostruzione della sequenza LDCS}
+\begin{algorithmic}[1]
+\Procedure{Print-LDCS}{$i, j, c, b, X, Y$}
+    \If{$i == 0 \lor j == 0 \lor c[i, j] == 0$}
+        \State \textbf{print} \texttt{"Non esiste soluzione non vuota"}
+        \State \Return
+    \Else
+        \If{$b[i, j] == (0, 0)$}
+            \State \textbf{print} $x_i$
+            \State \Return
+        \Else
+            \State $(h, k) \gets b[i, j]$
+            \State \Call{Print-LDCS}{$h, k, c, b, X, Y$}
+            \State \textbf{print} $x_i$
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+\textbf{Chiamata principale (Driver):} Si invoca $\Call{Print-LDCS}{\text{ind\_m1}, \text{ind\_m2}, c, b, X, Y}$.
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} Le matrici $c$ e $b$ occupano spazio $\Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Bottom-Up):} Per ciascuna coppia $(i, j)$, il ramo \texttt{else} (eseguito quando $x_i = y_j$) effettua una scansione su $(i-1)(j-1)$ celle in tempo $\Theta(i \cdot j)$. Nel caso pessimo il costo complessivo è:
+    \[
+        T(m, n) = \sum_{i=1}^{m} \sum_{j=1}^{n} O(i \cdot j) = O(m^2 \cdot n^2)
+    \]
+    \item \textbf{Complessità temporale (Ricostruzione):} Segue la catena di puntatori in $b$ di lunghezza al più $\min(m, n)$, richiedendo tempo $O(\min(m, n))$.
+\end{itemize}

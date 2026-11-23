@@ -1,0 +1,107 @@
+\chapter{Longest Decreasing Subsequence (LDS)}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Sia data una sequenza $X = \langle x_1, x_2, \dots, x_n \rangle$ di $n$ numeri reali (o interi).
+
+\subsection{Soluzione}
+Una più lunga sottosequenza $Z = \langle x_{i_1}, x_{i_2}, \dots, x_{i_k} \rangle$ di $X$ (con $1 \le i_1 < i_2 < \dots < i_k \le n$) i cui elementi sono ordinati in senso strettamente decrescente:
+\[
+    x_{i_1} > x_{i_2} > \dots > x_{i_k}
+\]
+
+\section{Mancanza di informazione e definizione del coefficiente}
+Approcciando il problema sui soli prefissi $X_i = \langle x_1, \dots, x_i \rangle$ senza ulteriori vincoli, si incorre in una \textbf{mancanza di informazione}: conoscendo unicamente la lunghezza della più lunga sottosequenza decrescente di $X_{i-1}$, non è noto quale sia il suo ultimo elemento e non è quindi possibile verificare se $x_i$ sia strettamente minore di esso.
+
+Si definisce pertanto un problema ausiliario \textbf{vincolato} a terminare con l'elemento $x_i$.
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $c_i$:} Per ogni $i \in \{1, \dots, n\}$, $c_i$ è la lunghezza della più lunga sottosequenza strettamente decrescente del prefisso $X_i$ la quale è \textbf{vincolata a terminare con $x_i$}.
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+\[
+    i = 1 \implies c_1 = 1
+\]
+\textbf{Giustificazione:} L'unica sottosequenza del prefisso $X_1 = \langle x_1 \rangle$ che termina con $x_1$ è $\langle x_1 \rangle$ stessa, la quale è banalmente decrescente e ha lunghezza $1$.
+
+\subsection{Passo ricorsivo}
+Per $i > 1$:
+\[
+    c_i = \max \{ c_j : 1 \le j < i \land x_j > x_i \} + 1 \quad (\text{con } \max \emptyset = 0)
+\]
+\textbf{Giustificazione:} Ogni sottosequenza strettamente decrescente di $X_i$ che termina con $x_i$ si ottiene accodando $x_i$ a una sottosequenza strettamente decrescente di un prefisso $X_j$ ($1 \le j < i$) terminante in $x_j$, purché sia rispettata la condizione di decrescenza $x_j > x_i$. Per massimizzare la lunghezza si sceglie il $j$ che massimizza $c_j$; se nessun elemento precedente è maggiore di $x_i$ (insieme vuoto), $x_i$ forma da solo una sottosequenza di lunghezza $0 + 1 = 1$.
+
+\subsection{Soluzione del problema principale}
+Poiché la più lunga sottosequenza decrescente dell'intera sequenza $X$ deve terminare con uno degli elementi $x_i$ ($i \in \{1, \dots, n\}$), la lunghezza ottima globale è:
+\[
+    \text{Soluzione} = \max_{1 \le i \le n} \{ c_i \}
+\]
+
+\section{Algoritmo Bottom-Up}
+L'algoritmo utilizza un vettore $c[1 \dots n]$ per i coefficienti e un vettore dei predecessori $b[1 \dots n]$ per memorizzare l'indice $j$ che ha generato il massimo per $c[i]$ (oppure $0$ se l'insieme dei candidati è vuoto).
+
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up per LDS}
+\begin{algorithmic}[1]
+\Procedure{LDS}{$X$}
+    \State $n \gets |X|$
+    \State $c \gets \text{nuovo array } c[1 \dots n]$
+    \State $b \gets \text{nuovo array } b[1 \dots n]$
+    \Comment{Caso base per $i = 1$}
+    \State $c[1] \gets 1$
+    \State $b[1] \gets 0$
+    \State $m \gets c[1]$
+    \State $\text{ind\_m} \gets 1$
+    \Comment{Passo ricorsivo}
+    \For{$i = 2 \textbf{ to } n$}
+        \State $\text{tmp} \gets 0$
+        \State $k \gets 0$
+        \For{$j = 1 \textbf{ to } i - 1$}
+            \If{$x_i < x_j \land c[j] > \text{tmp}$}
+                \State $\text{tmp} \gets c[j]$
+                \State $k \gets j$
+            \EndIf
+        \EndFor
+        \State $c[i] \gets \text{tmp} + 1$
+        \State $b[i] \gets k$
+        \If{$c[i] > m$}
+            \State $m \gets c[i]$
+            \State $\text{ind\_m} \gets i$
+        \EndIf
+    \EndFor
+    \State \Return $c, b, m, \text{ind\_m}$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+\begin{algorithm}[htbp]
+\caption{Ricostruzione della sequenza LDS}
+\begin{algorithmic}[1]
+\Procedure{Print-LDS}{$i, b, X$}
+    \If{$b[i] == 0$}
+        \State \textbf{print} $x_i$
+    \Else
+        \State \Call{Print-LDS}{$b[i], b, X$}
+        \State \textbf{print} $x_i$
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+\textbf{Chiamata principale (Driver):} Una volta eseguito $\textsc{LDS}(X)$, si invoca $\Call{Print-LDS}{\text{ind\_m}, b, X}$.
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} I due vettori $c$ e $b$ hanno dimensione $n$, per cui lo spazio richiesto è $\Theta(n)$.
+    \item \textbf{Complessità temporale (Bottom-Up):} Per ogni $i \in \{2, \dots, n\}$ il ciclo interno esegue $i - 1$ confronti di costo $\Theta(1)$:
+    \[
+        T(n) = \sum_{i=2}^{n} \Theta(i - 1) = \Theta\!\left(\frac{n(n-1)}{2}\right) = \Theta(n^2)
+    \]
+    \item \textbf{Complessità temporale (Ricostruzione):} La procedura risale la catena dei predecessori stampando esattamente $m \le n$ elementi in tempo $O(n)$.
+\end{itemize}

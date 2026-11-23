@@ -1,0 +1,164 @@
+\chapter{LCS con al massimo 3 simboli rossi}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Siano date due sequenze di elementi sull'alfabeto $\Sigma$:
+\begin{align*}
+    X &= \langle x_1, x_2, \dots, x_m \rangle \\
+    Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+e una funzione di colorazione $\text{col} : \Sigma \to \{\text{rosso}, \text{blu}, \text{nero}\}$ che associa a ciascun simbolo un colore.
+
+\subsection{Soluzione}
+Una più lunga sottosequenza comune tra $X$ e $Y$ la quale contiene al massimo $3$ elementi di colore rosso.
+
+\section{Definizione del sottoproblema e del coefficiente}
+Per ogni $i \in \{0, \dots, m\}$, per ogni $j \in \{0, \dots, n\}$ e per ogni $r \in \{0, 1, 2, 3\}$:
+\begin{itemize}
+    \item $X_i = \langle x_1, \dots, x_i \rangle$ è il prefisso di lunghezza $i$ di $X$;
+    \item $Y_j = \langle y_1, \dots, y_j \rangle$ è il prefisso di lunghezza $j$ di $Y$;
+    \item $r$ rappresenta il budget massimo di elementi rossi ammessi nella sottosequenza comune.
+\end{itemize}
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $c_{i,j}^r$:} Per ogni $i \in \{0, \dots, m\}$, $j \in \{0, \dots, n\}$ e $r \in \{0, 1, 2, 3\}$, $c_{i,j}^r$ è la lunghezza di una più lunga sottosequenza comune tra i prefissi $X_i$ e $Y_j$ la quale contiene al massimo $r$ elementi di colore rosso.
+
+\medskip
+\noindent
+\textbf{Numero totale di sottoproblemi:} $4 \cdot (m + 1) \cdot (n + 1) = \Theta(m \cdot n)$.
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+\[
+    (i = 0 \lor j = 0) \land r \in \{0, 1, 2, 3\} \implies c_{i,j}^r = 0
+\]
+\textbf{Giustificazione:} Quando almeno uno dei due prefissi è vuoto, l'unica sottosequenza comune possibile è la sequenza vuota $\langle \rangle$, che contiene $0 \le r$ elementi rossi (rispettando il vincolo per ogni $r \ge 0$) ed ha lunghezza pari a $0$.
+
+\subsection{Passo ricorsivo}
+Per $i > 0 \land j > 0$ e per ogni $r \in \{0, 1, 2, 3\}$:
+\begin{itemize}
+    \item \textbf{Caso $x_i \neq y_j$:}
+    \[
+        c_{i,j}^r = \max \{ c_{i-1, j}^r, \, c_{i, j-1}^r \}
+    \]
+    \textbf{Giustificazione:} Poiché $x_i$ e $y_j$ sono diversi, non possono terminare simultaneamente la sottosequenza comune; si conserva il budget $r$ e si sceglie il massimo escludendo $x_i$ oppure $y_j$.
+
+    \item \textbf{Caso $x_i = y_j$ con $\text{col}(x_i) \neq \text{rosso}$:}
+    \[
+        c_{i,j}^r = c_{i-1, j-1}^r + 1
+    \]
+    \textbf{Giustificazione:} Un match di colore blu o nero non consuma il budget dei simboli rossi. È quindi sempre ottimo includerlo nella soluzione aggiungendo $1$ alla lunghezza ottima del sottoproblema $(i-1, j-1, r)$.
+
+    \item \textbf{Caso $x_i = y_j$ con $\text{col}(x_i) = \text{rosso}$:}
+    \begin{itemize}
+        \item Se $r = 0$:
+        \[
+            c_{i,j}^0 = c_{i-1, j-1}^0
+        \]
+        \textbf{Giustificazione:} Con budget $r = 0$ non è consentito prelevare alcun simbolo rosso; l'elemento $x_i = y_j$ viene obbligatoriamente scartato.
+        \item Se $r > 0$:
+        \[
+            c_{i,j}^r = \max \{ c_{i-1, j-1}^{r-1} + 1, \, c_{i-1, j-1}^r \}
+        \]
+        \textbf{Giustificazione:} Avendo budget $r > 0$, si valuta il massimo tra due scelte: includere il simbolo rosso $x_i = y_j$ (aumentando di $1$ la lunghezza e riducendo il budget residuo a $r-1$) oppure scartarlo (mantenendo invariato il budget $r$ sul sottoproblema $(i-1, j-1, r)$).
+    \end{itemize}
+\end{itemize}
+
+\subsection{Soluzione del problema principale}
+La lunghezza della più lunga sottosequenza comune tra $X$ e $Y$ con al massimo $3$ elementi rossi è data da:
+\[
+    \text{Soluzione} = c_{m, n}^3
+\]
+
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up per LCS con al massimo 3 simboli rossi}
+\begin{algorithmic}[1]
+\Procedure{LCS3R}{$X, Y, \text{col}$}
+    \State $m \gets |X|$
+    \State $n \gets |Y|$
+    \State $c \gets \text{nuova matrice } c[0 \dots m, \, 0 \dots n, \, 0 \dots 3]$
+    \Comment{Caso base}
+    \For{$i = 0 \textbf{ to } m$}
+        \For{$r = 0 \textbf{ to } 3$}
+            \State $c[i, 0, r] \gets 0$
+        \EndFor
+    \EndFor
+    \For{$j = 0 \textbf{ to } n$}
+        \For{$r = 0 \textbf{ to } 3$}
+            \State $c[0, j, r] \gets 0$
+        \EndFor
+    \EndFor
+    \Comment{Passo ricorsivo}
+    \For{$i = 1 \textbf{ to } m$}
+        \For{$j = 1 \textbf{ to } n$}
+            \For{$r = 0 \textbf{ to } 3$}
+                \If{$x_i \neq y_j$}
+                    \State $c[i, j, r] \gets \max \{ c[i-1, j, r], \, c[i, j-1, r] \}$
+                \Else
+                    \If{$\text{col}(x_i) \neq \text{rosso}$}
+                        \State $c[i, j, r] \gets c[i-1, j-1, r] + 1$
+                    \Else
+                        \If{$r == 0$}
+                            \State $c[i, j, 0] \gets c[i-1, j-1, 0]$
+                        \Else
+                            \State $c[i, j, r] \gets \max \{ c[i-1, j-1, r-1] + 1, \, c[i-1, j-1, r] \}$
+                        \EndIf
+                    \EndIf
+                \EndIf
+            \EndFor
+        \EndFor
+    \EndFor
+    \State \Return $c$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+\begin{algorithm}[htbp]
+\caption{Ricostruzione della sequenza LCS con al massimo 3 rossi}
+\begin{algorithmic}[1]
+\Procedure{LCS3RR}{$c, X, Y, i, j, r$}
+    \If{$i == 0 \lor j == 0$}
+        \State \Return
+    \Else
+        \If{$x_i \neq y_j$}
+            \If{$c[i-1, j, r] \ge c[i, j-1, r]$}
+                \State \Call{LCS3RR}{$c, X, Y, i-1, j, r$}
+            \Else
+                \State \Call{LCS3RR}{$c, X, Y, i, j-1, r$}
+            \EndIf
+        \Else
+            \If{$\text{col}(x_i) \neq \text{rosso}$}
+                \State \Call{LCS3RR}{$c, X, Y, i-1, j-1, r$}
+                \State \textbf{print} $x_i$
+            \Else
+                \If{$r == 0$}
+                    \State \Call{LCS3RR}{$c, X, Y, i-1, j-1, 0$}
+                \Else
+                    \If{$c[i-1, j-1, r-1] + 1 \ge c[i-1, j-1, r]$}
+                        \State \Call{LCS3RR}{$c, X, Y, i-1, j-1, r-1$}
+                        \State \textbf{print} $x_i$
+                    \Else
+                        \State \Call{LCS3RR}{$c, X, Y, i-1, j-1, r$}
+                    \EndIf
+                \EndIf
+            \EndIf
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+\textbf{Chiamata principale (Driver):} Per stampare la soluzione ottima del problema principale si invoca $\Call{LCS3RR}{c, X, Y, m, n, 3}$.
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} La tabella tridimensionale $c$ contiene $4 \cdot (m+1) \cdot (n+1)$ celle, pertanto richiede spazio $\Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Bottom-Up):} Ogni cella viene calcolata in tempo $\Theta(1)$ attraverso tre cicli annidati (di cui quello su $r$ esegue $4$ iterazioni costanti). Il tempo totale è $\Theta(4 \cdot m \cdot n) = \Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Ricostruzione):} Ad ogni passo ricorsivo almeno uno tra $i$ e $j$ diminuisce di $1$, pertanto la ricostruzione termina in tempo $O(m + n)$.
+\end{itemize}

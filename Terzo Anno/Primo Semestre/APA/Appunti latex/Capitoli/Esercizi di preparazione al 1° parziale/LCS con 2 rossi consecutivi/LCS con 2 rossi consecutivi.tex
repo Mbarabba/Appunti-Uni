@@ -1,0 +1,159 @@
+\chapter{LCS con 2 elementi rossi consecutivi}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Siano date due sequenze di simboli sull'alfabeto $\Sigma$:
+\begin{align*}
+    X &= \langle x_1, x_2, \dots, x_m \rangle \\
+    Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+e una funzione di colorazione $\text{col} : \Sigma \to \{\text{rosso}, \text{blu}, \text{nero}\}$.
+
+\subsection{Soluzione}
+Una più lunga sottosequenza comune tra $X$ e $Y$ nella quale compaiono almeno due elementi rossi consecutivi (oppure esattamente una coppia di elementi rossi consecutivi).
+
+\section{Mancanza di informazione e definizione del coefficiente}
+Per stabilire se l'inclusione di un elemento comune rosso $x_i = y_j$ formi una coppia di due elementi rossi consecutivi nella sottosequenza comune, occorre conoscere il colore dell'elemento immediatamente precedente nella sottosequenza. Poiché la formulazione standard sui soli prefissi $(X_i, Y_j)$ non conserva l'identità dell'ultimo elemento della sottosequenza, si introduce il vincolo di terminazione in $x_i = y_j$ affiancato da un parametro di stato $r \in \{0, 1\}$.
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $c_{i,j}^r$:} Per ogni $i \in \{0, \dots, m\}$, per ogni $j \in \{0, \dots, n\}$ e per ogni $r \in \{0, 1\}$, $c_{i,j}^r$ è la lunghezza della più lunga sottosequenza comune tra i prefissi $X_i$ e $Y_j$, \textbf{vincolata a terminare con $x_i = y_j$}, tale che:
+\begin{itemize}
+    \item se $r = 0$: la sottosequenza \textbf{non contiene} due elementi rossi consecutivi;
+    \item se $r = 1$: la sottosequenza \textbf{contiene} (almeno) due elementi rossi consecutivi.
+\end{itemize}
+Se per una data configurazione $(i, j, r)$ non esiste alcuna sottosequenza ammissibile, si pone $c_{i,j}^r = -\infty$ (o $0$ per lo stato $r=0$ sui casi base).
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+Per $i = 0 \lor j = 0 \lor x_i \neq y_j$:
+\begin{align*}
+    c_{i,j}^0 &= 0 \\
+    c_{i,j}^1 &= -\infty
+\end{align*}
+\textbf{Giustificazione:} Se almeno uno dei prefissi è vuoto oppure se $x_i \neq y_j$, non può esistere alcuna sottosequenza comune terminante con $x_i = y_j$. In particolare, per $r = 1$ si assegna $-\infty$ affinché uno stato privo di due rossi consecutivi non possa mai essere scambiato per una soluzione valida.
+
+\subsection{Passo ricorsivo}
+Per $i > 0 \land j > 0 \land x_i = y_j$:
+\begin{itemize}
+    \item \textbf{Caso $\text{col}(x_i) \in \{\text{nero}, \text{blu}\}$:}
+    \begin{align*}
+        c_{i,j}^0 &= \max \Big( \{0\} \cup \{ c_{h,k}^0 : 1 \le h < i \land 1 \le k < j \land x_h = y_k \} \Big) + 1 \\
+        c_{i,j}^1 &= \max \Big( \{-\infty\} \cup \{ c_{h,k}^1 : 1 \le h < i \land 1 \le k < j \land x_h = y_k \} \Big) + 1
+    \end{align*}
+    \textbf{Giustificazione:} Un elemento nero o blu non può formare una nuova coppia di rossi consecutivi. Pertanto:
+    \begin{itemize}
+        \item per $r = 0$, può estendere qualsiasi sottosequenza valida priva di due rossi consecutivi ($c_{h,k}^0$), oppure iniziare da solo una sottosequenza di lunghezza $0 + 1 = 1$;
+        \item per $r = 1$, può solo estendere una sottosequenza precedente $c_{h,k}^1$ che aveva già trovato due rossi consecutivi (se non ne esistono, resta $-\infty + 1 = -\infty$).
+    \end{itemize}
+
+    \item \textbf{Caso $\text{col}(x_i) = \text{rosso}$:}
+    \begin{itemize}
+        \item \textbf{Sottocaso $r = 0$ (nessuna coppia di rossi consecutivi):}
+        \[
+            c_{i,j}^0 = \max \Big( \{0\} \cup \{ c_{h,k}^0 : 1 \le h < i \land 1 \le k < j \land x_h = y_k \land \text{col}(x_h) \neq \text{rosso} \} \Big) + 1
+        \]
+        \textbf{Giustificazione:} Poiché $x_i$ è rosso e in $r = 0$ non devono comparire due rossi consecutivi, il penultimo elemento $x_h = y_k$ non può essere rosso ($\text{col}(x_h) \neq \text{rosso}$). In assenza di predecessori, $x_i$ forma da solo una sottosequenza di lunghezza $1$ (con un solo rosso, quindi senza due rossi consecutivi).
+
+        \item \textbf{Sottocaso $r = 1$ (presenza di due rossi consecutivi):}
+        \[
+            c_{i,j}^1 = \max \left\{
+            \begin{aligned}
+                &\max \Big( \{-\infty\} \cup \{ c_{h,k}^0 : 1 \le h < i \land 1 \le k < j \land x_h = y_k \land \text{col}(x_h) = \text{rosso} \} \Big) + 1, \\
+                &\max \Big( \{-\infty\} \cup \{ c_{h,k}^1 : 1 \le h < i \land 1 \le k < j \land x_h = y_k \} \Big) + 1
+            \end{aligned}
+            \right\}
+        \]
+        \textbf{Giustificazione:} Essendo $x_i = y_j$ rosso, si può realizzare la coppia di rossi consecutivi accodando $x_i$ a una sottosequenza $c_{h,k}^0$ il cui ultimo elemento $x_h = y_k$ era anch'esso rosso ($\text{col}(x_h) = \text{rosso}$), oppure estendere una sottosequenza $c_{h,k}^1$ che conteneva già due rossi consecutivi. (Nota: se il testo richiede che nella sottosequenza vi siano \emph{esattamente} due rossi consecutivi e mai tre, nel secondo ramo si aggiunge il vincolo $\text{col}(x_h) \neq \text{rosso}$ oppure si omette il secondo ramo).
+    \end{itemize}
+\end{itemize}
+
+\subsection{Soluzione del problema principale}
+La lunghezza della più lunga sottosequenza comune tra $X$ e $Y$ avente due elementi rossi consecutivi è:
+\[
+    \text{Soluzione} = \max_{\substack{1 \le i \le m \\ 1 \le j \le n \\ x_i = y_j}} \{ c_{i,j}^1 \}
+\]
+
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up per LCS con 2 elementi rossi consecutivi}
+\begin{algorithmic}[1]
+\Procedure{LCS2RC}{$X, Y, \text{col}$}
+    \State $m \gets |X|$, $n \gets |Y|$
+    \State $c \gets \text{nuova matrice } c[1 \dots m, \, 1 \dots n, \, 0 \dots 1]$
+    \State $b \gets \text{nuova matrice } b[1 \dots m, \, 1 \dots n, \, 0 \dots 1]$
+    \State $\text{max\_sol} \gets -\infty$, $\text{ind\_m1} \gets 0$, $\text{ind\_m2} \gets 0$
+    \For{$i = 1 \textbf{ to } m$}
+        \For{$j = 1 \textbf{ to } n$}
+            \If{$x_i \neq y_j$}
+                \State $c[i, j, 0] \gets 0$, $c[i, j, 1] \gets -\infty$
+                \State $b[i, j, 0] \gets (0, 0, 0)$, $b[i, j, 1] \gets (0, 0, 0)$
+            \Else
+                \State $\text{tmp}_0 \gets 0$, $\text{pred}_0 \gets (0, 0, 0)$
+                \State $\text{tmp}_1 \gets -\infty$, $\text{pred}_1 \gets (0, 0, 0)$
+                \For{$h = 1 \textbf{ to } i - 1$}
+                    \For{$k = 1 \textbf{ to } j - 1$}
+                        \If{$x_h == y_k$}
+                            \If{$\text{col}(x_i) \neq \text{rosso}$}
+                                \If{$c[h, k, 0] > \text{tmp}_0$}
+                                    \State $\text{tmp}_0 \gets c[h, k, 0]$, $\text{pred}_0 \gets (h, k, 0)$
+                                \EndIf
+                                \If{$c[h, k, 1] > \text{tmp}_1$}
+                                    \State $\text{tmp}_1 \gets c[h, k, 1]$, $\text{pred}_1 \gets (h, k, 1)$
+                                \EndIf
+                            \Else
+                                \If{$\text{col}(x_h) \neq \text{rosso} \land c[h, k, 0] > \text{tmp}_0$}
+                                    \State $\text{tmp}_0 \gets c[h, k, 0]$, $\text{pred}_0 \gets (h, k, 0)$
+                                \EndIf
+                                \If{$\text{col}(x_h) == \text{rosso} \land c[h, k, 0] > \text{tmp}_1$}
+                                    \State $\text{tmp}_1 \gets c[h, k, 0]$, $\text{pred}_1 \gets (h, k, 0)$
+                                \EndIf
+                                \If{$c[h, k, 1] > \text{tmp}_1$}
+                                    \State $\text{tmp}_1 \gets c[h, k, 1]$, $\text{pred}_1 \gets (h, k, 1)$
+                                \EndIf
+                            \EndIf
+                        \EndIf
+                    \EndFor
+                \EndFor
+                \State $c[i, j, 0] \gets \text{tmp}_0 + 1$, $b[i, j, 0] \gets \text{pred}_0$
+                \State $c[i, j, 1] \gets \text{tmp}_1 + 1$, $b[i, j, 1] \gets \text{pred}_1$
+                \If{$c[i, j, 1] > \text{max\_sol}$}
+                    \State $\text{max\_sol} \gets c[i, j, 1]$
+                    \State $\text{ind\_m1} \gets i$, $\text{ind\_m2} \gets j$
+                \EndIf
+            \EndIf
+        \EndFor
+    \EndFor
+    \State \Return $c, b, \text{max\_sol}, \text{ind\_m1}, \text{ind\_m2}$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+\begin{algorithm}[htbp]
+\caption{Ricostruzione per LCS con 2 elementi rossi consecutivi}
+\begin{algorithmic}[1]
+\Procedure{Print-LCS2RC}{$i, j, r, b, X$}
+    \If{$b[i, j, r] == (0, 0, 0)$}
+        \State \textbf{print} $x_i$
+        \State \Return
+    \Else
+        \State $(h, k, r_{\text{prec}}) \gets b[i, j, r]$
+        \State \Call{Print-LCS2RC}{$h, k, r_{\text{prec}}, b, X$}
+        \State \textbf{print} $x_i$
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+\textbf{Chiamata principale (Driver):} Se $\text{max\_sol} == -\infty$ si stampa che non esiste alcuna soluzione valida; altrimenti si invoca $\Call{Print-LCS2RC}{\text{ind\_m1}, \text{ind\_m2}, 1, b, X}$.
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} Le matrici $c$ e $b$ hanno dimensione $m \times n \times 2$, richiedendo spazio $\Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Bottom-Up):} Per ciascuna coppia $(i, j)$ con $x_i = y_j$, i due cicli interni su $h$ e $k$ eseguono $(i-1)(j-1)$ iterazioni di costo $\Theta(1)$, portando a una complessità nel caso pessimo pari a $O(m^2 \cdot n^2)$.
+    \item \textbf{Complessità temporale (Ricostruzione):} $O(\min(m, n))$.
+\end{itemize}

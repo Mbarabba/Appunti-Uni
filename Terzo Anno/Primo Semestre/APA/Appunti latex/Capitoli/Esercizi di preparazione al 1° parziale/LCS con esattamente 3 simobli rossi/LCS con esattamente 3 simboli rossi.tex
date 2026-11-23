@@ -1,0 +1,167 @@
+\chapter{LCS con esattamente 3 simboli rossi}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Siano date due sequenze di elementi sull'alfabeto $\Sigma$:
+\begin{align*}
+    X &= \langle x_1, x_2, \dots, x_m \rangle \\
+    Y &= \langle y_1, y_2, \dots, y_n \rangle
+\end{align*}
+e una funzione di colorazione $\text{col} : \Sigma \to \{\text{rosso}, \text{blu}, \text{nero}\}$.
+
+\subsection{Soluzione}
+Una più lunga sottosequenza comune tra $X$ e $Y$ la quale contiene esattamente $3$ simboli di colore rosso (se esiste).
+
+\section{Definizione del sottoproblema e del coefficiente}
+Per ogni $i \in \{0, \dots, m\}$, per ogni $j \in \{0, \dots, n\}$ e per ogni $r \in \{0, 1, 2, 3\}$, siano $X_i$ e $Y_j$ i prefissi di lunghezza $i$ e $j$ di $X$ e $Y$, e sia $r$ il numero esatto di simboli rossi richiesti.
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $c_{i,j}^r$:} Per ogni $i \in \{0, \dots, m\}$, $j \in \{0, \dots, n\}$ e $r \in \{0, 1, 2, 3\}$, $c_{i,j}^r$ è la lunghezza della più lunga sottosequenza comune tra i prefissi $X_i$ e $Y_j$ la quale contiene esattamente $r$ simboli rossi. Se una tale sottosequenza non esiste, si pone $c_{i,j}^r = -\infty$.
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+\begin{align*}
+    (i = 0 \lor j = 0) \land r = 0 &\implies c_{i,j}^0 = 0 \\
+    (i = 0 \lor j = 0) \land r > 0 &\implies c_{i,j}^r = -\infty
+\end{align*}
+\textbf{Giustificazione:} Se almeno uno dei due prefissi è vuoto, l'unica sottosequenza comune è $\langle \rangle$, che possiede esattamente $0$ simboli rossi ed ha lunghezza $0$ (caso $r=0$). È invece impossibile estrarre da un prefisso vuoto una sottosequenza con $r > 0$ simboli rossi, pertanto tali stati sono inammissibili ($-\infty$).
+
+\subsection{Passo ricorsivo}
+Per $i > 0 \land j > 0$ e per ogni $r \in \{0, 1, 2, 3\}$:
+\begin{itemize}
+    \item \textbf{Caso $x_i \neq y_j$:}
+    \[
+        c_{i,j}^r = \max \{ c_{i-1, j}^r, \, c_{i, j-1}^r \}
+    \]
+    \textbf{Giustificazione:} I caratteri finali non coincidono; si propaga la migliore soluzione con esattamente $r$ rossi scartando $x_i$ oppure $y_j$.
+
+    \item \textbf{Caso $x_i = y_j$ con $\text{col}(x_i) \neq \text{rosso}$:}
+    \[
+        c_{i,j}^r = c_{i-1, j-1}^r + 1
+    \]
+    \textbf{Giustificazione:} Il simbolo comune non è rosso e non altera il conteggio dei simboli rossi; lo si aggiunge alla migliore sottosequenza comune di $X_{i-1}$ e $Y_{j-1}$ avente esattamente $r$ rossi (con la convenzione $-\infty + 1 = -\infty$).
+
+    \item \textbf{Caso $x_i = y_j$ con $\text{col}(x_i) = \text{rosso}$:}
+    \begin{itemize}
+        \item Se $r = 0$:
+        \[
+            c_{i,j}^0 = c_{i-1, j-1}^0
+        \]
+        \textbf{Giustificazione:} Dovendo ottenere esattamente $0$ simboli rossi, il match rosso corrente deve essere necessariamente escluso.
+        \item Se $r > 0$:
+        \[
+            c_{i,j}^r = \max \{ c_{i-1, j-1}^{r-1} + 1, \, c_{i-1, j-1}^r \}
+        \]
+        \textbf{Giustificazione:} Si sceglie il massimo tra includere il simbolo rosso (richiedendo esattamente $r-1$ rossi nei prefissi $X_{i-1}$ e $Y_{j-1}$) ed escluderlo (richiedendo che tutti gli $r$ rossi provengano da $X_{i-1}$ e $Y_{j-1}$).
+    \end{itemize}
+\end{itemize}
+
+\subsection{Soluzione del problema principale}
+La lunghezza della più lunga sottosequenza comune tra $X$ e $Y$ con esattamente $3$ simboli rossi è:
+\[
+    \text{Soluzione} = c_{m, n}^3
+\]
+(Se $c_{m,n}^3 = -\infty$, allora non esiste alcuna sottosequenza comune con esattamente $3$ simboli rossi).
+
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up per LCS con esattamente 3 simboli rossi}
+\begin{algorithmic}[1]
+\Procedure{LCSE3R}{$X, Y, \text{col}$}
+    \State $m \gets |X|$
+    \State $n \gets |Y|$
+    \State $c \gets \text{nuova matrice } c[0 \dots m, \, 0 \dots n, \, 0 \dots 3]$
+    \Comment{Caso base}
+    \For{$i = 0 \textbf{ to } m$}
+        \State $c[i, 0, 0] \gets 0$
+        \For{$r = 1 \textbf{ to } 3$}
+            \State $c[i, 0, r] \gets -\infty$
+        \EndFor
+    \EndFor
+    \For{$j = 0 \textbf{ to } n$}
+        \State $c[0, j, 0] \gets 0$
+        \For{$r = 1 \textbf{ to } 3$}
+            \State $c[0, j, r] \gets -\infty$
+        \EndFor
+    \EndFor
+    \Comment{Passo ricorsivo}
+    \For{$i = 1 \textbf{ to } m$}
+        \For{$j = 1 \textbf{ to } n$}
+            \For{$r = 0 \textbf{ to } 3$}
+                \If{$x_i \neq y_j$}
+                    \State $c[i, j, r] \gets \max \{ c[i-1, j, r], \, c[i, j-1, r] \}$
+                \Else
+                    \If{$\text{col}(x_i) \neq \text{rosso}$}
+                        \State $c[i, j, r] \gets c[i-1, j-1, r] + 1$
+                    \Else
+                        \If{$r == 0$}
+                            \State $c[i, j, 0] \gets c[i-1, j-1, 0]$
+                        \Else
+                            \State $c[i, j, r] \gets \max \{ c[i-1, j-1, r-1] + 1, \, c[i-1, j-1, r] \}$
+                        \EndIf
+                    \EndIf
+                \EndIf
+            \EndFor
+        \EndFor
+    \EndFor
+    \State \Return $c$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+Per evitare la stampa spuria di $\langle \rangle$ o $-\infty$ durante la risalita ricorsiva, la verifica di esistenza della soluzione ($c[m,n,3] \neq -\infty$) viene effettuata in una procedura driver prima di avviare la ricorsione.
+
+\begin{algorithm}[htbp]
+\caption{Ricostruzione della sequenza LCS con esattamente 3 rossi}
+\begin{algorithmic}[1]
+\Procedure{Print-LCSE3R}{$c, X, Y$}
+    \State $m \gets |X|$, $n \gets |Y|$
+    \If{$c[m, n, 3] == -\infty$}
+        \State \textbf{print} \texttt{"Non esiste alcuna sottosequenza comune con esattamente 3 rossi"}
+    \Else
+        \State \Call{LCSE3RR}{$c, X, Y, m, n, 3$}
+    \EndIf
+\EndProcedure
+\Statex
+\Procedure{LCSE3RR}{$c, X, Y, i, j, r$}
+    \If{$i == 0 \lor j == 0$}
+        \State \Return
+    \Else
+        \If{$x_i \neq y_j$}
+            \If{$c[i-1, j, r] \ge c[i, j-1, r]$}
+                \State \Call{LCSE3RR}{$c, X, Y, i-1, j, r$}
+            \Else
+                \State \Call{LCSE3RR}{$c, X, Y, i, j-1, r$}
+            \EndIf
+        \Else
+            \If{$\text{col}(x_i) \neq \text{rosso}$}
+                \State \Call{LCSE3RR}{$c, X, Y, i-1, j-1, r$}
+                \State \textbf{print} $x_i$
+            \Else
+                \If{$r == 0$}
+                    \State \Call{LCSE3RR}{$c, X, Y, i-1, j-1, 0$}
+                \Else
+                    \If{$c[i-1, j-1, r-1] + 1 \ge c[i-1, j-1, r]$}
+                        \State \Call{LCSE3RR}{$c, X, Y, i-1, j-1, r-1$}
+                        \State \textbf{print} $x_i$
+                    \Else
+                        \State \Call{LCSE3RR}{$c, X, Y, i-1, j-1, r$}
+                    \EndIf
+                \EndIf
+            \EndIf
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} $\Theta(4 \cdot m \cdot n) = \Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Bottom-Up):} $\Theta(4 \cdot m \cdot n) = \Theta(m \cdot n)$.
+    \item \textbf{Complessità temporale (Ricostruzione):} $O(m + n)$.
+\end{itemize}

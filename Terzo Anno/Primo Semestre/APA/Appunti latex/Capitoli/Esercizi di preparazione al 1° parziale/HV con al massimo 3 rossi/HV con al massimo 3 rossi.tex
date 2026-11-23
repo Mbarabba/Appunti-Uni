@@ -1,0 +1,160 @@
+\chapter{Hateville con al massimo 3 case rosse}
+
+\section{Definizione del problema}
+
+\subsection{Istanza}
+Siano date $n$ case numerate da $1$ a $n$, una funzione donazione $d : \{1, \dots, n\} \to \mathbb{N}^+$ che associa a ciascuna casa $i$ l'importo $d(i)$ che il suo abitante è disposto a donare, e una funzione di colorazione $\text{col} : \{1, \dots, n\} \to \{\text{rosso}, \text{blu}, \text{nero}\}$ che associa un colore ad ogni casa.
+
+\subsection{Soluzione}
+Un sottoinsieme di case $S \subseteq \{1, \dots, n\}$ tale che:
+\begin{enumerate}
+    \item non contenga due case adiacenti (ovvero per ogni $i, j \in S$, $|i - j| \ge 2$);
+    \item contenga al massimo $3$ case di colore rosso ($|\{i \in S : \text{col}(i) = \text{rosso}\}| \le 3$);
+    \item renda massima la donazione complessiva $D(S) = \sum_{i \in S} d(i)$.
+\end{enumerate}
+
+\section{Definizione del sottoproblema e del coefficiente}
+Per ogni $i \in \{0, \dots, n\}$ e per ogni $r \in \{0, 1, 2, 3\}$, si considera il sottoinsieme delle prime $i$ case $X_i = \{1, \dots, i\}$ (con $X_0 = \emptyset$) e un budget massimo di $r$ case rosse.
+
+\medskip
+\noindent
+\textbf{Definizione del coefficiente $d_i^r$:} Per ogni $i \in \{0, \dots, n\}$ e $r \in \{0, 1, 2, 3\}$, $d_i^r$ è il valore della donazione massima ottenibile da un sottoinsieme ammissibile $S_i \subseteq \{1, \dots, i\}$ (senza case adiacenti) il quale contiene al massimo $r$ case di colore rosso.
+
+\section{Equazioni di ricorrenza}
+
+\subsection{Caso base}
+\begin{itemize}
+    \item \textbf{Per $i = 0$ e $r \in \{0, 1, 2, 3\}$:}
+    \[
+        d_0^r = 0
+    \]
+    \textbf{Giustificazione:} In assenza di case ($X_0 = \emptyset$), l'unico sottoinsieme selezionabile è l'insieme vuoto, che fornisce una donazione pari a $0$.
+
+    \item \textbf{Per $i = 1$ e $r \in \{0, 1, 2, 3\}$:}
+    \begin{align*}
+        \text{col}(1) \neq \text{rosso} &\implies d_1^r = d(1) \\
+        \text{col}(1) = \text{rosso} \land r = 0 &\implies d_1^0 = 0 \\
+        \text{col}(1) = \text{rosso} \land r > 0 &\implies d_1^r = d(1)
+    \end{align*}
+    \textbf{Giustificazione:} Avendo a disposizione solo la casa $1$, conviene sempre accettarne la donazione $d(1) > 0$, a meno che la casa $1$ sia rossa e il budget di case rosse disponibili sia nullo ($r = 0$), caso in cui si è obbligati a scartarla ottenendo $0$.
+\end{itemize}
+
+\subsection{Passo ricorsivo}
+Per $i \ge 2$ e per ogni $r \in \{0, 1, 2, 3\}$:
+\begin{itemize}
+    \item \textbf{Caso $\text{col}(i) \neq \text{rosso}$:}
+    \[
+        d_i^r = \max \{ d_{i-2}^r + d(i), \, d_{i-1}^r \}
+    \]
+    \textbf{Giustificazione:} Poiché la casa $i$ non è rossa, non consuma il budget $r$. Si sceglie il massimo tra accettare la casa $i$ (ottenendo $d(i)$ ed escludendo la casa adiacente $i-1$, passando quindi al sottoproblema $d_{i-2}^r$) e rifiutarla (ereditando l'ottimo $d_{i-1}^r$).
+
+    \item \textbf{Caso $\text{col}(i) = \text{rosso}$:}
+    \begin{itemize}
+        \item Se $r = 0$:
+        \[
+            d_i^0 = d_{i-1}^0
+        \]
+        \textbf{Giustificazione:} Con budget $r = 0$ non è possibile selezionare la casa rossa $i$, per cui la si scarta.
+        \item Se $r > 0$:
+        \[
+            d_i^r = \max \{ d_{i-2}^{r-1} + d(i), \, d_{i-1}^r \}
+        \]
+        \textbf{Giustificazione:} Avendo budget $r > 0$, si confronta il guadagno ottenuto selezionando la casa rossa $i$ (che somma $d(i)$, salta la casa $i-1$ e riduce il budget residuo a $r-1$ sulle prime $i-2$ case) con quello ottenuto scartandola ($d_{i-1}^r$).
+    \end{itemize}
+\end{itemize}
+
+\subsection{Soluzione del problema principale}
+Il valore della donazione massima complessiva sulle $n$ case con al massimo $3$ case rosse è:
+\[
+    \text{Soluzione} = d_n^3
+\]
+
+\section{Algoritmo Bottom-Up}
+\begin{algorithm}[htbp]
+\caption{Calcolo Bottom-Up per Hateville con al massimo 3 case rosse}
+\begin{algorithmic}[1]
+\Procedure{HV3R}{$n, d_{\text{val}}, \text{col}$}
+    \State $d \gets \text{nuova matrice } d[0 \dots n, \, 0 \dots 3]$
+    \Comment{Caso base $i = 0$}
+    \For{$r = 0 \textbf{ to } 3$}
+        \State $d[0, r] \gets 0$
+    \EndFor
+    \Comment{Caso base $i = 1$}
+    \For{$r = 0 \textbf{ to } 3$}
+        \If{$\text{col}(1) == \text{rosso}$}
+            \If{$r == 0$}
+                \State $d[1, 0] \gets 0$
+            \Else
+                \State $d[1, r] \gets d_{\text{val}}(1)$
+            \EndIf
+        \Else
+            \State $d[1, r] \gets d_{\text{val}}(1)$
+        \EndIf
+    \EndFor
+    \Comment{Passo ricorsivo $i \ge 2$}
+    \For{$i = 2 \textbf{ to } n$}
+        \For{$r = 0 \textbf{ to } 3$}
+            \If{$\text{col}(i) \neq \text{rosso}$}
+                \State $d[i, r] \gets \max \{ d[i-2, r] + d_{\text{val}}(i), \, d[i-1, r] \}$
+            \Else
+                \If{$r == 0$}
+                    \State $d[i, 0] \gets d[i-1, 0]$
+                \Else
+                    \State $d[i, r] \gets \max \{ d[i-2, r-1] + d_{\text{val}}(i), \, d[i-1, r] \}$
+                \EndIf
+            \EndIf
+        \EndFor
+    \EndFor
+    \State \Return $d$
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\section{Algoritmo di ricostruzione}
+La procedura seguente stampa gli indici delle case selezionate nella soluzione ottima.
+
+\begin{algorithm}[htbp]
+\caption{Ricostruzione dell'insieme ottimo di case per HV3R}
+\begin{algorithmic}[1]
+\Procedure{Print-HV3R}{$d, d_{\text{val}}, \text{col}, i, r$}
+    \If{$i == 0$}
+        \State \Return
+    \ElsIf{$i == 1$}
+        \If{$\text{col}(1) \neq \text{rosso} \lor r > 0$}
+            \State \textbf{print} $1$
+        \EndIf
+        \State \Return
+    \Else
+        \If{$\text{col}(i) \neq \text{rosso}$}
+            \If{$d[i-2, r] + d_{\text{val}}(i) \ge d[i-1, r]$}
+                \State \Call{Print-HV3R}{$d, d_{\text{val}}, \text{col}, i-2, r$}
+                \State \textbf{print} $i$
+            \Else
+                \State \Call{Print-HV3R}{$d, d_{\text{val}}, \text{col}, i-1, r$}
+            \EndIf
+        \Else
+            \If{$r == 0$}
+                \State \Call{Print-HV3R}{$d, d_{\text{val}}, \text{col}, i-1, 0$}
+            \Else
+                \If{$d[i-2, r-1] + d_{\text{val}}(i) \ge d[i-1, r]$}
+                    \State \Call{Print-HV3R}{$d, d_{\text{val}}, \text{col}, i-2, r-1$}
+                    \State \textbf{print} $i$
+                \Else
+                    \State \Call{Print-HV3R}{$d, d_{\text{val}}, \text{col}, i-1, r$}
+                \EndIf
+            \EndIf
+        \EndIf
+    \EndIf
+\EndProcedure
+\end{algorithmic}
+\end{algorithm}
+
+\noindent
+\textbf{Chiamata principale (Driver):} Si invoca $\Call{Print-HV3R}{d, d_{\text{val}}, \text{col}, n, 3}$.
+
+\section{Analisi della complessità}
+\begin{itemize}
+    \item \textbf{Complessità spaziale:} La tabella $d[0 \dots n, 0 \dots 3]$ ha $4(n+1)$ celle, pertanto lo spazio richiesto è $\Theta(n)$.
+    \item \textbf{Complessità temporale (Bottom-Up):} Il ciclo esterno scorre $n$ case e quello interno esegue $4$ iterazioni costanti, per un tempo totale di $\Theta(4n) = \Theta(n)$.
+    \item \textbf{Complessità temporale (Ricostruzione):} Ad ogni chiamata ricorsiva l'indice $i$ decresce di $1$ o di $2$, terminando in tempo $O(n)$.
+\end{itemize}
