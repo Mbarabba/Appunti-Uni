@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.11.13)  23 NOV 2026 13:36
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.11.13)  24 NOV 2026 10:09
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -846,7 +846,7 @@ Package: cancel 2013/04/12 v2.2 Cancel math terms
 LaTeX Font Info:    Trying to load font information for T1+lmr on input line 5.
  (/usr/share/texlive/texmf-dist/tex/latex/lm/t1lmr.fd
 File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
-) (./main.aux (./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux) (./Capitoli/Teoria/Programmazione Dinamica/WIS/WIS.aux) (./Capitoli/Teoria/Programmazione Dinamica/LIS/LIS.aux) (./Capitoli/Teoria/Programmazione Dinamica/LICS/LICS.aux) (./Capitoli/Teoria/Programmazione Dinamica/Hateville/Hateville.aux) (./Capitoli/Teoria/Programmazione Dinamica/Knapsack/Knapsack.aux) (./Capitoli/Teoria/Programmazione Dinamica/Floyd Warshall/Floyd Warshall.aux) (./Capitoli/Teoria/Programmazione Dinamica/FW: Chiusura Transitiva/FW chiusura transitiva.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Strutture dati per insiemi disgiunti.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione Attraverso liste concatenate/Rappresentazione di insiemi disgiunti mediante Liste concatenate.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux) (./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux) (./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux) (./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux) (./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux) (./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux)
+) (./main.aux (./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux) (./Capitoli/Teoria/Programmazione Dinamica/WIS/WIS.aux) (./Capitoli/Teoria/Programmazione Dinamica/LIS/LIS.aux) (./Capitoli/Teoria/Programmazione Dinamica/LICS/LICS.aux) (./Capitoli/Teoria/Programmazione Dinamica/Hateville/Hateville.aux) (./Capitoli/Teoria/Programmazione Dinamica/Knapsack/Knapsack.aux) (./Capitoli/Teoria/Programmazione Dinamica/Floyd Warshall/Floyd Warshall.aux) (./Capitoli/Teoria/Programmazione Dinamica/FW: Chiusura Transitiva/FW chiusura transitiva.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Strutture dati per insiemi disgiunti.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione Attraverso liste concatenate/Rappresentazione di insiemi disgiunti mediante Liste concatenate.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux) (./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux) (./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux) (./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux) (./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux)
 \c@algpx@indentEndPage-0@totc=\count398
 \c@algpx@indentEndPage-1@totc=\count399
 \c@algpx@indentEndPage-2@totc=\count400
@@ -1165,7 +1165,7 @@ l.62 ...ne {2.1.2}Soluzione}{20}{subsection.2.1.2}
                                                   % [1
 
 ] [2{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-rm.enc}{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}] [3{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc}] [4]
-LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 248.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 247.
  (/usr/share/texlive/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ) [5{/usr/share/texlive/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}])
@@ -1760,7 +1760,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 145.
 
-<Immagini/Screenshot From 2026-11-16 15-16-21.png, id=1023, 689.57625pt x 288.07625pt>
+<Immagini/Screenshot From 2026-11-16 15-16-21.png, id=1021, 689.57625pt x 288.07625pt>
 File: Immagini/Screenshot From 2026-11-16 15-16-21.png Graphic file (type png)
 <use Immagini/Screenshot From 2026-11-16 15-16-21.png>
 Package pdftex.def Info: Immagini/Screenshot From 2026-11-16 15-16-21.png  used on input line 154.
@@ -1778,7 +1778,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 167.
 
-<Immagini/Find-Set.png, id=1034, 484.81125pt x 128.48pt>
+<Immagini/Find-Set.png, id=1032, 484.81125pt x 128.48pt>
 File: Immagini/Find-Set.png Graphic file (type png)
 <use Immagini/Find-Set.png>
 Package pdftex.def Info: Immagini/Find-Set.png  used on input line 174.
@@ -1871,17 +1871,7 @@ LaTeX Font Warning: Font shape `T1/lmr/bx/sc' undefined
 \c@algpx@indentEndCoordIndex-89=\count714
 \c@algpx@indentEndPage-93=\count715
 \c@algpx@indentEndPage-94=\count716
-) [63]
-\openout2 = `"Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux"'.
-
- (./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
-Capitolo 12.
-) [64
-
-
-
-
-] [65
+) [63] [64
 
 
 
@@ -1889,7 +1879,7 @@ Capitolo 12.
 \openout2 = `"Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux"'.
 
  (./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
-Capitolo 13.
+Capitolo 12.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 40.
@@ -1898,7 +1888,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 40.
 
-[66
+[65
 
 
 ]
@@ -1920,7 +1910,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 
 \c@algpx@indentEndCoordIndex-98=\count723
 \c@algpx@indentEndCoordIndex-95=\count724
-[67]
+[66]
 \c@algpx@indentEndPage-101=\count725
 \c@algpx@indentEndPage-102=\count726
 \c@algpx@indentEndPage-103=\count727
@@ -1930,7 +1920,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 \c@algpx@indentEndPage-107=\count731
 \c@algpx@indentEndCoordIndex-105=\count732
 \c@algpx@indentEndCoordIndex-104=\count733
- [68]
+ [67]
 \c@algpx@indentEndPage-108=\count734
 \c@algpx@indentEndPage-109=\count735
 \c@algpx@indentEndPage-110=\count736
@@ -1939,7 +1929,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 \c@algpx@indentEndPage-113=\count739
 \c@algpx@indentEndCoordIndex-111=\count740
 \c@algpx@indentEndCoordIndex-108=\count741
- [69] [70]
+ [68] [69]
 \c@algpx@indentEndPage-114=\count742
 \c@algpx@indentEndPage-115=\count743
 \c@algpx@indentEndPage-116=\count744
@@ -1965,7 +1955,7 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 \c@algpx@indentEndCoordIndex-123=\count764
 \c@algpx@indentEndCoordIndex-122=\count765
 \c@algpx@indentEndCoordIndex-121=\count766
- [71]
+ [70]
 \c@algpx@indentEndPage-130=\count767
 \c@algpx@indentEndPage-131=\count768
 \c@algpx@indentEndPage-132=\count769
@@ -1977,11 +1967,11 @@ Underfull \hbox (badness 10000) in paragraph at lines 110--111
 \c@algpx@indentEndCoordIndex-135=\count775
 \c@algpx@indentEndCoordIndex-133=\count776
 \c@algpx@indentEndCoordIndex-130=\count777
- [72]) [73]
+ [71]) [72]
 \openout2 = `"Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux"'.
 
  (./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.tex
-Capitolo 14.
+Capitolo 13.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 22.
@@ -1994,16 +1984,16 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 22.
 
-[74
+[73
 
 
 
 
-] [75] [76] [77] [78]) [79]
+] [74] [75] [76] [77]) [78]
 \openout2 = `"Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux"'.
 
  (./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.tex
-Capitolo 15.
+Capitolo 14.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 21.
@@ -2028,7 +2018,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 21.
 
-[80
+[79
 
 
 
@@ -2042,7 +2032,7 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 28.
 
-[81]
+[80]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 98.
@@ -2059,11 +2049,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 98.
 
-) [82]
+) [81]
 \openout2 = `"Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux"'.
 
  (./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.tex
-Capitolo 16.
+Capitolo 15.
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 21.
@@ -2072,12 +2062,12 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 21.
 
-[83
+[82
 
 
 
 
-] [84]
+] [83]
 
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 90.
@@ -2094,11 +2084,11 @@ Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 Package hyperref Warning: Token not allowed in a PDF string (Unicode):
 (hyperref)                removing `math shift' on input line 90.
 
-[85]) [86] [87
+[84]) [85] [86
 
 
 
-] (./main.aux (./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux) (./Capitoli/Teoria/Programmazione Dinamica/WIS/WIS.aux) (./Capitoli/Teoria/Programmazione Dinamica/LIS/LIS.aux) (./Capitoli/Teoria/Programmazione Dinamica/LICS/LICS.aux) (./Capitoli/Teoria/Programmazione Dinamica/Hateville/Hateville.aux) (./Capitoli/Teoria/Programmazione Dinamica/Knapsack/Knapsack.aux) (./Capitoli/Teoria/Programmazione Dinamica/Floyd Warshall/Floyd Warshall.aux) (./Capitoli/Teoria/Programmazione Dinamica/FW: Chiusura Transitiva/FW chiusura transitiva.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Strutture dati per insiemi disgiunti.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione Attraverso liste concatenate/Rappresentazione di insiemi disgiunti mediante Liste concatenate.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux) (./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux) (./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux) (./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux) (./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux) (./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux))
+] (./main.aux (./Capitoli/Teoria/Programmazione Dinamica/LCS/LCS.aux) (./Capitoli/Teoria/Programmazione Dinamica/WIS/WIS.aux) (./Capitoli/Teoria/Programmazione Dinamica/LIS/LIS.aux) (./Capitoli/Teoria/Programmazione Dinamica/LICS/LICS.aux) (./Capitoli/Teoria/Programmazione Dinamica/Hateville/Hateville.aux) (./Capitoli/Teoria/Programmazione Dinamica/Knapsack/Knapsack.aux) (./Capitoli/Teoria/Programmazione Dinamica/Floyd Warshall/Floyd Warshall.aux) (./Capitoli/Teoria/Programmazione Dinamica/FW: Chiusura Transitiva/FW chiusura transitiva.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Strutture dati per insiemi disgiunti.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione Attraverso liste concatenate/Rappresentazione di insiemi disgiunti mediante Liste concatenate.aux) (./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux) (./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux) (./Capitoli/Esercitazioni/2ª Esercitazione/2ª Esercitazione.aux) (./Capitoli/Esercitazioni/3ª Esercitazione/3ª Esercitazione.aux) (./Capitoli/Esercitazioni/4ª Esercitazione/4ª Esercitazione.aux))
  ***********
 LaTeX2e <2025-11-01>
 L3 programming layer <2026-03-20>
@@ -2109,18 +2099,18 @@ LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 45611 strings out of 467363
- 961263 string characters out of 5419000
- 1894176 words of memory out of 6000000
- 73307 multiletter control sequences out of 15000+600000
+ 45582 strings out of 467363
+ 959665 string characters out of 5419000
+ 1882650 words of memory out of 6000000
+ 73288 multiletter control sequences out of 15000+600000
  792261 words of font info for 150 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 91i,21n,107p,1549b,4997s stack positions out of 10000i,1000n,20000p,200000b,200000s
+ 91i,21n,107p,1549b,4994s stack positions out of 10000i,1000n,20000p,200000b,200000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/latxfont/line10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmbx8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmi8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmmib10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr17.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr6.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmr8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmri12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmsy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/lm/lmtt12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (88 pages, 827735 bytes).
+Output written on main.pdf (87 pages, 827246 bytes).
 PDF statistics:
- 2383 PDF objects out of 2487 (max. 8388607)
- 2174 compressed objects within 22 object streams
- 601 named destinations out of 1000 (max. 500000)
- 2420 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 2373 PDF objects out of 2487 (max. 8388607)
+ 2165 compressed objects within 22 object streams
+ 599 named destinations out of 1000 (max. 500000)
+ 2412 words of extra memory for PDF output out of 10000 (max. 10000000)
 

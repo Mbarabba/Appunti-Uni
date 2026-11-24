@@ -377,9 +377,6 @@ INPUT Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappre
 INPUT ./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
 INPUT ./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
 INPUT Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
-INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
-INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
-INPUT Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
@@ -634,12 +631,6 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
-INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
-INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
-OUTPUT Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
-INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
-INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
-INPUT Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
 OUTPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
@@ -707,9 +698,6 @@ INPUT Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappre
 INPUT ./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
 INPUT ./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
 INPUT Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
-INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
-INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
-INPUT Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
