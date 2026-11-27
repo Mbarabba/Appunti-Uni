@@ -1,0 +1,309 @@
+\usetikzlibrary{shapes, backgrounds}
+
+\chapter{Matroidi}
+
+\section{Definizione}
+Un Sistema di Indipendenza $\langle E,F \rangle$ è un matroide se e solo se vale la seguente proprietà (detto "di scambio")
+
+{
+    \large
+    $$
+    \forall A,B \in F \text{ con } |B| > |A| \quad \exists b \in B \backslash A \text{ tale che } A \cup \{b\} \in F
+    $$
+
+    $$
+    |B| > |A| \text{ si può sostituire equivalentemente con } |B| = |A|+1 
+    $$
+}
+
+\subsection{Esempi di matroidi}
+\begin{itemize}
+    \item Il S.I $\langle E, \mathcal{P}(E) \rangle$ dell'esempio 1 è un matroide
+    \item Il S.I dell'esempio 2 è un matroide
+    \item Il S.I dell'esempio 3 (matroide grafico) è un matroide
+    \item Il S.I dell'esempio 4 non è un matroide
+    $$
+    \begin{aligned}
+        A = \{x_1\} \in F & \quad (\text{ing}(A) = 30 \leq 45) \\
+        B = \{x_2, x_3\} \in F & \quad (\text{ing(B)} = 45 \leq 45) \\
+        \not \exists b \in B \backslash A : A \cup \{b\} \in F & \quad \text{Non rispetta la proprietà di scambio } \\ 
+    \end{aligned}
+    $$
+    \begin{center}
+        Infatti $ing(A \cup b) > 45$ con $b \in B \backslash A$
+    \end{center}
+\end{itemize}
+
+\section{Teorema della dimensione di un matroide}
+
+\subsection{Proposizione}
+Sia $\langle E,F \rangle$ un matroide, tutti gli insiemi massimali di $\langle E,F \rangle$ hanno la stessa cardinalità
+
+\subsection{Dimostrazione}
+Per assurdo, siano $A,B \in F$ massimali con $|B| > |A|$ per la proprietà dello scambio 
+
+$$
+\exists b \in B \backslash A : A \cup \{b\} \in F
+$$
+
+quindi $A$ è estendibile, il che è una contraddizione
+
+\newpage
+\section{Matroidi grafici}
+
+\subsection{Obiettivo}
+Vogliamo ora far vedere che il matroide grafico è un matroide.
+
+\begin{itemize}
+    \item Sia $G = (V,E)$ un grafo orientato
+    \item Sia $\langle E,F \rangle$ il S.I con $F=\{A \subseteq E : (V,A) \text{ è una foresta}\}$
+\end{itemize}
+
+\begin{figure}[htbp]
+\centering
+\definecolor{highlightpink}{RGB}{255, 204, 218}
+\definecolor{softpurple}{RGB}{220, 210, 245}
+\definecolor{softblue}{RGB}{210, 220, 250}
+
+\begin{tikzpicture}[
+    vertex/.style={circle, draw, thick, inner sep=0pt, minimum size=6.5mm, font=\small\bfseries},
+    hl/.style={draw=highlightpink, line width=7pt, line cap=round, line join=round},
+    edge/.style={thick, line cap=round},
+    textnode/.style={anchor=west, font=\normalsize}
+]
+
+% ==================== INTESTAZIONE ====================
+\node[anchor=west] at (0, 0.8) {\textbf{ESEMPIO:}\quad $G = (V, E)$\quad $V = \{1, 2, 3, 4, 5, 6\}$};
+
+% ==================== RIGA 1 (Grafo base G) ====================
+\begin{scope}[yshift=0cm]
+    % Nodi
+    \node[vertex] (1) at (0, 0) {1};
+    \node[vertex] (2) at (1.8, 0) {2};
+    \node[vertex] (3) at (3.6, 0) {3};
+    \node[vertex] (4) at (0, -1.3) {4};
+    \node[vertex] (5) at (1.8, -1.3) {5};
+    \node[vertex] (6) at (3.6, -1.3) {6};
+
+    % Archi
+    \draw[edge] (1) -- (2);
+    \draw[edge] (2) -- (3);
+    \draw[edge] (1) -- (4);
+    \draw[edge] (4) -- (2);
+    \draw[edge] (4) -- (5);
+    \draw[edge] (5) -- (6);
+
+    % Testo
+    \node[textnode] at (4.5, -0.65) {$E = \{(1,2), (1,4), (2,3), (2,4), \dots\}$};
+\end{scope}
+
+% ==================== RIGA 2 (Foresta A) ====================
+\begin{scope}[yshift=-2.8cm]
+    % Evidenziazione archi
+    \begin{pgfonlayer}{background}
+        \draw[hl] (0, 0) -- (0, -1.3);
+        \draw[hl] (0, -1.3) -- (1.8, 0);
+        \draw[hl] (0, -1.3) -- (1.8, -1.3);
+    \end{pgfonlayer}
+
+    % Nodi
+    \node[vertex] (1) at (0, 0) {1};
+    \node[vertex] (2) at (1.8, 0) {2};
+    \node[vertex, fill=softpurple] (3) at (3.6, 0) {3};
+    \node[vertex] (4) at (0, -1.3) {4};
+    \node[vertex] (5) at (1.8, -1.3) {5};
+    \node[vertex, fill=softblue] (6) at (3.6, -1.3) {6};
+
+    % Archi
+    \draw[edge] (1) -- (4);
+    \draw[edge] (4) -- (2);
+    \draw[edge] (4) -- (5);
+
+    % Testo
+    \node[textnode] at (4.5, 0) {$A = \{(1,4), (2,4), (4,5)\}$};
+    \node[textnode] at (4.5, -0.65) {$(V, A)$ \`e una foresta (di 3 alberi)};
+    \node[textnode] at (4.5, -1.3) {$A \in \mathcal{F}$};
+\end{scope}
+
+% ==================== RIGA 3 (Foresta B) ====================
+\begin{scope}[yshift=-5.6cm]
+    % Evidenziazione archi
+    \begin{pgfonlayer}{background}
+        \draw[hl] (0, 0) -- (0, -1.3);
+        \draw[hl] (0, 0) -- (1.8, 0);
+        \draw[hl] (1.8, 0) -- (3.6, 0);
+        \draw[hl] (1.8, -1.3) -- (3.6, -1.3);
+    \end{pgfonlayer}
+
+    % Nodi
+    \node[vertex] (1) at (0, 0) {1};
+    \node[vertex] (2) at (1.8, 0) {2};
+    \node[vertex] (3) at (3.6, 0) {3};
+    \node[vertex] (4) at (0, -1.3) {4};
+    \node[vertex] (5) at (1.8, -1.3) {5};
+    \node[vertex] (6) at (3.6, -1.3) {6};
+
+    % Archi
+    \draw[edge] (1) -- (4);
+    \draw[edge] (1) -- (2);
+    \draw[edge] (2) -- (3);
+    \draw[edge] (5) -- (6);
+
+    % Testo
+    \node[textnode] at (4.5, 0) {$B = \{(1,2), (1,4), (2,3), (5,6)\}$};
+    \node[textnode] at (4.5, -0.65) {$(V, B)$ \`e una foresta (di 2 alberi)};
+    \node[textnode] at (4.5, -1.3) {$B \in \mathcal{F}$};
+\end{scope}
+
+% ==================== RIGA 4 (Non foresta A') ====================
+\begin{scope}[yshift=-8.4cm]
+    % Evidenziazione ciclo
+    \begin{pgfonlayer}{background}
+        \draw[hl] (0, 0) -- (1.8, 0) -- (0, -1.3) -- cycle;
+    \end{pgfonlayer}
+
+    % Nodi
+    \node[vertex] (1) at (0, 0) {1};
+    \node[vertex] (2) at (1.8, 0) {2};
+    \node[vertex] (3) at (3.6, 0) {3};
+    \node[vertex] (4) at (0, -1.3) {4};
+    \node[vertex] (5) at (1.8, -1.3) {5};
+    \node[vertex] (6) at (3.6, -1.3) {6};
+
+    % Archi
+    \draw[edge] (1) -- (2);
+    \draw[edge] (2) -- (4);
+    \draw[edge] (4) -- (1);
+    \draw[edge] (5) -- (6);
+
+    % Testo
+    \node[textnode] at (4.5, 0) {$A' = \{(1,2), (1,4), (2,4), (5,6)\}$};
+    \node[textnode] at (4.5, -0.65) {$(V, A')$ non \`e una foresta $\longrightarrow$ \colorbox{highlightpink}{perch\'e c'\`e un ciclo nel grafo} $(1, 2, 4)$};
+    \node[textnode] at (4.5, -1.3) {$A' \notin \mathcal{F}$};
+\end{scope}
+
+\end{tikzpicture}
+\end{figure}
+
+\subsection{Lemma sul numero di componenti connesse di una foresta}
+
+\subsubsection{Enunciato}
+Sia $(V,C)$ una foresta essa contiene $t$ alberi, dove $t = |V| - |C|$
+
+\subsubsection{Dimostrazione}
+Siano $v_i / e_i$ il numero di vertici / archi dell'albero $i$ nella foresta $(V,C)$ si ha che:
+
+{
+    \large
+    $$
+    |C| = \sum_{i=1}^{t} e_i = \sum_{i=1}^{t} (v_i - 1) = \sum_{i=1}^{t} v_i - \sum_{i=1}^{t} 1 = |V| - t \implies t = |V| - |C|
+    $$
+}
+
+\newpage
+\subsection{Teorema dell'esistenza del matroide grafico}
+
+\subsubsection{Enunciato}
+
+\begin{itemize}
+    \item Sia $(V,E)$ un grafo non orientato
+    \item Sia $\langle E,F \rangle$ con $F=\{A \subseteq E : (V,A) \text{ è una foresta}\}$
+\end{itemize}
+
+Vale che $\langle E,F \rangle$ è un matroide
+
+\subsubsection{Dimostrazione}
+Occorre mostrare che:
+\begin{itemize}
+    \item $\forall A,B \in F$ con $|B| > A \quad \exists b \in B \backslash A : A \cup \{b\} \in F$
+    \item Quindi $(V,A)$ e $(V,B)$ sono due foreste
+    \begin{itemize}
+        \item $(V,A)$ consiste di $|V|-|A|$ alberi $\implies$ +alberi
+        \item $(V,B)$ consiste di $|V|-|B|$ alberi $\implies$ -alberi
+    \end{itemize}
+\end{itemize}
+
+Allora $(V,B)$ deve contenere un albero $T$ in cui ci sono due vertici $u,v$ con $(u,v) \in B$ e che si trovano in due alberi di $A \implies A \cup \{(u,v)\} \in F$
+
+\newpage
+\section{Teorema di Rado}
+\subsection{Enunciato}
+Sia $\langle E,F \rangle$ un Sistema di indipendenza.
+
+Vale che $\langle E,F \rangle$ è un matroide se e solo se $\forall w : E \to R^+$ Greedy-Max($E,F,w$) risolve il problema di massimo associato a $\langle E,F \rangle$ e $w$, ossia ritorna un massimale di peso massimo tra tutti i massimali di $F$
+
+\subsection{Dimostrazione}
+Supponiamo che $\langle E, F \rangle$ è un matroide.
+
+\begin{itemize}
+    \item Sia $w:E \to R^+$ una qualsiasi funzione peso 
+    \item Sia $S = \{b_1, \dots, b_p\}$ con $w(b_1) \geq \dots w(b_p)$ l'insieme ritornato da Greedy-Max($E,F,w$)
+\end{itemize}
+
+Sappiamo che $S \in F$ e $S$ è massimale.
+
+Sia ora $A \in F$ con $A$ massimale \uline{dobbiamo far vedere che $w(S) \geq w(A)$}
+
+Siccome $\langle E,F \rangle$ è un matroide allora $|A|=|S|=p$ (tutti i massimali hanno la stessa cardinalità per il teorema della dimensione di un matroide)
+
+Quindi possiamo scrivere $A = \{a_1, \dots, a_p\}$ assumendo che $w(a_1) \geq \dots \geq w(a_p)$ senza perdità di generalità (WLONG).
+
+Mostriamo ora che \uline{$\forall i \in \{1, \dots, p\}\ w(b_i) \geq w(a_i)$} fatto che consente di concludere che $\mathbf{w(S) \geq w(A)}$.
+
+Se per assurdo \uline{$\exists i \in \{1, \dots, p\}$ tale che $w(b_i) \leq w(a_i)$ sia $k$ il più piccolo di tali $i$.}
+
+Quindi $\mathbf{w(b_k) < w(a_k)}$
+
+Consideriamo gli insiemi
+{
+    \large
+    
+    \begin{align*}
+        & D = \{b_1, \dots, b_{k-1}\} \subseteq S \to D \in F \\
+        & D' = \{a_1, \dots, a_{k-1}, a_k\} \subseteq A \to D' \in F 
+    \end{align*}
+}
+
+Siccome $|D'| > |D|$ per la proprietà dello scambio
+
+{
+    \large
+    $$
+        \exists a_j \in D' \backslash D : D \cup \{a_j\} \in F
+    $$
+}
+
+Siccome $D$ è costituito dai primi $k-1$ elementi di $S$, quindi i primi $k-1$ elemeti selezionati da Greedy-Max e il $k$-esimo selezionato è $b_k$, essendo \uline{$a_i \not \in D$ vale che $w(b_k) \geq w(s_i)$}.
+
+Inoltre, \uline{siccome $a_i \in D'$, vale che $w(a_i) \geq w(a_k)$} quindi da $w(b_k) \geq w(s_i)$ e $w(a_i) \geq w(a_k)$ \textbf{che contraddice} $\mathbf{w(b_k) < w(a_k)}$
+
+\newpage
+Greedy-Max($E,F,w$) ritorna un insieme $S$ nel quale:
+\begin{itemize}
+    \item Vi sono tutti gli elementi di $A$ (poichè sono quelli di peso $>$ e poichè $A \in F$)
+    \item Non vi è alcun elemento di $B \backslash A$ (poichè $\forall b \in B \backslash A \quad A \cup \{b\} \not \in F$)
+    \item Potrebbero esserici eventualmente elementi di $(A \cup B)^C$ (questi hanno peso nullo)
+\end{itemize}
+
+$$\text{Quindi } w(S) = w(A) = |A| \cdot (1 + \frac{1}{2|A|}) = |A| + \frac{1}{2}$$
+
+Calcoliamo ora $w(B)$, sapendo che $B = (B \backslash A) \cup (A \cap B)$
+
+{
+    \large
+    \[
+    \omega(B) = \underbrace{1 + \dots + 1}_{\text{un } 1 \quad \forall x \in B \setminus A} 
+    + \underbrace{1 + \frac{1}{2|A|} + \dots + 1 + \frac{1}{2|A|}}_{\text{un contributo di } 1 + \frac{1}{2|A|} \quad \forall x \in A \cap B}
+    \]
+}
+
+Pertanto $w(B) \geq |B| = |A| + 1 > |A| + \frac{1}{2} = w(S)$.
+
+{
+    \large
+    $$
+    \mathbf{\text{In definitiva } w(B) > w(S)}
+    $$
+}
+
+Quindi l'insieme $S$ restituto da Greedy-Max non è di peso massimo.

@@ -377,6 +377,18 @@ INPUT Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappre
 INPUT ./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
 INPUT ./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
 INPUT Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.aux
+INPUT Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
+INPUT Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.aux
+INPUT Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.aux
+INPUT Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
@@ -631,6 +643,53 @@ INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/lmsy10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/lm/rm-lmbx12.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msam10.tfm
 INPUT /usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/symbols/msbm10.tfm
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.tex
+OUTPUT Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.tex
+INPUT Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
+OUTPUT Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
+INPUT Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.geometric.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.geometric.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.misc.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.misc.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.symbols.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.symbols.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.arrows.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.arrows.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibraryshapes.callouts.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/libraries/shapes/pgflibraryshapes.callouts.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+INPUT /usr/share/texlive/texmf-dist/tex/generic/pgf/frontendlayer/tikz/libraries/tikzlibrarybackgrounds.code.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.tex
+OUTPUT Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.tex
+INPUT Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.tex
+OUTPUT Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.tex
+INPUT ./Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.tex
+INPUT Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.tex
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
 OUTPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.tex
@@ -698,6 +757,18 @@ INPUT Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappre
 INPUT ./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
 INPUT ./Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
 INPUT Capitoli/Teoria/Tecnica Greedy/Strutture dati per insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi disgiunti/Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.aux
+INPUT Capitoli/Teoria/Tecnica Greedy/Greedy-Max/Greedy-Max.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
+INPUT Capitoli/Teoria/Tecnica Greedy/Matroidi/Matroidi.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.aux
+INPUT Capitoli/Teoria/Tecnica Greedy/Greedy-Min/Greedy-min.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.aux
+INPUT ./Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.aux
+INPUT Capitoli/Teoria/Tecnica Greedy/MST - Minimum Spanning Tree/MST.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT ./Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux
 INPUT Capitoli/Esercitazioni/1ª Esercitazione/Esercizi LCS.aux

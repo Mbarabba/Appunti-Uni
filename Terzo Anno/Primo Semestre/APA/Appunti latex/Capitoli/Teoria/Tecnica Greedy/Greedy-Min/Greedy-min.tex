@@ -1,0 +1,105 @@
+\chapter{Greedy-Min}
+
+\section{Definizione di problema di minimo associato a un sistema di indipendenza e ad una funzione peso}
+Problema di minimo associato ad un Sistema di indipendenza e ad una funzione peso $w : E \to R^+$
+\subsection{Istanza}
+\begin{itemize}
+    \item Un sistema di indipendenza $\langle E,F \rangle$
+    \item Una funzione peso $w: E \to R^+$
+\end{itemize}
+
+\subsection{Soluzione}
+
+{
+    \large
+    $$
+    N \in F \text{ massimale tale che } w(N) = \min_{\substack{A \in F \\ A \text{ massimale}}}\{w(A)\} 
+    $$
+}
+
+\begin{itemize}
+    \item Sia ora $\langle E,F \rangle$ un matroide
+    \item Sia $k = \max_{\substack{e \in E}}\{w(E)\}$
+    \item Sia $H$ un qualunque numero $>k$
+\end{itemize}
+
+\section{Come risolvere un problema di minimo}
+\section{Definizione di $w'$ per Greedy-Min}
+Definiamo $w' : E \to R^+$ come segue
+{
+    \large
+    $$
+    \forall x \in E,\quad w'(x) = H - w(x)
+    $$
+}
+
+Sia $N \in F$ un massimale vale che $\forall A \in F$ con $A$ massimale (quindi $|A| = |N|$)
+
+\begin{gather*}
+    \uline{\mathbf{w'(N) \geq w'(A)}} \iff 
+    \sum_{x \in N} w'(X) \geq \sum_{x \in A} w'(x) \iff
+    \sum_{x \in N} (H - w(x)) \geq \sum_{x \in A} (H - w(x)) \iff \\
+    \sum_{x \in N} H - \sum_{x\in N} w(x) \geq \sum_{x \in A} H - \sum_{x \in A} w(x) \iff |N| \cdot H - w(n) \geq |A| \cdot H - w(A) \iff \uline{\mathbf{w(N) \leq w(A)}}
+\end{gather*}
+
+\begin{center}
+    In definitiva vale che $F \ni N$ è di peso massimo per $w'$ se e solo se $F \ni N$ massimale è di peso massimo per $w$
+\end{center}
+
+\newpage
+In altri termini un massimale $N \in F$ soddisfa
+{
+    \large
+    $$
+    w'(N) = \max_{\substack{A \in F \\ A \text{ massimale}}}\{w(A)\}
+    $$
+}
+\begin{center}
+    se e solo se $N \in F$ è un massimale che soddisfa
+\end{center}
+{
+    \large
+    $$
+    w(N) = \min_{\substack{A \in F \\ A \text{ massimale}}}\{w(A)\}
+    $$
+}
+
+Pertanto se $\langle E,F \rangle$ è un matroide per risolvere il problema di min con peso $w$ basta risolvere il problema di max con peso $w'$.
+
+Per il teorema di Rado sappiamo che Greedy-Max($E,F,w'$) risolve il problema di max!
+
+\subsection{Pseudocodice Greedy-Min}
+
+\subsubsection{Utilizzando $w'$ (Procedure Greedy-Max)}
+\begin{algorithmic}
+    \Procedure{Greedy-Max}{$E,F,w'$}
+        \State $S = \emptyset$
+        \State $Q = E$
+        \State $Q = Sort(Q)$ \Comment{Ordinamento per peso decrescente rispetto a $w'$}
+
+        \For{$i = 1$ to $n$}
+            \If{$S \cup \{Q[i]\} \in F$}
+                \State $S = S \cup \{Q[i]\}$
+            \EndIf
+        \EndFor
+
+        \State \Return $S$
+    \EndProcedure
+\end{algorithmic}
+
+\subsubsection{Utilizzando $w$ (Procedure Greedy-Min)}
+\begin{algorithmic}
+    \Procedure{Greedy-Min}{$E,F,w$}
+        \State $S = \emptyset$
+        \State $Q = E$
+        \State $Q = Sort(Q)$ \Comment{Ordinamento per peso crescente rispetto a $w$}
+
+        \For{$i = 1$ to $n$}
+            \If{$S \cup \{Q[i]\} \in F$}
+                \State $S = S \cup \{Q[i]\}$
+            \EndIf
+        \EndFor
+
+        \State \Return $S$
+\EndProcedure
+\end{algorithmic}

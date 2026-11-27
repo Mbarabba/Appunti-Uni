@@ -1,0 +1,239 @@
+\chapter{Greedy-Max}
+\section{Procedimento Greedy}
+
+\subsection{Problema}
+\begin{center}
+    Consideriamo la seguente istanza di Knapsack-01
+\end{center}
+
+\begin{minipage}[t]{0.55\textwidth}
+    \centering
+    \begin{tabular}{ccc}
+        \textbf{OGGETTO} & \textbf{VALORE} & \textbf{INGOMBRO} \\
+        \midrule
+        $x_1$ & 100 & 30 \\
+        $x_2$ & 80  & 25 \\
+        $x_3$ & 60  & 20 \\
+    \end{tabular}
+\end{minipage}
+\hfill
+\begin{minipage}[t]{0.4\textwidth}
+    \textbf{CAPACITÀ ZAINO:}
+    \vspace{0.5em}
+    
+    $C = 45$
+\end{minipage}
+
+\vspace{2em}
+
+\noindent \textbf{SOLUZIONE:} \quad $S = \{x_2, x_3\}$
+
+La soluzione si trova utilizzando la programmazione Dinamica
+
+\subsection{Procedimento algoritmo Greedy}
+\begin{enumerate}
+    \item Si effettua una scelta (quella greedy)
+    \item Si risolve un sottoproblema
+\end{enumerate}
+
+In un algoritmo greedy facciamo la scelta che sembra migliore in un determinato momento e poi risolviamo il problema che deriva da tale scelta.
+
+La scelta di un algoritmo goloso può dipendere dalle precedenti scelte ma non può dipendere dalle scelte future o dalle soluzioni dei sottoproblemi.
+
+\subsection{Soluzione ottenuta attraverso Greedy}
+Nel caso presentato:
+\begin{enumerate}
+    \item Includo $x_1$ nella soluzione
+    \item Il sottoproblema da risolvere sarà $\{x_2, x_3\}$ con capacità residua $= 15$
+    \item La soluzione del sottoproblema è $\emptyset$
+\end{enumerate}
+
+Applicando la tecnica greedy si ottiene l'insieme $\{x_1\} \cup \emptyset$ \uline{che però non è la soluzione ottimale}.
+
+
+La tecnica greedy non porta sempre a trovare la soluzione ottima, vale la pena capire quando è percorribile perchè permette di ottenere algoritmi semplici e di facile implementazione
+
+\section{Confronto  tra Programmazione Dinamica e Tecnica Greedy}
+
+\begin{minipage}[t]{0.47\textwidth}
+  % Linea orizzontale superiore sinistra
+  \rule{\linewidth}{1.2pt}\\[0.8em]
+  
+  \centering
+  {PROGRAMMAZIONE DINAMICA}\\[1.4em]
+  
+  \raggedright
+  Le decisioni vengono prese in base alla risoluzione dei sottoproblemi.\\[1.4em]
+  
+  \begin{enumerate}
+    \item Si risolvono i sottoproblemi
+    \item Si effettua una scelta
+  \end{enumerate}
+
+  \vspace{1.8em}
+  \begin{center}
+    \textbf{BOTTOM-UP}
+  \end{center}
+\end{minipage}%
+\hfill
+% Linea verticale divisoria
+\vrule width 1.2pt
+\hfill
+\begin{minipage}[t]{0.47\textwidth}
+  % Linea orizzontale superiore destra
+  \rule{\linewidth}{1.2pt}\\[0.8em]
+  
+  \centering
+  PROGRAMMAZIONE GREEDY\\[1.4em]
+  
+  \raggedright
+  Viene presa la decisione che al momento appare la migliore e poi si risolve un sottopb.\\[1.4em]
+  
+  \begin{enumerate}
+    \item Si effettua una scelta
+    \item Si risolve \underline{\textbf{UN}} sottoproblema
+  \end{enumerate}
+
+  \vspace{1.8em}
+    \begin{center}
+        \textbf{SOLITAMENTE TOP-DOWN}    
+    \end{center}
+\end{minipage}
+
+In entrambe le tecniche vale la proprietà della sottostruttura ottima-
+
+Per capire quando la tecnica Greedy funziona occorre introdurre alcuni concetti.
+
+\section{Sistema Indipendenza (S.I)}
+
+\subsection{Definizione}
+
+Un sistema di indipendenza è una coppia $<E,F>$ dove:
+
+\begin{itemize}
+    \item $E$ è un insieme finito ($|E| < \infty$)
+    \item $F$ è una famiglia di sottoinsiemi di $E\ (F \subseteq \mathcal{P}(E))$ tali che:
+    {
+        \large
+        $$
+        \forall A \in F, \forall B \subseteq A \text{ vale che } B \in F
+        $$
+    }
+\end{itemize}
+
+\subsection{Esempio 1}
+$$\langle E,F \rangle$$
+
+\begin{itemize}
+    \item $E$ è un insieme finito qualunque
+    \item $F = \mathcal{P}(E)$
+\end{itemize}
+
+\begin{center}
+    È un sistema di indipendenza
+\end{center}
+
+\subsection{Esempio 2}
+$$
+    \langle E,F \rangle
+$$
+
+\begin{itemize}
+    \item $E \subseteq V$ con $V$ spazio vettoriale e $|E| < \infty$
+    \item $F = \{A \subseteq E : A \text{ è un insieme di vettori linearmente indipendenti}\}$
+\end{itemize}
+
+\begin{center}
+    È un sistema di indipendenza
+\end{center}
+
+\newpage
+\subsection{Esempio 3}
+$$
+G = (V,E) \text{un grafo non orientato}
+$$
+
+\begin{itemize}
+    \item $\langle E,F \rangle$ con $F = \{A \subseteq E : (V,A) \text{ è una foresta}\}$
+\end{itemize}
+
+\begin{center}
+    È un sistema di indipendenza
+\end{center}
+
+Infatti, scelto $A \subseteq F$ (quindi $(V,A)$ è una foresta) e scelto $B \subseteq A$ si ha che $(V,B)$ è una foresta, per cui $B \in F$
+
+
+\section{Insieme Massimale (Non estendibile)}
+
+\subsection{Definizione}
+
+$A \in F$ è massimale se e solo se $A \in E \backslash A$ vale che $A \cup \{e\} \not \in F$
+
+\section{Problema di massimo associato ad un S.I}
+
+\subsection{Istanza}
+\begin{itemize}
+    \item $\langle E,F \rangle$ è un sistema di indipendenza
+    \item $w: E \to R$
+\end{itemize}
+
+\subsection{Soluzione}
+{
+    \large 
+    
+
+    $$
+    M \in F \text{ massimale tale che }
+    w(M) = \max_{\substack{A \in F \text{ con } A \text{ massiale}}}\{w(A)\}
+    $$
+}
+
+\subsection{Esempio 4}
+\begin{itemize}
+    \item $E = \{x_1 , \dots, x_m\}$ e $\forall x_i$ ha un ingombro $ing(x_i)$
+    \item $F = \{A \subseteq E : ing(A) \leq C\}$
+    \item $w : E \to R^+ \quad \forall x_i\ w(x_i)$ è il valore di $x_i$
+\end{itemize}
+
+\subsubsection{Nota}
+
+$\langle E,F \rangle$ è un S.I se:
+\begin{itemize}
+    \item $A \in F,\ ing(A) \leq C$
+    \item $B \subseteq A$
+    \item $ing(B) \leq ing(a) \leq C \implies B \in F$
+\end{itemize}
+
+Inoltre il problema con 
+\begin{itemize}
+    \item \textbf{Istanza}: $\langle E,F \rangle \text{ e } w$
+    \item \textbf{Soluzione}: $M \in F$ massimale tale che $w(M) = \max_{\substack{A \in F \text{ con } A \text{ massiale}}}\{w(A)\}$
+\end{itemize}
+è il Knapsack-01
+
+\newpage
+\section{Algoritmo Greedy Associato ad un S.I $\langle E,F \rangle$ e $w:E \to R^+$}
+
+\subsection{Pseudocodice}
+\begin{algorithmic}
+    \Procedure{Greedy-Max}{$E,F,w$} \Comment{$E = \{e_1 , \dots, e_n\}$}
+        \State $S = \emptyset$
+        \State $Q = [1, \dots, m] = (e_1, \dots, e_m)$
+        \State $Q = Sort(Q)$ \Comment{Ordinamente decrescente in baso ai pesi}
+
+        \For{$i = 1$ to $n$}
+            \If{$S \cup \{Q[i]\} \in F$} \Comment{Costo: $O(n\log(n)+ n \cdot C(n))$}
+                \State $S = S \cup \{Q[i]\}$
+            \EndIf
+        \EndFor
+
+        \State \Return $S$
+    \EndProcedure
+\end{algorithmic}
+
+\subsection{Cosa restituisce?}
+Greedy-Max ritorna sempre un  sottoinsieme massimale
+
+\subsection{Quando Greedy-Max risolve il problema?}
+Greedy-Max risolve i problemi associati a dei \textbf{matroidi}, la cui teoria è utile per determinare quando il metodo greedy genera solozuini ottime, essa non tratta tutti i casi ai quali è possibile applicare il metodo greedy ma consente di analizzare molti casi di interesse pratico

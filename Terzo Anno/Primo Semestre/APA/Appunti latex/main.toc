@@ -1,365 +1,420 @@
 \babel@toc {italian}{}\relax 
 \babel@toc {italian}{}\relax 
-\contentsline {part}{I\hspace {1em}Teoria Programmazione Dinamica}{7}{part.1}%
-\contentsline {chapter}{\numberline {1}LCS - Longest Common Subsequence}{8}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Sequenze}{8}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Definizione}{8}{subsection.1.1.1}%
-\contentsline {subsection}{\numberline {1.1.2}Sequenza vuota}{8}{subsection.1.1.2}%
-\contentsline {subsection}{\numberline {1.1.3}Lunghezza della sequenza}{8}{subsection.1.1.3}%
-\contentsline {subsection}{\numberline {1.1.4}Esempio di sequenza}{8}{subsection.1.1.4}%
-\contentsline {subsection}{\numberline {1.1.5}Prefisso}{8}{subsection.1.1.5}%
-\contentsline {subsection}{\numberline {1.1.6}Esempio di prefisso}{8}{subsection.1.1.6}%
-\contentsline {section}{\numberline {1.2}Sottosequenze}{9}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Definizione}{9}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Esempio di sottosequenza}{9}{subsection.1.2.2}%
-\contentsline {section}{\numberline {1.3}Definizione del problema LCS}{9}{section.1.3}%
-\contentsline {subsection}{\numberline {1.3.1}Istanza}{9}{subsection.1.3.1}%
-\contentsline {subsection}{\numberline {1.3.2}Obiettivo}{9}{subsection.1.3.2}%
-\contentsline {subsubsection}{Molteplicità di soluzioni}{9}{subsubsection*.2}%
-\contentsline {subsection}{\numberline {1.3.3}Esempi di LCS}{10}{subsection.1.3.3}%
-\contentsline {section}{\numberline {1.4}LCS - Metodo NAIF}{11}{section.1.4}%
-\contentsline {subsection}{\numberline {1.4.1}Spiegazione}{11}{subsection.1.4.1}%
-\contentsline {subsection}{\numberline {1.4.2}Procedura di soluzione}{11}{subsection.1.4.2}%
-\contentsline {subsection}{\numberline {1.4.3}Complessità}{11}{subsection.1.4.3}%
-\contentsline {section}{\numberline {1.5}LCS - Ricorsivo puro}{12}{section.1.5}%
-\contentsline {subsection}{\numberline {1.5.1}Caso base}{12}{subsection.1.5.1}%
-\contentsline {subsubsection}{Sottoproblemi}{12}{subsubsection*.3}%
-\contentsline {subsubsection}{Numero di sottoproblemi}{12}{subsubsection*.4}%
-\contentsline {subsection}{\numberline {1.5.2}Passo ricorsivo}{12}{subsection.1.5.2}%
-\contentsline {subsubsection}{Singnificato simbolo " | "}{12}{subsubsection*.5}%
-\contentsline {subsection}{\numberline {1.5.3}"Matrice" dei sottoproblemi}{13}{subsection.1.5.3}%
-\contentsline {subsection}{\numberline {1.5.4}Algoritmo in pseudocodice}{13}{subsection.1.5.4}%
-\contentsline {subsection}{\numberline {1.5.5}Tempi di calcolo}{13}{subsection.1.5.5}%
-\contentsline {section}{\numberline {1.6}Algoritmo Iterativo Bottom-Up}{14}{section.1.6}%
-\contentsline {subsection}{\numberline {1.6.1}Spiegazione del funzionamento generale}{14}{subsection.1.6.1}%
-\contentsline {subsection}{\numberline {1.6.2}Strutture dati di supporto}{14}{subsection.1.6.2}%
-\contentsline {subsubsection}{Matrice S}{14}{subsubsection*.7}%
-\contentsline {subsubsection}{Matrice C}{14}{subsubsection*.9}%
-\contentsline {subsection}{\numberline {1.6.3}Algortimo in pseudocodice}{15}{subsection.1.6.3}%
-\contentsline {subsection}{\numberline {1.6.4}Tempi di calcolo}{15}{subsection.1.6.4}%
-\contentsline {subsection}{\numberline {1.6.5}Come migliorarlo}{15}{subsection.1.6.5}%
-\contentsline {section}{\numberline {1.7}LCS - Length (Calcolo della lunghezza e dei puntatori di una LCS)}{16}{section.1.7}%
-\contentsline {subsection}{\numberline {1.7.1}Spiegazione del funzionamento generale}{16}{subsection.1.7.1}%
-\contentsline {subsection}{\numberline {1.7.2}Strutture dati di supporto}{16}{subsection.1.7.2}%
-\contentsline {subsubsection}{Matrice C}{16}{subsubsection*.11}%
-\contentsline {subsubsection}{Matrice b}{16}{subsubsection*.12}%
-\contentsline {subsection}{\numberline {1.7.3}Algortimo in pseudocodice}{16}{subsection.1.7.3}%
-\contentsline {section}{\numberline {1.8}Print - LCS (Costruzione di una LCS)}{17}{section.1.8}%
-\contentsline {subsection}{\numberline {1.8.1}Spiegazione del funzionamento generale}{17}{subsection.1.8.1}%
-\contentsline {subsection}{\numberline {1.8.2}Strutture dati di supporto}{17}{subsection.1.8.2}%
-\contentsline {subsubsection}{Matrice C}{17}{subsubsection*.13}%
-\contentsline {subsubsection}{Matrice b}{17}{subsubsection*.14}%
-\contentsline {subsection}{\numberline {1.8.3}Algortimo in pseudocodice}{17}{subsection.1.8.3}%
-\contentsline {subsection}{\numberline {1.8.4}Tempi di calcolo}{17}{subsection.1.8.4}%
-\contentsline {section}{\numberline {1.9}Dimostrazione}{18}{section.1.9}%
-\contentsline {chapter}{\numberline {2}WIS - Weighted Interval Scheduling \\(ottimizzazione combinatoria insiemi)}{19}{chapter.2}%
-\contentsline {section}{\numberline {2.1}Definzione del problema}{19}{section.2.1}%
-\contentsline {subsection}{\numberline {2.1.1}Istanza}{19}{subsection.2.1.1}%
-\contentsline {subsubsection}{Definizione dell'insieme}{19}{subsubsection*.15}%
-\contentsline {subsubsection}{Compatibilità}{19}{subsubsection*.16}%
-\contentsline {subsubsection}{Funzione di valutazione}{19}{subsubsection*.17}%
-\contentsline {subsubsection}{Funzione di Compatibilità}{20}{subsubsection*.18}%
-\contentsline {subsection}{\numberline {2.1.2}Soluzione}{20}{subsection.2.1.2}%
-\contentsline {section}{\numberline {2.2}Definzione della soluzione ricorsiva}{21}{section.2.2}%
-\contentsline {subsection}{\numberline {2.2.1}Istanza}{21}{subsection.2.2.1}%
-\contentsline {subsection}{\numberline {2.2.2}Soluzione}{21}{subsection.2.2.2}%
-\contentsline {subsubsection}{Definizione del coefficiente $c_i$}{21}{subsubsection*.19}%
-\contentsline {subsection}{\numberline {2.2.3}Casi base}{21}{subsection.2.2.3}%
-\contentsline {subsubsection}{Insieme vuoto $i=0$}{21}{subsubsection*.20}%
-\contentsline {subsubsection}{Insieme composto da un solo elemento $i=1$}{21}{subsubsection*.21}%
-\contentsline {subsection}{\numberline {2.2.4}Passo ricorsivo}{21}{subsection.2.2.4}%
-\contentsline {subsubsection}{$\mathbf {i \not \in S_i}$}{21}{subsubsection*.22}%
-\contentsline {subsubsection}{$\mathbf {i \in S_i}$}{22}{subsubsection*.23}%
-\contentsline {section}{\numberline {2.3}Algoritmo bottom-up}{22}{section.2.3}%
-\contentsline {subsection}{\numberline {2.3.1}Pseudocodice}{22}{subsection.2.3.1}%
-\contentsline {subsection}{\numberline {2.3.2}Spiegazione}{22}{subsection.2.3.2}%
-\contentsline {subsection}{\numberline {2.3.3}Complessità}{22}{subsection.2.3.3}%
-\contentsline {subsection}{\numberline {2.3.4}Simulazione}{22}{subsection.2.3.4}%
-\contentsline {section}{\numberline {2.4}Algoritmo di stampa della soluzione $\mathbf {S_i}$}{23}{section.2.4}%
-\contentsline {subsection}{\numberline {2.4.1}Pseudocodice}{23}{subsection.2.4.1}%
-\contentsline {subsection}{\numberline {2.4.2}Spiegazione}{23}{subsection.2.4.2}%
-\contentsline {subsection}{\numberline {2.4.3}Complessità}{23}{subsection.2.4.3}%
-\contentsline {section}{\numberline {2.5}Algoritmo di stampa dell'insieme di soluzione}{24}{section.2.5}%
-\contentsline {subsection}{\numberline {2.5.1}Pseudocodice}{24}{subsection.2.5.1}%
-\contentsline {subsection}{\numberline {2.5.2}Spiegazione}{24}{subsection.2.5.2}%
-\contentsline {subsection}{\numberline {2.5.3}Complessità}{24}{subsection.2.5.3}%
-\contentsline {section}{\numberline {2.6}Dimostrazione del problema della sottostruttura ottima}{25}{section.2.6}%
-\contentsline {subsection}{\numberline {2.6.1}Teorema}{25}{subsection.2.6.1}%
-\contentsline {subsection}{\numberline {2.6.2}Dimostrazione}{25}{subsection.2.6.2}%
-\contentsline {chapter}{\numberline {3}LIS - Longest Increasing Subsequence}{26}{chapter.3}%
-\contentsline {section}{\numberline {3.1}Definizione del problema}{26}{section.3.1}%
-\contentsline {subsection}{\numberline {3.1.1}Istanza}{26}{subsection.3.1.1}%
-\contentsline {subsection}{\numberline {3.1.2}Soluzione}{26}{subsection.3.1.2}%
-\contentsline {subsection}{\numberline {3.1.3}Esempio}{26}{subsection.3.1.3}%
-\contentsline {section}{\numberline {3.2}Formulazione ricorsiva di una LIS}{27}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}Istanza}{27}{subsection.3.2.1}%
-\contentsline {subsection}{\numberline {3.2.2}Soluzione}{27}{subsection.3.2.2}%
-\contentsline {subsection}{\numberline {3.2.3}Caso base}{27}{subsection.3.2.3}%
-\contentsline {subsection}{\numberline {3.2.4}Passo ricorsivo $i > 1$}{27}{subsection.3.2.4}%
-\contentsline {section}{\numberline {3.3}Formulazione ricorsiva di una $LIS_V$}{28}{section.3.3}%
-\contentsline {subsection}{\numberline {3.3.1}Istanza}{28}{subsection.3.3.1}%
-\contentsline {subsection}{\numberline {3.3.2}Soluzione}{28}{subsection.3.3.2}%
-\contentsline {subsection}{\numberline {3.3.3}Definizione dei coefficienti nel problema $LIS_V$}{28}{subsection.3.3.3}%
-\contentsline {subsection}{\numberline {3.3.4}Caso base}{28}{subsection.3.3.4}%
-\contentsline {subsection}{\numberline {3.3.5}Passo ricorsivo}{28}{subsection.3.3.5}%
-\contentsline {section}{\numberline {3.4}Algoritmo Bottom-Up}{29}{section.3.4}%
-\contentsline {section}{\numberline {3.5}Ricostruzione della LIS}{29}{section.3.5}%
-\contentsline {section}{\numberline {3.6}Dimostrazione: Proprietà Sottostruttura Ottima di una $LIS_V$}{30}{section.3.6}%
-\contentsline {subsection}{\numberline {3.6.1}Teorema}{30}{subsection.3.6.1}%
-\contentsline {subsection}{\numberline {3.6.2}Dimostrazione}{30}{subsection.3.6.2}%
-\contentsline {chapter}{\numberline {4}LICS - Longest Increasing Common Subsequence}{31}{chapter.4}%
-\contentsline {section}{\numberline {4.1}Definizione del problema}{31}{section.4.1}%
-\contentsline {subsection}{\numberline {4.1.1}Istanza}{31}{subsection.4.1.1}%
-\contentsline {subsection}{\numberline {4.1.2}Soluzione}{31}{subsection.4.1.2}%
-\contentsline {subsubsection}{Esempio}{31}{subsubsection*.24}%
-\contentsline {section}{\numberline {4.2}Formulazione ricorsiva di una LICS Sottoproblema $(i,j)$}{32}{section.4.2}%
-\contentsline {subsection}{\numberline {4.2.1}Istanza}{32}{subsection.4.2.1}%
-\contentsline {subsection}{\numberline {4.2.2}Soluzione}{32}{subsection.4.2.2}%
-\contentsline {subsection}{\numberline {4.2.3}Caso base $i = 0 \lor j=0$}{32}{subsection.4.2.3}%
-\contentsline {subsection}{\numberline {4.2.4}Passo ricorsivo}{32}{subsection.4.2.4}%
-\contentsline {section}{\numberline {4.3}$LICS_V$}{33}{section.4.3}%
-\contentsline {subsection}{\numberline {4.3.1}Definizione del problema}{33}{subsection.4.3.1}%
-\contentsline {subsubsection}{Istanza}{33}{subsubsection*.25}%
-\contentsline {subsubsection}{Soluzione}{33}{subsubsection*.26}%
-\contentsline {subsection}{\numberline {4.3.2}Definizione del sottoproblema $(i,j)$}{33}{subsection.4.3.2}%
-\contentsline {subsubsection}{Istanza}{33}{subsubsection*.27}%
-\contentsline {subsubsection}{Soluzione}{33}{subsubsection*.28}%
-\contentsline {subsubsection}{Definizione dei coefficienti della $LICS_V$}{33}{subsubsection*.29}%
-\contentsline {subsection}{\numberline {4.3.3}Formulazione ricorsiva di $Z^{(i,j)}$}{34}{subsection.4.3.3}%
-\contentsline {subsubsection}{Caso base}{34}{subsubsection*.30}%
-\contentsline {subsubsection}{Passo ricorsivo}{34}{subsubsection*.31}%
-\contentsline {subsubsection}{Lunghezza della soluzione}{34}{subsubsection*.32}%
-\contentsline {section}{\numberline {4.4}Algoritmo Bottom-Up}{35}{section.4.4}%
-\contentsline {subsection}{\numberline {4.4.1}Pseudocodice}{35}{subsection.4.4.1}%
-\contentsline {subsection}{\numberline {4.4.2}Spiegazione dell'algoritmo}{35}{subsection.4.4.2}%
-\contentsline {subsection}{\numberline {4.4.3}Complessità}{35}{subsection.4.4.3}%
-\contentsline {section}{\numberline {4.5}Algoritmo di ricostruzione}{36}{section.4.5}%
-\contentsline {subsection}{\numberline {4.5.1}Pseudocodice}{36}{subsection.4.5.1}%
-\contentsline {section}{\numberline {4.6}Problema della sottostruttura ottima}{37}{section.4.6}%
-\contentsline {subsection}{\numberline {4.6.1}Teorema}{37}{subsection.4.6.1}%
-\contentsline {subsection}{\numberline {4.6.2}Dimostrazione}{37}{subsection.4.6.2}%
-\contentsline {chapter}{\numberline {5}Hateville}{38}{chapter.5}%
-\contentsline {section}{\numberline {5.1}Definizione del problema}{38}{section.5.1}%
-\contentsline {subsection}{\numberline {5.1.1}Istanza}{38}{subsection.5.1.1}%
-\contentsline {subsection}{\numberline {5.1.2}Soluzione}{38}{subsection.5.1.2}%
-\contentsline {subsubsection}{Esempio}{38}{subsubsection*.33}%
-\contentsline {section}{\numberline {5.2}Definizione del sottoproblema}{39}{section.5.2}%
-\contentsline {subsection}{\numberline {5.2.1}Istanza}{39}{subsection.5.2.1}%
-\contentsline {subsection}{\numberline {5.2.2}Soluzione}{39}{subsection.5.2.2}%
-\contentsline {subsection}{\numberline {5.2.3}$\mathbf {c_i}$ valore di una massima donazione}{39}{subsection.5.2.3}%
-\contentsline {section}{\numberline {5.3}Formulazione ricorsiva}{39}{section.5.3}%
-\contentsline {subsection}{\numberline {5.3.1}Caso base}{39}{subsection.5.3.1}%
-\contentsline {subsection}{\numberline {5.3.2}Passo ricorsivo $\mathbf {i > 1}$}{39}{subsection.5.3.2}%
-\contentsline {section}{\numberline {5.4}Soluzione al problema su istanza $\mathbf {X_n}$}{40}{section.5.4}%
-\contentsline {section}{\numberline {5.5}Algoritmo bottom-up}{40}{section.5.5}%
-\contentsline {subsection}{\numberline {5.5.1}Pseudocodice}{40}{subsection.5.5.1}%
-\contentsline {subsection}{\numberline {5.5.2}Spiegazione}{40}{subsection.5.5.2}%
-\contentsline {subsection}{\numberline {5.5.3}Complessità}{40}{subsection.5.5.3}%
-\contentsline {section}{\numberline {5.6}Ricostruzione mediante stampa di $S_i$}{41}{section.5.6}%
-\contentsline {section}{\numberline {5.7}Ricorstruzione che ritorna $S_i$}{41}{section.5.7}%
-\contentsline {chapter}{\numberline {6}Knapsack}{42}{chapter.6}%
-\contentsline {section}{\numberline {6.1}Defunizione del problema}{42}{section.6.1}%
-\contentsline {subsection}{\numberline {6.1.1}Istanza}{42}{subsection.6.1.1}%
-\contentsline {subsection}{\numberline {6.1.2}Soluzione}{42}{subsection.6.1.2}%
-\contentsline {section}{\numberline {6.2}Definizione del sottoproblema}{42}{section.6.2}%
-\contentsline {subsection}{\numberline {6.2.1}Istanza}{42}{subsection.6.2.1}%
-\contentsline {subsection}{\numberline {6.2.2}Soluzione}{42}{subsection.6.2.2}%
-\contentsline {section}{\numberline {6.3}Definizione del coefficiente $\mathbf {val_{ic}}$}{43}{section.6.3}%
-\contentsline {section}{\numberline {6.4}Formulazione ricorsiva}{43}{section.6.4}%
-\contentsline {subsection}{\numberline {6.4.1}Caso base}{43}{subsection.6.4.1}%
-\contentsline {subsubsection}{Spiegazione}{43}{subsubsection*.34}%
-\contentsline {subsection}{\numberline {6.4.2}Passo ricorsivo}{44}{subsection.6.4.2}%
-\contentsline {subsubsection}{Spiegazione}{44}{subsubsection*.35}%
-\contentsline {section}{\numberline {6.5}Soluzione}{44}{section.6.5}%
-\contentsline {section}{\numberline {6.6}Algoritmo Bottom-up}{45}{section.6.6}%
-\contentsline {subsection}{\numberline {6.6.1}Algoritmo in pseudocodice}{45}{subsection.6.6.1}%
-\contentsline {subsection}{\numberline {6.6.2}Complessità}{45}{subsection.6.6.2}%
-\contentsline {section}{\numberline {6.7}Algoritmo di ricostruzione}{46}{section.6.7}%
-\contentsline {section}{\numberline {6.8}Proprietà Sottostruttura Ottima}{46}{section.6.8}%
-\contentsline {chapter}{\numberline {7}Algoritmo di Floyd Warshall}{47}{chapter.7}%
-\contentsline {section}{\numberline {7.1}Definizione del problema}{47}{section.7.1}%
-\contentsline {subsection}{\numberline {7.1.1}Istanza}{47}{subsection.7.1.1}%
-\contentsline {subsection}{\numberline {7.1.2}Soluzione}{47}{subsection.7.1.2}%
-\contentsline {section}{\numberline {7.2}Definizione del sottoproblema di dimensione $k$}{47}{section.7.2}%
-\contentsline {section}{\numberline {7.3}Definizione dei coefficienti}{47}{section.7.3}%
-\contentsline {subsection}{\numberline {7.3.1}$\mathbf {d_{ij}^{(k)}}$ Peso del cammino}{47}{subsection.7.3.1}%
-\contentsline {subsection}{\numberline {7.3.2}$\mathbf {\pi _{ij}^{(k)}}$ Predecessore di $\mathbf {j}$}{47}{subsection.7.3.2}%
-\contentsline {section}{\numberline {7.4}Equazione di ricorrenza}{48}{section.7.4}%
-\contentsline {subsection}{\numberline {7.4.1}Caso base $\mathbf {k=0}$}{48}{subsection.7.4.1}%
-\contentsline {subsection}{\numberline {7.4.2}Passo ricorsivo $\mathbf {k>0}$}{48}{subsection.7.4.2}%
-\contentsline {section}{\numberline {7.5}Algoritmo Bottom-up}{49}{section.7.5}%
-\contentsline {subsection}{\numberline {7.5.1}Pseudocodice}{49}{subsection.7.5.1}%
-\contentsline {subsection}{\numberline {7.5.2}Complessità}{49}{subsection.7.5.2}%
-\contentsline {section}{\numberline {7.6}Ricostruzione della soluzione}{49}{section.7.6}%
-\contentsline {chapter}{\numberline {8}Floyd Warshall: Chiusura Transitiva}{50}{chapter.8}%
-\contentsline {section}{\numberline {8.1}Definizione del problema}{50}{section.8.1}%
-\contentsline {subsection}{\numberline {8.1.1}Istanza}{50}{subsection.8.1.1}%
-\contentsline {subsection}{\numberline {8.1.2}Soluzione}{50}{subsection.8.1.2}%
-\contentsline {section}{\numberline {8.2}Definizione del sottoproblema $k(0 \leq k \leq n)$}{50}{section.8.2}%
-\contentsline {section}{\numberline {8.3}Definizione del coefficiente $\mathbf {t^{(k)_{ij}}}$}{50}{section.8.3}%
-\contentsline {section}{\numberline {8.4}Formulazione ricorsiva}{51}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Caso base $\mathbf {k=0}$}{51}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Passo ricorsivo $\mathbf {k>0}$}{51}{subsection.8.4.2}%
-\contentsline {subsubsection}{Spiegazione}{51}{subsubsection*.36}%
-\contentsline {section}{\numberline {8.5}Soluzione del problema principale}{51}{section.8.5}%
-\contentsline {section}{\numberline {8.6}Algoritmo Bottom-up}{51}{section.8.6}%
-\contentsline {subsection}{\numberline {8.6.1}Algoritmo bottom-up}{51}{subsection.8.6.1}%
-\contentsline {subsection}{\numberline {8.6.2}Complessità}{51}{subsection.8.6.2}%
-\contentsline {part}{II\hspace {1em}Teoria Programmazione Greedy}{52}{part.2}%
-\contentsline {chapter}{\numberline {9}Strutture dati per insiemi disgiunti}{53}{chapter.9}%
-\contentsline {section}{\numberline {9.1}A cosa servono}{53}{section.9.1}%
-\contentsline {section}{\numberline {9.2}Definizione}{53}{section.9.2}%
-\contentsline {section}{\numberline {9.3}Proprietà degli insiemi disgiunti}{54}{section.9.3}%
-\contentsline {section}{\numberline {9.4}Operazioni da implementare all'interno della classe}{54}{section.9.4}%
-\contentsline {subsection}{\numberline {9.4.1}Make-Set: $X \to \mathcal {P}(X)$}{54}{subsection.9.4.1}%
-\contentsline {subsubsection}{Cosa fa}{54}{subsubsection*.38}%
-\contentsline {subsubsection}{Come funziona}{54}{subsubsection*.39}%
-\contentsline {subsection}{\numberline {9.4.2}Union: $Z \to \mathcal {P}(X)$}{54}{subsection.9.4.2}%
-\contentsline {subsubsection}{Cosa fa}{54}{subsubsection*.40}%
-\contentsline {subsubsection}{Come funziona}{54}{subsubsection*.41}%
-\contentsline {subsubsection}{Post condizioni}{55}{subsubsection*.42}%
-\contentsline {subsection}{\numberline {9.4.3}Find-Set: $X \to X$}{55}{subsection.9.4.3}%
-\contentsline {chapter}{\numberline {10}Rappresentazione di insiemi disgiunti mediante Liste Concatenate}{56}{chapter.10}%
-\contentsline {section}{\numberline {10.1}Struttura della lista}{56}{section.10.1}%
-\contentsline {section}{\numberline {10.2}Metodi della lista}{57}{section.10.2}%
-\contentsline {subsection}{\numberline {10.2.1}Make-Set}{57}{subsection.10.2.1}%
-\contentsline {subsection}{\numberline {10.2.2}Find-Set}{57}{subsection.10.2.2}%
-\contentsline {subsection}{\numberline {10.2.3}Union}{58}{subsection.10.2.3}%
-\contentsline {section}{\numberline {10.3}Euristica dell'unione pesata}{59}{section.10.3}%
-\contentsline {subsection}{\numberline {10.3.1}Teorema}{59}{subsection.10.3.1}%
-\contentsline {subsection}{\numberline {10.3.2}Dimostrazione}{59}{subsection.10.3.2}%
-\contentsline {subsection}{\numberline {10.3.3}Algoritmo}{59}{subsection.10.3.3}%
-\contentsline {chapter}{\numberline {11}Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti}{61}{chapter.11}%
-\contentsline {section}{\numberline {11.1}Struttura della foresta}{61}{section.11.1}%
-\contentsline {subsection}{\numberline {11.1.1}Esempio grafico}{61}{subsection.11.1.1}%
-\contentsline {section}{\numberline {11.2}Pseudocodice Metodi Stock}{61}{section.11.2}%
-\contentsline {subsection}{\numberline {11.2.1}Make-Set}{61}{subsection.11.2.1}%
-\contentsline {subsection}{\numberline {11.2.2}Find-Set}{61}{subsection.11.2.2}%
-\contentsline {subsection}{\numberline {11.2.3}Union}{62}{subsection.11.2.3}%
-\contentsline {section}{\numberline {11.3}Euristica dell'unione per rango + compressione dei cammini}{63}{section.11.3}%
-\contentsline {subsection}{\numberline {11.3.1}Unione per rango}{63}{subsection.11.3.1}%
-\contentsline {subsection}{\numberline {11.3.2}Metodi}{63}{subsection.11.3.2}%
-\contentsline {subsubsection}{Make-Set}{63}{subsubsection*.51}%
-\contentsline {subsubsection}{Union}{63}{subsubsection*.52}%
-\contentsline {subsubsection}{Link}{63}{subsubsection*.53}%
-\contentsline {subsubsection}{Find-Set con compressione dei cammini}{63}{subsubsection*.54}%
-\contentsline {part}{III\hspace {1em}Esercitazioni}{64}{part.3}%
-\contentsline {chapter}{\numberline {12}1ª Esercitazione}{65}{chapter.12}%
-\contentsline {section}{\numberline {12.1}Simulazione della Costruzione e Scrittura di una LCS}{65}{section.12.1}%
-\contentsline {subsection}{\numberline {12.1.1}Come si risolve il problema della LCS di X e Y}{65}{subsection.12.1.1}%
-\contentsline {subsection}{\numberline {12.1.2}Equazioni di ricorrenza}{65}{subsection.12.1.2}%
-\contentsline {subsection}{\numberline {12.1.3}Riempimento della matrice $c$}{65}{subsection.12.1.3}%
-\contentsline {subsection}{\numberline {12.1.4}Ricostruzione della soluzione}{66}{subsection.12.1.4}%
-\contentsline {subsection}{\numberline {12.1.5}Algoritmo PRINT-LCS senza matrice dei puntatori b}{66}{subsection.12.1.5}%
-\contentsline {section}{\numberline {12.2}HCS - Heaviest Common Subsequence}{67}{section.12.2}%
-\contentsline {subsection}{\numberline {12.2.1}Definizione del problema}{67}{subsection.12.2.1}%
-\contentsline {subsection}{\numberline {12.2.2}Procedura di risoluzione}{67}{subsection.12.2.2}%
-\contentsline {subsection}{\numberline {12.2.3}Definizione del generico sottoproblema}{67}{subsection.12.2.3}%
-\contentsline {subsection}{\numberline {12.2.4}Equazione di ricorrenza}{67}{subsection.12.2.4}%
-\contentsline {subsection}{\numberline {12.2.5}Algoritmo bottom-up}{68}{subsection.12.2.5}%
-\contentsline {subsection}{\numberline {12.2.6}Algoritmo di stampa HCS}{68}{subsection.12.2.6}%
-\contentsline {section}{\numberline {12.3}LCS con al massimo 3 rossi}{69}{section.12.3}%
-\contentsline {subsection}{\numberline {12.3.1}Definizione del problema}{69}{subsection.12.3.1}%
-\contentsline {subsection}{\numberline {12.3.2}Esempi}{69}{subsection.12.3.2}%
-\contentsline {subsubsection}{Esempio 1}{69}{subsubsection*.55}%
-\contentsline {subsubsection}{Esempio 2}{69}{subsubsection*.56}%
-\contentsline {subsection}{\numberline {12.3.3}Procedura di soluzione}{69}{subsection.12.3.3}%
-\contentsline {subsection}{\numberline {12.3.4}Definizione del generico sottoproblema}{70}{subsection.12.3.4}%
-\contentsline {subsection}{\numberline {12.3.5}Equazione di ricorrenza}{70}{subsection.12.3.5}%
-\contentsline {subsection}{\numberline {12.3.6}Algoritmo Bottom-up}{71}{subsection.12.3.6}%
-\contentsline {subsection}{\numberline {12.3.7}Ricostruzione}{71}{subsection.12.3.7}%
-\contentsline {section}{\numberline {12.4}LCS tra 3 sequenze}{72}{section.12.4}%
-\contentsline {chapter}{\numberline {13}2ª Esercitazione}{73}{chapter.13}%
-\contentsline {section}{\numberline {13.1}Alternanza pari e dispari}{73}{section.13.1}%
-\contentsline {subsection}{\numberline {13.1.1}Definizione del problema}{73}{subsection.13.1.1}%
-\contentsline {subsubsection}{Istanza}{73}{subsubsection*.57}%
-\contentsline {subsubsection}{Soluzione}{73}{subsubsection*.58}%
-\contentsline {subsection}{\numberline {13.1.2}Definizione del sottoproblema}{73}{subsection.13.1.2}%
-\contentsline {subsection}{\numberline {13.1.3}Definizione del coefficiente $\mathbf {c_i}$}{73}{subsection.13.1.3}%
-\contentsline {subsection}{\numberline {13.1.4}Formulazione ricorsiva}{73}{subsection.13.1.4}%
-\contentsline {subsubsection}{Caso base}{73}{subsubsection*.59}%
-\contentsline {subsubsection}{Passo ricorsivo}{73}{subsubsection*.60}%
-\contentsline {section}{\numberline {13.2}Alternanza dei colori}{74}{section.13.2}%
-\contentsline {subsection}{\numberline {13.2.1}Definizione del problema}{74}{subsection.13.2.1}%
-\contentsline {subsubsection}{Istanza}{74}{subsubsection*.61}%
-\contentsline {subsubsection}{Soluzione}{74}{subsubsection*.62}%
-\contentsline {subsection}{\numberline {13.2.2}Definizione del sottoproblema}{74}{subsection.13.2.2}%
-\contentsline {subsection}{\numberline {13.2.3}Formulazione ricorsiva}{74}{subsection.13.2.3}%
-\contentsline {subsubsection}{Caso base}{74}{subsubsection*.63}%
-\contentsline {subsubsection}{Passo ricorsivo}{74}{subsubsection*.64}%
-\contentsline {section}{\numberline {13.3}Elementi non consecutivamenti rossi}{75}{section.13.3}%
-\contentsline {subsection}{\numberline {13.3.1}Definizione del problema}{75}{subsection.13.3.1}%
-\contentsline {subsubsection}{Istanza}{75}{subsubsection*.65}%
-\contentsline {subsubsection}{Soluzione}{75}{subsubsection*.66}%
-\contentsline {subsection}{\numberline {13.3.2}Definizione del sottoproblema}{75}{subsection.13.3.2}%
-\contentsline {subsection}{\numberline {13.3.3}Definizione del coefficiente}{75}{subsection.13.3.3}%
-\contentsline {subsection}{\numberline {13.3.4}Formulazione ricorsiva}{75}{subsection.13.3.4}%
-\contentsline {subsubsection}{Caso base}{75}{subsubsection*.67}%
-\contentsline {subsubsection}{Passo ricorsivo}{75}{subsubsection*.68}%
-\contentsline {section}{\numberline {13.4}Elementi non consecutivamente dello stesso colore}{76}{section.13.4}%
-\contentsline {subsection}{\numberline {13.4.1}Definizione del problema}{76}{subsection.13.4.1}%
-\contentsline {subsubsection}{Istanza}{76}{subsubsection*.69}%
-\contentsline {subsubsection}{Soluzione}{76}{subsubsection*.70}%
-\contentsline {subsection}{\numberline {13.4.2}Definizione del sottoproblema}{76}{subsection.13.4.2}%
-\contentsline {subsection}{\numberline {13.4.3}Definizione del coefficiente}{76}{subsection.13.4.3}%
-\contentsline {subsection}{\numberline {13.4.4}Formulazione ricorsiva}{76}{subsection.13.4.4}%
-\contentsline {subsubsection}{Caso base}{76}{subsubsection*.71}%
-\contentsline {subsubsection}{Passo ricorsivo}{76}{subsubsection*.72}%
-\contentsline {section}{\numberline {13.5}Problema della Edit Distance}{77}{section.13.5}%
-\contentsline {subsection}{\numberline {13.5.1}Testo del problema}{77}{subsection.13.5.1}%
-\contentsline {subsection}{\numberline {13.5.2}Definizione del problema}{77}{subsection.13.5.2}%
-\contentsline {subsubsection}{Istanza}{77}{subsubsection*.73}%
-\contentsline {subsubsection}{Soluzione}{77}{subsubsection*.74}%
-\contentsline {subsection}{\numberline {13.5.3}Definizione del sottoproblema}{78}{subsection.13.5.3}%
-\contentsline {subsection}{\numberline {13.5.4}Definizione del coefficiente}{78}{subsection.13.5.4}%
-\contentsline {subsection}{\numberline {13.5.5}Formulazione ricorsiva}{78}{subsection.13.5.5}%
-\contentsline {subsubsection}{Caso base}{78}{subsubsection*.75}%
-\contentsline {subsubsection}{Passo ricorsivo}{78}{subsubsection*.76}%
-\contentsline {chapter}{\numberline {14}3ª Esercitazione}{79}{chapter.14}%
-\contentsline {section}{\numberline {14.1}Cammino minimo con esattamete 3 archi rossi}{79}{section.14.1}%
-\contentsline {subsection}{\numberline {14.1.1}Definizione del problema}{79}{subsection.14.1.1}%
-\contentsline {subsubsection}{Istanza}{79}{subsubsection*.77}%
-\contentsline {subsubsection}{Soluzione}{79}{subsubsection*.78}%
-\contentsline {subsection}{\numberline {14.1.2}Definizione del sottoproblema $\mathbf {(k,r)(0 \leq k \leq n, 0 \leq r \leq 3)}$}{79}{subsection.14.1.2}%
-\contentsline {subsection}{\numberline {14.1.3}Definizione del coefficiente}{79}{subsection.14.1.3}%
-\contentsline {subsection}{\numberline {14.1.4}Formulazione ricorsiva $\mathbf {k=0}$}{80}{subsection.14.1.4}%
-\contentsline {subsubsection}{Caso base}{80}{subsubsection*.79}%
-\contentsline {subsubsection}{Passo ricorsivo $k>0$}{80}{subsubsection*.80}%
-\contentsline {section}{\numberline {14.2}Cammini minimi in cui si alterna il colore dei vertici}{81}{section.14.2}%
-\contentsline {subsection}{\numberline {14.2.1}Definizione del problema}{81}{subsection.14.2.1}%
-\contentsline {subsubsection}{Istanza}{81}{subsubsection*.81}%
-\contentsline {subsubsection}{Soluzione}{81}{subsubsection*.82}%
-\contentsline {subsection}{\numberline {14.2.2}Definizione del sottoproblema $k(0 \leq k \leq n)$}{81}{subsection.14.2.2}%
-\contentsline {subsection}{\numberline {14.2.3}Definizione del coefficiente}{81}{subsection.14.2.3}%
-\contentsline {subsection}{\numberline {14.2.4}Formulazione ricorsiva}{81}{subsection.14.2.4}%
-\contentsline {subsubsection}{Caso base $\mathbf {k=0 \DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}D^{(0)} \not = W}$}{81}{subsubsection*.83}%
-\contentsline {subsubsection}{Passo ricorsivo $\mathbf {k>0}$}{81}{subsubsection*.84}%
-\contentsline {chapter}{\numberline {15}4ª Esercitazione}{82}{chapter.15}%
-\contentsline {section}{\numberline {15.1}Cammini minimi in cui si alterna il colore degli archi}{82}{section.15.1}%
-\contentsline {subsection}{\numberline {15.1.1}Definizione del problema}{82}{subsection.15.1.1}%
-\contentsline {subsubsection}{Istanza}{82}{subsubsection*.85}%
-\contentsline {subsubsection}{Soluzione}{82}{subsubsection*.86}%
-\contentsline {subsection}{\numberline {15.1.2}Definizione del sottoproblema $(k,a,b)$}{82}{subsection.15.1.2}%
-\contentsline {subsection}{\numberline {15.1.3}Definizione del coefficiente}{82}{subsection.15.1.3}%
-\contentsline {subsection}{\numberline {15.1.4}Formulazione ricorsiva}{83}{subsection.15.1.4}%
-\contentsline {subsubsection}{Caso base $k=0$}{83}{subsubsection*.87}%
-\contentsline {subsubsection}{Passo ricorsivo $k > 0$}{83}{subsubsection*.88}%
-\contentsline {section}{\numberline {15.2}Esistenza di cammini in cui si alterna il colore dei vertici}{84}{section.15.2}%
-\contentsline {subsection}{\numberline {15.2.1}Definizione del problema}{84}{subsection.15.2.1}%
-\contentsline {subsubsection}{Istanza}{84}{subsubsection*.89}%
-\contentsline {subsubsection}{Soluzione}{84}{subsubsection*.90}%
-\contentsline {subsection}{\numberline {15.2.2}Definizione sottoproblema $k(0 \leq k \leq n)$}{84}{subsection.15.2.2}%
-\contentsline {subsection}{\numberline {15.2.3}Definizione del coefficiente}{84}{subsection.15.2.3}%
-\contentsline {subsection}{\numberline {15.2.4}Formulazione ricorsiva}{84}{subsection.15.2.4}%
-\contentsline {subsubsection}{Caso base $k=0$}{84}{subsubsection*.91}%
-\contentsline {subsubsection}{Passo ricorsivo $k>0$}{84}{subsubsection*.92}%
-\contentsline {section}{\numberline {15.3}Esistenza di cammini in cui si alterna il colore degli archi}{85}{section.15.3}%
-\contentsline {subsection}{\numberline {15.3.1}Definizione del problema}{85}{subsection.15.3.1}%
-\contentsline {subsubsection}{Istanza}{85}{subsubsection*.93}%
-\contentsline {subsubsection}{Soluzione}{85}{subsubsection*.94}%
-\contentsline {subsection}{\numberline {15.3.2}Definizione del sottoproblema}{85}{subsection.15.3.2}%
-\contentsline {subsection}{\numberline {15.3.3}Definizione del coefficiente}{85}{subsection.15.3.3}%
-\contentsline {subsection}{\numberline {15.3.4}Formulazione ricorsiva}{85}{subsection.15.3.4}%
-\contentsline {subsubsection}{Caso base $k=0$}{85}{subsubsection*.95}%
-\contentsline {subsubsection}{Passo ricorsivo $k>0$}{85}{subsubsection*.96}%
-\contentsline {part}{IV\hspace {1em}Esercizi di preparazione per il 1° parziale}{86}{part.4}%
+\contentsline {part}{I\hspace {1em}Teoria Programmazione Dinamica}{8}{part.1}%
+\contentsline {chapter}{\numberline {1}LCS - Longest Common Subsequence}{9}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Sequenze}{9}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Definizione}{9}{subsection.1.1.1}%
+\contentsline {subsection}{\numberline {1.1.2}Sequenza vuota}{9}{subsection.1.1.2}%
+\contentsline {subsection}{\numberline {1.1.3}Lunghezza della sequenza}{9}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Esempio di sequenza}{9}{subsection.1.1.4}%
+\contentsline {subsection}{\numberline {1.1.5}Prefisso}{9}{subsection.1.1.5}%
+\contentsline {subsection}{\numberline {1.1.6}Esempio di prefisso}{9}{subsection.1.1.6}%
+\contentsline {section}{\numberline {1.2}Sottosequenze}{10}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Definizione}{10}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Esempio di sottosequenza}{10}{subsection.1.2.2}%
+\contentsline {section}{\numberline {1.3}Definizione del problema LCS}{10}{section.1.3}%
+\contentsline {subsection}{\numberline {1.3.1}Istanza}{10}{subsection.1.3.1}%
+\contentsline {subsection}{\numberline {1.3.2}Obiettivo}{10}{subsection.1.3.2}%
+\contentsline {subsubsection}{Molteplicità di soluzioni}{10}{subsubsection*.2}%
+\contentsline {subsection}{\numberline {1.3.3}Esempi di LCS}{11}{subsection.1.3.3}%
+\contentsline {section}{\numberline {1.4}LCS - Metodo NAIF}{12}{section.1.4}%
+\contentsline {subsection}{\numberline {1.4.1}Spiegazione}{12}{subsection.1.4.1}%
+\contentsline {subsection}{\numberline {1.4.2}Procedura di soluzione}{12}{subsection.1.4.2}%
+\contentsline {subsection}{\numberline {1.4.3}Complessità}{12}{subsection.1.4.3}%
+\contentsline {section}{\numberline {1.5}LCS - Ricorsivo puro}{13}{section.1.5}%
+\contentsline {subsection}{\numberline {1.5.1}Caso base}{13}{subsection.1.5.1}%
+\contentsline {subsubsection}{Sottoproblemi}{13}{subsubsection*.3}%
+\contentsline {subsubsection}{Numero di sottoproblemi}{13}{subsubsection*.4}%
+\contentsline {subsection}{\numberline {1.5.2}Passo ricorsivo}{13}{subsection.1.5.2}%
+\contentsline {subsubsection}{Singnificato simbolo " | "}{13}{subsubsection*.5}%
+\contentsline {subsection}{\numberline {1.5.3}"Matrice" dei sottoproblemi}{14}{subsection.1.5.3}%
+\contentsline {subsection}{\numberline {1.5.4}Algoritmo in pseudocodice}{14}{subsection.1.5.4}%
+\contentsline {subsection}{\numberline {1.5.5}Tempi di calcolo}{14}{subsection.1.5.5}%
+\contentsline {section}{\numberline {1.6}Algoritmo Iterativo Bottom-Up}{15}{section.1.6}%
+\contentsline {subsection}{\numberline {1.6.1}Spiegazione del funzionamento generale}{15}{subsection.1.6.1}%
+\contentsline {subsection}{\numberline {1.6.2}Strutture dati di supporto}{15}{subsection.1.6.2}%
+\contentsline {subsubsection}{Matrice S}{15}{subsubsection*.7}%
+\contentsline {subsubsection}{Matrice C}{15}{subsubsection*.9}%
+\contentsline {subsection}{\numberline {1.6.3}Algortimo in pseudocodice}{16}{subsection.1.6.3}%
+\contentsline {subsection}{\numberline {1.6.4}Tempi di calcolo}{16}{subsection.1.6.4}%
+\contentsline {subsection}{\numberline {1.6.5}Come migliorarlo}{16}{subsection.1.6.5}%
+\contentsline {section}{\numberline {1.7}LCS - Length (Calcolo della lunghezza e dei puntatori di una LCS)}{17}{section.1.7}%
+\contentsline {subsection}{\numberline {1.7.1}Spiegazione del funzionamento generale}{17}{subsection.1.7.1}%
+\contentsline {subsection}{\numberline {1.7.2}Strutture dati di supporto}{17}{subsection.1.7.2}%
+\contentsline {subsubsection}{Matrice C}{17}{subsubsection*.11}%
+\contentsline {subsubsection}{Matrice b}{17}{subsubsection*.12}%
+\contentsline {subsection}{\numberline {1.7.3}Algortimo in pseudocodice}{17}{subsection.1.7.3}%
+\contentsline {section}{\numberline {1.8}Print - LCS (Costruzione di una LCS)}{18}{section.1.8}%
+\contentsline {subsection}{\numberline {1.8.1}Spiegazione del funzionamento generale}{18}{subsection.1.8.1}%
+\contentsline {subsection}{\numberline {1.8.2}Strutture dati di supporto}{18}{subsection.1.8.2}%
+\contentsline {subsubsection}{Matrice C}{18}{subsubsection*.13}%
+\contentsline {subsubsection}{Matrice b}{18}{subsubsection*.14}%
+\contentsline {subsection}{\numberline {1.8.3}Algortimo in pseudocodice}{18}{subsection.1.8.3}%
+\contentsline {subsection}{\numberline {1.8.4}Tempi di calcolo}{18}{subsection.1.8.4}%
+\contentsline {section}{\numberline {1.9}Dimostrazione}{19}{section.1.9}%
+\contentsline {chapter}{\numberline {2}WIS - Weighted Interval Scheduling \\(ottimizzazione combinatoria insiemi)}{20}{chapter.2}%
+\contentsline {section}{\numberline {2.1}Definzione del problema}{20}{section.2.1}%
+\contentsline {subsection}{\numberline {2.1.1}Istanza}{20}{subsection.2.1.1}%
+\contentsline {subsubsection}{Definizione dell'insieme}{20}{subsubsection*.15}%
+\contentsline {subsubsection}{Compatibilità}{20}{subsubsection*.16}%
+\contentsline {subsubsection}{Funzione di valutazione}{20}{subsubsection*.17}%
+\contentsline {subsubsection}{Funzione di Compatibilità}{21}{subsubsection*.18}%
+\contentsline {subsection}{\numberline {2.1.2}Soluzione}{21}{subsection.2.1.2}%
+\contentsline {section}{\numberline {2.2}Definzione della soluzione ricorsiva}{22}{section.2.2}%
+\contentsline {subsection}{\numberline {2.2.1}Istanza}{22}{subsection.2.2.1}%
+\contentsline {subsection}{\numberline {2.2.2}Soluzione}{22}{subsection.2.2.2}%
+\contentsline {subsubsection}{Definizione del coefficiente $c_i$}{22}{subsubsection*.19}%
+\contentsline {subsection}{\numberline {2.2.3}Casi base}{22}{subsection.2.2.3}%
+\contentsline {subsubsection}{Insieme vuoto $i=0$}{22}{subsubsection*.20}%
+\contentsline {subsubsection}{Insieme composto da un solo elemento $i=1$}{22}{subsubsection*.21}%
+\contentsline {subsection}{\numberline {2.2.4}Passo ricorsivo}{22}{subsection.2.2.4}%
+\contentsline {subsubsection}{$\mathbf {i \not \in S_i}$}{22}{subsubsection*.22}%
+\contentsline {subsubsection}{$\mathbf {i \in S_i}$}{23}{subsubsection*.23}%
+\contentsline {section}{\numberline {2.3}Algoritmo bottom-up}{23}{section.2.3}%
+\contentsline {subsection}{\numberline {2.3.1}Pseudocodice}{23}{subsection.2.3.1}%
+\contentsline {subsection}{\numberline {2.3.2}Spiegazione}{23}{subsection.2.3.2}%
+\contentsline {subsection}{\numberline {2.3.3}Complessità}{23}{subsection.2.3.3}%
+\contentsline {subsection}{\numberline {2.3.4}Simulazione}{23}{subsection.2.3.4}%
+\contentsline {section}{\numberline {2.4}Algoritmo di stampa della soluzione $\mathbf {S_i}$}{24}{section.2.4}%
+\contentsline {subsection}{\numberline {2.4.1}Pseudocodice}{24}{subsection.2.4.1}%
+\contentsline {subsection}{\numberline {2.4.2}Spiegazione}{24}{subsection.2.4.2}%
+\contentsline {subsection}{\numberline {2.4.3}Complessità}{24}{subsection.2.4.3}%
+\contentsline {section}{\numberline {2.5}Algoritmo di stampa dell'insieme di soluzione}{25}{section.2.5}%
+\contentsline {subsection}{\numberline {2.5.1}Pseudocodice}{25}{subsection.2.5.1}%
+\contentsline {subsection}{\numberline {2.5.2}Spiegazione}{25}{subsection.2.5.2}%
+\contentsline {subsection}{\numberline {2.5.3}Complessità}{25}{subsection.2.5.3}%
+\contentsline {section}{\numberline {2.6}Dimostrazione del problema della sottostruttura ottima}{26}{section.2.6}%
+\contentsline {subsection}{\numberline {2.6.1}Teorema}{26}{subsection.2.6.1}%
+\contentsline {subsection}{\numberline {2.6.2}Dimostrazione}{26}{subsection.2.6.2}%
+\contentsline {chapter}{\numberline {3}LIS - Longest Increasing Subsequence}{27}{chapter.3}%
+\contentsline {section}{\numberline {3.1}Definizione del problema}{27}{section.3.1}%
+\contentsline {subsection}{\numberline {3.1.1}Istanza}{27}{subsection.3.1.1}%
+\contentsline {subsection}{\numberline {3.1.2}Soluzione}{27}{subsection.3.1.2}%
+\contentsline {subsection}{\numberline {3.1.3}Esempio}{27}{subsection.3.1.3}%
+\contentsline {section}{\numberline {3.2}Formulazione ricorsiva di una LIS}{28}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}Istanza}{28}{subsection.3.2.1}%
+\contentsline {subsection}{\numberline {3.2.2}Soluzione}{28}{subsection.3.2.2}%
+\contentsline {subsection}{\numberline {3.2.3}Caso base}{28}{subsection.3.2.3}%
+\contentsline {subsection}{\numberline {3.2.4}Passo ricorsivo $i > 1$}{28}{subsection.3.2.4}%
+\contentsline {section}{\numberline {3.3}Formulazione ricorsiva di una $LIS_V$}{29}{section.3.3}%
+\contentsline {subsection}{\numberline {3.3.1}Istanza}{29}{subsection.3.3.1}%
+\contentsline {subsection}{\numberline {3.3.2}Soluzione}{29}{subsection.3.3.2}%
+\contentsline {subsection}{\numberline {3.3.3}Definizione dei coefficienti nel problema $LIS_V$}{29}{subsection.3.3.3}%
+\contentsline {subsection}{\numberline {3.3.4}Caso base}{29}{subsection.3.3.4}%
+\contentsline {subsection}{\numberline {3.3.5}Passo ricorsivo}{29}{subsection.3.3.5}%
+\contentsline {section}{\numberline {3.4}Algoritmo Bottom-Up}{30}{section.3.4}%
+\contentsline {section}{\numberline {3.5}Ricostruzione della LIS}{30}{section.3.5}%
+\contentsline {section}{\numberline {3.6}Dimostrazione: Proprietà Sottostruttura Ottima di una $LIS_V$}{31}{section.3.6}%
+\contentsline {subsection}{\numberline {3.6.1}Teorema}{31}{subsection.3.6.1}%
+\contentsline {subsection}{\numberline {3.6.2}Dimostrazione}{31}{subsection.3.6.2}%
+\contentsline {chapter}{\numberline {4}LICS - Longest Increasing Common Subsequence}{32}{chapter.4}%
+\contentsline {section}{\numberline {4.1}Definizione del problema}{32}{section.4.1}%
+\contentsline {subsection}{\numberline {4.1.1}Istanza}{32}{subsection.4.1.1}%
+\contentsline {subsection}{\numberline {4.1.2}Soluzione}{32}{subsection.4.1.2}%
+\contentsline {subsubsection}{Esempio}{32}{subsubsection*.24}%
+\contentsline {section}{\numberline {4.2}Formulazione ricorsiva di una LICS Sottoproblema $(i,j)$}{33}{section.4.2}%
+\contentsline {subsection}{\numberline {4.2.1}Istanza}{33}{subsection.4.2.1}%
+\contentsline {subsection}{\numberline {4.2.2}Soluzione}{33}{subsection.4.2.2}%
+\contentsline {subsection}{\numberline {4.2.3}Caso base $i = 0 \lor j=0$}{33}{subsection.4.2.3}%
+\contentsline {subsection}{\numberline {4.2.4}Passo ricorsivo}{33}{subsection.4.2.4}%
+\contentsline {section}{\numberline {4.3}$LICS_V$}{34}{section.4.3}%
+\contentsline {subsection}{\numberline {4.3.1}Definizione del problema}{34}{subsection.4.3.1}%
+\contentsline {subsubsection}{Istanza}{34}{subsubsection*.25}%
+\contentsline {subsubsection}{Soluzione}{34}{subsubsection*.26}%
+\contentsline {subsection}{\numberline {4.3.2}Definizione del sottoproblema $(i,j)$}{34}{subsection.4.3.2}%
+\contentsline {subsubsection}{Istanza}{34}{subsubsection*.27}%
+\contentsline {subsubsection}{Soluzione}{34}{subsubsection*.28}%
+\contentsline {subsubsection}{Definizione dei coefficienti della $LICS_V$}{34}{subsubsection*.29}%
+\contentsline {subsection}{\numberline {4.3.3}Formulazione ricorsiva di $Z^{(i,j)}$}{35}{subsection.4.3.3}%
+\contentsline {subsubsection}{Caso base}{35}{subsubsection*.30}%
+\contentsline {subsubsection}{Passo ricorsivo}{35}{subsubsection*.31}%
+\contentsline {subsubsection}{Lunghezza della soluzione}{35}{subsubsection*.32}%
+\contentsline {section}{\numberline {4.4}Algoritmo Bottom-Up}{36}{section.4.4}%
+\contentsline {subsection}{\numberline {4.4.1}Pseudocodice}{36}{subsection.4.4.1}%
+\contentsline {subsection}{\numberline {4.4.2}Spiegazione dell'algoritmo}{36}{subsection.4.4.2}%
+\contentsline {subsection}{\numberline {4.4.3}Complessità}{36}{subsection.4.4.3}%
+\contentsline {section}{\numberline {4.5}Algoritmo di ricostruzione}{37}{section.4.5}%
+\contentsline {subsection}{\numberline {4.5.1}Pseudocodice}{37}{subsection.4.5.1}%
+\contentsline {section}{\numberline {4.6}Problema della sottostruttura ottima}{38}{section.4.6}%
+\contentsline {subsection}{\numberline {4.6.1}Teorema}{38}{subsection.4.6.1}%
+\contentsline {subsection}{\numberline {4.6.2}Dimostrazione}{38}{subsection.4.6.2}%
+\contentsline {chapter}{\numberline {5}Hateville}{39}{chapter.5}%
+\contentsline {section}{\numberline {5.1}Definizione del problema}{39}{section.5.1}%
+\contentsline {subsection}{\numberline {5.1.1}Istanza}{39}{subsection.5.1.1}%
+\contentsline {subsection}{\numberline {5.1.2}Soluzione}{39}{subsection.5.1.2}%
+\contentsline {subsubsection}{Esempio}{39}{subsubsection*.33}%
+\contentsline {section}{\numberline {5.2}Definizione del sottoproblema}{40}{section.5.2}%
+\contentsline {subsection}{\numberline {5.2.1}Istanza}{40}{subsection.5.2.1}%
+\contentsline {subsection}{\numberline {5.2.2}Soluzione}{40}{subsection.5.2.2}%
+\contentsline {subsection}{\numberline {5.2.3}$\mathbf {c_i}$ valore di una massima donazione}{40}{subsection.5.2.3}%
+\contentsline {section}{\numberline {5.3}Formulazione ricorsiva}{40}{section.5.3}%
+\contentsline {subsection}{\numberline {5.3.1}Caso base}{40}{subsection.5.3.1}%
+\contentsline {subsection}{\numberline {5.3.2}Passo ricorsivo $\mathbf {i > 1}$}{40}{subsection.5.3.2}%
+\contentsline {section}{\numberline {5.4}Soluzione al problema su istanza $\mathbf {X_n}$}{41}{section.5.4}%
+\contentsline {section}{\numberline {5.5}Algoritmo bottom-up}{41}{section.5.5}%
+\contentsline {subsection}{\numberline {5.5.1}Pseudocodice}{41}{subsection.5.5.1}%
+\contentsline {subsection}{\numberline {5.5.2}Spiegazione}{41}{subsection.5.5.2}%
+\contentsline {subsection}{\numberline {5.5.3}Complessità}{41}{subsection.5.5.3}%
+\contentsline {section}{\numberline {5.6}Ricostruzione mediante stampa di $S_i$}{42}{section.5.6}%
+\contentsline {section}{\numberline {5.7}Ricorstruzione che ritorna $S_i$}{42}{section.5.7}%
+\contentsline {chapter}{\numberline {6}Knapsack}{43}{chapter.6}%
+\contentsline {section}{\numberline {6.1}Defunizione del problema}{43}{section.6.1}%
+\contentsline {subsection}{\numberline {6.1.1}Istanza}{43}{subsection.6.1.1}%
+\contentsline {subsection}{\numberline {6.1.2}Soluzione}{43}{subsection.6.1.2}%
+\contentsline {section}{\numberline {6.2}Definizione del sottoproblema}{43}{section.6.2}%
+\contentsline {subsection}{\numberline {6.2.1}Istanza}{43}{subsection.6.2.1}%
+\contentsline {subsection}{\numberline {6.2.2}Soluzione}{43}{subsection.6.2.2}%
+\contentsline {section}{\numberline {6.3}Definizione del coefficiente $\mathbf {val_{ic}}$}{44}{section.6.3}%
+\contentsline {section}{\numberline {6.4}Formulazione ricorsiva}{44}{section.6.4}%
+\contentsline {subsection}{\numberline {6.4.1}Caso base}{44}{subsection.6.4.1}%
+\contentsline {subsubsection}{Spiegazione}{44}{subsubsection*.34}%
+\contentsline {subsection}{\numberline {6.4.2}Passo ricorsivo}{45}{subsection.6.4.2}%
+\contentsline {subsubsection}{Spiegazione}{45}{subsubsection*.35}%
+\contentsline {section}{\numberline {6.5}Soluzione}{45}{section.6.5}%
+\contentsline {section}{\numberline {6.6}Algoritmo Bottom-up}{46}{section.6.6}%
+\contentsline {subsection}{\numberline {6.6.1}Algoritmo in pseudocodice}{46}{subsection.6.6.1}%
+\contentsline {subsection}{\numberline {6.6.2}Complessità}{46}{subsection.6.6.2}%
+\contentsline {section}{\numberline {6.7}Algoritmo di ricostruzione}{47}{section.6.7}%
+\contentsline {section}{\numberline {6.8}Proprietà Sottostruttura Ottima}{47}{section.6.8}%
+\contentsline {chapter}{\numberline {7}Algoritmo di Floyd Warshall}{48}{chapter.7}%
+\contentsline {section}{\numberline {7.1}Definizione del problema}{48}{section.7.1}%
+\contentsline {subsection}{\numberline {7.1.1}Istanza}{48}{subsection.7.1.1}%
+\contentsline {subsection}{\numberline {7.1.2}Soluzione}{48}{subsection.7.1.2}%
+\contentsline {section}{\numberline {7.2}Definizione del sottoproblema di dimensione $k$}{48}{section.7.2}%
+\contentsline {section}{\numberline {7.3}Definizione dei coefficienti}{48}{section.7.3}%
+\contentsline {subsection}{\numberline {7.3.1}$\mathbf {d_{ij}^{(k)}}$ Peso del cammino}{48}{subsection.7.3.1}%
+\contentsline {subsection}{\numberline {7.3.2}$\mathbf {\pi _{ij}^{(k)}}$ Predecessore di $\mathbf {j}$}{48}{subsection.7.3.2}%
+\contentsline {section}{\numberline {7.4}Equazione di ricorrenza}{49}{section.7.4}%
+\contentsline {subsection}{\numberline {7.4.1}Caso base $\mathbf {k=0}$}{49}{subsection.7.4.1}%
+\contentsline {subsection}{\numberline {7.4.2}Passo ricorsivo $\mathbf {k>0}$}{49}{subsection.7.4.2}%
+\contentsline {section}{\numberline {7.5}Algoritmo Bottom-up}{50}{section.7.5}%
+\contentsline {subsection}{\numberline {7.5.1}Pseudocodice}{50}{subsection.7.5.1}%
+\contentsline {subsection}{\numberline {7.5.2}Complessità}{50}{subsection.7.5.2}%
+\contentsline {section}{\numberline {7.6}Ricostruzione della soluzione}{50}{section.7.6}%
+\contentsline {chapter}{\numberline {8}Floyd Warshall: Chiusura Transitiva}{51}{chapter.8}%
+\contentsline {section}{\numberline {8.1}Definizione del problema}{51}{section.8.1}%
+\contentsline {subsection}{\numberline {8.1.1}Istanza}{51}{subsection.8.1.1}%
+\contentsline {subsection}{\numberline {8.1.2}Soluzione}{51}{subsection.8.1.2}%
+\contentsline {section}{\numberline {8.2}Definizione del sottoproblema $k(0 \leq k \leq n)$}{51}{section.8.2}%
+\contentsline {section}{\numberline {8.3}Definizione del coefficiente $\mathbf {t^{(k)_{ij}}}$}{51}{section.8.3}%
+\contentsline {section}{\numberline {8.4}Formulazione ricorsiva}{52}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Caso base $\mathbf {k=0}$}{52}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Passo ricorsivo $\mathbf {k>0}$}{52}{subsection.8.4.2}%
+\contentsline {subsubsection}{Spiegazione}{52}{subsubsection*.36}%
+\contentsline {section}{\numberline {8.5}Soluzione del problema principale}{52}{section.8.5}%
+\contentsline {section}{\numberline {8.6}Algoritmo Bottom-up}{52}{section.8.6}%
+\contentsline {subsection}{\numberline {8.6.1}Algoritmo bottom-up}{52}{subsection.8.6.1}%
+\contentsline {subsection}{\numberline {8.6.2}Complessità}{52}{subsection.8.6.2}%
+\contentsline {part}{II\hspace {1em}Teoria Programmazione Greedy}{53}{part.2}%
+\contentsline {chapter}{\numberline {9}Strutture dati per insiemi disgiunti}{54}{chapter.9}%
+\contentsline {section}{\numberline {9.1}A cosa servono}{54}{section.9.1}%
+\contentsline {section}{\numberline {9.2}Definizione}{54}{section.9.2}%
+\contentsline {section}{\numberline {9.3}Proprietà degli insiemi disgiunti}{55}{section.9.3}%
+\contentsline {section}{\numberline {9.4}Operazioni da implementare all'interno della classe}{55}{section.9.4}%
+\contentsline {subsection}{\numberline {9.4.1}Make-Set: $X \to \mathcal {P}(X)$}{55}{subsection.9.4.1}%
+\contentsline {subsubsection}{Cosa fa}{55}{subsubsection*.38}%
+\contentsline {subsubsection}{Come funziona}{55}{subsubsection*.39}%
+\contentsline {subsection}{\numberline {9.4.2}Union: $Z \to \mathcal {P}(X)$}{55}{subsection.9.4.2}%
+\contentsline {subsubsection}{Cosa fa}{55}{subsubsection*.40}%
+\contentsline {subsubsection}{Come funziona}{55}{subsubsection*.41}%
+\contentsline {subsubsection}{Post condizioni}{56}{subsubsection*.42}%
+\contentsline {subsection}{\numberline {9.4.3}Find-Set: $X \to X$}{56}{subsection.9.4.3}%
+\contentsline {chapter}{\numberline {10}Rappresentazione di insiemi disgiunti mediante Liste Concatenate}{57}{chapter.10}%
+\contentsline {section}{\numberline {10.1}Struttura della lista}{57}{section.10.1}%
+\contentsline {section}{\numberline {10.2}Metodi della lista}{58}{section.10.2}%
+\contentsline {subsection}{\numberline {10.2.1}Make-Set}{58}{subsection.10.2.1}%
+\contentsline {subsection}{\numberline {10.2.2}Find-Set}{58}{subsection.10.2.2}%
+\contentsline {subsection}{\numberline {10.2.3}Union}{59}{subsection.10.2.3}%
+\contentsline {section}{\numberline {10.3}Euristica dell'unione pesata}{60}{section.10.3}%
+\contentsline {subsection}{\numberline {10.3.1}Teorema}{60}{subsection.10.3.1}%
+\contentsline {subsection}{\numberline {10.3.2}Dimostrazione}{60}{subsection.10.3.2}%
+\contentsline {subsection}{\numberline {10.3.3}Algoritmo}{60}{subsection.10.3.3}%
+\contentsline {chapter}{\numberline {11}Rappresentazione di insiemi disgiunti mediante Foreste di insiemi Disgiunti}{62}{chapter.11}%
+\contentsline {section}{\numberline {11.1}Struttura della foresta}{62}{section.11.1}%
+\contentsline {subsection}{\numberline {11.1.1}Esempio grafico}{62}{subsection.11.1.1}%
+\contentsline {section}{\numberline {11.2}Pseudocodice Metodi Stock}{62}{section.11.2}%
+\contentsline {subsection}{\numberline {11.2.1}Make-Set}{62}{subsection.11.2.1}%
+\contentsline {subsection}{\numberline {11.2.2}Find-Set}{62}{subsection.11.2.2}%
+\contentsline {subsection}{\numberline {11.2.3}Union}{63}{subsection.11.2.3}%
+\contentsline {section}{\numberline {11.3}Euristica dell'unione per rango + compressione dei cammini}{64}{section.11.3}%
+\contentsline {subsection}{\numberline {11.3.1}Unione per rango}{64}{subsection.11.3.1}%
+\contentsline {subsection}{\numberline {11.3.2}Metodi}{64}{subsection.11.3.2}%
+\contentsline {subsubsection}{Make-Set}{64}{subsubsection*.51}%
+\contentsline {subsubsection}{Union}{64}{subsubsection*.52}%
+\contentsline {subsubsection}{Link}{64}{subsubsection*.53}%
+\contentsline {subsubsection}{Find-Set con compressione dei cammini}{64}{subsubsection*.54}%
+\contentsline {chapter}{\numberline {12}Greedy-Max}{65}{chapter.12}%
+\contentsline {section}{\numberline {12.1}Procedimento Greedy}{65}{section.12.1}%
+\contentsline {subsection}{\numberline {12.1.1}Problema}{65}{subsection.12.1.1}%
+\contentsline {subsection}{\numberline {12.1.2}Procedimento algoritmo Greedy}{65}{subsection.12.1.2}%
+\contentsline {subsection}{\numberline {12.1.3}Soluzione ottenuta attraverso Greedy}{65}{subsection.12.1.3}%
+\contentsline {section}{\numberline {12.2}Confronto tra Programmazione Dinamica e Tecnica Greedy}{66}{section.12.2}%
+\contentsline {section}{\numberline {12.3}Sistema Indipendenza (S.I)}{66}{section.12.3}%
+\contentsline {subsection}{\numberline {12.3.1}Definizione}{66}{subsection.12.3.1}%
+\contentsline {subsection}{\numberline {12.3.2}Esempio 1}{66}{subsection.12.3.2}%
+\contentsline {subsection}{\numberline {12.3.3}Esempio 2}{66}{subsection.12.3.3}%
+\contentsline {subsection}{\numberline {12.3.4}Esempio 3}{67}{subsection.12.3.4}%
+\contentsline {section}{\numberline {12.4}Insieme Massimale (Non estendibile)}{67}{section.12.4}%
+\contentsline {subsection}{\numberline {12.4.1}Definizione}{67}{subsection.12.4.1}%
+\contentsline {section}{\numberline {12.5}Problema di massimo associato ad un S.I}{67}{section.12.5}%
+\contentsline {subsection}{\numberline {12.5.1}Istanza}{67}{subsection.12.5.1}%
+\contentsline {subsection}{\numberline {12.5.2}Soluzione}{67}{subsection.12.5.2}%
+\contentsline {subsection}{\numberline {12.5.3}Esempio 4}{67}{subsection.12.5.3}%
+\contentsline {subsubsection}{Nota}{67}{subsubsection*.55}%
+\contentsline {section}{\numberline {12.6}Algoritmo Greedy Associato ad un S.I $\langle E,F \rangle $ e $w:E \to R^+$}{68}{section.12.6}%
+\contentsline {subsection}{\numberline {12.6.1}Pseudocodice}{68}{subsection.12.6.1}%
+\contentsline {subsection}{\numberline {12.6.2}Cosa restituisce?}{68}{subsection.12.6.2}%
+\contentsline {subsection}{\numberline {12.6.3}Quando Greedy-Max risolve il problema?}{68}{subsection.12.6.3}%
+\contentsline {chapter}{\numberline {13}Matroidi}{69}{chapter.13}%
+\contentsline {section}{\numberline {13.1}Definizione}{69}{section.13.1}%
+\contentsline {subsection}{\numberline {13.1.1}Esempi di matroidi}{69}{subsection.13.1.1}%
+\contentsline {section}{\numberline {13.2}Teorema della dimensione di un matroide}{69}{section.13.2}%
+\contentsline {subsection}{\numberline {13.2.1}Proposizione}{69}{subsection.13.2.1}%
+\contentsline {subsection}{\numberline {13.2.2}Dimostrazione}{69}{subsection.13.2.2}%
+\contentsline {section}{\numberline {13.3}Matroidi grafici}{70}{section.13.3}%
+\contentsline {subsection}{\numberline {13.3.1}Obiettivo}{70}{subsection.13.3.1}%
+\contentsline {subsection}{\numberline {13.3.2}Lemma sul numero di componenti connesse di una foresta}{70}{subsection.13.3.2}%
+\contentsline {subsubsection}{Enunciato}{70}{subsubsection*.57}%
+\contentsline {subsubsection}{Dimostrazione}{70}{subsubsection*.58}%
+\contentsline {subsection}{\numberline {13.3.3}Teorema dell'esistenza del matroide grafico}{71}{subsection.13.3.3}%
+\contentsline {subsubsection}{Enunciato}{71}{subsubsection*.59}%
+\contentsline {subsubsection}{Dimostrazione}{71}{subsubsection*.60}%
+\contentsline {section}{\numberline {13.4}Teorema di Rado}{72}{section.13.4}%
+\contentsline {subsection}{\numberline {13.4.1}Enunciato}{72}{subsection.13.4.1}%
+\contentsline {subsection}{\numberline {13.4.2}Dimostrazione}{72}{subsection.13.4.2}%
+\contentsline {chapter}{\numberline {14}Greedy-Min}{74}{chapter.14}%
+\contentsline {section}{\numberline {14.1}Definizione di problema di minimo associato a un sistema di indipendenza e ad una funzione peso}{74}{section.14.1}%
+\contentsline {subsection}{\numberline {14.1.1}Istanza}{74}{subsection.14.1.1}%
+\contentsline {subsection}{\numberline {14.1.2}Soluzione}{74}{subsection.14.1.2}%
+\contentsline {section}{\numberline {14.2}Come risolvere un problema di minimo}{74}{section.14.2}%
+\contentsline {section}{\numberline {14.3}Definizione di $w'$ per Greedy-Min}{74}{section.14.3}%
+\contentsline {subsection}{\numberline {14.3.1}Pseudocodice Greedy-Min}{75}{subsection.14.3.1}%
+\contentsline {subsubsection}{Utilizzando $w'$ (Procedure Greedy-Max)}{75}{subsubsection*.61}%
+\contentsline {subsubsection}{Utilizzando $w$ (Procedure Greedy-Min)}{75}{subsubsection*.62}%
+\contentsline {chapter}{\numberline {15}MST - Minimum Spanning Tree}{76}{chapter.15}%
+\contentsline {section}{\numberline {15.1}Definizione}{76}{section.15.1}%
+\contentsline {subsection}{\numberline {15.1.1}Esempio}{76}{subsection.15.1.1}%
+\contentsline {subsection}{\numberline {15.1.2}Importanza di saper calcolare un MST}{76}{subsection.15.1.2}%
+\contentsline {section}{\numberline {15.2}Come calcolare un MST}{77}{section.15.2}%
+\contentsline {subsection}{\numberline {15.2.1}Requisiti}{77}{subsection.15.2.1}%
+\contentsline {subsection}{\numberline {15.2.2}Procedimento}{77}{subsection.15.2.2}%
+\contentsline {subsection}{\numberline {15.2.3}Pseudocodice}{77}{subsection.15.2.3}%
+\contentsline {part}{III\hspace {1em}Esercitazioni}{78}{part.3}%
+\contentsline {chapter}{\numberline {16}1ª Esercitazione}{79}{chapter.16}%
+\contentsline {section}{\numberline {16.1}Simulazione della Costruzione e Scrittura di una LCS}{79}{section.16.1}%
+\contentsline {subsection}{\numberline {16.1.1}Come si risolve il problema della LCS di X e Y}{79}{subsection.16.1.1}%
+\contentsline {subsection}{\numberline {16.1.2}Equazioni di ricorrenza}{79}{subsection.16.1.2}%
+\contentsline {subsection}{\numberline {16.1.3}Riempimento della matrice $c$}{79}{subsection.16.1.3}%
+\contentsline {subsection}{\numberline {16.1.4}Ricostruzione della soluzione}{80}{subsection.16.1.4}%
+\contentsline {subsection}{\numberline {16.1.5}Algoritmo PRINT-LCS senza matrice dei puntatori b}{80}{subsection.16.1.5}%
+\contentsline {section}{\numberline {16.2}HCS - Heaviest Common Subsequence}{81}{section.16.2}%
+\contentsline {subsection}{\numberline {16.2.1}Definizione del problema}{81}{subsection.16.2.1}%
+\contentsline {subsection}{\numberline {16.2.2}Procedura di risoluzione}{81}{subsection.16.2.2}%
+\contentsline {subsection}{\numberline {16.2.3}Definizione del generico sottoproblema}{81}{subsection.16.2.3}%
+\contentsline {subsection}{\numberline {16.2.4}Equazione di ricorrenza}{81}{subsection.16.2.4}%
+\contentsline {subsection}{\numberline {16.2.5}Algoritmo bottom-up}{82}{subsection.16.2.5}%
+\contentsline {subsection}{\numberline {16.2.6}Algoritmo di stampa HCS}{82}{subsection.16.2.6}%
+\contentsline {section}{\numberline {16.3}LCS con al massimo 3 rossi}{83}{section.16.3}%
+\contentsline {subsection}{\numberline {16.3.1}Definizione del problema}{83}{subsection.16.3.1}%
+\contentsline {subsection}{\numberline {16.3.2}Esempi}{83}{subsection.16.3.2}%
+\contentsline {subsubsection}{Esempio 1}{83}{subsubsection*.63}%
+\contentsline {subsubsection}{Esempio 2}{83}{subsubsection*.64}%
+\contentsline {subsection}{\numberline {16.3.3}Procedura di soluzione}{83}{subsection.16.3.3}%
+\contentsline {subsection}{\numberline {16.3.4}Definizione del generico sottoproblema}{84}{subsection.16.3.4}%
+\contentsline {subsection}{\numberline {16.3.5}Equazione di ricorrenza}{84}{subsection.16.3.5}%
+\contentsline {subsection}{\numberline {16.3.6}Algoritmo Bottom-up}{85}{subsection.16.3.6}%
+\contentsline {subsection}{\numberline {16.3.7}Ricostruzione}{85}{subsection.16.3.7}%
+\contentsline {chapter}{\numberline {17}2ª Esercitazione}{86}{chapter.17}%
+\contentsline {section}{\numberline {17.1}Alternanza pari e dispari}{86}{section.17.1}%
+\contentsline {subsection}{\numberline {17.1.1}Definizione del problema}{86}{subsection.17.1.1}%
+\contentsline {subsubsection}{Istanza}{86}{subsubsection*.65}%
+\contentsline {subsubsection}{Soluzione}{86}{subsubsection*.66}%
+\contentsline {subsection}{\numberline {17.1.2}Definizione del sottoproblema}{86}{subsection.17.1.2}%
+\contentsline {subsection}{\numberline {17.1.3}Definizione del coefficiente $\mathbf {c_i}$}{86}{subsection.17.1.3}%
+\contentsline {subsection}{\numberline {17.1.4}Formulazione ricorsiva}{86}{subsection.17.1.4}%
+\contentsline {subsubsection}{Caso base}{86}{subsubsection*.67}%
+\contentsline {subsubsection}{Passo ricorsivo}{86}{subsubsection*.68}%
+\contentsline {section}{\numberline {17.2}Alternanza dei colori}{87}{section.17.2}%
+\contentsline {subsection}{\numberline {17.2.1}Definizione del problema}{87}{subsection.17.2.1}%
+\contentsline {subsubsection}{Istanza}{87}{subsubsection*.69}%
+\contentsline {subsubsection}{Soluzione}{87}{subsubsection*.70}%
+\contentsline {subsection}{\numberline {17.2.2}Definizione del sottoproblema}{87}{subsection.17.2.2}%
+\contentsline {subsection}{\numberline {17.2.3}Formulazione ricorsiva}{87}{subsection.17.2.3}%
+\contentsline {subsubsection}{Caso base}{87}{subsubsection*.71}%
+\contentsline {subsubsection}{Passo ricorsivo}{87}{subsubsection*.72}%
+\contentsline {section}{\numberline {17.3}Elementi non consecutivamenti rossi}{88}{section.17.3}%
+\contentsline {subsection}{\numberline {17.3.1}Definizione del problema}{88}{subsection.17.3.1}%
+\contentsline {subsubsection}{Istanza}{88}{subsubsection*.73}%
+\contentsline {subsubsection}{Soluzione}{88}{subsubsection*.74}%
+\contentsline {subsection}{\numberline {17.3.2}Definizione del sottoproblema}{88}{subsection.17.3.2}%
+\contentsline {subsection}{\numberline {17.3.3}Definizione del coefficiente}{88}{subsection.17.3.3}%
+\contentsline {subsection}{\numberline {17.3.4}Formulazione ricorsiva}{88}{subsection.17.3.4}%
+\contentsline {subsubsection}{Caso base}{88}{subsubsection*.75}%
+\contentsline {subsubsection}{Passo ricorsivo}{88}{subsubsection*.76}%
+\contentsline {section}{\numberline {17.4}Elementi non consecutivamente dello stesso colore}{89}{section.17.4}%
+\contentsline {subsection}{\numberline {17.4.1}Definizione del problema}{89}{subsection.17.4.1}%
+\contentsline {subsubsection}{Istanza}{89}{subsubsection*.77}%
+\contentsline {subsubsection}{Soluzione}{89}{subsubsection*.78}%
+\contentsline {subsection}{\numberline {17.4.2}Definizione del sottoproblema}{89}{subsection.17.4.2}%
+\contentsline {subsection}{\numberline {17.4.3}Definizione del coefficiente}{89}{subsection.17.4.3}%
+\contentsline {subsection}{\numberline {17.4.4}Formulazione ricorsiva}{89}{subsection.17.4.4}%
+\contentsline {subsubsection}{Caso base}{89}{subsubsection*.79}%
+\contentsline {subsubsection}{Passo ricorsivo}{89}{subsubsection*.80}%
+\contentsline {section}{\numberline {17.5}Problema della Edit Distance}{90}{section.17.5}%
+\contentsline {subsection}{\numberline {17.5.1}Testo del problema}{90}{subsection.17.5.1}%
+\contentsline {subsection}{\numberline {17.5.2}Definizione del problema}{90}{subsection.17.5.2}%
+\contentsline {subsubsection}{Istanza}{90}{subsubsection*.81}%
+\contentsline {subsubsection}{Soluzione}{90}{subsubsection*.82}%
+\contentsline {subsection}{\numberline {17.5.3}Definizione del sottoproblema}{91}{subsection.17.5.3}%
+\contentsline {subsection}{\numberline {17.5.4}Definizione del coefficiente}{91}{subsection.17.5.4}%
+\contentsline {subsection}{\numberline {17.5.5}Formulazione ricorsiva}{91}{subsection.17.5.5}%
+\contentsline {subsubsection}{Caso base}{91}{subsubsection*.83}%
+\contentsline {subsubsection}{Passo ricorsivo}{91}{subsubsection*.84}%
+\contentsline {chapter}{\numberline {18}3ª Esercitazione}{92}{chapter.18}%
+\contentsline {section}{\numberline {18.1}Cammino minimo con esattamete 3 archi rossi}{92}{section.18.1}%
+\contentsline {subsection}{\numberline {18.1.1}Definizione del problema}{92}{subsection.18.1.1}%
+\contentsline {subsubsection}{Istanza}{92}{subsubsection*.85}%
+\contentsline {subsubsection}{Soluzione}{92}{subsubsection*.86}%
+\contentsline {subsection}{\numberline {18.1.2}Definizione del sottoproblema $\mathbf {(k,r)(0 \leq k \leq n, 0 \leq r \leq 3)}$}{92}{subsection.18.1.2}%
+\contentsline {subsection}{\numberline {18.1.3}Definizione del coefficiente}{92}{subsection.18.1.3}%
+\contentsline {subsection}{\numberline {18.1.4}Formulazione ricorsiva $\mathbf {k=0}$}{93}{subsection.18.1.4}%
+\contentsline {subsubsection}{Caso base}{93}{subsubsection*.87}%
+\contentsline {subsubsection}{Passo ricorsivo $k>0$}{93}{subsubsection*.88}%
+\contentsline {section}{\numberline {18.2}Cammini minimi in cui si alterna il colore dei vertici}{94}{section.18.2}%
+\contentsline {subsection}{\numberline {18.2.1}Definizione del problema}{94}{subsection.18.2.1}%
+\contentsline {subsubsection}{Istanza}{94}{subsubsection*.89}%
+\contentsline {subsubsection}{Soluzione}{94}{subsubsection*.90}%
+\contentsline {subsection}{\numberline {18.2.2}Definizione del sottoproblema $k(0 \leq k \leq n)$}{94}{subsection.18.2.2}%
+\contentsline {subsection}{\numberline {18.2.3}Definizione del coefficiente}{94}{subsection.18.2.3}%
+\contentsline {subsection}{\numberline {18.2.4}Formulazione ricorsiva}{94}{subsection.18.2.4}%
+\contentsline {subsubsection}{Caso base $\mathbf {k=0 \DOTSB \tmspace +\thickmuskip {.2777em}\DOTSB \Relbar \joinrel \Rightarrow \tmspace +\thickmuskip {.2777em}D^{(0)} \not = W}$}{94}{subsubsection*.91}%
+\contentsline {subsubsection}{Passo ricorsivo $\mathbf {k>0}$}{94}{subsubsection*.92}%
+\contentsline {chapter}{\numberline {19}4ª Esercitazione}{95}{chapter.19}%
+\contentsline {section}{\numberline {19.1}Cammini minimi in cui si alterna il colore degli archi}{95}{section.19.1}%
+\contentsline {subsection}{\numberline {19.1.1}Definizione del problema}{95}{subsection.19.1.1}%
+\contentsline {subsubsection}{Istanza}{95}{subsubsection*.93}%
+\contentsline {subsubsection}{Soluzione}{95}{subsubsection*.94}%
+\contentsline {subsection}{\numberline {19.1.2}Definizione del sottoproblema $(k,a,b)$}{95}{subsection.19.1.2}%
+\contentsline {subsection}{\numberline {19.1.3}Definizione del coefficiente}{95}{subsection.19.1.3}%
+\contentsline {subsection}{\numberline {19.1.4}Formulazione ricorsiva}{96}{subsection.19.1.4}%
+\contentsline {subsubsection}{Caso base $k=0$}{96}{subsubsection*.95}%
+\contentsline {subsubsection}{Passo ricorsivo $k > 0$}{96}{subsubsection*.96}%
+\contentsline {section}{\numberline {19.2}Esistenza di cammini in cui si alterna il colore dei vertici}{97}{section.19.2}%
+\contentsline {subsection}{\numberline {19.2.1}Definizione del problema}{97}{subsection.19.2.1}%
+\contentsline {subsubsection}{Istanza}{97}{subsubsection*.97}%
+\contentsline {subsubsection}{Soluzione}{97}{subsubsection*.98}%
+\contentsline {subsection}{\numberline {19.2.2}Definizione sottoproblema $k(0 \leq k \leq n)$}{97}{subsection.19.2.2}%
+\contentsline {subsection}{\numberline {19.2.3}Definizione del coefficiente}{97}{subsection.19.2.3}%
+\contentsline {subsection}{\numberline {19.2.4}Formulazione ricorsiva}{97}{subsection.19.2.4}%
+\contentsline {subsubsection}{Caso base $k=0$}{97}{subsubsection*.99}%
+\contentsline {subsubsection}{Passo ricorsivo $k>0$}{97}{subsubsection*.100}%
+\contentsline {section}{\numberline {19.3}Esistenza di cammini in cui si alterna il colore degli archi}{98}{section.19.3}%
+\contentsline {subsection}{\numberline {19.3.1}Definizione del problema}{98}{subsection.19.3.1}%
+\contentsline {subsubsection}{Istanza}{98}{subsubsection*.101}%
+\contentsline {subsubsection}{Soluzione}{98}{subsubsection*.102}%
+\contentsline {subsection}{\numberline {19.3.2}Definizione del sottoproblema}{98}{subsection.19.3.2}%
+\contentsline {subsection}{\numberline {19.3.3}Definizione del coefficiente}{98}{subsection.19.3.3}%
+\contentsline {subsection}{\numberline {19.3.4}Formulazione ricorsiva}{98}{subsection.19.3.4}%
+\contentsline {subsubsection}{Caso base $k=0$}{98}{subsubsection*.103}%
+\contentsline {subsubsection}{Passo ricorsivo $k>0$}{98}{subsubsection*.104}%
+\contentsline {part}{IV\hspace {1em}Esercizi di preparazione per il 1° parziale}{99}{part.4}%
